@@ -1,9 +1,10 @@
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Modules</title>
+		<title>xt-test.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -64,7 +65,7 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -82,76 +83,89 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">list</span>
-				<h1><span class="name">Modules</span></h1>
-				<div class="summary"><p>All documented modules.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">xt-test.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-						<ol class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
-							<li class="active">Modules</li>
-						</ol>
-					<section>
-		<h2><span class="name">Modules</span></h2>
-		<article class="secondary">
-				<dl class="symbol">
-						
-						<dt class="symbol-title module public">
-			<h4 id="xt-clean" class="module public"><a href="module-xt-clean.html"><span class="name">xt-clean</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="xt-clean" class="module public"><a href="module-xt-clean.html"><span class="name">xt-clean</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="xt-docs" class="module public"><a href="module-xt-docs.html"><span class="name">xt-docs</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="xt-docs" class="module public"><a href="module-xt-docs.html"><span class="name">xt-docs</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="xt-sync" class="module public"><a href="module-xt-sync.html"><span class="name">xt-sync</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-						<hr/>
-						<dt class="symbol-title module public">
-			<h4 id="xt-sync" class="module public"><a href="module-xt-sync.html"><span class="name">xt-sync</span></a></h4>
-</dt>
-<dd class="symbol-details module public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-				</dl>
-		</article>
-					</section>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">#!/usr/bin/env node
+
+
+/**
+ * This command will run project unit tests located in test/ directory.
+ *
+ * This command will setup extension testing environment using sinon-chrome,
+ * mocha, chai, chai-as-promised, and headless jsdom.
+ *
+ * @namespace xt-test
+ *
+ * @example &lt;caption>Default test command&lt;/caption>
+ * npx xt-test
+ *
+ * @example &lt;caption>Execute tests and keep watching changes&lt;/caption>
+ * npx xt-test --watch
+ *
+ * @example &lt;caption>Execute tests and pipe result to coveralls&lt;/caption>
+ * npx xt-test --coveralls
+ *
+ * @example &lt;caption>Get help using this command&lt;/caption>
+ * npx xt-test --help
+ *
+ */
+
+const util = require('util');
+const path = require('path');
+const program = require('commander');
+const pkg = require('../package.json');
+const exec = require('child_process').exec;
+const rootSuite = path.join(process.cwd(), './node_modules', pkg.name, 'config/rootSuite.js');
+
+program
+    .version(pkg.version)
+    .option('-l --coveralls', 'pipe coverage')
+    .option('-w --watch', 'enable watch')
+    .parse(process.argv);
+
+const args = [
+
+    // use nyc &amp;&amp; mocha
+    'nyc mocha', './test/**/*.js',
+
+    // setup test environment
+    util.format('--file "%s"', rootSuite),
+
+    // enable watch
+    program.watch ? '--watch' : '',
+
+    // babel + chalk
+    '--require babel-core/register --colors',
+
+    // lastly: pipe to coveralls -->
+    // this has to happen last after all tests have run
+    program.coveralls ? '&amp;&amp; nyc report --reporter=text-lcov | coveralls' : ''
+
+].join(' ');
+
+/** execute test runner in project working dir **/
+process.chdir(process.cwd());
+
+const bat = exec(args);
+
+/** display all test output on screen **/
+bat.stdout.on('data', data => {
+    process.stdout.write(data.toString());
+});
+
+bat.stderr.on('data', data => {
+    process.stdout.write(data.toString());
+});
+</code></pre>
+		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -183,3 +197,4 @@
 	
 </body>
 </html>
+<!-- end:source.tmpl.hbs -->

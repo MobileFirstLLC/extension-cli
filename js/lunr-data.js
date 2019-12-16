@@ -64,13 +64,13 @@ window.lunrData = {
           "document",
           "global"
         ],
-        "list_module.html": [
+        "list_namespace.html": [
           "document",
           "list",
-          "list:modul",
-          "modul"
+          "list:namespac",
+          "namespac"
         ],
-        "module-xt-clean.html": [
+        "xt-clean.html": [
           "clean",
           "delet",
           "directori",
@@ -84,8 +84,7 @@ window.lunrData = {
           "ignor",
           "iter",
           "list",
-          "modul",
-          "module:xt",
+          "namespac",
           "node_modul",
           "on",
           "oper",
@@ -96,7 +95,7 @@ window.lunrData = {
           "vscode",
           "xt"
         ],
-        "module-xt-docs.html": [
+        "xt-docs.html": [
           "automat",
           "c",
           "chang",
@@ -119,10 +118,9 @@ window.lunrData = {
           "jsdoc.html",
           "locat",
           "look",
-          "modul",
-          "module:xt",
           "more",
           "name",
+          "namespac",
           "option",
           "opts.templ",
           "overrid",
@@ -141,7 +139,7 @@ window.lunrData = {
           "xtdoc",
           "xtdocs.json"
         ],
-        "module-xt-sync.html": [
+        "xt-sync.html": [
           "advis",
           "cli",
           "command",
@@ -154,8 +152,7 @@ window.lunrData = {
           "manner",
           "manual",
           "modifi",
-          "modul",
-          "module:xt",
+          "namespac",
           "project",
           "provid",
           "purpos",
@@ -167,9 +164,31 @@ window.lunrData = {
           "upgrad",
           "version",
           "xt"
+        ],
+        "xt-test.html": [
+          "chai",
+          "chrome",
+          "command",
+          "directori",
+          "environ",
+          "extens",
+          "headless",
+          "jsdom",
+          "locat",
+          "mocha",
+          "namespac",
+          "project",
+          "promis",
+          "run",
+          "setup",
+          "sinon",
+          "test",
+          "unit",
+          "us",
+          "xt"
         ]
       },
-      "length": 6
+      "length": 7
     },
     "tokenStore": {
       "root": {
@@ -196,8 +215,8 @@ window.lunrData = {
         },
         "c": {
           "docs": {
-            "module-xt-docs.html": {
-              "ref": "module-xt-docs.html",
+            "xt-docs.html": {
+              "ref": "xt-docs.html",
               "tf": 0.78125
             }
           },
@@ -214,6 +233,10 @@ window.lunrData = {
                       "index.html": {
                         "ref": "index.html",
                         "tf": 4.117647058823529
+                      },
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -226,10 +249,18 @@ window.lunrData = {
                 "docs": {},
                 "g": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 0.78125
                     }
+                  }
+                }
+              },
+              "i": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 4.545454545454546
                   }
                 }
               }
@@ -243,8 +274,8 @@ window.lunrData = {
                   "ref": "index.html",
                   "tf": 300
                 },
-                "module-xt-sync.html": {
-                  "ref": "module-xt-sync.html",
+                "xt-sync.html": {
+                  "ref": "xt-sync.html",
                   "tf": 1.7241379310344827
                 }
               }
@@ -255,8 +286,8 @@ window.lunrData = {
                 "docs": {},
                 "n": {
                   "docs": {
-                    "module-xt-clean.html": {
-                      "ref": "module-xt-clean.html",
+                    "xt-clean.html": {
+                      "ref": "xt-clean.html",
                       "tf": 951.9230769230769
                     }
                   }
@@ -280,13 +311,17 @@ window.lunrData = {
                           "ref": "index.html",
                           "tf": 4.117647058823529
                         },
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 3.125
                         },
-                        "module-xt-sync.html": {
-                          "ref": "module-xt-sync.html",
+                        "xt-sync.html": {
+                          "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
+                        },
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 4.545454545454546
                         }
                       }
                     }
@@ -302,12 +337,12 @@ window.lunrData = {
                   "docs": {},
                   "g": {
                     "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 2.34375
                       },
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
                         "tf": 3.4482758620689653
                       }
                     },
@@ -315,12 +350,12 @@ window.lunrData = {
                       "docs": {},
                       "r": {
                         "docs": {
-                          "module-xt-docs.html": {
-                            "ref": "module-xt-docs.html",
+                          "xt-docs.html": {
+                            "ref": "xt-docs.html",
                             "tf": 4.6875
                           },
-                          "module-xt-sync.html": {
-                            "ref": "module-xt-sync.html",
+                          "xt-sync.html": {
+                            "ref": "xt-sync.html",
                             "tf": 3.4482758620689653
                           }
                         }
@@ -362,8 +397,8 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-xt-clean.html": {
-                      "ref": "module-xt-clean.html",
+                    "xt-clean.html": {
+                      "ref": "xt-clean.html",
                       "tf": 1.9230769230769231
                     }
                   }
@@ -380,8 +415,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 0.78125
                         }
                       }
@@ -393,8 +428,8 @@ window.lunrData = {
                 "docs": {},
                 "n": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 1.5625
                     }
                   }
@@ -409,8 +444,8 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 0.78125
                       }
                     }
@@ -423,8 +458,8 @@ window.lunrData = {
             "docs": {},
             "c": {
               "docs": {
-                "module-xt-docs.html": {
-                  "ref": "module-xt-docs.html",
+                "xt-docs.html": {
+                  "ref": "xt-docs.html",
                   "tf": 951.5625
                 }
               },
@@ -446,12 +481,12 @@ window.lunrData = {
                             "ref": "global.html",
                             "tf": 35
                           },
-                          "list_module.html": {
-                            "ref": "list_module.html",
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
                             "tf": 35
                           },
-                          "module-xt-docs.html": {
-                            "ref": "module-xt-docs.html",
+                          "xt-docs.html": {
+                            "ref": "xt-docs.html",
                             "tf": 0.78125
                           }
                         }
@@ -478,9 +513,13 @@ window.lunrData = {
                         "docs": {},
                         "i": {
                           "docs": {
-                            "module-xt-clean.html": {
-                              "ref": "module-xt-clean.html",
+                            "xt-clean.html": {
+                              "ref": "xt-clean.html",
                               "tf": 5.769230769230769
+                            },
+                            "xt-test.html": {
+                              "ref": "xt-test.html",
+                              "tf": 2.272727272727273
                             }
                           }
                         }
@@ -507,6 +546,10 @@ window.lunrData = {
                       "index.html": {
                         "ref": "index.html",
                         "tf": 308.2352941176471
+                      },
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -521,8 +564,8 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-xt-clean.html": {
-                        "ref": "module-xt-clean.html",
+                      "xt-clean.html": {
+                        "ref": "xt-clean.html",
                         "tf": 1.9230769230769231
                       }
                     }
@@ -546,8 +589,8 @@ window.lunrData = {
                           "docs": {},
                           "i": {
                             "docs": {
-                              "module-xt-clean.html": {
-                                "ref": "module-xt-clean.html",
+                              "xt-clean.html": {
+                                "ref": "xt-clean.html",
                                 "tf": 1.9230769230769231
                               }
                             }
@@ -566,9 +609,32 @@ window.lunrData = {
               "docs": {},
               "h": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 2.272727272727273
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -601,8 +667,8 @@ window.lunrData = {
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 0.78125
                       }
                     }
@@ -620,8 +686,8 @@ window.lunrData = {
                     "docs": {},
                     "d": {
                       "docs": {
-                        "module-xt-sync.html": {
-                          "ref": "module-xt-sync.html",
+                        "xt-sync.html": {
+                          "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
                         }
                       }
@@ -637,8 +703,8 @@ window.lunrData = {
               "docs": {},
               "a": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 }
@@ -653,8 +719,8 @@ window.lunrData = {
                 "docs": {},
                 "r": {
                   "docs": {
-                    "module-xt-clean.html": {
-                      "ref": "module-xt-clean.html",
+                    "xt-clean.html": {
+                      "ref": "xt-clean.html",
                       "tf": 1.9230769230769231
                     }
                   }
@@ -668,8 +734,8 @@ window.lunrData = {
               "docs": {},
               "r": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 }
@@ -696,30 +762,39 @@ window.lunrData = {
               "docs": {},
               "t": {
                 "docs": {
-                  "list_module.html": {
-                    "ref": "list_module.html",
+                  "list_namespace.html": {
+                    "ref": "list_namespace.html",
                     "tf": 110
                   },
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 },
                 ":": {
                   "docs": {},
-                  "m": {
+                  "n": {
                     "docs": {},
-                    "o": {
+                    "a": {
                       "docs": {},
-                      "d": {
+                      "m": {
                         "docs": {},
-                        "u": {
+                        "e": {
                           "docs": {},
-                          "l": {
-                            "docs": {
-                              "list_module.html": {
-                                "ref": "list_module.html",
-                                "tf": 1300
+                          "s": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "list_namespace.html": {
+                                      "ref": "list_namespace.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
                               }
                             }
                           }
@@ -739,9 +814,13 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 0.78125
+                    },
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 2.272727272727273
                     }
                   }
                 }
@@ -751,8 +830,8 @@ window.lunrData = {
               "docs": {},
               "k": {
                 "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
                     "tf": 1.5625
                   }
                 }
@@ -769,8 +848,8 @@ window.lunrData = {
                   "docs": {},
                   "t": {
                     "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
                         "tf": 1.7241379310344827
                       }
                     }
@@ -798,17 +877,21 @@ window.lunrData = {
                           "ref": "index.html",
                           "tf": 4.117647058823529
                         },
-                        "module-xt-clean.html": {
-                          "ref": "module-xt-clean.html",
+                        "xt-clean.html": {
+                          "ref": "xt-clean.html",
                           "tf": 1.9230769230769231
                         },
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 3.125
                         },
-                        "module-xt-sync.html": {
-                          "ref": "module-xt-sync.html",
+                        "xt-sync.html": {
+                          "ref": "xt-sync.html",
                           "tf": 5.172413793103448
+                        },
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 2.272727272727273
                         }
                       }
                     }
@@ -825,13 +908,27 @@ window.lunrData = {
                         "ref": "index.html",
                         "tf": 4.117647058823529
                       },
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 0.78125
                       },
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
                         "tf": 1.7241379310344827
+                      }
+                    }
+                  }
+                }
+              },
+              "m": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 2.272727272727273
                       }
                     }
                   }
@@ -845,8 +942,8 @@ window.lunrData = {
               "docs": {},
               "s": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 }
@@ -872,8 +969,8 @@ window.lunrData = {
                               "docs": {},
                               "n": {
                                 "docs": {
-                                  "module-xt-docs.html": {
-                                    "ref": "module-xt-docs.html",
+                                  "xt-docs.html": {
+                                    "ref": "xt-docs.html",
                                     "tf": 1.5625
                                   }
                                 }
@@ -891,8 +988,8 @@ window.lunrData = {
               "docs": {},
               "h": {
                 "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
                     "tf": 0.78125
                   }
                 }
@@ -909,8 +1006,8 @@ window.lunrData = {
                   "docs": {},
                   "s": {
                     "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
                         "tf": 1.7241379310344827
                       }
                     }
@@ -944,8 +1041,8 @@ window.lunrData = {
                 "docs": {},
                 "v": {
                   "docs": {
-                    "module-xt-clean.html": {
-                      "ref": "module-xt-clean.html",
+                    "xt-clean.html": {
+                      "ref": "xt-clean.html",
                       "tf": 3.8461538461538463
                     }
                   }
@@ -959,10 +1056,21 @@ window.lunrData = {
               "docs": {},
               "t": {
                 "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
                     "tf": 0.78125
                   }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {
+                "xt-test.html": {
+                  "ref": "xt-test.html",
+                  "tf": 2.272727272727273
                 }
               }
             }
@@ -1020,8 +1128,8 @@ window.lunrData = {
                   "docs": {},
                   "x": {
                     "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 0.78125
                       }
                     }
@@ -1030,8 +1138,8 @@ window.lunrData = {
               },
               "c": {
                 "docs": {
-                  "module-xt-sync.html": {
-                    "ref": "module-xt-sync.html",
+                  "xt-sync.html": {
+                    "ref": "xt-sync.html",
                     "tf": 950
                   }
                 }
@@ -1042,9 +1150,23 @@ window.lunrData = {
             "docs": {},
             "e": {
               "docs": {
-                "module-xt-docs.html": {
-                  "ref": "module-xt-docs.html",
+                "xt-docs.html": {
+                  "ref": "xt-docs.html",
                   "tf": 0.78125
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "p": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 2.272727272727273
+                    }
+                  }
                 }
               }
             }
@@ -1057,8 +1179,8 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-xt-sync.html": {
-                      "ref": "module-xt-sync.html",
+                    "xt-sync.html": {
+                      "ref": "xt-sync.html",
                       "tf": 1.7241379310344827
                     }
                   }
@@ -1072,9 +1194,26 @@ window.lunrData = {
               "docs": {},
               "h": {
                 "docs": {
-                  "module-xt-sync.html": {
-                    "ref": "module-xt-sync.html",
+                  "xt-sync.html": {
+                    "ref": "xt-sync.html",
                     "tf": 1.7241379310344827
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 2.272727272727273
+                    }
                   }
                 }
               }
@@ -1092,6 +1231,10 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 4.117647058823529
+                  },
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 956.8181818181819
                   }
                 }
               }
@@ -1106,8 +1249,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 0.78125
                         }
                       }
@@ -1127,8 +1270,8 @@ window.lunrData = {
                     "ref": "index.html",
                     "tf": 4.117647058823529
                   },
-                  "module-xt-sync.html": {
-                    "ref": "module-xt-sync.html",
+                  "xt-sync.html": {
+                    "ref": "xt-sync.html",
                     "tf": 1.7241379310344827
                   }
                 }
@@ -1143,8 +1286,8 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 0.78125
                     }
                   }
@@ -1168,8 +1311,8 @@ window.lunrData = {
                 "docs": {},
                 "t": {
                   "docs": {
-                    "module-xt-sync.html": {
-                      "ref": "module-xt-sync.html",
+                    "xt-sync.html": {
+                      "ref": "xt-sync.html",
                       "tf": 1.7241379310344827
                     }
                   }
@@ -1184,8 +1327,8 @@ window.lunrData = {
                   "docs": {},
                   "d": {
                     "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
                         "tf": 5.172413793103448
                       }
                     }
@@ -1210,9 +1353,27 @@ window.lunrData = {
           },
           "s": {
             "docs": {
-              "module-xt-docs.html": {
-                "ref": "module-xt-docs.html",
+              "xt-docs.html": {
+                "ref": "xt-docs.html",
                 "tf": 2.34375
+              },
+              "xt-test.html": {
+                "ref": "xt-test.html",
+                "tf": 2.272727272727273
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 2.272727272727273
+                  }
+                }
               }
             }
           }
@@ -1233,8 +1394,8 @@ window.lunrData = {
               "docs": {},
               "t": {
                 "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
                     "tf": 0.78125
                   }
                 }
@@ -1278,8 +1439,8 @@ window.lunrData = {
                       "docs": {},
                       "r": {
                         "docs": {
-                          "module-xt-clean.html": {
-                            "ref": "module-xt-clean.html",
+                          "xt-clean.html": {
+                            "ref": "xt-clean.html",
                             "tf": 1.9230769230769231
                           }
                         }
@@ -1298,188 +1459,9 @@ window.lunrData = {
                 "docs": {},
                 "r": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 0.78125
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "m": {
-          "docs": {},
-          "o": {
-            "docs": {},
-            "d": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "list_module.html": {
-                      "ref": "list_module.html",
-                      "tf": 635
-                    },
-                    "module-xt-clean.html": {
-                      "ref": "module-xt-clean.html",
-                      "tf": 110
-                    },
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
-                      "tf": 110
-                    },
-                    "module-xt-sync.html": {
-                      "ref": "module-xt-sync.html",
-                      "tf": 110
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    ":": {
-                      "docs": {},
-                      "x": {
-                        "docs": {},
-                        "t": {
-                          "docs": {
-                            "module-xt-clean.html": {
-                              "ref": "module-xt-clean.html",
-                              "tf": 650
-                            },
-                            "module-xt-docs.html": {
-                              "ref": "module-xt-docs.html",
-                              "tf": 650
-                            },
-                            "module-xt-sync.html": {
-                              "ref": "module-xt-sync.html",
-                              "tf": 650
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "i": {
-                "docs": {},
-                "f": {
-                  "docs": {},
-                  "i": {
-                    "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
-                        "tf": 1.7241379310344827
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
-                    "tf": 0.78125
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
-                        "tf": 1.7241379310344827
-                      }
-                    }
-                  }
-                }
-              },
-              "u": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "l": {
-                    "docs": {
-                      "module-xt-sync.html": {
-                        "ref": "module-xt-sync.html",
-                        "tf": 1.7241379310344827
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "f": {
-          "docs": {},
-          "i": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
-                    "tf": 5.769230769230769
-                  },
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
-                    "tf": 2.34375
-                  },
-                  "module-xt-sync.html": {
-                    "ref": "module-xt-sync.html",
-                    "tf": 5.172413793103448
-                  }
-                }
-              }
-            }
-          },
-          "l": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "g": {
-                "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
-                    "tf": 1.9230769230769231
-                  },
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
-                    "tf": 0.78125
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "d": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "c": {
-                    "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
-                        "tf": 0.78125
-                      }
                     }
                   }
                 }
@@ -1489,6 +1471,53 @@ window.lunrData = {
         },
         "n": {
           "docs": {},
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
+                    "tf": 0.78125
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 635
+                          },
+                          "xt-clean.html": {
+                            "ref": "xt-clean.html",
+                            "tf": 110
+                          },
+                          "xt-docs.html": {
+                            "ref": "xt-docs.html",
+                            "tf": 110
+                          },
+                          "xt-sync.html": {
+                            "ref": "xt-sync.html",
+                            "tf": 110
+                          },
+                          "xt-test.html": {
+                            "ref": "xt-test.html",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "o": {
             "docs": {},
             "d": {
@@ -1507,8 +1536,8 @@ window.lunrData = {
                           "docs": {},
                           "l": {
                             "docs": {
-                              "module-xt-clean.html": {
-                                "ref": "module-xt-clean.html",
+                              "xt-clean.html": {
+                                "ref": "xt-clean.html",
                                 "tf": 1.9230769230769231
                               }
                             }
@@ -1520,16 +1549,65 @@ window.lunrData = {
                 }
               }
             }
-          },
-          "a": {
+          }
+        },
+        "f": {
+          "docs": {},
+          "i": {
             "docs": {},
-            "m": {
+            "l": {
               "docs": {},
               "e": {
                 "docs": {
-                  "module-xt-docs.html": {
-                    "ref": "module-xt-docs.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
+                    "tf": 5.769230769230769
+                  },
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
+                    "tf": 2.34375
+                  },
+                  "xt-sync.html": {
+                    "ref": "xt-sync.html",
+                    "tf": 5.172413793103448
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
+                    "tf": 1.9230769230769231
+                  },
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
                     "tf": 0.78125
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "c": {
+                    "docs": {
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
+                        "tf": 0.78125
+                      }
+                    }
                   }
                 }
               }
@@ -1540,8 +1618,8 @@ window.lunrData = {
           "docs": {},
           "n": {
             "docs": {
-              "module-xt-clean.html": {
-                "ref": "module-xt-clean.html",
+              "xt-clean.html": {
+                "ref": "xt-clean.html",
                 "tf": 1.9230769230769231
               }
             }
@@ -1552,8 +1630,8 @@ window.lunrData = {
               "docs": {},
               "r": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 }
@@ -1567,8 +1645,8 @@ window.lunrData = {
                   "docs": {},
                   "n": {
                     "docs": {
-                      "module-xt-docs.html": {
-                        "ref": "module-xt-docs.html",
+                      "xt-docs.html": {
+                        "ref": "xt-docs.html",
                         "tf": 1.5625
                       }
                     }
@@ -1589,8 +1667,8 @@ window.lunrData = {
                           "docs": {},
                           "l": {
                             "docs": {
-                              "module-xt-docs.html": {
-                                "ref": "module-xt-docs.html",
+                              "xt-docs.html": {
+                                "ref": "xt-docs.html",
                                 "tf": 0.78125
                               }
                             }
@@ -1609,8 +1687,8 @@ window.lunrData = {
               "docs": {},
               "r": {
                 "docs": {
-                  "module-xt-clean.html": {
-                    "ref": "module-xt-clean.html",
+                  "xt-clean.html": {
+                    "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
                   }
                 },
@@ -1620,8 +1698,8 @@ window.lunrData = {
                     "docs": {},
                     "d": {
                       "docs": {
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 0.78125
                         }
                       }
@@ -1644,8 +1722,8 @@ window.lunrData = {
                   "docs": {},
                   "e": {
                     "docs": {
-                      "module-xt-clean.html": {
-                        "ref": "module-xt-clean.html",
+                      "xt-clean.html": {
+                        "ref": "xt-clean.html",
                         "tf": 1.9230769230769231
                       }
                     }
@@ -1666,8 +1744,8 @@ window.lunrData = {
                     "docs": {},
                     "n": {
                       "docs": {
-                        "module-xt-sync.html": {
-                          "ref": "module-xt-sync.html",
+                        "xt-sync.html": {
+                          "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
                         }
                       }
@@ -1682,17 +1760,21 @@ window.lunrData = {
           "docs": {},
           "t": {
             "docs": {
-              "module-xt-clean.html": {
-                "ref": "module-xt-clean.html",
-                "tf": 300
+              "xt-clean.html": {
+                "ref": "xt-clean.html",
+                "tf": 950
               },
-              "module-xt-docs.html": {
-                "ref": "module-xt-docs.html",
-                "tf": 300
+              "xt-docs.html": {
+                "ref": "xt-docs.html",
+                "tf": 950
               },
-              "module-xt-sync.html": {
-                "ref": "module-xt-sync.html",
-                "tf": 300
+              "xt-sync.html": {
+                "ref": "xt-sync.html",
+                "tf": 950
+              },
+              "xt-test.html": {
+                "ref": "xt-test.html",
+                "tf": 950
               }
             },
             "d": {
@@ -1701,8 +1783,8 @@ window.lunrData = {
                 "docs": {},
                 "c": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 0.78125
                     }
                   },
@@ -1718,8 +1800,8 @@ window.lunrData = {
                             "docs": {},
                             "n": {
                               "docs": {
-                                "module-xt-docs.html": {
-                                  "ref": "module-xt-docs.html",
+                                "xt-docs.html": {
+                                  "ref": "xt-docs.html",
                                   "tf": 0.78125
                                 }
                               }
@@ -1748,8 +1830,8 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
+                        "xt-docs.html": {
+                          "ref": "xt-docs.html",
                           "tf": 1.5625
                         }
                       }
@@ -1767,8 +1849,8 @@ window.lunrData = {
                 "docs": {},
                 "s": {
                   "docs": {
-                    "module-xt-sync.html": {
-                      "ref": "module-xt-sync.html",
+                    "xt-sync.html": {
+                      "ref": "xt-sync.html",
                       "tf": 1.7241379310344827
                     }
                   }
@@ -1823,8 +1905,8 @@ window.lunrData = {
                                                     "docs": {},
                                                     "t": {
                                                       "docs": {
-                                                        "module-xt-docs.html": {
-                                                          "ref": "module-xt-docs.html",
+                                                        "xt-docs.html": {
+                                                          "ref": "xt-docs.html",
                                                           "tf": 0.78125
                                                         }
                                                       }
@@ -1853,8 +1935,8 @@ window.lunrData = {
                                                               "docs": {},
                                                               "l": {
                                                                 "docs": {
-                                                                  "module-xt-docs.html": {
-                                                                    "ref": "module-xt-docs.html",
+                                                                  "xt-docs.html": {
+                                                                    "ref": "xt-docs.html",
                                                                     "tf": 0.78125
                                                                   }
                                                                 }
@@ -1897,9 +1979,29 @@ window.lunrData = {
                     "docs": {},
                     "i": {
                       "docs": {
-                        "module-xt-sync.html": {
-                          "ref": "module-xt-sync.html",
+                        "xt-sync.html": {
+                          "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "d": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "s": {
+                        "docs": {
+                          "xt-test.html": {
+                            "ref": "xt-test.html",
+                            "tf": 2.272727272727273
+                          }
                         }
                       }
                     }
@@ -1919,8 +2021,8 @@ window.lunrData = {
                 "docs": {},
                 "c": {
                   "docs": {
-                    "module-xt-docs.html": {
-                      "ref": "module-xt-docs.html",
+                    "xt-docs.html": {
+                      "ref": "xt-docs.html",
                       "tf": 1.5625
                     }
                   },
@@ -1934,13 +2036,103 @@ window.lunrData = {
                           "docs": {},
                           "l": {
                             "docs": {
-                              "module-xt-docs.html": {
-                                "ref": "module-xt-docs.html",
+                              "xt-docs.html": {
+                                "ref": "xt-docs.html",
                                 "tf": 0.78125
                               }
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 2.272727272727273
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "docs": {},
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "xt-docs.html": {
+                    "ref": "xt-docs.html",
+                    "tf": 0.78125
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "a": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 2.272727272727273
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
+                  }
+                }
+              },
+              "u": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "xt-sync.html": {
+                        "ref": "xt-sync.html",
+                        "tf": 1.7241379310344827
                       }
                     }
                   }
@@ -1950,13 +2142,14 @@ window.lunrData = {
           }
         }
       },
-      "length": 209
+      "length": 134
     },
     "corpusTokens": [
       "advis",
       "automat",
       "build",
       "c",
+      "chai",
       "chang",
       "chrome",
       "clean",
@@ -1973,6 +2166,7 @@ window.lunrData = {
       "doc",
       "document",
       "each",
+      "environ",
       "except",
       "explicitli",
       "extens",
@@ -1982,6 +2176,7 @@ window.lunrData = {
       "gener",
       "gitignor",
       "global",
+      "headless",
       "heavili",
       "https://jsdoc.app/about",
       "https://jsdoc.app/index.html",
@@ -1993,19 +2188,20 @@ window.lunrData = {
       "iter",
       "jsdoc",
       "jsdoc.html",
+      "jsdom",
       "latest",
       "line",
       "list",
-      "list:modul",
+      "list:namespac",
       "locat",
       "look",
       "manner",
       "manual",
+      "mocha",
       "modifi",
-      "modul",
-      "module:xt",
       "more",
       "name",
+      "namespac",
       "node_modul",
       "on",
       "oper",
@@ -2017,12 +2213,16 @@ window.lunrData = {
       "pass",
       "path",
       "project",
+      "promis",
       "provid",
       "purpos",
       "readm",
       "remov",
       "root",
+      "run",
       "see",
+      "setup",
+      "sinon",
       "speed",
       "stale",
       "such",
@@ -2033,6 +2233,7 @@ window.lunrData = {
       "test",
       "theme",
       "tool",
+      "unit",
       "up",
       "updat",
       "upgrad",
@@ -2075,48 +2276,59 @@ window.lunrData = {
       "description": "",
       "body": ""
     },
-    "list_module.html": {
-      "id": "list_module.html",
+    "list_namespace.html": {
+      "id": "list_namespace.html",
       "kind": "list",
-      "title": "Modules",
-      "longname": "list:module",
-      "name": "Modules",
-      "tags": "list:module",
-      "summary": "All documented modules.",
+      "title": "Namespaces",
+      "longname": "list:namespace",
+      "name": "Namespaces",
+      "tags": "list:namespace",
+      "summary": "All documented namespaces.",
       "description": "",
       "body": ""
     },
-    "module-xt-clean.html": {
-      "id": "module-xt-clean.html",
-      "kind": "module",
+    "xt-clean.html": {
+      "id": "xt-clean.html",
+      "kind": "namespace",
       "title": "xt-clean",
-      "longname": "module:xt-clean",
+      "longname": "xt-clean",
       "name": "xt-clean",
-      "tags": "module:xt-clean",
+      "tags": "xt-clean",
       "summary": "",
       "description": "Clean operation iterates over files and directories listed in the project .gitignore file, and removes all ignored files and directories, except node_modules, .idea/, and .vscode. To remove these directories, you must explicitly pass a flag to delete each one of them.",
       "body": ""
     },
-    "module-xt-docs.html": {
-      "id": "module-xt-docs.html",
-      "kind": "module",
+    "xt-docs.html": {
+      "id": "xt-docs.html",
+      "kind": "namespace",
       "title": "xt-docs",
-      "longname": "module:xt-docs",
+      "longname": "xt-docs",
       "name": "xt-docs",
-      "tags": "module:xt-docs",
+      "tags": "xt-docs",
       "summary": "",
       "description": "Docs command generates documentation for the project. This command uses jsdocs syntax. See https://jsdoc.app/index.html for more details, including configuration options: https://jsdoc.app/about-configuring-jsdoc.html. The default template for the docs is foodoc. You can override this theme in the project by changing opts.template in jsdoc config file. This command will automatically look for configuration in the project package.json. Use \"xtdocs\" to define config options in package.json. This command will also automatically look for a configuration file .xtdocs.json in the project root. If you want to define configuration in some other location, use -c/--config flag to provide path and name of the configuration file.",
       "body": ""
     },
-    "module-xt-sync.html": {
-      "id": "module-xt-sync.html",
-      "kind": "module",
+    "xt-sync.html": {
+      "id": "xt-sync.html",
+      "kind": "namespace",
       "title": "xt-sync",
-      "longname": "module:xt-sync",
+      "longname": "xt-sync",
       "name": "xt-sync",
-      "tags": "module:xt-sync",
+      "tags": "xt-sync",
       "summary": "",
       "description": "The purpose of this command is to upgrade configuration files of a stale project to latest version, where this CLI tool will provide updated project configuration files. If the config files have been modified heavily for the project, it is not advisable to upgrade them in this manner. Instead you should upgrade such configs manually.",
+      "body": ""
+    },
+    "xt-test.html": {
+      "id": "xt-test.html",
+      "kind": "namespace",
+      "title": "xt-test",
+      "longname": "xt-test",
+      "name": "xt-test",
+      "tags": "xt-test",
+      "summary": "",
+      "description": "This command will run project unit tests located in test/ directory. This command will setup extension testing environment using sinon-chrome, mocha, chai, chai-as-promised, and headless jsdom.",
       "body": ""
     }
   }

@@ -64,7 +64,7 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -82,7 +82,7 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">module</span>
+				<span class="kind">namespace</span>
 				<h1><span class="name">xt-clean</span></h1>
 			</div>
 		</div>
@@ -91,50 +91,64 @@
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="list_module.html">Modules</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
 							<li class="active">xt-clean</li>
 						</ol>
 					<section>
-		<dl class="symbol">
-			<dt class="symbol-title "></dt>
-			<dd class="symbol-details ">
-				<div class="symbol-details-inner">
-					<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Clean operation iterates over files and directories listed in the
-					project .gitignore file, and removes all ignored files and
-					directories, except node_modules, .idea/, and .vscode.</p>
-					<p>To remove these directories, you must explicitly pass a flag to delete
-					each one of them.</p></div>
-					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-									<!-- source -->
-									<div class="form-group">
-										<label class="col-sm-3 control-label">Source</label>
-										<div class="col-sm-9">
-											<p class="form-control-static"><a href="xt-clean.js.html">xt-clean.js</a>, <a href="xt-clean.js.html#line-3">line 3</a></p>
-										</div>
-									</div>
-					
-					
-					
-					
-							</form>
-					</div>				</div>
-			</dd>
-		</dl>
+							<dl class="symbol primary">
+								<dt class="symbol-title namespace collapsible-symbol expanded">
+			<h2 class="namespace"><span class="name">xt-clean</span></h2>
+</dt>
+<dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Clean operation iterates over files and directories listed in the
+			project .gitignore file, and removes all ignored files and
+			directories, except node_modules, .idea/, and .vscode.</p>
+			<p>To remove these directories, you must explicitly pass a flag to delete
+			each one of them.</p></div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Clear ignored files</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean</code></pre>
+					</div>
+					<div class="example-caption"><p>Clear ignored files, including node_modules</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean -m</code></pre>
+					</div>
+					<div class="example-caption"><p>Get help using this command</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean --help</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="xt-clean.js.html">xt-clean.js</a>, <a href="xt-clean.js.html#line-3">line 3</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
 							<article class="secondary">
 							</article>
 					</section>
