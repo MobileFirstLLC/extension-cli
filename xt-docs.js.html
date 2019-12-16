@@ -1,10 +1,10 @@
-<!-- start:readme.hbs -->
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Extension CLI</title>
+		<title>xt-docs.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = "true";
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,65 +83,115 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">readme</span>
-				<h1><span class="name">Extension CLI</span></h1>
-				<div class="summary"><p>Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">xt-docs.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-		<section class="readme-section">
-			<article><h1><a href="https://github.com/MobileFirstLLC/extension-cli">Extension CLI</a></h1>
-<p><img src="https://img.shields.io/npm/v/extension-cli" alt="npm">
-<img src="https://img.shields.io/travis/mobilefirstllc/extension-cli" alt="travis"></p>
-<p>This is a command-line utility package that helps chrome extension development by providing
-systematic way to build, test and document an extension project.</p>
-<h2>Quickstart</h2>
-<p>Note that for each command <code>--help</code> or <code>--version</code> are also valid</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>xt-build</code></td>
-<td>Run builds; env flags: <code>-e prod</code> and <code>-e dev</code></td>
-</tr>
-<tr>
-<td><code>xt-test</code></td>
-<td>Run unit tests</td>
-</tr>
-<tr>
-<td><code>xt-docs</code></td>
-<td>Generate docs</td>
-</tr>
-<tr>
-<td><code>xt-sync</code></td>
-<td>Update project config files to match the latest defaults supplied by this CLI</td>
-</tr>
-<tr>
-<td><code>xt-clean</code></td>
-<td>Remove automatically generated files</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Planned</strong></p>
-<ul>
-<li>[ ] <code>xt-init</code> -- create new project</li>
-</ul>
-<h2>Documentation</h2>
-<p>More detailed usage instructions <a href="https://mobilefirstllc.github.io/extension-cli/list_module.html">view project docs</a>.</p>
-<hr>
-<h3>License</h3>
-<p>MIT</p></article>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">#!/usr/bin/env node
+
+/**
+ * Docs command generates documentation for the project. This command uses
+ * jsdocs syntax. See {@link https://jsdoc.app/index.html} for more details,
+ * including configuration options: {@link https://jsdoc.app/about-configuring-jsdoc.html}.
+ *
+ * The default template for the docs is [foodoc](https://github.com/steveush/foodoc#readme).
+ * You can override this theme in the project by changing opts.template in jsdoc config file.
+ *
+ * This command will automatically look for configuration in the project package.json.
+ * Use "xtdocs" to define config options in package.json.
+ *
+ * This command will also automatically look for a configuration file .xtdocs.json in
+ * the project root.
+ *
+ * If you want to define configuration in some other location, use -c/--config flag
+ * to provide path and name of the configuration file.
+ *
+ * @example &lt;caption>Default docs generation command&lt;/caption>
+ * npx xt-docs
+ *
+ * @example &lt;caption>Example using custom config path&lt;/caption>
+ * npx xt-docs --config "/path/to/config.json"
+ *
+ * @example &lt;caption>Get help using this command&lt;/caption>
+ * npx xt-docs --help
+ *
+ * @module xt-docs
+ */
+
+const fs = require('fs');
+const del = require('del');
+const path = require('path');
+const util = require('util');
+const program = require('commander');
+const pkg = require('../package.json');
+const jsdoc = './node_modules/.bin/jsdoc';
+const exec = require('child_process').exec;
+const tmpFile = path.join(process.cwd(), './node_modules', pkg.name, 'tmpDocsconfig.json');
+let defaultConfig = require('../config/docs.json');
+
+program
+    .version(pkg.version)
+    .option('-c --config &lt;config>',
+        'Path to config file; defaults to `.xtdocs.json` ' +
+        'in project root, or `xtdocs` in package.json',
+        /^(.*)$/i)
+    .parse(process.argv);
+
+
+const docFile = program.config || '.xtdocs.json';
+
+/** locate &amp; initialize project docs configuration **/
+if (fs.existsSync(docFile)) {
+    const projectConfig = fs.existsSync(docFile) ?
+        JSON.parse(fs.readFileSync(docFile, 'utf8')) :
+        (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
+
+    /** recursively overwrite default config options with project's own configs **/
+    if (projectConfig) {
+        let keyReplace = (src, target) => {
+            for (let key in src)
+                if (src.hasOwnProperty(key)) {
+                    if (typeof src[key] === 'object') {
+                        if (!target[key]) target[key] = {};
+                        keyReplace(src[key], target[key]);
+                    } else {
+                        target[key] = src[key];
+                    }
+                }
+        };
+
+        for (let k in projectConfig) {
+            if (projectConfig.hasOwnProperty(k)) {
+                if (!defaultConfig[k]) defaultConfig[k] = {};
+                keyReplace(projectConfig[k], defaultConfig[k])
+            }
+        }
+    }
+}
+
+/** write config to file so we can pass path to jsdoc **/
+fs.writeFileSync(tmpFile, JSON.stringify(defaultConfig));
+
+/** generate the docs **/
+exec(util.format('"%s" -c %s', jsdoc, tmpFile),
+    (err, stdout, stderr) => {
+
+        /** pipe any jsdoc output to screen **/
+        console.log(stdout);
+        console.log(stderr);
+
+        /** remove configuration file **/
+        del.sync(tmpFile);
+        process.exit(0);
+    });
+</code></pre>
 		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -173,4 +223,4 @@ systematic way to build, test and document an extension project.</p>
 	
 </body>
 </html>
-<!-- end:readme.hbs -->
+<!-- end:source.tmpl.hbs -->

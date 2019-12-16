@@ -95,9 +95,54 @@
           "remov",
           "vscode",
           "xt"
+        ],
+        "module-xt-docs.html": [
+          "automat",
+          "c",
+          "chang",
+          "command",
+          "config",
+          "configur",
+          "default",
+          "defin",
+          "detail",
+          "doc",
+          "document",
+          "file",
+          "flag",
+          "foodoc",
+          "gener",
+          "https://jsdoc.app/about",
+          "https://jsdoc.app/index.html",
+          "includ",
+          "jsdoc",
+          "jsdoc.html",
+          "locat",
+          "look",
+          "modul",
+          "module:xt",
+          "more",
+          "name",
+          "option",
+          "opts.templ",
+          "overrid",
+          "package.json",
+          "path",
+          "project",
+          "provid",
+          "root",
+          "see",
+          "syntax",
+          "templat",
+          "theme",
+          "us",
+          "want",
+          "xt",
+          "xtdoc",
+          "xtdocs.json"
         ]
       },
-      "length": 4
+      "length": 5
     },
     "tokenStore": {
       "root": {
@@ -123,7 +168,12 @@
           }
         },
         "c": {
-          "docs": {},
+          "docs": {
+            "module-xt-docs.html": {
+              "ref": "module-xt-docs.html",
+              "tf": 0.78125
+            }
+          },
           "h": {
             "docs": {},
             "r": {
@@ -138,6 +188,20 @@
                         "ref": "index.html",
                         "tf": 4.117647058823529
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.78125
                     }
                   }
                 }
@@ -184,6 +248,38 @@
                         "index.html": {
                           "ref": "index.html",
                           "tf": 4.117647058823529
+                        },
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 3.125
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 2.34375
+                      }
+                    },
+                    "u": {
+                      "docs": {},
+                      "r": {
+                        "docs": {
+                          "module-xt-docs.html": {
+                            "ref": "module-xt-docs.html",
+                            "tf": 4.6875
+                          }
                         }
                       }
                     }
@@ -230,12 +326,65 @@
                   }
                 }
               }
+            },
+            "f": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 0.78125
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 1.5625
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.78125
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "o": {
             "docs": {},
             "c": {
-              "docs": {},
+              "docs": {
+                "module-xt-docs.html": {
+                  "ref": "module-xt-docs.html",
+                  "tf": 951.5625
+                }
+              },
               "u": {
                 "docs": {},
                 "m": {
@@ -257,6 +406,10 @@
                           "list_module.html": {
                             "ref": "list_module.html",
                             "tf": 35
+                          },
+                          "module-xt-docs.html": {
+                            "ref": "module-xt-docs.html",
+                            "tf": 0.78125
                           }
                         }
                       }
@@ -396,6 +549,23 @@
                   }
                 }
               }
+            },
+            "c": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.78125
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "d": {
@@ -497,6 +667,34 @@
                 }
               }
             }
+          },
+          "o": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.78125
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 1.5625
+                  }
+                }
+              }
+            }
           }
         },
         "p": {
@@ -520,6 +718,10 @@
                         "module-xt-clean.html": {
                           "ref": "module-xt-clean.html",
                           "tf": 1.9230769230769231
+                        },
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 3.125
                         }
                       }
                     }
@@ -535,6 +737,10 @@
                       "index.html": {
                         "ref": "index.html",
                         "tf": 4.117647058823529
+                      },
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.78125
                       }
                     }
                   }
@@ -551,6 +757,52 @@
                   "module-xt-clean.html": {
                     "ref": "module-xt-clean.html",
                     "tf": 1.9230769230769231
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "k": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      ".": {
+                        "docs": {},
+                        "j": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "module-xt-docs.html": {
+                                    "ref": "module-xt-docs.html",
+                                    "tf": 1.5625
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
                   }
                 }
               }
@@ -585,6 +837,20 @@
                       "ref": "module-xt-clean.html",
                       "tf": 3.8461538461538463
                     }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
                   }
                 }
               }
@@ -634,6 +900,34 @@
                   }
                 }
               }
+            },
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "x": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.78125
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "e": {
+              "docs": {
+                "module-xt-docs.html": {
+                  "ref": "module-xt-docs.html",
+                  "tf": 0.78125
+                }
+              }
             }
           }
         },
@@ -651,6 +945,26 @@
                   }
                 }
               }
+            },
+            "m": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 0.78125
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "o": {
@@ -662,6 +976,23 @@
                   "index.html": {
                     "ref": "index.html",
                     "tf": 4.117647058823529
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.78125
+                    }
                   }
                 }
               }
@@ -691,6 +1022,14 @@
                 }
               }
             }
+          },
+          "s": {
+            "docs": {
+              "module-xt-docs.html": {
+                "ref": "module-xt-docs.html",
+                "tf": 2.34375
+              }
+            }
           }
         },
         "w": {
@@ -702,6 +1041,17 @@
                 "index.html": {
                   "ref": "index.html",
                   "tf": 4.117647058823529
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
+                  }
                 }
               }
             }
@@ -754,6 +1104,23 @@
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.78125
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "m": {
@@ -773,6 +1140,10 @@
                     "module-xt-clean.html": {
                       "ref": "module-xt-clean.html",
                       "tf": 110
+                    },
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 110
                     }
                   },
                   "e": {
@@ -786,11 +1157,26 @@
                             "module-xt-clean.html": {
                               "ref": "module-xt-clean.html",
                               "tf": 650
+                            },
+                            "module-xt-docs.html": {
+                              "ref": "module-xt-docs.html",
+                              "tf": 650
                             }
                           }
                         }
                       }
                     }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
                   }
                 }
               }
@@ -808,6 +1194,10 @@
                   "module-xt-clean.html": {
                     "ref": "module-xt-clean.html",
                     "tf": 5.769230769230769
+                  },
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 2.34375
                   }
                 }
               }
@@ -822,6 +1212,30 @@
                   "module-xt-clean.html": {
                     "ref": "module-xt-clean.html",
                     "tf": 1.9230769230769231
+                  },
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "c": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.78125
+                      }
+                    }
                   }
                 }
               }
@@ -861,6 +1275,20 @@
                 }
               }
             }
+          },
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "module-xt-docs.html": {
+                    "ref": "module-xt-docs.html",
+                    "tf": 0.78125
+                  }
+                }
+              }
+            }
           }
         },
         "o": {
@@ -885,6 +1313,49 @@
                   }
                 }
               }
+            },
+            "t": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 1.5625
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                ".": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "p": {
+                          "docs": {},
+                          "l": {
+                            "docs": {
+                              "module-xt-docs.html": {
+                                "ref": "module-xt-docs.html",
+                                "tf": 0.78125
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "v": {
@@ -896,6 +1367,20 @@
                   "module-xt-clean.html": {
                     "ref": "module-xt-clean.html",
                     "tf": 1.9230769230769231
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 0.78125
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -932,22 +1417,247 @@
               "module-xt-clean.html": {
                 "ref": "module-xt-clean.html",
                 "tf": 300
+              },
+              "module-xt-docs.html": {
+                "ref": "module-xt-docs.html",
+                "tf": 300
+              }
+            },
+            "d": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.78125
+                    }
+                  },
+                  "s": {
+                    "docs": {},
+                    ".": {
+                      "docs": {},
+                      "j": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "n": {
+                              "docs": {
+                                "module-xt-docs.html": {
+                                  "ref": "module-xt-docs.html",
+                                  "tf": 0.78125
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "a": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 1.5625
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h": {
+          "docs": {},
+          "t": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  ":": {
+                    "docs": {},
+                    "/": {
+                      "docs": {},
+                      "/": {
+                        "docs": {},
+                        "j": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  ".": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "p": {
+                                        "docs": {},
+                                        "p": {
+                                          "docs": {},
+                                          "/": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "b": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "module-xt-docs.html": {
+                                                          "ref": "module-xt-docs.html",
+                                                          "tf": 0.78125
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "i": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "x": {
+                                                      "docs": {},
+                                                      ".": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "t": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {},
+                                                              "l": {
+                                                                "docs": {
+                                                                  "module-xt-docs.html": {
+                                                                    "ref": "module-xt-docs.html",
+                                                                    "tf": 0.78125
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "j": {
+          "docs": {},
+          "s": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 1.5625
+                    }
+                  },
+                  ".": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "l": {
+                            "docs": {
+                              "module-xt-docs.html": {
+                                "ref": "module-xt-docs.html",
+                                "tf": 0.78125
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }
       },
-      "length": 73
+      "length": 159
     },
     "corpusTokens": [
+      "automat",
       "build",
+      "c",
+      "chang",
       "chrome",
       "clean",
       "cli",
       "command",
+      "config",
+      "configur",
+      "default",
+      "defin",
       "delet",
+      "detail",
       "develop",
       "directori",
+      "doc",
       "document",
       "each",
       "except",
@@ -955,35 +1665,60 @@
       "extens",
       "file",
       "flag",
+      "foodoc",
+      "gener",
       "gitignor",
       "global",
+      "https://jsdoc.app/about",
+      "https://jsdoc.app/index.html",
       "idea",
       "ignor",
+      "includ",
       "index",
       "iter",
+      "jsdoc",
+      "jsdoc.html",
       "line",
       "list",
       "list:modul",
+      "locat",
+      "look",
       "modul",
       "module:xt",
+      "more",
+      "name",
       "node_modul",
       "on",
       "oper",
+      "option",
+      "opts.templ",
       "over",
+      "overrid",
+      "package.json",
       "pass",
+      "path",
       "project",
       "provid",
       "readm",
       "remov",
+      "root",
+      "see",
       "speed",
+      "syntax",
       "systemat",
+      "templat",
       "test",
+      "theme",
       "tool",
       "up",
+      "us",
       "util",
       "vscode",
+      "want",
       "way",
-      "xt"
+      "xt",
+      "xtdoc",
+      "xtdocs.json"
     ],
     "pipeline": [
       "trimmer",
@@ -1034,6 +1769,17 @@
       "tags": "module:xt-clean",
       "summary": "",
       "description": "Clean operation iterates over files and directories listed in the project .gitignore file, and removes all ignored files and directories, except node_modules, .idea/, and .vscode. To remove these directories, you must explicitly pass a flag to delete each one of them.",
+      "body": ""
+    },
+    "module-xt-docs.html": {
+      "id": "module-xt-docs.html",
+      "kind": "module",
+      "title": "xt-docs",
+      "longname": "module:xt-docs",
+      "name": "xt-docs",
+      "tags": "module:xt-docs",
+      "summary": "",
+      "description": "Docs command generates documentation for the project. This command uses jsdocs syntax. See https://jsdoc.app/index.html for more details, including configuration options: https://jsdoc.app/about-configuring-jsdoc.html. The default template for the docs is foodoc. You can override this theme in the project by changing opts.template in jsdoc config file. This command will automatically look for configuration in the project package.json. Use \"xtdocs\" to define config options in package.json. This command will also automatically look for a configuration file .xtdocs.json in the project root. If you want to define configuration in some other location, use -c/--config flag to provide path and name of the configuration file.",
       "body": ""
     }
   }
