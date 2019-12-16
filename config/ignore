@@ -1,0 +1,8 @@
+.idea/ 
+node_modules/
+.nyc_output
+coverage/
+dist/
+docs/
+release.zip
+yarn-error.log

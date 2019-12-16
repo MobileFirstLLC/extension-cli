@@ -1,0 +1,23 @@
+{
+  "projectRootDir": "../../../",
+  "dist": "./dist",
+  "source": "./src",
+  "releases": "./",
+  "manifest": "./src/manifest.json",
+  "js": "./src/**/*.js",
+  "js_bundles": null,
+  "html": "./src/**/*.html",
+  "scss": "./src/**/*.scss",
+  "scss_bundles": null,
+  "icons": [
+    "./assets/img/**/*.png",
+    "./assets/img/**/*.gif",
+    "./assets/img/**/*.jpg",
+    "./assets/img/**/*.svg"
+  ],
+  "copyAsIs": [],
+  "locales_dir": "./assets/locales/",
+  "locales_list": [
+    "en"
+  ]
+}

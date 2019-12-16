@@ -1,0 +1,46 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc"
+    ]
+  },
+  "source": {
+    "include": [
+      "src"
+    ],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "footer": "",
+    "copyright": "",
+    "includeDate": "true",
+    "dateFormat": "MMM YYYY",
+    "inlineNav": "true",
+    "inverseNav": "false",
+    "linenums": "true",
+    "showTableOfContents": "true",
+    "showAccessFilter": "true",
+    "collapseSymbols": "true",
+    "methodHeadingReturns": "false",
+    "outputSourceFiles": "true",
+    "outputSourcePath": "true",
+    "search": "true",
+    "stylesheets": [
+      "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="
+    ],
+    "scripts": [],
+    "favicon": "./assets/img/128x128.png"
+  },
+  "opts": {
+    "destination": "./public/documentation",
+    "encoding": "utf8",
+    "private": true,
+    "recurse": true,
+    "template": "./node_modules/foodoc/template"
+  }
+}
