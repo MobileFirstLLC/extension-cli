@@ -140,9 +140,36 @@ window.lunrData = {
           "xt",
           "xtdoc",
           "xtdocs.json"
+        ],
+        "module-xt-sync.html": [
+          "advis",
+          "cli",
+          "command",
+          "config",
+          "configur",
+          "file",
+          "heavili",
+          "instead",
+          "latest",
+          "manner",
+          "manual",
+          "modifi",
+          "modul",
+          "module:xt",
+          "project",
+          "provid",
+          "purpos",
+          "stale",
+          "such",
+          "sync",
+          "tool",
+          "updat",
+          "upgrad",
+          "version",
+          "xt"
         ]
       },
-      "length": 5
+      "length": 6
     },
     "tokenStore": {
       "root": {
@@ -215,6 +242,10 @@ window.lunrData = {
                 "index.html": {
                   "ref": "index.html",
                   "tf": 300
+                },
+                "module-xt-sync.html": {
+                  "ref": "module-xt-sync.html",
+                  "tf": 1.7241379310344827
                 }
               }
             },
@@ -252,6 +283,10 @@ window.lunrData = {
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
                           "tf": 3.125
+                        },
+                        "module-xt-sync.html": {
+                          "ref": "module-xt-sync.html",
+                          "tf": 1.7241379310344827
                         }
                       }
                     }
@@ -270,6 +305,10 @@ window.lunrData = {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
                         "tf": 2.34375
+                      },
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 3.4482758620689653
                       }
                     },
                     "u": {
@@ -279,6 +318,10 @@ window.lunrData = {
                           "module-xt-docs.html": {
                             "ref": "module-xt-docs.html",
                             "tf": 4.6875
+                          },
+                          "module-xt-sync.html": {
+                            "ref": "module-xt-sync.html",
+                            "tf": 3.4482758620689653
                           }
                         }
                       }
@@ -566,6 +609,26 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "module-xt-sync.html": {
+                          "ref": "module-xt-sync.html",
+                          "tf": 1.7241379310344827
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "d": {
@@ -695,6 +758,26 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "a": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "p": {
@@ -722,6 +805,10 @@ window.lunrData = {
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
                           "tf": 3.125
+                        },
+                        "module-xt-sync.html": {
+                          "ref": "module-xt-sync.html",
+                          "tf": 5.172413793103448
                         }
                       }
                     }
@@ -741,6 +828,10 @@ window.lunrData = {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
                         "tf": 0.78125
+                      },
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
                       }
                     }
                   }
@@ -803,6 +894,26 @@ window.lunrData = {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
                     "tf": 0.78125
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
                   }
                 }
               }
@@ -916,6 +1027,14 @@ window.lunrData = {
                     }
                   }
                 }
+              },
+              "c": {
+                "docs": {
+                  "module-xt-sync.html": {
+                    "ref": "module-xt-sync.html",
+                    "tf": 950
+                  }
+                }
               }
             }
           },
@@ -926,6 +1045,37 @@ window.lunrData = {
                 "module-xt-docs.html": {
                   "ref": "module-xt-docs.html",
                   "tf": 0.78125
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "module-xt-sync.html": {
+                      "ref": "module-xt-sync.html",
+                      "tf": 1.7241379310344827
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "module-xt-sync.html": {
+                    "ref": "module-xt-sync.html",
+                    "tf": 1.7241379310344827
+                  }
                 }
               }
             }
@@ -976,6 +1126,10 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 4.117647058823529
+                  },
+                  "module-xt-sync.html": {
+                    "ref": "module-xt-sync.html",
+                    "tf": 1.7241379310344827
                   }
                 }
               }
@@ -1006,6 +1160,37 @@ window.lunrData = {
               "index.html": {
                 "ref": "index.html",
                 "tf": 4.117647058823529
+              }
+            },
+            "d": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "module-xt-sync.html": {
+                      "ref": "module-xt-sync.html",
+                      "tf": 1.7241379310344827
+                    }
+                  }
+                }
+              }
+            },
+            "g": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 5.172413793103448
+                      }
+                    }
+                  }
+                }
               }
             }
           },
@@ -1144,6 +1329,10 @@ window.lunrData = {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
                       "tf": 110
+                    },
+                    "module-xt-sync.html": {
+                      "ref": "module-xt-sync.html",
+                      "tf": 110
                     }
                   },
                   "e": {
@@ -1161,9 +1350,27 @@ window.lunrData = {
                             "module-xt-docs.html": {
                               "ref": "module-xt-docs.html",
                               "tf": 650
+                            },
+                            "module-xt-sync.html": {
+                              "ref": "module-xt-sync.html",
+                              "tf": 650
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
                       }
                     }
                   }
@@ -1177,6 +1384,40 @@ window.lunrData = {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
                     "tf": 0.78125
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
+                  }
+                }
+              },
+              "u": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "module-xt-sync.html": {
+                        "ref": "module-xt-sync.html",
+                        "tf": 1.7241379310344827
+                      }
+                    }
                   }
                 }
               }
@@ -1198,6 +1439,10 @@ window.lunrData = {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
                     "tf": 2.34375
+                  },
+                  "module-xt-sync.html": {
+                    "ref": "module-xt-sync.html",
+                    "tf": 5.172413793103448
                   }
                 }
               }
@@ -1408,6 +1653,29 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "module-xt-sync.html": {
+                          "ref": "module-xt-sync.html",
+                          "tf": 1.7241379310344827
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "x": {
@@ -1420,6 +1688,10 @@ window.lunrData = {
               },
               "module-xt-docs.html": {
                 "ref": "module-xt-docs.html",
+                "tf": 300
+              },
+              "module-xt-sync.html": {
+                "ref": "module-xt-sync.html",
                 "tf": 300
               }
             },
@@ -1481,6 +1753,23 @@ window.lunrData = {
                           "tf": 1.5625
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "d": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "module-xt-sync.html": {
+                      "ref": "module-xt-sync.html",
+                      "tf": 1.7241379310344827
                     }
                   }
                 }
@@ -1595,6 +1884,29 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "module-xt-sync.html": {
+                          "ref": "module-xt-sync.html",
+                          "tf": 1.7241379310344827
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "j": {
@@ -1638,9 +1950,10 @@ window.lunrData = {
           }
         }
       },
-      "length": 159
+      "length": 209
     },
     "corpusTokens": [
+      "advis",
       "automat",
       "build",
       "c",
@@ -1669,20 +1982,26 @@ window.lunrData = {
       "gener",
       "gitignor",
       "global",
+      "heavili",
       "https://jsdoc.app/about",
       "https://jsdoc.app/index.html",
       "idea",
       "ignor",
       "includ",
       "index",
+      "instead",
       "iter",
       "jsdoc",
       "jsdoc.html",
+      "latest",
       "line",
       "list",
       "list:modul",
       "locat",
       "look",
+      "manner",
+      "manual",
+      "modifi",
       "modul",
       "module:xt",
       "more",
@@ -1699,11 +2018,15 @@ window.lunrData = {
       "path",
       "project",
       "provid",
+      "purpos",
       "readm",
       "remov",
       "root",
       "see",
       "speed",
+      "stale",
+      "such",
+      "sync",
       "syntax",
       "systemat",
       "templat",
@@ -1711,8 +2034,11 @@ window.lunrData = {
       "theme",
       "tool",
       "up",
+      "updat",
+      "upgrad",
       "us",
       "util",
+      "version",
       "vscode",
       "want",
       "way",
@@ -1780,6 +2106,17 @@ window.lunrData = {
       "tags": "module:xt-docs",
       "summary": "",
       "description": "Docs command generates documentation for the project. This command uses jsdocs syntax. See https://jsdoc.app/index.html for more details, including configuration options: https://jsdoc.app/about-configuring-jsdoc.html. The default template for the docs is foodoc. You can override this theme in the project by changing opts.template in jsdoc config file. This command will automatically look for configuration in the project package.json. Use \"xtdocs\" to define config options in package.json. This command will also automatically look for a configuration file .xtdocs.json in the project root. If you want to define configuration in some other location, use -c/--config flag to provide path and name of the configuration file.",
+      "body": ""
+    },
+    "module-xt-sync.html": {
+      "id": "module-xt-sync.html",
+      "kind": "module",
+      "title": "xt-sync",
+      "longname": "module:xt-sync",
+      "name": "xt-sync",
+      "tags": "module:xt-sync",
+      "summary": "",
+      "description": "The purpose of this command is to upgrade configuration files of a stale project to latest version, where this CLI tool will provide updated project configuration files. If the config files have been modified heavily for the project, it is not advisable to upgrade them in this manner. Instead you should upgrade such configs manually.",
       "body": ""
     }
   }

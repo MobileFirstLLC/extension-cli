@@ -1,10 +1,10 @@
-<!-- start:readme.hbs -->
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Extension CLI</title>
+		<title>xt-sync.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +44,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = "true";
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,65 +83,79 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">readme</span>
-				<h1><span class="name">Extension CLI</span></h1>
-				<div class="summary"><p>Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">xt-sync.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-		<section class="readme-section">
-			<article><h1><a href="https://github.com/MobileFirstLLC/extension-cli">Extension CLI</a></h1>
-<p><img src="https://img.shields.io/npm/v/extension-cli" alt="npm">
-<img src="https://img.shields.io/travis/mobilefirstllc/extension-cli" alt="travis"></p>
-<p>This is a command-line utility package that helps chrome extension development by providing
-systematic way to build, test and document extension projects.</p>
-<h2>Quickstart</h2>
-<p>Note that for each command <code>--help</code> or <code>--version</code> are also valid</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>xt-build</code></td>
-<td>Run builds; env flags: <code>-e prod</code> and <code>-e dev</code></td>
-</tr>
-<tr>
-<td><code>xt-test</code></td>
-<td>Run unit tests</td>
-</tr>
-<tr>
-<td><code>xt-docs</code></td>
-<td>Generate docs</td>
-</tr>
-<tr>
-<td><code>xt-sync</code></td>
-<td>Update project config files to match the latest defaults supplied by this CLI</td>
-</tr>
-<tr>
-<td><code>xt-clean</code></td>
-<td>Remove automatically generated files</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Planned</strong></p>
-<ul>
-<li>[ ] <code>xt-init</code> -- create new project</li>
-</ul>
-<h2>Documentation</h2>
-<p>More detailed usage instructions <a href="https://mobilefirstllc.github.io/extension-cli/list_module.html">view project docs</a>.</p>
-<hr>
-<h3>License</h3>
-<p>MIT</p></article>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">#!/usr/bin/env node
+
+/**
+ * The purpose of this command is to upgrade configuration files of
+ * a stale project to latest version, where this CLI tool will provide
+ * updated project configuration files. If the config files have been
+ * modified heavily for the project, it is not advisable to upgrade them
+ * in this manner. Instead you should upgrade such configs manually.
+ *
+ * @example &lt;caption>Sync all configs&lt;/caption>
+ * npx xt-sync --all
+ *
+ * @example &lt;caption>Sync eslint config&lt;/caption>
+ * npx xt-sync --eslint
+ *
+ * @example &lt;caption>Get help using this command&lt;/caption>
+ * npx xt-sync --help
+ *
+ * @module xt-sync
+ */
+
+const fs = require('fs');
+const path = require('path');
+const chalk = require('chalk');
+const program = require('commander');
+const pkg = require('../package.json');
+let counter = 0;
+
+const files = {
+    gitlab: {path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
+    travis: {path: '../config/travis.yml', out: '.travis.yml'},
+    eslint: {path: '../config/eslint.json', out: '.eslintrc'},
+    gitignore: {path: '../config/ignore', out: '.gitignore'}
+};
+
+program
+    .version(pkg.version)
+    .option('-l --gitlab', 'sync gitlab-ci.yml')
+    .option('-t --travis', 'sync travis.yml')
+    .option('-e --eslint', 'sync eslint')
+    .option('-g --gitignore', 'sync gitignore')
+    .option('-a --all', 'sync everything')
+    .parse(process.argv);
+
+Object.keys(files).map(opt => {
+    if (program[opt] !== undefined || program.all) {
+        const relativePath = path.resolve(__dirname, files[opt].path);
+        const outputFileName = files[opt].out;
+        const content = fs.readFileSync(relativePath, 'utf8');
+
+        let outPath = path.join(process.cwd(), outputFileName);
+        fs.writeFileSync(outPath, content);
+        console.log(chalk.bold.green(`✓ updated ${outputFileName}`));
+        counter++;
+    }
+});
+
+if (!counter)
+    console.log(chalk.red(`(!) Specify which files to sync using flags.`+
+        `\nSee --help for more details.`));
+
+</code></pre>
 		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -173,4 +187,4 @@ systematic way to build, test and document extension projects.</p>
 	
 </body>
 </html>
-<!-- end:readme.hbs -->
+<!-- end:source.tmpl.hbs -->
