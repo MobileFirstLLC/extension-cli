@@ -1,4 +1,4 @@
-# Extension CLI 
+# [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
 
 ![npm](https://img.shields.io/npm/v/extension-cli)
 
@@ -16,7 +16,7 @@ Command | Description
 `xt-test` | Run unit tests
 `xt-docs` | Generate docs
 `xt-sync` | Update project config files to match the latest defaults supplied by this CLI
-`xt-clean` | Removes automatically generated files
+`xt-clean` | Remove automatically generated files
 
 **Planned**
 
@@ -24,7 +24,7 @@ Command | Description
 
 ## Documentation
 
-More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli).
+More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli/index.html).
 
 ---
 
