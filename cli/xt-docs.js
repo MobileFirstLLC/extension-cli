@@ -6,7 +6,6 @@ const pkg = require('../package.json');
 const del = require('del');
 const fs = require('fs');
 const jsdoc = './node_modules/.bin/jsdoc';
-// const jsdoc = './node_modules/.bin/esdoc';
 const tmpConfigName = 'tmpDocsconfig.json';
 const tmpFile = ['.', 'node_modules', pkg.name, tmpConfigName].join('/');
 

@@ -1,61 +1,33 @@
 # Extension CLI 
 
+![npm](https://img.shields.io/npm/v/extension-cli)
+
 This is a command-line utility package that helps chrome extension development by providing
 systematic way to build, test and document an extension project.
 
 
-## Available Commands
+## Quickstart
 
 Note that for each command `--help` or `--version` are also valid
 
-#### run builds
+Command | Description
+--- | ---
+`xt-build` | run builds; use `-e prod` for production build (minified) and `-e dev` for development build 
+`xt-test` | Run unit tests
+`xt-docs` | generate docs; generated using [jsdoc](https://jsdoc.app/index.html) syntax.
+`xt-sync` | Update configuration files to current defaults supplied by this CLI
+`xt-clean` | Removes automatically generated files; include --modules flag to remove node_modules
 
-```
-xt-build --config --env --watch
-``` 
-
-This command will build the extension project; use:
-
-- `-e prod` for production build (minified)
-- `-e dev` for development build 
-
-#### generate docs
-
-```
-xt-docs --config
-```
-
-Generate documentation for extension project. Docs are generated using [jsdoc](https://jsdoc.app/index.html) syntax.
-
-#### sync project configs:
-
-```
-xt-sync --ci --lint --gitignore --all
-```
-
-Update configuration files to current defaults supplied by this CLI
-
-#### clean working directory
-
-```
-xt-clean --modules --idea
-```
-
-Removes automatically generated files; include --modules flag to remove node_modules
-
-#### run tests 
-```
-xt-test --watch
-```
-
-Execute tests
-
-
-## Future Commands
+**Planned**
 
 - [ ] `xt-init` -- create new project
 
 
+
+
+
 ---
 
-**LICENSE** MIT
+### License 
+
+MIT
