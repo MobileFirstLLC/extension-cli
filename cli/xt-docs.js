@@ -8,8 +8,8 @@
  * The default template for the docs is [foodoc](https://github.com/steveush/foodoc#readme).
  * You can override this theme in the project by changing opts.template in jsdoc config file.
  *
- * This command will automatically look for configuration in the project package.json
- * -> use "xtdocs" to define config options in package.json.
+ * This command will automatically look for configuration in the project package.json.
+ * Use "xtdocs" to define config options in package.json.
  *
  * This command will also automatically look for a configuration file .xtdocs.json in
  * the project root.

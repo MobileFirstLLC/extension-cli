@@ -25,7 +25,7 @@ Command | Description
 
 ## Documentation
 
-More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli/index.html).
+More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli/list_module.html).
 
 ---
 

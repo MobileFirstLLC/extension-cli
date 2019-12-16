@@ -11,7 +11,7 @@
       "cli"
     ],
     "includePattern": ".js$",
-    "excludePattern": "(node_modules/|docs)"
+    "excludePattern": ""
   },
   "plugins": [
     "plugins/markdown"
