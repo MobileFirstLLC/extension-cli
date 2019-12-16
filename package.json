@@ -4,7 +4,7 @@
   "description": "Chrome Extension CLI tools",
   "bin": {
     "xt-build": "cli/xt-build.js",
-    "xt-init": "cli/xt-init.js",
+    "xt-init": "cli/xt-create.js",
     "xt-docs": "cli/xt-docs.js",
     "xt-test": "cli/xt-test.js",
     "xt-clean": "cli/xt-clean.js",

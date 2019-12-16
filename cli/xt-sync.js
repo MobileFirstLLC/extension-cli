@@ -16,7 +16,7 @@
  * @example <caption>Get help using this command</caption>
  * npx xt-sync --help
  *
- * @module xt-sync
+ * @namespace xt-sync
  */
 
 const fs = require('fs');

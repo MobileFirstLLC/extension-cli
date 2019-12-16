@@ -17,7 +17,7 @@
  * @example <caption>Get help using this command</caption>
  * npx xt-clean --help
  *
- * @module xt-clean
+ * @namespace xt-clean
  */
 
 const fs = require('fs');

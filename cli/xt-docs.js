@@ -17,6 +17,8 @@
  * If you want to define configuration in some other location, use -c/--config flag
  * to provide path and name of the configuration file.
  *
+ * @namespace xt-docs
+ *
  * @example <caption>Default docs generation command</caption>
  * npx xt-docs
  *
@@ -26,7 +28,6 @@
  * @example <caption>Get help using this command</caption>
  * npx xt-docs --help
  *
- * @module xt-docs
  */
 
 const fs = require('fs');

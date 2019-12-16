@@ -7,10 +7,9 @@
   },
   "source": {
     "include": [
-      "README.md",
-      "cli"
+      "README.md"
     ],
-    "includePattern": ".js$",
+    "includePattern": "",
     "excludePattern": ""
   },
   "plugins": [

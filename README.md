@@ -21,13 +21,11 @@ Command | Description
 
 **Planned**
 
-- [ ] `xt-init` -- create new project
+- [ ] `xt-create` -- create new extension project
 
 ## Documentation
 
-More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli/list_module.html).
-
----
+More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
 
 ### License 
 
