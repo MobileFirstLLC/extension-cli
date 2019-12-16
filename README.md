@@ -12,19 +12,19 @@ Note that for each command `--help` or `--version` are also valid
 
 Command | Description
 --- | ---
-`xt-build` | run builds; use `-e prod` for production build (minified) and `-e dev` for development build 
+`xt-build` | Run builds; env flags: `-e prod` and `-e dev`
 `xt-test` | Run unit tests
-`xt-docs` | generate docs; generated using [jsdoc](https://jsdoc.app/index.html) syntax.
-`xt-sync` | Update configuration files to current defaults supplied by this CLI
-`xt-clean` | Removes automatically generated files; include --modules flag to remove node_modules
+`xt-docs` | Generate docs
+`xt-sync` | Update project config files to match the latest defaults supplied by this CLI
+`xt-clean` | Removes automatically generated files
 
 **Planned**
 
 - [ ] `xt-init` -- create new project
 
+## Documentation
 
-
-
+More detailed usage instructions [view project docs](https://mobilefirstllc.github.io/extension-cli).
 
 ---
 
