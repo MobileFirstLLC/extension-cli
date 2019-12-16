@@ -12,7 +12,8 @@
   },
   "keywords": [
     "chrome extension",
-    "cli tools"
+    "command line",
+    "utility"
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0"

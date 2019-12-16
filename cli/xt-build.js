@@ -16,7 +16,7 @@ program
 
 const args = [
     program.watch ? "gulp watch" : "gulp",
-    util.format('--gulpfile "%s"', './node_modules/pm-extension-cli/config/gulpfile.js'),
+    util.format('--gulpfile "%s"', './node_modules/extension-cli/config/gulpfile.js'),
     util.format('--config "%s"', program.config || './.xtbuild.json'),
     util.format('--%s', program.env),
     '--colors'
