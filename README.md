@@ -25,9 +25,7 @@ This command will build the extension project; use:
 xt-docs --config
 ```
 
-Generate documentation for extension project. 
-
-Uses [jsdoc](https://jsdoc.app/index.html) syntax.
+Generate documentation for extension project. Docs are generated using [jsdoc](https://jsdoc.app/index.html) syntax.
 
 #### sync project configs:
 
@@ -55,7 +53,7 @@ Execute tests
 
 ## Future Commands
 
-[ ] `xt-init` -- create new project
+- [ ] `xt-init` -- create new project
 
 
 ---
