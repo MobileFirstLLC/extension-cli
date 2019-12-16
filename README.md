@@ -10,7 +10,9 @@ Note that for each command `--help` or `--version` are also valid
 
 #### run builds
 
-- [x] `xt-build --config --env --watch` 
+```
+xt-build --config --env --watch
+``` 
 
 This command will build the extension project; use:
 
@@ -18,31 +20,42 @@ This command will build the extension project; use:
 - `-e dev` for development build 
 
 #### generate docs
-- [x] `xt-docs --config`
+
+```
+xt-docs --config
+```
 
 Generate documentation for extension project. 
 
 Uses [jsdoc](https://jsdoc.app/index.html) syntax.
 
 #### sync project configs:
-- [x] `xt-sync --ci --lint --gitignore --all` 
+
+```
+xt-sync --ci --lint --gitignore --all
+```
 
 Update configuration files to current defaults supplied by this CLI
 
 #### clean working directory
-- [x] `xt-clean --modules --idea`
 
-Removes automatically generated files
+```
+xt-clean --modules --idea
+```
+
+Removes automatically generated files; include --modules flag to remove node_modules
 
 #### run tests 
-- [x] `xt-test --watch`
+```
+xt-test --watch
+```
 
 Execute tests
 
 
 ## Future Commands
 
-- [ ] `xt-init` -- create new project
+[ ] `xt-init` -- create new project
 
 
 ---
