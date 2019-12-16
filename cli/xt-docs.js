@@ -1,69 +1,97 @@
 #!/usr/bin/env node
 
+/**
+ * Docs command generates documentation for the project. This command uses
+ * jsdocs syntax. See {@link https://jsdoc.app/index.html} for more details,
+ * including configuration options: {@link https://jsdoc.app/about-configuring-jsdoc.html}.
+ *
+ * The default template for the docs is [foodoc](https://github.com/steveush/foodoc#readme).
+ * You can override this theme in the project by changing opts.template in jsdoc config file.
+ *
+ * This command will automatically look for configuration in the project package.json
+ * -> use "xtdocs" to define config options in package.json.
+ *
+ * This command will also automatically look for a configuration file .xtdocs.json in
+ * the project root.
+ *
+ * If you want to define configuration in some other location, use -c/--config flag
+ * to provide path and name of the configuration file.
+ *
+ * @example <caption>Default docs generation command</caption>
+ * npx xt-docs
+ *
+ * @example <caption>Example using custom config path</caption>
+ * npx xt-docs --config "/path/to/config.json"
+ *
+ * @example <caption>Get help using this command</caption>
+ * npx xt-docs --help
+ *
+ * @module xt-docs
+ */
+
+const fs = require('fs');
+const del = require('del');
+const path = require('path');
 const util = require('util');
 const program = require('commander');
 const pkg = require('../package.json');
-const del = require('del');
-const fs = require('fs');
 const jsdoc = './node_modules/.bin/jsdoc';
-const tmpConfigName = 'tmpDocsconfig.json';
-const tmpFile = ['.', 'node_modules', pkg.name, tmpConfigName].join('/');
+const exec = require('child_process').exec;
+const tmpFile = path.join(process.cwd(), './node_modules', pkg.name, 'tmpDocsconfig.json');
+let defaultConfig = require('../config/docs.json');
 
 program
     .version(pkg.version)
-    .option('-c --config <config>', 'Path to configuration file (default: "./.xtdocs.json" or \"xtdocs\" in package.json)', /^(.*)$/i)
+    .option('-c --config <config>',
+        'Path to config file; defaults to `.xtdocs.json` ' +
+        'in project root, or `xtdocs` in package.json',
+        /^(.*)$/i)
     .parse(process.argv);
 
-/////////////////////////
 
-const docFile = program.config || './.xtdocs.json';
-let config = require('../config/docs.json');
-// let config = require('../config/esdocs.json');
-let projectConfig = null;
+const docFile = program.config || '.xtdocs.json';
 
-// try find project docs config
+/** locate & initialize project docs configuration **/
 if (fs.existsSync(docFile)) {
-    projectConfig = JSON.parse(fs.readFileSync(docFile, 'utf8'));
-}
-else {
-    const { xtdocs } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
-    projectConfig = xtdocs;
-}
+    const projectConfig = fs.existsSync(docFile) ?
+        JSON.parse(fs.readFileSync(docFile, 'utf8')) :
+        (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
 
-// recursively replace config keys
-if (projectConfig) {
-    let keyReplace = (src, target) => {
-        for (let key in src)
-            if (src.hasOwnProperty(key)) {
-                if (typeof src[key] === 'object') {
-                    if (!target[key]) target[key] = {};
-                    keyReplace(src[key], target[key]);
-                } else {
-                    target[key] = src[key];
+    /** recursively overwrite default config options with project's own configs **/
+    if (projectConfig) {
+        let keyReplace = (src, target) => {
+            for (let key in src)
+                if (src.hasOwnProperty(key)) {
+                    if (typeof src[key] === 'object') {
+                        if (!target[key]) target[key] = {};
+                        keyReplace(src[key], target[key]);
+                    } else {
+                        target[key] = src[key];
+                    }
                 }
-            }
-    };
+        };
 
-    for (let k in projectConfig) {
-        if (projectConfig.hasOwnProperty(k)) {
-            if (!config[k]) config[k] = {};
-            keyReplace(projectConfig[k], config[k])
+        for (let k in projectConfig) {
+            if (projectConfig.hasOwnProperty(k)) {
+                if (!defaultConfig[k]) defaultConfig[k] = {};
+                keyReplace(projectConfig[k], defaultConfig[k])
+            }
         }
     }
 }
 
-// write file so we can pass path to jsdoc
-fs.writeFileSync(tmpFile, JSON.stringify(config));
+/** write config to file so we can pass path to jsdoc **/
+fs.writeFileSync(tmpFile, JSON.stringify(defaultConfig));
 
-// exec the docs generator
-const exec = require('child_process').exec;
-const command = util.format('"%s" -c %s', jsdoc, tmpFile);
+/** generate the docs **/
+exec(util.format('"%s" -c %s', jsdoc, tmpFile),
+    (err, stdout, stderr) => {
 
-exec(command, function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
+        /** pipe any jsdoc output to screen **/
+        console.log(stdout);
+        console.log(stderr);
 
-    // remove tmp config file
-    del.sync(tmpFile);
-    process.exit(0);
-});
+        /** remove configuration file **/
+        del.sync(tmpFile);
+        process.exit(0);
+    });

@@ -16,7 +16,8 @@
     "utility"
   ],
   "scripts": {
-    "test": "echo \"Pass: no tests specified\" && exit 0"
+    "test": "echo \"Pass: no tests specified\" && exit 0",
+    "docs": "jsdoc ./cli/* -c ./jsdocs.json"
   },
   "license": "MIT",
   "dependencies": {

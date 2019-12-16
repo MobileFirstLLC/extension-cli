@@ -14,20 +14,20 @@
  * @example <caption>Clear ignored files, including node_modules</caption>
  * npx xt-clean -m
  *
- * @example <caption>Help on using this command</caption>
+ * @example <caption>Get help using this command</caption>
  * npx xt-clean --help
  *
  * @module xt-clean
  */
 
-const path = require('path');
 const fs = require('fs');
+const del = require('del');
+const path = require('path');
+const chalk = require('chalk');
 const program = require('commander');
+const readline = require('readline');
 const pkg = require('../package.json');
 const ignore = path.join(process.cwd(), '.gitignore');
-const del = require('del');
-const chalk = require('chalk');
-const readline = require('readline');
 let counter = 0;
 
 program

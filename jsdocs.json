@@ -1,0 +1,50 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc"
+    ]
+  },
+  "source": {
+    "include": [
+      "README.md",
+      "cli"
+    ],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "systemName": "Extension CLI",
+    "systemSummary": "Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.",
+    "systemColor": "#222136",
+    "footer": "",
+    "copyright": "Mobile First LLC",
+    "includeDate": "true",
+    "dateFormat": "MMM YYYY",
+    "inlineNav": "true",
+    "inverseNav": "false",
+    "linenums": "true",
+    "showTableOfContents": "true",
+    "showAccessFilter": "true",
+    "collapseSymbols": "true",
+    "methodHeadingReturns": "false",
+    "outputSourceFiles": "true",
+    "outputSourcePath": "true",
+    "search": "true",
+    "stylesheets": [
+      "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="
+    ],
+    "scripts": [],
+    "favicon": "./assets/img/128x128.png"
+  },
+  "opts": {
+    "destination": "./docs",
+    "encoding": "utf8",
+    "private": true,
+    "recurse": true,
+    "template": "./node_modules/foodoc/template"
+  }
+}

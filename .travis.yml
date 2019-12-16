@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "12.13.1"
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run docs
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    local_dir: docs
+    on:
+      branch: master
+  - provider: npm
+    skip_cleanup: true
+    email: $npm_email
+    api_key: $npm_token
+    on:
+      tags: true
