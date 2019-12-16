@@ -4,7 +4,7 @@
 ![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)
 
 This is a command-line utility package that helps chrome extension development by providing
-systematic way to build, test and document an extension project.
+systematic way to build, test and document extension projects.
 
 
 ## Quickstart
