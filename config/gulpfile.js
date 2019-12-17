@@ -1,178 +1,179 @@
-const webpack = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
-const plugins = require('gulp-load-plugins')();
-const argv = require('yargs').argv;
+const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
-const fs = require('fs');
+const paths = require('./build.json');
+const plugins = require('gulp-load-plugins')();
+const argv = require('yargs').argv;
 const isProd = argv.prod;
-let paths = require('./build.json');
 
-// switch to caller dir
-process.chdir(paths.projectRootDir);  // try process.cwd()
-const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+/** switch to project working directory **/
+process.chdir(paths.projectRootDir);
 
-// override default paths
+/** override default paths with project paths **/
 let customPaths = null;
+const pkg = JSON.parse(fs.readFileSync(argv.pkg, 'utf8'));
+
 if (fs.existsSync(argv.config)) {
     customPaths = JSON.parse(fs.readFileSync(argv.config, 'utf8'));
 } else if (pkg.xtbuild !== undefined) {
     customPaths = pkg.xtbuild;
 }
+
 if (customPaths) {
     for (let key in customPaths) {
-        if (customPaths.hasOwnProperty(key))
+        if (customPaths.hasOwnProperty(key)) {
             paths[key] = customPaths[key];
+        }
     }
 }
 
-///////////////////////////////
+const clean = () => del([paths.dist + '/*']);
 
-gulp.task('default', [
-    'clean',
-    'build-js',
-    'build-css',
-    'copyAsIs',
-    'copy-manifest',
-    'copy-images',
-    'copy-locales',
-    'build-html',
-    'release'
-]);
+const scripts = done => {
+    let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [],
+        onDone = () => typeof done !== 'function' || done(),
+        count = bundles.length,
+        isDone = false;
 
-gulp.task('watch', ['default'], () => {
-    console.log('watching...');
-    gulp.watch(paths.js, ['build-js']);
-    gulp.watch([paths.scss], ['build-css']);
-    gulp.watch(paths.manifest, ['copy-manifest']);
-    gulp.watch(paths.icons, ['copy-images']);
-    gulp.watch(paths.locales + '**/*.json', ['copy-locales']);
-    gulp.watch(paths.html, ['build-html']);
-});
-
-///////////////////////////////
-
-gulp.task('clean', () => {
-    return del.sync(paths.dist + '/*');
-});
-
-gulp.task('build-js', (done) => {
-    let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [];
-    let count = bundles.length;
-    let isDone = false;
-    let onEnd = () => {
-        if ((--count === 0) && !isDone) {
-            isDone = true;
-            return typeof done !== 'function' || done();
-        }
-    };
-    if (!count) return done();
-    return bundles.map(bdl => {
-        gulp.src(bdl.src)
-            .pipe(webpack(webpackConfig), require("webpack"))
+    return !count ? onDone() : bundles.map(b => {
+        gulp.src(b.src, {sourcemaps: !isProd})
+            .pipe(plugins.babel())
+            .pipe(plugins.uglify())
+            .pipe(plugins.concat(b.name + '.js'))
             .pipe(plugins.rename(function (path) {
-                path.dirname = "";
-                path.basename = bdl.name
+                path.dirname = '';
             }))
             .pipe(gulp.dest(paths.dist))
-            .on('end', onEnd);
+            .on('end', function () {
+                if ((--count === 0) && !isDone) {
+                    isDone = true;
+                    return onDone();
+                }
+                return true;
+            });
     });
-});
+};
 
-gulp.task('build-css', (done) => {
+const styles = done => {
     let bundles = Array.isArray(paths.scss_bundles) ?
-        paths.scss_bundles :
-        [{ src: paths.scss, name: 'styles.css' }];
-    let count = bundles.length;
-    let isDone = false;
-    let onEnd = () => {
-        if ((--count === 0) && !isDone) {
-            isDone = true;
-            return typeof done !== 'function' || done();
-        }
-    };
-    if (!count) return done();
-    return bundles.map(scss => {
-        gulp.src(scss.src)
-            .pipe(plugins.sass())
-            .pipe(plugins.if(isProd, plugins.cleanCss()))
-            .pipe(plugins.concat(scss.name))
-            .pipe(gulp.dest(paths.dist + '/css'))
-            .on('end', onEnd);
-    });
-});
+        paths.scss_bundles : [{src: paths.scss, name: 'styles.css'}],
+        count = bundles.length,
+        isDone = false;
 
-gulp.task('copy-manifest', () => {
-    const { version } = pkg;
-    const manifest_dir = require('path').dirname(paths.manifest);
+    return !count ? done() :
+        bundles.map(scss => {
+            gulp.src(scss.src)
+                .pipe(plugins.sass())
+                .pipe(plugins.if(isProd, plugins.cleanCss()))
+                .pipe(plugins.concat(scss.name))
+                .pipe(gulp.dest(paths.dist + '/css'))
+                .on('end', function () {
+                    if ((--count === 0) && !isDone) {
+                        isDone = true;
+                        return typeof done !== 'function' || done();
+                    }
+                    return true;
+                });
+        });
+};
+
+const copyAs = done => {
+    return !paths.copyAsIs.length ? done() :
+        gulp.src(paths.copyAsIs)
+            .pipe(plugins.rename(path => {
+                path.dirname = '';
+            }))
+            .pipe(gulp.dest(paths.dist))
+            .on('end', done);
+};
+
+const copyManifest = () => {
+
+    const {version} = argv.pkg,
+        manifest_dir = require('path').dirname(paths.manifest);
 
     return gulp.src(paths.manifest)
-        .pipe(plugins.jsonEditor({
-            'version': version,
-            'version_name': version,
-        }))
+        .pipe(plugins.jsonEditor({'version': version, 'version_name': version}))
         .pipe(gulp.dest(manifest_dir))
         .pipe(plugins.jsonminify())
         .pipe(gulp.dest(paths.dist));
-});
+};
 
-gulp.task('copyAsIs', () => {
-    return gulp.src(paths.copyAsIs)
-        .pipe(plugins.rename((path) => {
-            path.dirname = "";
-        }))
-        .pipe(gulp.dest(paths.dist));
-});
-
-gulp.task('copy-images', () => {
+const copyImages = () => {
     return gulp.src(paths.icons)
-        .pipe(gulp.dest(paths.dist + "/icons"));
-});
+        .pipe(gulp.dest(paths.dist + '/icons'));
+};
 
-gulp.task('copy-locales', (done) => {
+const locales = done => {
     let bundles = Array.isArray(paths.locales_list) ?
-        paths.locales_list : [];
-    let count = bundles.length;
-    let isDone = false;
-    let onEnd = () => {
-        if ((--count === 0) && !isDone) {
-            isDone = true;
-            return typeof done !== 'function' || done();
-        }
-    };
-    if (!count) return done();
+        paths.locales_list : [],
+        onDone = () => typeof done !== 'function' || done(),
+        count = bundles.length,
+        isDone = false;
 
-    paths.locales_list.map(language => {
+    return !count ? onDone() : paths.locales_list.map(language => {
         let root = paths.locales_dir + language;
-        if (fs.existsSync(root)) {
-            return gulp.src(root + "/**/*.json")
-                .pipe(plugins.mergeJson({ fileName: 'messages.json' }))
-                .pipe(plugins.jsonminify())
-                .pipe(gulp.dest(paths.dist + "/_locales/" + language))
-                .on('end', onEnd);
-        }
-    });
-});
 
-gulp.task('build-html', () => {
+        if (fs.existsSync(root)) {
+            return gulp.src(root + '/!**!/!*.json')
+                .pipe(plugins.mergeJson({fileName: 'messages.json'}))
+                .pipe(plugins.jsonminify())
+                .pipe(gulp.dest(paths.dist + '/_locales/' + language))
+                .on('end', function () {
+                    if ((--count === 0) && !isDone) {
+                        isDone = true;
+                        return onDone();
+                    }
+                    return true;
+                });
+        }
+
+        return true;
+    });
+};
+
+const buildHtml = () => {
     return gulp.src(paths.html)
-        .pipe(plugins.htmlmin({ collapseWhitespace: true }))
-        .pipe(plugins.rename((path) => {
-            path.dirname = "";
+        .pipe(plugins.htmlmin({collapseWhitespace: true}))
+        .pipe(plugins.rename(path => {
+            path.dirname = '';
         }))
         .pipe(gulp.dest(paths.dist));
-});
+};
 
-gulp.task('release', [
-    'clean',
-    'build-js',
-    'build-css',
-    'copyAsIs',
-    'copy-manifest',
-    'copy-images',
-    'copy-locales',
-    'build-html'], () => {
-        return isProd ? gulp.src(paths.dist + '/**/*')
-            .pipe(plugins.zip('release.zip'))
-            .pipe(gulp.dest(paths.releases)) : true;
-    });
+const release = done => {
+    return isProd ? gulp.src(paths.dist + '/**/*')
+        .pipe(plugins.zip('release.zip'))
+        .pipe(gulp.dest(paths.releases))
+        .on('end', done) : done();
+};
+
+const watch = () => {
+    console.log('watching...');
+    gulp.watch(paths.js, scripts);
+    gulp.watch([paths.scss], styles);
+    gulp.watch(paths.manifest, copyManifest);
+    gulp.watch(paths.icons, copyImages);
+    gulp.watch(paths.locales + '**!/!*.json', locales);
+    gulp.watch(paths.html, buildHtml);
+};
+
+const build = gulp.series(
+    clean,
+    gulp.series(
+        scripts,
+        styles,
+        copyAs,
+        copyManifest,
+        copyImages,
+        locales,
+        buildHtml),
+    release
+);
+
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = build;
+
+exports.watch = gulp.series(build, watch);

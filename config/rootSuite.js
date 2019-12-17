@@ -1,11 +1,11 @@
 const sinon = require('sinon');
 const chrome = require('sinon-chrome');
 const chai = require('chai');
-const jsdom = require('jsdom-global')();
 const chalk = require('chalk');
 const sandbox = sinon.createSandbox();
 const argv = require('yargs').argv;
 const chaiAsPromised = require('chai-as-promised');
+const jsdom = require('jsdom-global')();
 
 before(function () {
     process.env.NODE_ENV = 'test';

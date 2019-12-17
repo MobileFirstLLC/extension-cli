@@ -28,7 +28,12 @@ const path = require('path');
 const program = require('commander');
 const pkg = require('../package.json');
 const exec = require('child_process').exec;
-const rootSuite = path.join(process.cwd(), './node_modules', pkg.name, 'config/rootSuite.js');
+
+
+/** execute test runner in project working dir **/
+process.chdir(process.cwd());
+
+const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config', 'rootSuite.js');
 
 program
     .version(pkg.version)
@@ -56,8 +61,6 @@ const args = [
 
 ].join(' ');
 
-/** execute test runner in project working dir **/
-process.chdir(process.cwd());
 
 const bat = exec(args);
 
