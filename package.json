@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "docs": "jsdoc ./cli/* -c ./jsdocs.json"
+    "docs": "jsdoc ./cli/* -c .docs.json"
   },
   "license": "MIT",
   "dependencies": {

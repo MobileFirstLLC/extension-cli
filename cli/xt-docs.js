@@ -28,6 +28,19 @@
  * @example <caption>Get help using this command</caption>
  * npx xt-docs --help
  *
+ * In the configuration file, or in the the project package.json, you should define at
+ * least the following properties when using the default theme:
+ *
+ * @example <caption>Configuring docs in package.json</caption>
+ *
+ * "xtdocs": {
+ *   "templates": {
+ *     "systemName": "{extension name}",
+ *     "systemSummary": "{short description}",
+ *     "systemColor": "{css-color}"
+ *   }
+ * }
+ *
  */
 
 const fs = require('fs');
