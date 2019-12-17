@@ -122,7 +122,20 @@
 					</div>
 					<div class="example-caption"><p>Get help using this command</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-docs --help</code></pre>
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-docs --help
+			
+			In the configuration file, or in the the project package.json, you should define at
+			least the following properties when using the default theme:</code></pre>
+					</div>
+					<div class="example-caption"><p>Configuring docs in package.json</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">&quot;xtdocs&quot;: {
+			  &quot;templates&quot;: {
+			    &quot;systemName&quot;: &quot;{extension name}&quot;,
+			    &quot;systemSummary&quot;: &quot;{short description}&quot;,
+			    &quot;systemColor&quot;: &quot;{css-color}&quot;
+			  }
+			}</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
