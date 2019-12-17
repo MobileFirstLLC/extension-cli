@@ -5,7 +5,7 @@
 ![npm](https://img.shields.io/npm/v/extension-cli)
 ![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)
 
-This application includes command-line build tools that help rapid chrome extension development by providing
+> This application includes command-line build tools that facilitate rapid chrome extension development by providing
 systematic way to build, test and document extension projects.
 
 ## Quickstart

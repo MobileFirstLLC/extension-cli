@@ -1,9 +1,9 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
+const path = require('path');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
-const webpackConfig = require('./webpack.config.js');
 const webpack = require('webpack-stream');
 const argv = require('yargs').argv;
 const isProd = argv.prod;
@@ -32,26 +32,40 @@ if (customPaths) {
 const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
-    let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [],
-        onDone = () => typeof done !== 'function' || done();
+    let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [];
 
-    const buildScript = b => {
-        gulp.src(b.src)
-            .pipe(webpack(webpackConfig), require('webpack'))
+    const buildScript = () => {
+        if (!bundles.length) {
+            return typeof done !== 'function' || done();
+        }
+
+        const b = bundles.pop();
+
+        return gulp.src(b.src)
+            .pipe(webpack({
+                mode: 'production', // always use this option !
+                module: {
+                    rules: [{
+                        test: /(\.jsx|\.js)$/,
+                        loader: ['babel-loader', 'eslint-loader'],
+                        exclude: /(node_modules|bower_components)/
+                    }]
+                },
+                resolve: {
+                    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+                    extensions: ['.js']
+                },
+                plugins: []
+            }), require('webpack'))
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
                 path.basename = b.name;
             }))
             .pipe(gulp.dest(paths.dist))
-            .on('end', function () {
-                if (bundles.length === 0) {
-                    return onDone();
-                }
-                return buildScript(bundles.pop());
-            });
+            .on('end', buildScript);
     };
 
-    return !bundles.length ? onDone() : buildScript(bundles.pop());
+    buildScript();
 };
 
 const styles = done => {
