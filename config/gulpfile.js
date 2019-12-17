@@ -3,6 +3,8 @@ const gulp = require('gulp');
 const del = require('del');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
+const webpackConfig = require('./webpack.config.js');
+const webpack = require('webpack-stream');
 const argv = require('yargs').argv;
 const isProd = argv.prod;
 
@@ -31,27 +33,25 @@ const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
     let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [],
-        onDone = () => typeof done !== 'function' || done(),
-        count = bundles.length,
-        isDone = false;
+        onDone = () => typeof done !== 'function' || done();
 
-    return !count ? onDone() : bundles.map(b => {
-        gulp.src(b.src, {sourcemaps: !isProd})
-            .pipe(plugins.babel())
-            .pipe(plugins.uglify())
-            .pipe(plugins.concat(b.name + '.js'))
+    const buildScript = b => {
+        gulp.src(b.src)
+            .pipe(webpack(webpackConfig), require('webpack'))
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
+                path.basename = b.name;
             }))
             .pipe(gulp.dest(paths.dist))
             .on('end', function () {
-                if ((--count === 0) && !isDone) {
-                    isDone = true;
+                if (bundles.length === 0) {
                     return onDone();
                 }
-                return true;
+                return buildScript(bundles.pop());
             });
-    });
+    };
+
+    return !bundles.length ? onDone() : buildScript(bundles.pop());
 };
 
 const styles = done => {

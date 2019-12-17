@@ -1,5 +1,5 @@
 {
-  "projectRootDir": "../../../",
+  "projectRootDir": "../../../Extensions/sitemap-generator",
   "dist": "./dist",
   "source": "./src",
   "releases": "./",
@@ -17,7 +17,5 @@
   ],
   "copyAsIs": [],
   "locales_dir": "./assets/locales/",
-  "locales_list": [
-    "en"
-  ]
+  "locales_list": ["en"]
 }
