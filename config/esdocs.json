@@ -1,9 +1,0 @@
-{
-    "source": "./src",
-    "destination": "./public/documentation",
-    "plugins": [
-        {
-            "name": "esdoc-standard-plugin"
-        }
-    ]
-}

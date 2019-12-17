@@ -40,7 +40,7 @@ program
     .parse(process.argv);
 
 const args = [
-    program.watch ? "gulp watch" : "gulp",
+    program.watch ? 'gulp watch' : 'gulp',
     util.format('--gulpfile "%s"', gulpfile),
     util.format('--config "%s"', path.resolve(process.cwd(), program.config || './.xtbuild.json')),
     util.format('--pkg', path.resolve(process.cwd(), './package.json')),
@@ -49,14 +49,16 @@ const args = [
 ].join(' ');
 
 const spinner = (!program.watch) ? new Spinner(' %s ') : null;
+
 if (spinner) spinner.start();
 
 const bat = exec(args);
 
-if (true || program.watch)
+if (true || program.watch) {
     bat.stdout.on('data', (data) => {
         process.stdout.write(data.toString());
     });
+}
 
 bat.stderr.on('data', (data) => {
     if (spinner) spinner.stop(true);
@@ -65,6 +67,11 @@ bat.stderr.on('data', (data) => {
 
 bat.on('exit', (code) => {
     if (spinner) spinner.stop(true);
-    console.log(chalk.bold.green('CODE: ' + code));
+    if (!code) {
+        console.log(chalk.bold.green('Success'));
+    } else {
+        console.log(chalk.bold.red('Build Failed'));
+    }
+
 });
 

@@ -89,11 +89,14 @@ const copyAs = done => {
 
 const copyManifest = () => {
 
-    const {version} = argv.pkg,
+    const {version} = pkg,
         manifest_dir = require('path').dirname(paths.manifest);
 
     return gulp.src(paths.manifest)
-        .pipe(plugins.jsonEditor({'version': version, 'version_name': version}))
+        .pipe(plugins.jsonEditor({
+            'version': version,
+            'version_name': version
+        }))
         .pipe(gulp.dest(manifest_dir))
         .pipe(plugins.jsonminify())
         .pipe(gulp.dest(paths.dist));
@@ -115,7 +118,7 @@ const locales = done => {
         let root = paths.locales_dir + language;
 
         if (fs.existsSync(root)) {
-            return gulp.src(root + '/!**!/!*.json')
+            return gulp.src(root + '/**/*.json')
                 .pipe(plugins.mergeJson({fileName: 'messages.json'}))
                 .pipe(plugins.jsonminify())
                 .pipe(gulp.dest(paths.dist + '/_locales/' + language))
@@ -154,7 +157,7 @@ const watch = () => {
     gulp.watch([paths.scss], styles);
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(paths.icons, copyImages);
-    gulp.watch(paths.locales + '**!/!*.json', locales);
+    gulp.watch(paths.locales + '**/*.json', locales);
     gulp.watch(paths.html, buildHtml);
 };
 
