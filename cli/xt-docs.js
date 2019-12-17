@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Docs command generates documentation for the project. This command uses
+ * @description Docs command generates documentation for the project. This command uses
  * jsdocs syntax. See {@link https://jsdoc.app/index.html} for more details,
  * including configuration options: {@link https://jsdoc.app/about-configuring-jsdoc.html}.
  *
@@ -28,10 +28,8 @@
  * @example <caption>Get help using this command</caption>
  * npx xt-docs --help
  *
- * In the configuration file, or in the the project package.json, you should define at
- * least the following properties when using the default theme:
  *
- * @example <caption>Configuring docs in package.json</caption>
+ * @example <caption>Configuring docs in package.json - In the configuration file, or in the the project package.json, you should define at least the following properties when using the default theme:</caption>
  *
  * "xtdocs": {
  *   "templates": {
