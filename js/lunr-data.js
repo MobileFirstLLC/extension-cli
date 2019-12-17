@@ -165,6 +165,32 @@ window.lunrData = {
           "version",
           "xt"
         ],
+        "xt-build.html": [
+          "browser",
+          "build",
+          "call",
+          "command",
+          "compil",
+          "debug",
+          "directori",
+          "dist",
+          "distribut",
+          "e",
+          "env",
+          "extens",
+          "file",
+          "flag",
+          "gener",
+          "minifi",
+          "namespac",
+          "prod",
+          "product",
+          "store",
+          "upload",
+          "web",
+          "xt",
+          "zip"
+        ],
         "xt-test.html": [
           "chai",
           "chrome",
@@ -188,7 +214,7 @@ window.lunrData = {
           "xt"
         ]
       },
-      "length": 7
+      "length": 8
     },
     "tokenStore": {
       "root": {
@@ -206,6 +232,33 @@ window.lunrData = {
                     "index.html": {
                       "ref": "index.html",
                       "tf": 4.117647058823529
+                    },
+                    "xt-build.html": {
+                      "ref": "xt-build.html",
+                      "tf": 952.1739130434783
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "xt-build.html": {
+                          "ref": "xt-build.html",
+                          "tf": 2.1739130434782608
+                        }
+                      }
                     }
                   }
                 }
@@ -319,10 +372,28 @@ window.lunrData = {
                           "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
                         },
+                        "xt-build.html": {
+                          "ref": "xt-build.html",
+                          "tf": 4.3478260869565215
+                        },
                         "xt-test.html": {
                           "ref": "xt-test.html",
                           "tf": 4.545454545454546
                         }
+                      }
+                    }
+                  }
+                }
+              },
+              "p": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "xt-build.html": {
+                        "ref": "xt-build.html",
+                        "tf": 2.1739130434782608
                       }
                     }
                   }
@@ -361,6 +432,20 @@ window.lunrData = {
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "xt-build.html": {
+                    "ref": "xt-build.html",
+                    "tf": 2.1739130434782608
                   }
                 }
               }
@@ -452,6 +537,20 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "b": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "xt-build.html": {
+                      "ref": "xt-build.html",
+                      "tf": 2.1739130434782608
+                    }
+                  }
+                }
+              }
             }
           },
           "o": {
@@ -517,9 +616,44 @@ window.lunrData = {
                               "ref": "xt-clean.html",
                               "tf": 5.769230769230769
                             },
+                            "xt-build.html": {
+                              "ref": "xt-build.html",
+                              "tf": 2.1739130434782608
+                            },
                             "xt-test.html": {
                               "ref": "xt-test.html",
                               "tf": 2.272727272727273
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "xt-build.html": {
+                    "ref": "xt-build.html",
+                    "tf": 2.1739130434782608
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "b": {
+                      "docs": {},
+                      "u": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "xt-build.html": {
+                              "ref": "xt-build.html",
+                              "tf": 2.1739130434782608
                             }
                           }
                         }
@@ -532,7 +666,12 @@ window.lunrData = {
           }
         },
         "e": {
-          "docs": {},
+          "docs": {
+            "xt-build.html": {
+              "ref": "xt-build.html",
+              "tf": 2.1739130434782608
+            }
+          },
           "x": {
             "docs": {},
             "t": {
@@ -546,6 +685,10 @@ window.lunrData = {
                       "index.html": {
                         "ref": "index.html",
                         "tf": 308.2352941176471
+                      },
+                      "xt-build.html": {
+                        "ref": "xt-build.html",
+                        "tf": 2.1739130434782608
                       },
                       "xt-test.html": {
                         "ref": "xt-test.html",
@@ -620,7 +763,12 @@ window.lunrData = {
           "n": {
             "docs": {},
             "v": {
-              "docs": {},
+              "docs": {
+                "xt-build.html": {
+                  "ref": "xt-build.html",
+                  "tf": 2.1739130434782608
+                }
+              },
               "i": {
                 "docs": {},
                 "r": {
@@ -920,6 +1068,28 @@ window.lunrData = {
                   }
                 }
               },
+              "d": {
+                "docs": {
+                  "xt-build.html": {
+                    "ref": "xt-build.html",
+                    "tf": 2.1739130434782608
+                  }
+                },
+                "u": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "xt-build.html": {
+                          "ref": "xt-build.html",
+                          "tf": 2.1739130434782608
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "m": {
                 "docs": {},
                 "i": {
@@ -1186,6 +1356,20 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "o": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "xt-build.html": {
+                      "ref": "xt-build.html",
+                      "tf": 2.1739130434782608
+                    }
+                  }
+                }
+              }
             }
           },
           "u": {
@@ -1335,6 +1519,23 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "l": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "xt-build.html": {
+                        "ref": "xt-build.html",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "t": {
@@ -1401,6 +1602,17 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "b": {
+              "docs": {
+                "xt-build.html": {
+                  "ref": "xt-build.html",
+                  "tf": 2.1739130434782608
+                }
+              }
+            }
           }
         },
         "g": {
@@ -1462,6 +1674,10 @@ window.lunrData = {
                     "xt-docs.html": {
                       "ref": "xt-docs.html",
                       "tf": 0.78125
+                    },
+                    "xt-build.html": {
+                      "ref": "xt-build.html",
+                      "tf": 2.1739130434782608
                     }
                   }
                 }
@@ -1504,6 +1720,10 @@ window.lunrData = {
                           },
                           "xt-sync.html": {
                             "ref": "xt-sync.html",
+                            "tf": 110
+                          },
+                          "xt-build.html": {
+                            "ref": "xt-build.html",
                             "tf": 110
                           },
                           "xt-test.html": {
@@ -1570,6 +1790,10 @@ window.lunrData = {
                   "xt-sync.html": {
                     "ref": "xt-sync.html",
                     "tf": 5.172413793103448
+                  },
+                  "xt-build.html": {
+                    "ref": "xt-build.html",
+                    "tf": 2.1739130434782608
                   }
                 }
               }
@@ -1588,6 +1812,10 @@ window.lunrData = {
                   "xt-docs.html": {
                     "ref": "xt-docs.html",
                     "tf": 0.78125
+                  },
+                  "xt-build.html": {
+                    "ref": "xt-build.html",
+                    "tf": 2.1739130434782608
                   }
                 }
               }
@@ -1770,6 +1998,10 @@ window.lunrData = {
               },
               "xt-sync.html": {
                 "ref": "xt-sync.html",
+                "tf": 950
+              },
+              "xt-build.html": {
+                "ref": "xt-build.html",
                 "tf": 950
               },
               "xt-test.html": {
@@ -2139,33 +2371,75 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "xt-build.html": {
+                        "ref": "xt-build.html",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "z": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "p": {
+              "docs": {
+                "xt-build.html": {
+                  "ref": "xt-build.html",
+                  "tf": 2.1739130434782608
+                }
+              }
+            }
           }
         }
       },
-      "length": 134
+      "length": 158
     },
     "corpusTokens": [
       "advis",
       "automat",
+      "browser",
       "build",
       "c",
+      "call",
       "chai",
       "chang",
       "chrome",
       "clean",
       "cli",
       "command",
+      "compil",
       "config",
       "configur",
+      "debug",
       "default",
       "defin",
       "delet",
       "detail",
       "develop",
       "directori",
+      "dist",
+      "distribut",
       "doc",
       "document",
+      "e",
       "each",
+      "env",
       "environ",
       "except",
       "explicitli",
@@ -2197,6 +2471,7 @@ window.lunrData = {
       "look",
       "manner",
       "manual",
+      "minifi",
       "mocha",
       "modifi",
       "more",
@@ -2212,6 +2487,8 @@ window.lunrData = {
       "package.json",
       "pass",
       "path",
+      "prod",
+      "product",
       "project",
       "promis",
       "provid",
@@ -2225,6 +2502,7 @@ window.lunrData = {
       "sinon",
       "speed",
       "stale",
+      "store",
       "such",
       "sync",
       "syntax",
@@ -2237,15 +2515,18 @@ window.lunrData = {
       "up",
       "updat",
       "upgrad",
+      "upload",
       "us",
       "util",
       "version",
       "vscode",
       "want",
       "way",
+      "web",
       "xt",
       "xtdoc",
-      "xtdocs.json"
+      "xtdocs.json",
+      "zip"
     ],
     "pipeline": [
       "trimmer",
@@ -2318,6 +2599,17 @@ window.lunrData = {
       "tags": "xt-sync",
       "summary": "",
       "description": "The purpose of this command is to upgrade configuration files of a stale project to latest version, where this CLI tool will provide updated project configuration files. If the config files have been modified heavily for the project, it is not advisable to upgrade them in this manner. Instead you should upgrade such configs manually.",
+      "body": ""
+    },
+    "xt-build.html": {
+      "id": "xt-build.html",
+      "kind": "namespace",
+      "title": "xt-build",
+      "longname": "xt-build",
+      "name": "xt-build",
+      "tags": "xt-build",
+      "summary": "",
+      "description": "Build command generates an extension dist/ directory that can be debugged in the browser. When called with production env flag, -e prod, this command will minify and compile a zip file that can be uploaded to the web store for distribution.",
       "body": ""
     },
     "xt-test.html": {

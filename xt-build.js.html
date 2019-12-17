@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>xt-test.js</title>
+		<title>xt-build.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -84,7 +84,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">source</span>
-				<h1><span class="name">xt-test.js</span></h1>
+				<h1><span class="name">xt-build.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -96,76 +96,72 @@
 
 
 /**
- * This command will run project unit tests located in test/ directory.
+ * Build command generates an extension dist/ directory that
+ * can be debugged in the browser.
  *
- * This command will setup extension testing environment using sinon-chrome,
- * mocha, chai, chai-as-promised, and headless jsdom.
+ * When called with production env flag, -e prod, this command
+ * will minify and compile a zip file that can be uploaded to
+ * the web store for distribution.
  *
- * @namespace xt-test
+ * @namespace xt-build
  *
- * @example &lt;caption>Default test command&lt;/caption>
- * npx xt-test
+ * @example &lt;caption>Run development build and watch changes&lt;/caption>
+ * npx xt-build -e dev -w
  *
- * @example &lt;caption>Execute tests and keep watching changes&lt;/caption>
- * npx xt-test --watch
- *
- * @example &lt;caption>Execute tests and pipe result to coveralls&lt;/caption>
- * npx xt-test --coveralls
+ * @example &lt;caption>Build production version&lt;/caption>
+ * npx xt-build -e prod
  *
  * @example &lt;caption>Get help using this command&lt;/caption>
- * npx xt-test --help
- *
+ * npx xt-build --help
  */
 
 const util = require('util');
 const path = require('path');
+const chalk = require('chalk');
 const program = require('commander');
-const pkg = require('../package.json');
+var Spinner = require('cli-spinner').Spinner;
 const exec = require('child_process').exec;
-
-
-/** execute test runner in project working dir **/
-process.chdir(process.cwd());
-
-const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config', 'rootSuite.js');
+const pkg = require('../package.json');
+const env = {prod: 'prod', dev: 'dev'};
+const gulpfile = path.resolve(__dirname, '../config/gulpfile.js');
 
 program
     .version(pkg.version)
-    .option('-l --coveralls', 'pipe coverage')
-    .option('-w --watch', 'enable watch')
+    .option('-e --env &lt;env>', 'Environment', /^(dev|prod)$/i, env.prod)
+    .option('-c --config &lt;config>', 'Path to configuration file,  ' +
+        'default: .xtbuild.json in root, or xtbuild in package.json)', /^(.*)$/i)
+    .option('-w --watch', 'Enable watch')
     .parse(process.argv);
 
 const args = [
-
-    // use nyc &amp;&amp; mocha
-    'nyc mocha', './test/**/*.js',
-
-    // setup test environment
-    util.format('--file "%s"', rootSuite),
-
-    // enable watch
-    program.watch ? '--watch' : '',
-
-    // babel + chalk
-    '--require babel-core/register --colors',
-
-    // lastly: pipe to coveralls -->
-    // this has to happen last after all tests have run
-    program.coveralls ? '&amp;&amp; nyc report --reporter=text-lcov | coveralls' : ''
-
+    program.watch ? "gulp watch" : "gulp",
+    util.format('--gulpfile "%s"', gulpfile),
+    util.format('--config "%s"', path.resolve(process.cwd(), program.config || './.xtbuild.json')),
+    util.format('--pkg', path.resolve(process.cwd(), './package.json')),
+    util.format('--%s', program.env),
+    '--colors'
 ].join(' ');
 
+const spinner = (!program.watch) ? new Spinner(' %s ') : null;
+if (spinner) spinner.start();
 
 const bat = exec(args);
 
-/** display all test output on screen **/
-bat.stdout.on('data', data => {
+if (true || program.watch)
+    bat.stdout.on('data', (data) => {
+        process.stdout.write(data.toString());
+    });
+
+bat.stderr.on('data', (data) => {
+    if (spinner) spinner.stop(true);
     process.stdout.write(data.toString());
 });
 
-bat.stderr.on('data', data => {
-    process.stdout.write(data.toString());
+bat.on('exit', (code) => {
+    if (spinner) spinner.stop(true);
+    console.log(chalk.bold.green('CODE: ' + code));
 });
+
 </code></pre>
 		</section>
 			</div>

@@ -1,10 +1,9 @@
-<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>xt-test.js</title>
+		<title>xt-build</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +43,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,92 +82,80 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">xt-test.js</span></h1>
+				<span class="kind">namespace</span>
+				<h1><span class="name">xt-build</span></h1>
 			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">#!/usr/bin/env node
-
-
-/**
- * This command will run project unit tests located in test/ directory.
- *
- * This command will setup extension testing environment using sinon-chrome,
- * mocha, chai, chai-as-promised, and headless jsdom.
- *
- * @namespace xt-test
- *
- * @example &lt;caption>Default test command&lt;/caption>
- * npx xt-test
- *
- * @example &lt;caption>Execute tests and keep watching changes&lt;/caption>
- * npx xt-test --watch
- *
- * @example &lt;caption>Execute tests and pipe result to coveralls&lt;/caption>
- * npx xt-test --coveralls
- *
- * @example &lt;caption>Get help using this command&lt;/caption>
- * npx xt-test --help
- *
- */
-
-const util = require('util');
-const path = require('path');
-const program = require('commander');
-const pkg = require('../package.json');
-const exec = require('child_process').exec;
-
-
-/** execute test runner in project working dir **/
-process.chdir(process.cwd());
-
-const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config', 'rootSuite.js');
-
-program
-    .version(pkg.version)
-    .option('-l --coveralls', 'pipe coverage')
-    .option('-w --watch', 'enable watch')
-    .parse(process.argv);
-
-const args = [
-
-    // use nyc &amp;&amp; mocha
-    'nyc mocha', './test/**/*.js',
-
-    // setup test environment
-    util.format('--file "%s"', rootSuite),
-
-    // enable watch
-    program.watch ? '--watch' : '',
-
-    // babel + chalk
-    '--require babel-core/register --colors',
-
-    // lastly: pipe to coveralls -->
-    // this has to happen last after all tests have run
-    program.coveralls ? '&amp;&amp; nyc report --reporter=text-lcov | coveralls' : ''
-
-].join(' ');
-
-
-const bat = exec(args);
-
-/** display all test output on screen **/
-bat.stdout.on('data', data => {
-    process.stdout.write(data.toString());
-});
-
-bat.stderr.on('data', data => {
-    process.stdout.write(data.toString());
-});
-</code></pre>
-		</section>
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_namespace.html">Namespaces</a></li>
+							<li class="active">xt-build</li>
+						</ol>
+					<section>
+							<dl class="symbol primary">
+								<dt class="symbol-title namespace collapsible-symbol expanded">
+			<h2 class="namespace"><span class="name">xt-build</span></h2>
+</dt>
+<dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Build command generates an extension dist/ directory that
+			can be debugged in the browser.</p>
+			<p>When called with production env flag, -e prod, this command
+			will minify and compile a zip file that can be uploaded to
+			the web store for distribution.</p></div>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Run development build and watch changes</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build -e dev -w</code></pre>
+					</div>
+					<div class="example-caption"><p>Build production version</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build -e prod</code></pre>
+					</div>
+					<div class="example-caption"><p>Get help using this command</p></div>
+					<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build --help</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="xt-build.js.html">xt-build.js</a>, <a href="xt-build.js.html#line-4">line 4</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+							</article>
+					</section>
 			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
 		</div>
 	</div>
 	<footer>
@@ -200,4 +187,3 @@ bat.stderr.on('data', data => {
 	
 </body>
 </html>
-<!-- end:source.tmpl.hbs -->
