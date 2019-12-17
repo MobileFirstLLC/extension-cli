@@ -1,4 +1,4 @@
-# [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
+# <img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/assets/img/128x128.png' alt='' width="40" /> [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
 
 ![npm](https://img.shields.io/npm/v/extension-cli)
 ![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)
