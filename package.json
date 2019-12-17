@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "0.8.0-alpha01",
+  "version": "0.8.0-alpha.0",
   "description": "Chrome Extension CLI tools",
   "bin": {
     "xt-build": "cli/xt-build.js",
@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "docs": "jsdoc ./cli/* -c .docs.json"
+    "docs": "jsdoc ./cli/* -c .docs.json",
+    "release": "standard-version"
   },
   "license": "MIT",
   "dependencies": {

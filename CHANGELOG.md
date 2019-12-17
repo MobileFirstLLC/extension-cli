@@ -1,6 +1,17 @@
-# Release History
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 0.8.0-alpha.0 (2019-12-17)
+
+
+### Bug Fixes
+
+* jsdoc config ([b021a0e](https://github.com/MobileFirstLLC/extension-cli/commit/b021a0e1424d4f5e226dea1d1940dee9af3fdbb8))
+* migrate build script to gulp 4 ([237c44f](https://github.com/MobileFirstLLC/extension-cli/commit/237c44f4107a66c7ffc7fd9917e6343d28f90021))
+* migrate xt-test; update docs ([2ae3e78](https://github.com/MobileFirstLLC/extension-cli/commit/2ae3e78128b5db0dad81b1f589fb3e6add732fe8))
+* xt-clean, xt-docs; update packages; add build configuration, image assets, and source docs ([85eead2](https://github.com/MobileFirstLLC/extension-cli/commit/85eead28704cf684b520409f192fe7073623f2fa))
+* xt-sync; update readme ([ddcc8aa](https://github.com/MobileFirstLLC/extension-cli/commit/ddcc8aaab252e7e184061576fb6683f3ed095343))
 
 <a name="0.7.11"></a>
 ## 0.7.11 (2018-06-25)
