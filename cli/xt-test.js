@@ -4,8 +4,19 @@
 /**
  * This command will run project unit tests located in test/ directory.
  *
- * This command will setup extension testing environment using sinon-chrome,
- * mocha, chai, chai-as-promised, and headless jsdom.
+ * This command will setup extension testing environment that is pre-initialized
+ * with mocha {@link https://mochajs.org/}, chai (including chai-as-promised) {@link https://www.chaijs.com/},
+ * and expect. nyc is used for computing code coverage {@link https://www.npmjs.com/package/nyc}.
+ *
+ * Also the following browser API's are initialized: window, chrome. Window
+ * is setup using jsdom-global {@link https://www.npmjs.com/package/jsdom-global} and
+ * chrome using sinon-chrome {@link https://www.npmjs.com/package/sinon-chrome}.
+ *
+ * Mocha will execute with babel, meaning you can use this test environment to
+ * test ES6 modules with imports, arrows, and classes.
+ *
+ * You may extend this test environment with a single project; this is simply the base setup
+ * for running unit tests. Or you may create your own test environment if this is not suitable.
  *
  * @namespace xt-test
  *
@@ -15,8 +26,8 @@
  * @example <caption>Execute tests and keep watching changes</caption>
  * npx xt-test --watch
  *
- * @example <caption>Execute tests and pipe result to coveralls</caption>
- * npx xt-test --coveralls
+ * @example <caption>Execute tests and pipe result to coveralls.io</caption>
+ * npx xt-test --coverage
  *
  * @example <caption>Get help using this command</caption>
  * npx xt-test --help
@@ -36,7 +47,7 @@ const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config'
 
 program
     .version(pkg.version)
-    .option('-l --coveralls', 'pipe coverage')
+    .option('-c --coverage', 'pipe coverage')
     .option('-w --watch', 'enable watch')
     .parse(process.argv);
 

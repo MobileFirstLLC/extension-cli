@@ -14,11 +14,11 @@ before(function () {
     chai.use(chaiAsPromised);
     global.sinon = sinon;
     global.chrome = chrome;
-    window.chrome = chrome;
     global.chai = chai;
     global.expect = chai.expect;
     global.sandbox = sandbox;
     window.sandbox = sandbox;
+    window.chrome = chrome;
     console.log(["ENV: ",
         chalk.bold.green(" window "),
         chalk.bold.green(" chrome "),
@@ -40,9 +40,9 @@ afterEach(function () {
 
 after(function () {
     if (argv.watch) return;
+    delete window.chrome;
     delete global.sinon;
     delete global.chrome;
-    delete window.chrome;
     delete global.jsdom;
     delete global.chai;
     delete global.expect;
