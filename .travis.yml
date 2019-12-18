@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-- 12.13.1
+  - 12.13.1
 script:
-- npm run docs
+  - npm run docs
 deploy:
-  matrix:
   - provider: pages
     skip_cleanup: true
     github_token: "$GITHUB_TOKEN"
@@ -12,10 +11,3 @@ deploy:
     local_dir: docs
     on:
       branch: master
-  - provider: npm
-    skip_cleanup: true
-    email: "$NPM_EMAIL"
-    api_key:
-      secure: JEKXI+b0u4i/vAckLOJWd5BgXZZ6U7wpagmhaeGxNnl5TuH3l7kzkKy4Zt4YE1qXptmQUfcl21xts44gWiQVs4hMpMF4BYvPCmbEDZsCdkJGe9tHOUUmqZsI7KqX4EnAdmZ3DODmMISxmDYIpXZqa2H4yMdiKb4CtQqayHzdAQ/6M8kFjtCrdLNjQS0186e6lu90aMCyU+ePbmIeGAuY++a/Hwt3HaCVyeXZcvXzFSZ/NB831WLvmhEoFrKtvyX104RebCmpGxU6akYegcHX13EbJcBNbzS/NMoGHgEfLA+2JgXpG5fplevvsTdpHOp4hqAatRm7hbn7HrGfK0/EFeb9A1N9BvJpOQ5UN9ufuoIRALPtVmElf8psUrW+TpPa/7nWausH2J8rHR2iGJWlUy2V+qtgPAVPCgOaPz1zQI8ty4qnDt66nh386/DWR6C3eQWtDr0VR/qh0T0B7l7WCUP0q72kE6BuawmdQkrt5i9XmkI96t0FWM/sCcYMkHOVj3DjuAfzuMlCALYNg9LwE+5aqmN0pKoBQrHumtixNx57eCtwpZ/q09PBiKOyPDcQZL4LiYLcJR/fXGUITNAVHZcFQlq6t9chkngPOGS3iCQbHQ88aigt18+JdLtoL+yniL7To9Nyodx+kBKTPA+VcUyQyiHqYm9gsdbdDyxQf1U=
-    on:
-      tags: true
