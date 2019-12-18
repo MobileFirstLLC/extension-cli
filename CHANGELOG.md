@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0-alpha.1](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.0-alpha.0...v0.8.0-alpha.1) (2019-12-18)
+
+
+### Bug Fixes
+
+* xt-build -> use webpack with scripts ([063cecc](https://github.com/MobileFirstLLC/extension-cli/commit/063cecc585d5657c005af7342eeb04466930ea09))
+* xt-build locales and manifest tasks ([f98872e](https://github.com/MobileFirstLLC/extension-cli/commit/f98872e0f39cd7095076e4f97897de6857fe3306))
+* xt-build webpack scripts ([13e2297](https://github.com/MobileFirstLLC/extension-cli/commit/13e2297b912b067eaf1ad44e449e83585b3a22ab))
+* xt-test command ([130986f](https://github.com/MobileFirstLLC/extension-cli/commit/130986f3bf58c01d46e14308d2bf080b1b88c6fc))
+
 ## 0.8.0-alpha.0 (2019-12-17)
 
 
