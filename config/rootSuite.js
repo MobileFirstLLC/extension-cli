@@ -5,7 +5,9 @@ const chalk = require('chalk');
 const sandbox = sinon.createSandbox();
 const argv = require('yargs').argv;
 const chaiAsPromised = require('chai-as-promised');
-const jsdom = require('jsdom-global')();
+
+// simulate "window"
+require('jsdom-global')();
 
 before(function () {
     process.env.NODE_ENV = 'test';
@@ -18,11 +20,11 @@ before(function () {
     global.sandbox = sandbox;
     window.sandbox = sandbox;
     console.log(["ENV: ",
-        chalk.bold.bgGreen(" window "),
-        chalk.bold.bgGreen(" chrome "),
-        chalk.bold.bgGreen(" chai "),
-        chalk.bold.bgGreen(" expect "),
-        chalk.bold.bgGreen(" sandbox[sinon] ")
+        chalk.bold.green(" window "),
+        chalk.bold.green(" chrome "),
+        chalk.bold.green(" chai "),
+        chalk.bold.green(" expect "),
+        chalk.bold.green(" sandbox (sinon) ")
     ].join(" ") + "\n")
 });
 

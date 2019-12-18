@@ -29,7 +29,6 @@ const program = require('commander');
 const pkg = require('../package.json');
 const exec = require('child_process').exec;
 
-
 /** execute test runner in project working dir **/
 process.chdir(process.cwd());
 
@@ -44,7 +43,10 @@ program
 const args = [
 
     // use nyc && mocha
-    'nyc mocha', './test/**/*.js',
+    'nyc mocha',
+
+    // where to look for tests
+    './test/**/*.js',
 
     // setup test environment
     util.format('--file "%s"', rootSuite),
@@ -52,8 +54,11 @@ const args = [
     // enable watch
     program.watch ? '--watch' : '',
 
-    // babel + chalk
-    '--require babel-core/register --colors',
+    // babel
+    ' --require @babel/register ',
+
+    // output colors
+    '--colors',
 
     // lastly: pipe to coveralls -->
     // this has to happen last after all tests have run

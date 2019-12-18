@@ -24,9 +24,7 @@
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
+    "@babel/register": "^7.7.4",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chalk": "^3.0.0",
@@ -59,9 +57,9 @@
     "npm": "^6.13.4",
     "nyc": "^14.1.1",
     "sinon": "^7.5.0",
+    "sinon-chrome": "^3.0.1",
     "webpack": "^4.41.3",
     "webpack-stream": "^5.2.1",
-    "sinon-chrome": "^3.0.1",
     "yargs": "^15.0.2"
   },
   "devDependencies": {

@@ -2,8 +2,8 @@
 
 # [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
 
-![npm](https://img.shields.io/npm/v/extension-cli)
-![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)
+[![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
+[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
 
 > This application includes command-line build tools that facilitate rapid chrome extension development by providing
 systematic way to build, test and document extension projects.

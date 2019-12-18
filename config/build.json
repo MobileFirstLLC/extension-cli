@@ -1,5 +1,5 @@
 {
-  "projectRootDir": "../../../Extensions/sitemap-generator",
+  "projectRootDir": "../../../",
   "dist": "./dist",
   "source": "./src",
   "releases": "./",
