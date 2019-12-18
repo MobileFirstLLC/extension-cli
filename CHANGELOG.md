@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0-alpha.2](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.0-alpha.1...v0.8.0-alpha.2) (2019-12-18)
+
+
+### Bug Fixes
+
+* try fix ci publish ([23ae7b3](https://github.com/MobileFirstLLC/extension-cli/commit/23ae7b33e2fc361fffafec2e9ec79693d212d292))
+
 ## [0.8.0-alpha.1](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.0-alpha.0...v0.8.0-alpha.1) (2019-12-18)
 
 
