@@ -192,25 +192,56 @@ window.lunrData = {
           "zip"
         ],
         "xt-test.html": [
+          "api'",
+          "arrow",
+          "babel",
+          "base",
+          "browser",
           "chai",
           "chrome",
+          "class",
+          "code",
           "command",
+          "comput",
+          "coverag",
+          "creat",
           "directori",
           "environ",
+          "es6",
+          "execut",
+          "expect",
+          "extend",
           "extens",
-          "headless",
+          "follow",
+          "global",
+          "https://mochajs.org",
+          "https://www.chaijs.com",
+          "https://www.npmjs.com/package/jsdom",
+          "https://www.npmjs.com/package/nyc",
+          "https://www.npmjs.com/package/sinon",
+          "import",
+          "includ",
+          "initi",
           "jsdom",
           "locat",
+          "mean",
           "mocha",
+          "modul",
           "namespac",
+          "nyc",
+          "pre",
           "project",
           "promis",
           "run",
           "setup",
+          "simpli",
+          "singl",
           "sinon",
+          "suitabl",
           "test",
           "unit",
           "us",
+          "window",
           "xt"
         ]
       },
@@ -257,9 +288,41 @@ window.lunrData = {
                         "xt-build.html": {
                           "ref": "xt-build.html",
                           "tf": 2.1739130434782608
+                        },
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 0.6578947368421052
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "b": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 0.6578947368421052
                   }
                 }
               }
@@ -289,7 +352,7 @@ window.lunrData = {
                       },
                       "xt-test.html": {
                         "ref": "xt-test.html",
-                        "tf": 2.272727272727273
+                        "tf": 2.631578947368421
                       }
                     }
                   }
@@ -313,7 +376,7 @@ window.lunrData = {
                 "docs": {
                   "xt-test.html": {
                     "ref": "xt-test.html",
-                    "tf": 4.545454545454546
+                    "tf": 1.3157894736842104
                   }
                 }
               }
@@ -342,6 +405,20 @@ window.lunrData = {
                     "xt-clean.html": {
                       "ref": "xt-clean.html",
                       "tf": 951.9230769230769
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
                     }
                   }
                 }
@@ -378,7 +455,7 @@ window.lunrData = {
                         },
                         "xt-test.html": {
                           "ref": "xt-test.html",
-                          "tf": 4.545454545454546
+                          "tf": 1.3157894736842104
                         }
                       }
                     }
@@ -394,6 +471,17 @@ window.lunrData = {
                       "xt-build.html": {
                         "ref": "xt-build.html",
                         "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                },
+                "u": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
                       }
                     }
                   }
@@ -435,6 +523,37 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 0.6578947368421052
+                  }
+                }
+              }
+            },
+            "v": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 0.6578947368421052
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "a": {
@@ -446,6 +565,23 @@ window.lunrData = {
                   "xt-build.html": {
                     "ref": "xt-build.html",
                     "tf": 2.1739130434782608
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
+                    }
                   }
                 }
               }
@@ -622,7 +758,7 @@ window.lunrData = {
                             },
                             "xt-test.html": {
                               "ref": "xt-test.html",
-                              "tf": 2.272727272727273
+                              "tf": 0.6578947368421052
                             }
                           }
                         }
@@ -692,7 +828,15 @@ window.lunrData = {
                       },
                       "xt-test.html": {
                         "ref": "xt-test.html",
-                        "tf": 2.272727272727273
+                        "tf": 0.6578947368421052
+                      }
+                    }
+                  },
+                  "d": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
                       }
                     }
                   }
@@ -743,6 +887,37 @@ window.lunrData = {
                     }
                   }
                 }
+              },
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
+                      }
+                    }
+                  }
+                }
               }
             }
           },
@@ -779,7 +954,7 @@ window.lunrData = {
                       "docs": {
                         "xt-test.html": {
                           "ref": "xt-test.html",
-                          "tf": 2.272727272727273
+                          "tf": 2.631578947368421
                         }
                       }
                     }
@@ -787,6 +962,17 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "s": {
+            "6": {
+              "docs": {
+                "xt-test.html": {
+                  "ref": "xt-test.html",
+                  "tf": 0.6578947368421052
+                }
+              }
+            },
+            "docs": {}
           }
         },
         "i": {
@@ -818,6 +1004,10 @@ window.lunrData = {
                       "xt-docs.html": {
                         "ref": "xt-docs.html",
                         "tf": 0.78125
+                      },
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
                       }
                     }
                   }
@@ -839,6 +1029,20 @@ window.lunrData = {
                           "tf": 1.7241379310344827
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 1.3157894736842104
                     }
                   }
                 }
@@ -885,6 +1089,26 @@ window.lunrData = {
                   "xt-clean.html": {
                     "ref": "xt-clean.html",
                     "tf": 1.9230769230769231
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
+                      }
+                    }
                   }
                 }
               }
@@ -968,7 +1192,7 @@ window.lunrData = {
                     },
                     "xt-test.html": {
                       "ref": "xt-test.html",
-                      "tf": 2.272727272727273
+                      "tf": 0.6578947368421052
                     }
                   }
                 }
@@ -1039,7 +1263,7 @@ window.lunrData = {
                         },
                         "xt-test.html": {
                           "ref": "xt-test.html",
-                          "tf": 2.272727272727273
+                          "tf": 1.3157894736842104
                         }
                       }
                     }
@@ -1098,10 +1322,18 @@ window.lunrData = {
                     "docs": {
                       "xt-test.html": {
                         "ref": "xt-test.html",
-                        "tf": 2.272727272727273
+                        "tf": 0.6578947368421052
                       }
                     }
                   }
+                }
+              }
+            },
+            "e": {
+              "docs": {
+                "xt-test.html": {
+                  "ref": "xt-test.html",
+                  "tf": 0.6578947368421052
                 }
               }
             }
@@ -1240,7 +1472,7 @@ window.lunrData = {
               "docs": {
                 "xt-test.html": {
                   "ref": "xt-test.html",
-                  "tf": 2.272727272727273
+                  "tf": 1.3157894736842104
                 }
               }
             }
@@ -1334,7 +1566,7 @@ window.lunrData = {
                   "docs": {
                     "xt-test.html": {
                       "ref": "xt-test.html",
-                      "tf": 2.272727272727273
+                      "tf": 1.9736842105263157
                     }
                   }
                 }
@@ -1384,19 +1616,67 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "xt-test.html": {
+                          "ref": "xt-test.html",
+                          "tf": 0.6578947368421052
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "i": {
             "docs": {},
+            "m": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "n": {
               "docs": {},
+              "g": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
+                    }
+                  }
+                }
+              },
               "o": {
                 "docs": {},
                 "n": {
                   "docs": {
                     "xt-test.html": {
                       "ref": "xt-test.html",
-                      "tf": 2.272727272727273
+                      "tf": 0.6578947368421052
                     }
                   }
                 }
@@ -1418,7 +1698,7 @@ window.lunrData = {
                   },
                   "xt-test.html": {
                     "ref": "xt-test.html",
-                    "tf": 956.8181818181819
+                    "tf": 955.2631578947369
                   }
                 }
               }
@@ -1560,7 +1840,7 @@ window.lunrData = {
               },
               "xt-test.html": {
                 "ref": "xt-test.html",
-                "tf": 2.272727272727273
+                "tf": 2.631578947368421
               }
             }
           },
@@ -1572,7 +1852,7 @@ window.lunrData = {
                 "docs": {
                   "xt-test.html": {
                     "ref": "xt-test.html",
-                    "tf": 2.272727272727273
+                    "tf": 1.3157894736842104
                   }
                 }
               }
@@ -1613,6 +1893,26 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "w": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 1.3157894736842104
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "g": {
@@ -1630,6 +1930,10 @@ window.lunrData = {
                       "global.html": {
                         "ref": "global.html",
                         "tf": 2045
+                      },
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 1.3157894736842104
                       }
                     }
                   }
@@ -1769,6 +2073,17 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "y": {
+            "docs": {},
+            "c": {
+              "docs": {
+                "xt-test.html": {
+                  "ref": "xt-test.html",
+                  "tf": 0.6578947368421052
+                }
+              }
+            }
           }
         },
         "f": {
@@ -1834,6 +2149,23 @@ window.lunrData = {
                       "xt-docs.html": {
                         "ref": "xt-docs.html",
                         "tf": 0.78125
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "w": {
+                    "docs": {
+                      "xt-test.html": {
+                        "ref": "xt-test.html",
+                        "tf": 0.6578947368421052
                       }
                     }
                   }
@@ -2089,6 +2421,37 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "p": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "'": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 0.6578947368421052
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "w": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "h": {
@@ -2191,6 +2554,199 @@ window.lunrData = {
                               }
                             }
                           }
+                        },
+                        "m": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "h": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "j": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      ".": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {
+                                                "xt-test.html": {
+                                                  "ref": "xt-test.html",
+                                                  "tf": 0.6578947368421052
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "w": {
+                          "docs": {},
+                          "w": {
+                            "docs": {},
+                            "w": {
+                              "docs": {},
+                              ".": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "h": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "j": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            ".": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {
+                                                      "xt-test.html": {
+                                                        "ref": "xt-test.html",
+                                                        "tf": 0.6578947368421052
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "n": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {},
+                                      "j": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          ".": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "/": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "c": {
+                                                          "docs": {},
+                                                          "k": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "g": {
+                                                                "docs": {},
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "/": {
+                                                                    "docs": {},
+                                                                    "j": {
+                                                                      "docs": {},
+                                                                      "s": {
+                                                                        "docs": {},
+                                                                        "d": {
+                                                                          "docs": {},
+                                                                          "o": {
+                                                                            "docs": {},
+                                                                            "m": {
+                                                                              "docs": {
+                                                                                "xt-test.html": {
+                                                                                  "ref": "xt-test.html",
+                                                                                  "tf": 0.6578947368421052
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "n": {
+                                                                      "docs": {},
+                                                                      "y": {
+                                                                        "docs": {},
+                                                                        "c": {
+                                                                          "docs": {
+                                                                            "xt-test.html": {
+                                                                              "ref": "xt-test.html",
+                                                                              "tf": 0.6578947368421052
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "s": {
+                                                                      "docs": {},
+                                                                      "i": {
+                                                                        "docs": {},
+                                                                        "n": {
+                                                                          "docs": {},
+                                                                          "o": {
+                                                                            "docs": {},
+                                                                            "n": {
+                                                                              "docs": {
+                                                                                "xt-test.html": {
+                                                                                  "ref": "xt-test.html",
+                                                                                  "tf": 0.6578947368421052
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -2214,26 +2770,6 @@ window.lunrData = {
                         "xt-sync.html": {
                           "ref": "xt-sync.html",
                           "tf": 1.7241379310344827
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "d": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "s": {
-                      "docs": {},
-                      "s": {
-                        "docs": {
-                          "xt-test.html": {
-                            "ref": "xt-test.html",
-                            "tf": 2.272727272727273
-                          }
                         }
                       }
                     }
@@ -2283,7 +2819,7 @@ window.lunrData = {
                   "docs": {
                     "xt-test.html": {
                       "ref": "xt-test.html",
-                      "tf": 2.272727272727273
+                      "tf": 0.6578947368421052
                     }
                   }
                 }
@@ -2321,6 +2857,17 @@ window.lunrData = {
                     }
                   }
                 }
+              },
+              "u": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "xt-test.html": {
+                      "ref": "xt-test.html",
+                      "tf": 0.6578947368421052
+                    }
+                  }
+                }
               }
             },
             "c": {
@@ -2331,7 +2878,7 @@ window.lunrData = {
                   "docs": {
                     "xt-test.html": {
                       "ref": "xt-test.html",
-                      "tf": 2.272727272727273
+                      "tf": 1.3157894736842104
                     }
                   }
                 }
@@ -2391,6 +2938,20 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "e": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "xt-test.html": {
+                    "ref": "xt-test.html",
+                    "tf": 0.6578947368421052
+                  }
+                }
+              }
+            }
           }
         },
         "z": {
@@ -2408,11 +2969,15 @@ window.lunrData = {
           }
         }
       },
-      "length": 158
+      "length": 189
     },
     "corpusTokens": [
       "advis",
+      "api'",
+      "arrow",
       "automat",
+      "babel",
+      "base",
       "browser",
       "build",
       "c",
@@ -2420,12 +2985,17 @@ window.lunrData = {
       "chai",
       "chang",
       "chrome",
+      "class",
       "clean",
       "cli",
+      "code",
       "command",
       "compil",
+      "comput",
       "config",
       "configur",
+      "coverag",
+      "creat",
       "debug",
       "default",
       "defin",
@@ -2441,23 +3011,34 @@ window.lunrData = {
       "each",
       "env",
       "environ",
+      "es6",
       "except",
+      "execut",
+      "expect",
       "explicitli",
+      "extend",
       "extens",
       "file",
       "flag",
+      "follow",
       "foodoc",
       "gener",
       "gitignor",
       "global",
-      "headless",
       "heavili",
       "https://jsdoc.app/about",
       "https://jsdoc.app/index.html",
+      "https://mochajs.org",
+      "https://www.chaijs.com",
+      "https://www.npmjs.com/package/jsdom",
+      "https://www.npmjs.com/package/nyc",
+      "https://www.npmjs.com/package/sinon",
       "idea",
       "ignor",
+      "import",
       "includ",
       "index",
+      "initi",
       "instead",
       "iter",
       "jsdoc",
@@ -2471,13 +3052,16 @@ window.lunrData = {
       "look",
       "manner",
       "manual",
+      "mean",
       "minifi",
       "mocha",
       "modifi",
+      "modul",
       "more",
       "name",
       "namespac",
       "node_modul",
+      "nyc",
       "on",
       "oper",
       "option",
@@ -2487,6 +3071,7 @@ window.lunrData = {
       "package.json",
       "pass",
       "path",
+      "pre",
       "prod",
       "product",
       "project",
@@ -2499,11 +3084,14 @@ window.lunrData = {
       "run",
       "see",
       "setup",
+      "simpli",
+      "singl",
       "sinon",
       "speed",
       "stale",
       "store",
       "such",
+      "suitabl",
       "sync",
       "syntax",
       "systemat",
@@ -2523,6 +3111,7 @@ window.lunrData = {
       "want",
       "way",
       "web",
+      "window",
       "xt",
       "xtdoc",
       "xtdocs.json",
@@ -2620,7 +3209,7 @@ window.lunrData = {
       "name": "xt-test",
       "tags": "xt-test",
       "summary": "",
-      "description": "This command will run project unit tests located in test/ directory. This command will setup extension testing environment using sinon-chrome, mocha, chai, chai-as-promised, and headless jsdom.",
+      "description": "This command will run project unit tests located in test/ directory. This command will setup extension testing environment that is pre-initialized with mocha https://mochajs.org/, chai (including chai-as-promised) https://www.chaijs.com/, and expect. nyc is used for computing code coverage https://www.npmjs.com/package/nyc. Also the following browser API's are initialized: window, chrome. Window is setup using jsdom-global https://www.npmjs.com/package/jsdom-global and chrome using sinon-chrome https://www.npmjs.com/package/sinon-chrome. Mocha will execute with babel, meaning you can use this test environment to test ES6 modules with imports, arrows, and classes. You may extend this test environment with a single project; this is simply the base setup for running unit tests. Or you may create your own test environment if this is not suitable.",
       "body": ""
     }
   }

@@ -102,8 +102,16 @@
 <dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>This command will run project unit tests located in test/ directory.</p>
-			<p>This command will setup extension testing environment using sinon-chrome,
-			mocha, chai, chai-as-promised, and headless jsdom.</p></div>
+			<p>This command will setup extension testing environment that is pre-initialized
+			with mocha <a href="https://mochajs.org/">https://mochajs.org/</a>, chai (including chai-as-promised) <a href="https://www.chaijs.com/">https://www.chaijs.com/</a>,
+			and expect. nyc is used for computing code coverage <a href="https://www.npmjs.com/package/nyc">https://www.npmjs.com/package/nyc</a>.</p>
+			<p>Also the following browser API's are initialized: window, chrome. Window
+			is setup using jsdom-global <a href="https://www.npmjs.com/package/jsdom-global">https://www.npmjs.com/package/jsdom-global</a> and
+			chrome using sinon-chrome <a href="https://www.npmjs.com/package/sinon-chrome">https://www.npmjs.com/package/sinon-chrome</a>.</p>
+			<p>Mocha will execute with babel, meaning you can use this test environment to
+			test ES6 modules with imports, arrows, and classes.</p>
+			<p>You may extend this test environment with a single project; this is simply the base setup
+			for running unit tests. Or you may create your own test environment if this is not suitable.</p></div>
 			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Default test command</p></div>
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-test</code></pre>
@@ -112,9 +120,9 @@
 					<div class="example-code">
 						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-test --watch</code></pre>
 					</div>
-					<div class="example-caption"><p>Execute tests and pipe result to coveralls</p></div>
+					<div class="example-caption"><p>Execute tests and pipe result to coveralls.io</p></div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-test --coveralls</code></pre>
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-test --coverage</code></pre>
 					</div>
 					<div class="example-caption"><p>Get help using this command</p></div>
 					<div class="example-code">
