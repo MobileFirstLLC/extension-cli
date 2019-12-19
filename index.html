@@ -100,7 +100,10 @@
 systematic way to build, test and document extension projects.</p>
 </blockquote>
 <h2>Motivation</h2>
-<p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about <a href="#file-organization">project structure</a> and how things are organized.</p>
+<p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project.</p>
+<p>Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects.</p>
+<p>This approach helps with creating a common, consistent development approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects as many npm packages inevitably need to be updated (frequently!).</p>
+<br/>
 <table>
 <thead>
 <tr>
@@ -135,6 +138,7 @@ systematic way to build, test and document extension projects.</p>
 </tr>
 </tbody>
 </table>
+<br/>
 <img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
 <h2>Command Reference</h2>
 <table>
