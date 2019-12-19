@@ -9,8 +9,13 @@ systematic way to build, test and document extension projects.
 
 ## Motivation
 
-After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
+After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. 
 
+Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. 
+
+This approach helps with creating a common, consistent development approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects as many npm packages inevitably need to be updated (frequently!).
+
+<br/>
 
 | # | Core Features |
 | --- | :--- | 
@@ -21,6 +26,7 @@ After developing multiple browser extension, it became clear that there were sev
 | ➎ | Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
 | ➏ | Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom | 
 
+<br/>
 
 <img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
 
