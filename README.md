@@ -17,7 +17,7 @@ This approach helps with creating a common, consistent development approach betw
 
 <br/>
 
-| # | ℹ️ CORE FEATURES |
+| # | CORE FEATURES |
 | --- | :--- | 
 | ➊ | Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
 | ➋ | Compiles and bundles [SASS files](https://sass-lang.com/guide) |
