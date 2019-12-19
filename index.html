@@ -102,7 +102,7 @@ systematic way to build, test and document extension projects.</p>
 </blockquote>
 <h3>Motivation</h3>
 <p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about <a href="#file-organization">project structure</a> and how things are organized.</p>
-<p><strong>This program provides following functionality</strong></p>
+<p><strong>This program provides following functionality:</strong></p>
 <ul>
 <li>Compiles and bundles javascript files (including <a href="http://es6-features.org/">ES6 syntax</a> w/ babel and webpack)</li>
 <li>Compiles and bundles <a href="https://sass-lang.com/guide">SASS files</a>
@@ -151,6 +151,7 @@ systematic way to build, test and document extension projects.</p>
 <p><strong>Planned</strong></p>
 <ul>
 <li>[ ] <code>xt-create</code> -- create new extension project</li>
+<li>[ ] <code>xt-eject</code> -- remove CLi dependency</li>
 </ul>
 <p><strong>Documentation</strong></p>
 <p><a href="https://mobilefirstllc.github.io/extension-cli/list_namespace.html">More detailed usage instructions for each command available here</a>.</p>
@@ -158,7 +159,7 @@ systematic way to build, test and document extension projects.</p>
 <h2>Getting Started</h2>
 <h3>File Organization</h3>
 <p>Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.</p>
-<p><strong>At minimum, the following project structure is expected</strong></p>
+<p><strong>The following project structure is expected:</strong></p>
 <table>
 <thead>
 <tr>
@@ -169,42 +170,41 @@ systematic way to build, test and document extension projects.</p>
 <tbody>
 <tr>
 <td>└ <strong>assets</strong></td>
-<td></td>
+<td>static assets</td>
 </tr>
 <tr>
-<td>    └─── img</td>
+<td>    └─ <code>img</code></td>
 <td>Extension icons</td>
 </tr>
 <tr>
-<td>    └─── locales</td>
-<td>localized string resources</td>
+<td>    └─ <code>locales</code></td>
+<td>Localized string resources</td>
 </tr>
 <tr>
-<td>        └─ en/messages.json</td>
+<td>        └─ <code>en</code>/<code>messages.json</code></td>
 <td>Basic en dictionary</td>
 </tr>
 <tr>
 <td>└ <strong>src</strong></td>
-<td>source code: js, scss, html, json files</td>
+<td>Source code: js, scss, html, json files</td>
 </tr>
 <tr>
-<td>        └─ manifest.json</td>
+<td>    └─ <code>manifest.json</code></td>
 <td>Extension manifest</td>
 </tr>
 <tr>
 <td>└ <strong>test</strong></td>
-<td>unit tests</td>
+<td>Unit tests</td>
 </tr>
 <tr>
-<td>└ package.json</td>
-<td>application root</td>
+<td>└ <code>package.json</code></td>
+<td>Application root</td>
 </tr>
 </tbody>
 </table>
 <h3>Installation</h3>
 <p><strong>1. Install latest version</strong> <a href="https://www.npmjs.com/package/extension-cli">from NPM</a></p>
 <p><strong>2. Update <code>package.json</code></strong> with following options:</p>
-<p>Add following other sections to <code>package.json</code></p>
 <p><em>Needed to compile projects written in ES6</em></p>
 <pre class="prettyprint source lang-json"><code>  &quot;babel&quot;: {
     &quot;presets&quot;: [
