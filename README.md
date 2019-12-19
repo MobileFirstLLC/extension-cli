@@ -1,5 +1,3 @@
-<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/assets/img/128x128.png' alt='' width="40" /> 
-
 # [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
@@ -8,6 +6,7 @@
 > This application includes command-line build tools that facilitate rapid chrome extension development by providing
 systematic way to build, test and document extension projects.
 
+<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
 
 ### Motivation
 
