@@ -12,14 +12,14 @@ systematic way to build, test and document extension projects.
 After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
 
-| Core Features |
-| --- | 
-| Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
-| Compiles and bundles [SASS files](https://sass-lang.com/guide) |
-| Lint scripts using [eslint](https://eslint.org/) |
-| Generates a distributable `.zip` file for uploading to Chrome Web Store |
-| Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
-| Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom | 
+| # | Core Features |
+| --- | :--- | 
+| ➊ | Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
+| ➋ | Compiles and bundles [SASS files](https://sass-lang.com/guide) |
+| ➌ | Lint scripts using [eslint](https://eslint.org/) |
+| ➍ | Generates a distributable `.zip` file for uploading to Chrome Web Store |
+| ➎ | Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
+| ➏ | Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom | 
 
 
 <img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
@@ -67,6 +67,15 @@ Path | Description
 &nbsp; &nbsp; └─ `manifest.json` | Extension manifest 
 └ **`test`** | Unit tests
 └ `package.json` | Application root
+
+### Prerequisites
+
+Before using this program, you should have all of the following installed:
+
+- [NodeJs](https://nodejs.org/en/download/)
+- Any web-friendly IDE
+- Terminal/cmd
+- Chrome browser for debugging extension
 
 ### Installation & basic configuration
 
