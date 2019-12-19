@@ -101,7 +101,7 @@
 systematic way to build, test and document extension projects.</p>
 </blockquote>
 <h3>Motivation</h3>
-<p>After developing 10+ chrome extension, it became clear that there were several steps in the development process that were the same between each project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent environment between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about <a href="#file-organization">project structure</a> and how things are organized.</p>
+<p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about <a href="#file-organization">project structure</a> and how things are organized.</p>
 <p><strong>This program provides following functionality</strong></p>
 <ul>
 <li>Compiles and bundles javascript files (including <a href="http://es6-features.org/">ES6 syntax</a> w/ babel and webpack)</li>
@@ -110,13 +110,14 @@ systematic way to build, test and document extension projects.</p>
 <li>note: if you don't like using sass, just write basic css. Name your style files using extension <code>.scss</code></li>
 </ul>
 </li>
+<li>Lint scripts using <a href="https://eslint.org/">eslint</a></li>
 <li>Generates a distributable <code>.zip</code> file for uploading to Chrome Web Store</li>
 <li>Generates code documentation using <a href="https://jsdoc.app/about-getting-started.html">JSdoc 3</a></li>
 <li>Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom.</li>
 </ul>
 <hr>
 <h2>Command Reference</h2>
-<p>Note that for each command <code>--help</code> or <code>--version</code> are also valid</p>
+<p>Note that for each command <code>--help</code> and <code>--version</code> flags are also valid</p>
 <table>
 <thead>
 <tr>
@@ -157,7 +158,7 @@ systematic way to build, test and document extension projects.</p>
 <h2>Getting Started</h2>
 <h3>File Organization</h3>
 <p>Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.</p>
-<p><strong>Following project structure is expected</strong></p>
+<p><strong>At minimum, the following project structure is expected</strong></p>
 <table>
 <thead>
 <tr>
@@ -179,7 +180,7 @@ systematic way to build, test and document extension projects.</p>
 <td>localized string resources</td>
 </tr>
 <tr>
-<td>      └── en/messages.json</td>
+<td>        └─ en/messages.json</td>
 <td>Basic en dictionary</td>
 </tr>
 <tr>
@@ -187,7 +188,7 @@ systematic way to build, test and document extension projects.</p>
 <td>source code: js, scss, html, json files</td>
 </tr>
 <tr>
-<td>      └── manifest.json</td>
+<td>        └─ manifest.json</td>
 <td>Extension manifest</td>
 </tr>
 <tr>
