@@ -151,7 +151,7 @@ systematic way to build, test and document extension projects.</p>
 <p><strong>Planned</strong></p>
 <ul>
 <li>[ ] <code>xt-create</code> -- create new extension project</li>
-<li>[ ] <code>xt-eject</code> -- remove CLi dependency</li>
+<li>[ ] <code>xt-eject</code> -- remove CLI dependency</li>
 </ul>
 <p><strong>Documentation</strong></p>
 <p><a href="https://mobilefirstllc.github.io/extension-cli/list_namespace.html">More detailed usage instructions for each command available here</a>.</p>
@@ -169,7 +169,7 @@ systematic way to build, test and document extension projects.</p>
 </thead>
 <tbody>
 <tr>
-<td>└ <strong>assets</strong></td>
+<td>└ <strong><code>assets</code></strong></td>
 <td>static assets</td>
 </tr>
 <tr>
@@ -185,7 +185,7 @@ systematic way to build, test and document extension projects.</p>
 <td>Basic en dictionary</td>
 </tr>
 <tr>
-<td>└ <strong>src</strong></td>
+<td>└ <strong><code>src</code></strong></td>
 <td>Source code: js, scss, html, json files</td>
 </tr>
 <tr>
@@ -193,7 +193,7 @@ systematic way to build, test and document extension projects.</p>
 <td>Extension manifest</td>
 </tr>
 <tr>
-<td>└ <strong>test</strong></td>
+<td>└ <strong><code>test</code></strong></td>
 <td>Unit tests</td>
 </tr>
 <tr>
@@ -205,49 +205,84 @@ systematic way to build, test and document extension projects.</p>
 <h3>Installation</h3>
 <p><strong>1. Install latest version</strong> <a href="https://www.npmjs.com/package/extension-cli">from NPM</a></p>
 <p><strong>2. Update <code>package.json</code></strong> with following options:</p>
-<p><em>Needed to compile projects written in ES6</em></p>
-<pre class="prettyprint source lang-json"><code>  &quot;babel&quot;: {
-    &quot;presets&quot;: [
-      &quot;@babel/preset-env&quot;
+<table>
+<tr>
+<td>
+<pre>
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
     ]
   }
-</code></pre>
-<p><em>Add this so test files will not be linted</em></p>
-<p>If your project includes compiled 3rd party libs (not imported from npm but literally <code>.js</code> files, you should exclude them also).</p>
-<pre class="prettyprint source"><code>  &quot;eslintIgnore&quot;: [
-    &quot;test/**/*&quot;
+</pre>
+</td>
+<td valign='top'>
+<strong>Babel presets</strong><br/><br/>
+Needed to compile projects written in ES6.
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+  "eslintIgnore": [
+    "test/**/*"
   ]
-</code></pre>
-<p><em>Basic options for generating docs using the default template</em></p>
-<pre class="prettyprint source"><code>  &quot;xtdocs&quot;: {
-    &quot;templates&quot;: {
-      &quot;systemName&quot;: &quot;Extension name&quot;,
-      &quot;systemSummary&quot;: &quot;Write a short description here!&quot;,
-      &quot;systemColor&quot;: &quot;#000000&quot;
+</pre>
+</td>
+<td>
+<strong>ESLint ignore</strong><br/><br/>
+Add this so test files will not be linted.If your project includes compiled 3rd party libs (not imported from npm but literally `.js` files, you should exclude them also).
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+  "xtdocs": {
+    "templates": {
+      "systemName": "Extension name",
+      "systemSummary": 
+        "Write a short description here!",
+      "systemColor": "#000000"
     }
   }
-</code></pre>
-<p><em>Define javacsript bundles to build</em>, where</p>
-<ul>
-<li><code>name</code> is the output filename without file extension and</li>
-<li><code>src</code> indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.</li>
-</ul>
-<pre class="prettyprint source"><code>  &quot;xtbuild&quot;: {
-    &quot;js_bundles&quot;: [
+</pre>
+</td>
+<td>
+<strong>Documentation Config</strong><br/><br/>
+Basic options for generating docs using the default template
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+  "xtbuild": {
+    "js_bundles": [
       {
-        &quot;name&quot;: &quot;background-script&quot;,
-        &quot;src&quot;: &quot;./src/bg/**/*.js&quot;
+        "name": "background-script",
+        "src": "./src/bg/**/*.js"
       }, {
-          &quot;name&quot;: &quot;content-script&quot;,
-          &quot;src&quot;: [&quot;./src/ct/index.js&quot;, &quot;./src/ct/helper.js&quot;]
+          "name": "content-script",
+          "src": [
+            "./src/ct/index.js", 
+            "./src/ct/helper.js"
+          ]
       }, {
-         &quot;name&quot;: &quot;coptions&quot;,
-         &quot;src&quot;: &quot;./src/options.js&quot;
+         "name": "coptions",
+         "src": "./src/options.js"
      }
     ]
   }
-</code></pre>
-<p><em>Finally, add following scripts</em></p>
+</pre>
+</td>
+<td>
+<strong>Build Config</strong><br/><br/>
+Define javacsript bundles to build, where<br/>
+- <code>name</code> is the output filename without file extension and<br/>
+- <code>src</code> indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.
+</td>
+</tr>
+</table>
+<p><strong>Finally, add following scripts to <code>package.json</code></strong></p>
 <p>After adding scripts, you can execute commands by running <code>npm run start</code>, <code>npm run docs</code>, etc.</p>
 <pre class="prettyprint source lang-json"><code>&quot;scripts&quot;: {
     &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
