@@ -14,7 +14,7 @@ systematic way to build, test and document extension projects.
 After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
 
-**This program provides following functionality**
+**This program provides following functionality:**
 
 - Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)
 - Compiles and bundles [SASS files](https://sass-lang.com/guide)
@@ -42,6 +42,7 @@ Command | Description
 **Planned**
 
 - [ ] `xt-create` -- create new extension project
+- [ ] `xt-eject` -- remove CLi dependency
 
 **Documentation**
 
@@ -55,26 +56,24 @@ Command | Description
 
 Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.
 
-**At minimum, the following project structure is expected**
+**The following project structure is expected:**
 
 Path | Description
 --- | ---
-└ **assets** | 
-&nbsp; &nbsp; └─── img | Extension icons
-&nbsp; &nbsp; └─── locales | localized string resources
-&nbsp; &nbsp; &nbsp; &nbsp; └─ en/messages.json | Basic en dictionary
-└ **src** | source code: js, scss, html, json files
-&nbsp; &nbsp; &nbsp; &nbsp; └─ manifest.json | Extension manifest 
-└ **test** | unit tests
-└ package.json | application root
+└ **assets** |  static assets
+&nbsp; &nbsp; └─ `img` | Extension icons
+&nbsp; &nbsp; └─ `locales` | Localized string resources
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/`messages.json` | Basic en dictionary
+└ **src** | Source code: js, scss, html, json files
+&nbsp; &nbsp; └─ `manifest.json` | Extension manifest 
+└ **test** | Unit tests
+└ `package.json` | Application root
 
 ### Installation
 
 **1. Install latest version** [from NPM](https://www.npmjs.com/package/extension-cli)
 
 **2. Update `package.json`** with following options:
-
-Add following other sections to `package.json`
 
 *Needed to compile projects written in ES6* 
 
