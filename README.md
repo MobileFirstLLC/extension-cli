@@ -28,7 +28,7 @@ This approach helps with creating a common, consistent development approach betw
 
 <br/>
 
-<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/img.png' alt='extension-cli' /> 
+<img src='https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5' alt='extension-cli' width="100%" /> 
 
 
 ## Command Reference
