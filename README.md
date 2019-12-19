@@ -17,18 +17,18 @@ This approach helps with creating a common, consistent development approach betw
 
 <br/>
 
-| # | Core Features |
+| # | ℹ️ CORE FEATURES |
 | --- | :--- | 
 | ➊ | Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
 | ➋ | Compiles and bundles [SASS files](https://sass-lang.com/guide) |
-| ➌ | Lint scripts using [eslint](https://eslint.org/) |
-| ➍ | Generates a distributable `.zip` file for uploading to Chrome Web Store |
+| ➌ | Code linting scripts using [ESLint](https://eslint.org/) |
+| ➍ | Generates distributable `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) |
 | ➎ | Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
-| ➏ | Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom | 
+| ➏ | Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) | 
 
 <br/>
 
-<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
+<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.jpg' alt='extension-cli' /> 
 
 
 ## Command Reference
