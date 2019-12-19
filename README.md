@@ -6,24 +6,23 @@
 > This application includes command-line build tools that facilitate rapid chrome extension development by providing
 systematic way to build, test and document extension projects.
 
-<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
 
-### Motivation
+## Motivation
 
 After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
 
-**This program provides following functionality:**
-
+#### Core Features
+ 
 - Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)
 - Compiles and bundles [SASS files](https://sass-lang.com/guide)
-    - note: if you don't like using sass, just write basic css. Name your style files using extension `.scss`
 - Lint scripts using [eslint](https://eslint.org/)    
 - Generates a distributable `.zip` file for uploading to Chrome Web Store
 - Generates code documentation using [JSdoc 3](https://jsdoc.app/about-getting-started.html)     
 - Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom.
 
----
+
+<img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
 
 
 ## Command Reference
@@ -51,7 +50,7 @@ Command | Description
 
 ## Getting Started
 
-### File Organization
+#### File Organization
 
 Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.
 
@@ -68,7 +67,7 @@ Path | Description
 └ **`test`** | Unit tests
 └ `package.json` | Application root
 
-### Installation
+#### Installation & basic configuration
 
 **1. Install latest version** [from NPM](https://www.npmjs.com/package/extension-cli)
 
@@ -77,7 +76,7 @@ Path | Description
 
 <table>
 <tr>
-<td>
+<td style="padding:0">
 <pre>
   "babel": {
     "presets": [
@@ -92,20 +91,20 @@ Needed to compile projects written in ES6.
 </td>
 </tr>
 <tr>
-<td>
+<td style="padding:0">
 <pre>
   "eslintIgnore": [
     "test/**/*"
   ]
 </pre>
 </td>
-<td>
+<td valign='top'>
 <strong>ESLint ignore</strong><br/><br/>
 Add this so test files will not be linted.If your project includes compiled 3rd party libs (not imported from npm but literally `.js` files, you should exclude them also).
 </td>
 </tr>
 <tr>
-<td>
+<td style="padding:0">
 <pre>
   "xtdocs": {
     "templates": {
@@ -117,13 +116,13 @@ Add this so test files will not be linted.If your project includes compiled 3rd 
   }
 </pre>
 </td>
-<td>
+<td valign='top'>
 <strong>Documentation Config</strong><br/><br/>
 Basic options for generating docs using the default template
 </td>
 </tr>
 <tr>
-<td>
+<td style="padding:0">
 <pre>
   "xtbuild": {
     "js_bundles": [
@@ -144,29 +143,32 @@ Basic options for generating docs using the default template
   }
 </pre>
 </td>
-<td>
+<td valign='top'>
 <strong>Build Config</strong><br/><br/>
 Define javacsript bundles to build, where<br/>
 - <code>name</code> is the output filename without file extension and<br/>
 - <code>src</code> indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.
 </td>
 </tr>
+<tr>
+<td style="padding:0">
+<pre>
+  "scripts": {
+      "start": "xt-build -e dev -w",
+      "build": "xt-build -e prod",
+      "clean": "xt-clean",
+      "docs": "xt-docs",
+      "test": "xt-test"
+    }
+</pre>
+</td>
+<td valign='top'>
+<strong>Finally, add following scripts</strong><br/><br/>
+After adding scripts, you can execute commands by running 
+<code>npm run start</code>, <code>npm run docs</code>, etc.</td>
+</tr>
 </table>
 
-
-**Finally, add following scripts to `package.json`** 
-
-After adding scripts, you can execute commands by running `npm run start`, `npm run docs`, etc.
-
-```json
-"scripts": {
-    "start": "xt-build -e dev -w",
-    "build": "xt-build -e prod",
-    "clean": "xt-clean",
-    "docs": "xt-docs",
-    "test": "xt-test"
-  }
-```
 
 
 ### License 
