@@ -11,7 +11,7 @@ systematic way to build, test and document extension projects.
 
 ### Motivation
 
-After developing 10+ chrome extension, it became clear that there were several steps in the development process that were the same between each project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent environment between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
+After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
 
 **This program provides following functionality**
@@ -19,6 +19,7 @@ After developing 10+ chrome extension, it became clear that there were several s
 - Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)
 - Compiles and bundles [SASS files](https://sass-lang.com/guide)
     - note: if you don't like using sass, just write basic css. Name your style files using extension `.scss`
+- Lint scripts using [eslint](https://eslint.org/)    
 - Generates a distributable `.zip` file for uploading to Chrome Web Store
 - Generates code documentation using [JSdoc 3](https://jsdoc.app/about-getting-started.html)     
 - Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom.
@@ -28,7 +29,7 @@ After developing 10+ chrome extension, it became clear that there were several s
 
 ## Command Reference
 
-Note that for each command `--help` or `--version` are also valid
+Note that for each command `--help` and `--version` flags are also valid
 
 Command | Description
 --- | ---
@@ -54,19 +55,18 @@ Command | Description
 
 Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.
 
-**Following project structure is expected**
+**At minimum, the following project structure is expected**
 
 Path | Description
 --- | ---
 └ **assets** | 
 &nbsp; &nbsp; └─── img | Extension icons
 &nbsp; &nbsp; └─── locales | localized string resources
-&nbsp; &nbsp; &nbsp; └── en/messages.json | Basic en dictionary
+&nbsp; &nbsp; &nbsp; &nbsp; └─ en/messages.json | Basic en dictionary
 └ **src** | source code: js, scss, html, json files
-&nbsp; &nbsp; &nbsp; └── manifest.json | Extension manifest 
+&nbsp; &nbsp; &nbsp; &nbsp; └─ manifest.json | Extension manifest 
 └ **test** | unit tests
 └ package.json | application root
-
 
 ### Installation
 
