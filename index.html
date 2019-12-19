@@ -102,7 +102,6 @@ systematic way to build, test and document extension projects.</p>
 </blockquote>
 <h3>Motivation</h3>
 <p>After developing 10+ chrome extension, it became clear that there were several steps in the development process that were the same between each project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent environment between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about <a href="#file-organization">project structure</a> and how things are organized.</p>
-<hr>
 <p><strong>This program provides following functionality</strong></p>
 <ul>
 <li>Compiles and bundles javascript files (including <a href="http://es6-features.org/">ES6 syntax</a> w/ babel and webpack)</li>
@@ -153,10 +152,11 @@ systematic way to build, test and document extension projects.</p>
 <li>[ ] <code>xt-create</code> -- create new extension project</li>
 </ul>
 <p><strong>Documentation</strong></p>
-<p>More detailed <a href="https://mobilefirstllc.github.io/extension-cli/list_namespace.html">usage instructions for each command available here</a>.</p>
+<p><a href="https://mobilefirstllc.github.io/extension-cli/list_namespace.html">More detailed usage instructions for each command available here</a>.</p>
+<hr>
 <h2>Getting Started</h2>
 <h3>File Organization</h3>
-<p>Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort. For a new project, follow the described organization.</p>
+<p>Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.</p>
 <p><strong>Following project structure is expected</strong></p>
 <table>
 <thead>
@@ -171,11 +171,11 @@ systematic way to build, test and document extension projects.</p>
 <td></td>
 </tr>
 <tr>
-<td>└─── img</td>
+<td>    └─── img</td>
 <td>Extension icons</td>
 </tr>
 <tr>
-<td>└─── locales</td>
+<td>    └─── locales</td>
 <td>localized string resources</td>
 </tr>
 <tr>
@@ -211,12 +211,13 @@ systematic way to build, test and document extension projects.</p>
     ]
   }
 </code></pre>
-<p><em>Do not lint test files</em></p>
+<p><em>Add this so test files will not be linted</em></p>
+<p>If your project includes compiled 3rd party libs (not imported from npm but literally <code>.js</code> files, you should exclude them also).</p>
 <pre class="prettyprint source"><code>  &quot;eslintIgnore&quot;: [
     &quot;test/**/*&quot;
   ]
 </code></pre>
-<p><em>Basic options for generated docs</em></p>
+<p><em>Basic options for generating docs using the default template</em></p>
 <pre class="prettyprint source"><code>  &quot;xtdocs&quot;: {
     &quot;templates&quot;: {
       &quot;systemName&quot;: &quot;Extension name&quot;,
@@ -227,8 +228,8 @@ systematic way to build, test and document extension projects.</p>
 </code></pre>
 <p><em>Define javacsript bundles to build</em>, where</p>
 <ul>
-<li><code>name</code> is the output filename and</li>
-<li><code>src</code> indicates which files to include in this bundle</li>
+<li><code>name</code> is the output filename without file extension and</li>
+<li><code>src</code> indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.</li>
 </ul>
 <pre class="prettyprint source"><code>  &quot;xtbuild&quot;: {
     &quot;js_bundles&quot;: [
@@ -237,12 +238,15 @@ systematic way to build, test and document extension projects.</p>
         &quot;src&quot;: &quot;./src/bg/**/*.js&quot;
       }, {
           &quot;name&quot;: &quot;content-script&quot;,
-          &quot;src&quot;: &quot;./src/ct/**/*.js&quot;
-      }
+          &quot;src&quot;: [&quot;./src/ct/index.js&quot;, &quot;./src/ct/helper.js&quot;]
+      }, {
+         &quot;name&quot;: &quot;coptions&quot;,
+         &quot;src&quot;: &quot;./src/options.js&quot;
+     }
     ]
   }
 </code></pre>
-<p><em>Add following scripts</em></p>
+<p><em>Finally, add following scripts</em></p>
 <p>After adding scripts, you can execute commands by running <code>npm run start</code>, <code>npm run docs</code>, etc.</p>
 <pre class="prettyprint source lang-json"><code>&quot;scripts&quot;: {
     &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
