@@ -13,7 +13,6 @@ systematic way to build, test and document extension projects.
 
 After developing 10+ chrome extension, it became clear that there were several steps in the development process that were the same between each project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent environment between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
----
 
 **This program provides following functionality**
 
@@ -45,21 +44,23 @@ Command | Description
 
 **Documentation**
 
-More detailed [usage instructions for each command available here](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
+[More detailed usage instructions for each command available here](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
+
+---
 
 ## Getting Started
 
 ### File Organization
 
-Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort. For a new project, follow the described organization.
+Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.
 
 **Following project structure is expected**
 
 Path | Description
 --- | ---
 └ **assets** | 
-└─── img | Extension icons
-└─── locales | localized string resources
+&nbsp; &nbsp; └─── img | Extension icons
+&nbsp; &nbsp; └─── locales | localized string resources
 &nbsp; &nbsp; &nbsp; └── en/messages.json | Basic en dictionary
 └ **src** | source code: js, scss, html, json files
 &nbsp; &nbsp; &nbsp; └── manifest.json | Extension manifest 
@@ -85,7 +86,9 @@ Add following other sections to `package.json`
   }
 ```
 
-*Do not lint test files*
+*Add this so test files will not be linted*
+
+If your project includes compiled 3rd party libs (not imported from npm but literally `.js` files, you should exclude them also).
 
 ```  
   "eslintIgnore": [
@@ -93,7 +96,7 @@ Add following other sections to `package.json`
   ]
 ```
 
-*Basic options for generated docs*
+*Basic options for generating docs using the default template*
 
 ```  
   "xtdocs": {
@@ -106,8 +109,8 @@ Add following other sections to `package.json`
 ```
 
 *Define javacsript bundles to build*, where 
-- `name` is the output filename and 
-- `src` indicates which files to include in this bundle
+- `name` is the output filename without file extension and 
+- `src` indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.
 
 ```
   "xtbuild": {
@@ -117,13 +120,16 @@ Add following other sections to `package.json`
         "src": "./src/bg/**/*.js"
       }, {
           "name": "content-script",
-          "src": "./src/ct/**/*.js"
-      }
+          "src": ["./src/ct/index.js", "./src/ct/helper.js"]
+      }, {
+         "name": "coptions",
+         "src": "./src/options.js"
+     }
     ]
   }
 ```
 
-*Add following scripts* 
+*Finally, add following scripts* 
 
 After adding scripts, you can execute commands by running `npm run start`, `npm run docs`, etc.
 
