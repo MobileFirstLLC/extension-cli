@@ -7,6 +7,7 @@ node_modules/
 CHANGELOG.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
-feature.jpg
+*.jpg
+*.png
 assets/
 
