@@ -6,8 +6,9 @@ const sandbox = sinon.createSandbox();
 const argv = require('yargs').argv;
 const chaiAsPromised = require('chai-as-promised');
 
-// simulate "window"
 require('jsdom-global')();
+
+// simulate "window"
 
 before(function () {
     process.env.NODE_ENV = 'test';
@@ -26,11 +27,6 @@ before(function () {
         chalk.bold.green(" expect "),
         chalk.bold.green(" sandbox (sinon) ")
     ].join(" ") + "\n")
-});
-
-beforeEach(function () {
-    chrome.flush();
-    sandbox.restore();
 });
 
 afterEach(function () {

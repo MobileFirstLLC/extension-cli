@@ -25,7 +25,7 @@ const util = require('util');
 const path = require('path');
 const chalk = require('chalk');
 const program = require('commander');
-var Spinner = require('cli-spinner').Spinner;
+const Spinner = require('cli-spinner').Spinner;
 const exec = require('child_process').exec;
 const pkg = require('../package.json');
 const env = {prod: 'prod', dev: 'dev'};
@@ -54,11 +54,9 @@ if (spinner) spinner.start();
 
 const bat = exec(args);
 
-if (true || program.watch) {
-    bat.stdout.on('data', (data) => {
-        process.stdout.write(data.toString());
-    });
-}
+bat.stdout.on('data', (data) => {
+    process.stdout.write(data.toString());
+});
 
 bat.stderr.on('data', (data) => {
     if (spinner) spinner.stop(true);
@@ -68,10 +66,9 @@ bat.stderr.on('data', (data) => {
 bat.on('exit', (code) => {
     if (spinner) spinner.stop(true);
     if (!code) {
-        console.log(chalk.bold.green('Success'));
+        console.log(chalk.bold.green('Build done'));
     } else {
-        console.log(chalk.bold.red('Build Failed'));
+        console.log(chalk.bold.red('Build failed'));
     }
-
 });
 

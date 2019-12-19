@@ -45,11 +45,14 @@ const fs = require('fs');
 const del = require('del');
 const path = require('path');
 const util = require('util');
+const chalk = require('chalk');
 const program = require('commander');
 const pkg = require('../package.json');
 const jsdoc = './node_modules/.bin/jsdoc';
 const exec = require('child_process').exec;
+const Spinner = require('cli-spinner').Spinner;
 const tmpFile = path.join(process.cwd(), './node_modules', pkg.name, 'tmpDocsconfig.json');
+
 let defaultConfig = require('../config/docs.json');
 
 program
@@ -60,6 +63,9 @@ program
         /^(.*)$/i)
     .parse(process.argv);
 
+const spinner = new Spinner(' %s ').start();
+
+spinner.start();
 
 const docFile = program.config || '.xtdocs.json';
 
@@ -72,7 +78,7 @@ if (fs.existsSync(docFile)) {
     /** recursively overwrite default config options with project's own configs **/
     if (projectConfig) {
         let keyReplace = (src, target) => {
-            for (let key in src)
+            for (let key in src) {
                 if (src.hasOwnProperty(key)) {
                     if (typeof src[key] === 'object') {
                         if (!target[key]) target[key] = {};
@@ -81,12 +87,13 @@ if (fs.existsSync(docFile)) {
                         target[key] = src[key];
                     }
                 }
+            }
         };
 
         for (let k in projectConfig) {
             if (projectConfig.hasOwnProperty(k)) {
                 if (!defaultConfig[k]) defaultConfig[k] = {};
-                keyReplace(projectConfig[k], defaultConfig[k])
+                keyReplace(projectConfig[k], defaultConfig[k]);
             }
         }
     }
@@ -96,14 +103,23 @@ if (fs.existsSync(docFile)) {
 fs.writeFileSync(tmpFile, JSON.stringify(defaultConfig));
 
 /** generate the docs **/
-exec(util.format('"%s" -c %s', jsdoc, tmpFile),
-    (err, stdout, stderr) => {
+const bat = exec(util.format('"%s" -c %s', jsdoc, tmpFile),
+    (_, stdout, stderr) => {
 
-        /** pipe any jsdoc output to screen **/
-        console.log(stdout);
-        console.log(stderr);
+        // console.log(stdout);
+        // console.log(stderr);
 
         /** remove configuration file **/
         del.sync(tmpFile);
         process.exit(0);
     });
+
+bat.on('exit', (code) => {
+    spinner.stop(true);
+    if (!code) {
+        console.log(chalk.bold.green('Docs done!'));
+    } else {
+        console.log(chalk.bold.red('Docs failed'));
+    }
+});
+
