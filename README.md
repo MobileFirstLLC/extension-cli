@@ -42,7 +42,7 @@ Command | Description
 **Planned**
 
 - [ ] `xt-create` -- create new extension project
-- [ ] `xt-eject` -- remove CLi dependency
+- [ ] `xt-eject` -- remove CLI dependency
 
 **Documentation**
 
@@ -60,13 +60,13 @@ Note that before you start, your project needs to have an expected file structur
 
 Path | Description
 --- | ---
-└ **assets** |  static assets
+└ **`assets`** |  static assets
 &nbsp; &nbsp; └─ `img` | Extension icons
 &nbsp; &nbsp; └─ `locales` | Localized string resources
 &nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/`messages.json` | Basic en dictionary
-└ **src** | Source code: js, scss, html, json files
+└ **`src`** | Source code: js, scss, html, json files
 &nbsp; &nbsp; └─ `manifest.json` | Extension manifest 
-└ **test** | Unit tests
+└ **`test`** | Unit tests
 └ `package.json` | Application root
 
 ### Installation
@@ -75,43 +75,57 @@ Path | Description
 
 **2. Update `package.json`** with following options:
 
-*Needed to compile projects written in ES6* 
 
-```json
+<table>
+<tr>
+<td>
+<pre>
   "babel": {
     "presets": [
       "@babel/preset-env"
     ]
   }
-```
-
-*Add this so test files will not be linted*
-
-If your project includes compiled 3rd party libs (not imported from npm but literally `.js` files, you should exclude them also).
-
-```  
+</pre>
+</td>
+<td valign='top'>
+<strong>Babel presets</strong><br/><br/>
+Needed to compile projects written in ES6.
+</td>
+</tr>
+<tr>
+<td>
+<pre>
   "eslintIgnore": [
     "test/**/*"
   ]
-```
-
-*Basic options for generating docs using the default template*
-
-```  
+</pre>
+</td>
+<td>
+<strong>ESLint ignore</strong><br/><br/>
+Add this so test files will not be linted.If your project includes compiled 3rd party libs (not imported from npm but literally `.js` files, you should exclude them also).
+</td>
+</tr>
+<tr>
+<td>
+<pre>
   "xtdocs": {
     "templates": {
       "systemName": "Extension name",
-      "systemSummary": "Write a short description here!",
+      "systemSummary": 
+        "Write a short description here!",
       "systemColor": "#000000"
     }
   }
-```
-
-*Define javacsript bundles to build*, where 
-- `name` is the output filename without file extension and 
-- `src` indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.
-
-```
+</pre>
+</td>
+<td>
+<strong>Documentation Config</strong><br/><br/>
+Basic options for generating docs using the default template
+</td>
+</tr>
+<tr>
+<td>
+<pre>
   "xtbuild": {
     "js_bundles": [
       {
@@ -119,16 +133,29 @@ If your project includes compiled 3rd party libs (not imported from npm but lite
         "src": "./src/bg/**/*.js"
       }, {
           "name": "content-script",
-          "src": ["./src/ct/index.js", "./src/ct/helper.js"]
+          "src": [
+            "./src/ct/index.js", 
+            "./src/ct/helper.js"
+          ]
       }, {
          "name": "coptions",
          "src": "./src/options.js"
      }
     ]
   }
-```
+</pre>
+</td>
+<td>
+<strong>Build Config</strong><br/><br/>
+Define javacsript bundles to build, where<br/>
+- <code>name</code> is the output filename without file extension and<br/>
+- <code>src</code> indicates which files to include in this bundle can be a single file path, an array or files, or use wildcard.
+</td>
+</tr>
+</table>
 
-*Finally, add following scripts* 
+
+**Finally, add following scripts to `package.json`** 
 
 After adding scripts, you can execute commands by running `npm run start`, `npm run docs`, etc.
 
