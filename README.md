@@ -12,14 +12,14 @@ systematic way to build, test and document extension projects.
 After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. This approach helps with creating a common, consistent approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects. However, this strategy of shared responsibility requires certain assumptions about [project structure](#file-organization) and how things are organized.
 
 
-#### Core Features
- 
-- Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)
-- Compiles and bundles [SASS files](https://sass-lang.com/guide)
-- Lint scripts using [eslint](https://eslint.org/)    
-- Generates a distributable `.zip` file for uploading to Chrome Web Store
-- Generates code documentation using [JSdoc 3](https://jsdoc.app/about-getting-started.html)     
-- Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom.
+| Core Features |
+| --- | 
+| Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
+| Compiles and bundles [SASS files](https://sass-lang.com/guide) |
+| Lint scripts using [eslint](https://eslint.org/) |
+| Generates a distributable `.zip` file for uploading to Chrome Web Store |
+| Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
+| Sets up a unit testing environment with mocha, chai (with promises), chrome-sinon, and js-dom | 
 
 
 <img src='https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/feature.png' alt='' /> 
@@ -27,7 +27,6 @@ After developing multiple browser extension, it became clear that there were sev
 
 ## Command Reference
 
-Note that for each command `--help` and `--version` flags are also valid
 
 Command | Description
 --- | ---
@@ -37,6 +36,8 @@ Command | Description
 `xt-sync` | Update project config files to match the latest defaults supplied by this CLI
 `xt-clean` | Remove automatically generated files
 
+Note that for each command `--help` and `--version` flags are also valid
+
 **Planned**
 
 - [ ] `xt-create` -- create new extension project
@@ -44,30 +45,30 @@ Command | Description
 
 **Documentation**
 
-[More detailed usage instructions for each command available here](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
+[More detailed usage instructions for each command are available here](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
 
 ---
 
 ## Getting Started
 
-#### File Organization
+Before you start, be aware that your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow the provided organization. Eventually we will add a command that will set this up automatically.
 
-Note that before you start, your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow this described organization. Eventually we will add a command that will set this up automatically.
+### File Organization
 
-**The following project structure is expected:**
+The following project structure is expected:
 
 Path | Description
 --- | ---
 └ **`assets`** |  static assets
 &nbsp; &nbsp; └─ `img` | Extension icons
 &nbsp; &nbsp; └─ `locales` | Localized string resources
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/`messages.json` | Basic en dictionary
-└ **`src`** | Source code: js, scss, html, json files
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/`messages.json` | English dictionary
+└ **`src`** | Source code: put js, scss, html, json files here
 &nbsp; &nbsp; └─ `manifest.json` | Extension manifest 
 └ **`test`** | Unit tests
 └ `package.json` | Application root
 
-#### Installation & basic configuration
+### Installation & basic configuration
 
 **1. Install latest version** [from NPM](https://www.npmjs.com/package/extension-cli)
 
