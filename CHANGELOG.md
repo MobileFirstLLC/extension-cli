@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.2](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.1...v0.8.2) (2019-12-20)
+
+
+### Bug Fixes
+
+* cognitive complexity ([de4d2fb](https://github.com/MobileFirstLLC/extension-cli/commit/de4d2fbbb475fbc43787925a7b25ad28fbb13330))
+* reduce complexity ([78bbb16](https://github.com/MobileFirstLLC/extension-cli/commit/78bbb163e6f6ec9396a4146147a52488ab1637c9))
+* Similar blocks of code found in 2 locations. Consider refactoring. ([b3c4e3d](https://github.com/MobileFirstLLC/extension-cli/commit/b3c4e3d014a3f2ac7db301ee3f80e16dbd8b7b00))
+* Similar blocks of code found in 3 locations. Consider refactoring. ([c6a7e30](https://github.com/MobileFirstLLC/extension-cli/commit/c6a7e3074d8c1305246b0b69fb03475a3d27ec9f))
+
 ### [0.8.1](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.0...v0.8.1) (2019-12-20)
 
 ## [0.8.0](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.0-alpha.3...v0.8.0) (2019-12-19)
