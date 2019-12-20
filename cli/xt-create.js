@@ -9,17 +9,19 @@ function displayLogo() {
     const green = c => chalk.hex('#A4C639').bold(c);
     const c = '▉▉▉', s = '   ', d = '※', divChars = 40;
 
+    const commonLines = (spaces) => `    ${blue(`${c}${s}${c}`)}${green(`${spaces}${c}`)}`;
+
     console.log('');
     console.log(`${d.repeat(divChars)}\n`);
     console.log(`    ${blue(`${s}${c}${c}`)}`);
-    console.log(`    ${blue(`${c}${s}${c}`)}${green(`${c}${c}`)}`);
-    console.log(`    ${blue(`${c}${s}${c}`)}${green(`${s}${c}`)}    C O M I N G`);
-    console.log(`    ${blue(`${c}${s}${c}`)}${green(`${s}${c}`)}     S O O N !`);
+    console.log(commonLines(c));
+    console.log(commonLines(s) + '   C O M I N G');
+    console.log(commonLines(s) + '     S O O N !');
     console.log(`    ${blue(`${c}${s}${c}`)} `);
     console.log(`    ${blue(`${c}`)}`);
     console.log('');
     console.log(`${d.repeat(divChars)}\n`);
-};
+}
 
 program
     .version(pkg.version)
