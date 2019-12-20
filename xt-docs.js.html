@@ -166,24 +166,22 @@ const docFile = program.config || '.xtdocs.json';
 
 const keyReplace = (src, target) => {
     for (let key in src) {
-        if (src.hasOwnProperty(key)) {
-            if (typeof src[key] === 'object') {
-                if (!target[key]) target[key] = {};
-                keyReplace(src[key], target[key]);
-            } else {
-                target[key] = src[key];
-            }
+        if (!src.hasOwnProperty(key)) continue;
+        if (typeof src[key] !== 'object') {
+            target[key] = src[key];
+            continue;
         }
+        if (!target[key]) target[key] = {};
+        keyReplace(src[key], target[key]);
     }
 };
 
 /** recursively overwrite default config options with project's own configs **/
 const iterateConfigs = projectConfig => {
     for (let k in projectConfig) {
-        if (projectConfig.hasOwnProperty(k)) {
-            if (!defaultConfig[k]) defaultConfig[k] = {};
-            keyReplace(projectConfig[k], defaultConfig[k]);
-        }
+        if (!projectConfig.hasOwnProperty(k)) continue;
+        if (!defaultConfig[k]) defaultConfig[k] = {};
+        keyReplace(projectConfig[k], defaultConfig[k]);
     }
 };
 
