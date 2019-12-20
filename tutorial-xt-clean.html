@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>xt-build</title>
+		<title>xt-clean</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,6 +14,7 @@
 		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
 		<link type="text/css" rel="stylesheet" href="css/template.min.css">
 			<link type="text/css" rel="stylesheet" href="data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ&#x3D;&#x3D;">
+			<link type="text/css" rel="stylesheet" href="data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19">
 			<style>
 				.page-header,
 				pre.code-toolbar > .toolbar:hover {
@@ -42,7 +44,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -64,8 +66,7 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li><a href="global.html">Globals</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -83,8 +84,8 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">namespace</span>
-				<h1><span class="name">xt-build</span></h1>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">xt-clean</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -92,67 +93,48 @@
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
-							<li class="active">xt-build</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">xt-clean</li>
 						</ol>
-					<section>
-							<dl class="symbol primary">
-								<dt class="symbol-title namespace collapsible-symbol expanded">
-			<h2 class="namespace"><span class="name">xt-build</span></h2>
-</dt>
-<dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Build command generates an extension dist/ directory that
-			can be debugged in the browser.</p>
-			<p>When called with production env flag, -e prod, this command
-			will minify and compile a zip file that can be uploaded to
-			the web store for distribution.</p></div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Run development build and watch changes</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build -e dev -w</code></pre>
-					</div>
-					<div class="example-caption"><p>Build production version</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build -e prod</code></pre>
-					</div>
-					<div class="example-caption"><p>Get help using this command</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-build --help</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="xt-build.js.html">xt-build.js</a>, <a href="xt-build.js.html#line-4">line 4</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-							</dl>
-							<article class="secondary">
-							</article>
-					</section>
+		<section class="tutorial-section">
+			<article><h1>xt-clean</h1>
+<blockquote>
+<p><code>xt-clean</code> command removes all automatically generated files from the project directories.</p>
+</blockquote>
+<p>Clean operation iterates over files and directories listed in the
+project <code>.gitignore</code> file, and removes all ignored files and
+directories, except <code>node_modules/</code>, <code>.idea/</code>, and <code>.vscode/</code>.</p>
+<p>(.idea is a collection of configuration files used by WebStorm IDE, and .vscode
+is the same for Visual Studio Code. The IDE will generate them automatically if they are absent.)</p>
+<p>To remove these directories, you must explicitly pass a flag to delete
+each directory respectively.</p>
+<h2>Commands</h2>
+<p>Default command: removes ignored files</p>
+<pre class="prettyprint source"><code>xt-clean
+</code></pre>
+<p>Clear ignored files, including <code>node_modules</code></p>
+<pre class="prettyprint source"><code>xt-clean -m
+</code></pre>
+<p>Clear ignored files, including <code>.idea/</code> directory</p>
+<pre class="prettyprint source"><code>xt-clean -m -i
+</code></pre>
+<p>Clear ignored files, including <code>.vscode/</code> directory</p>
+<pre class="prettyprint source"><code>xt-clean -m -v
+</code></pre>
+<p>Get help using this command</p>
+<pre class="prettyprint source"><code>xt-clean --help
+</code></pre>
+<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-clean</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run clean</code>.</p>
+<pre class="prettyprint source"><code>&quot;scripts&quot;:{
+  &quot;clean&quot;: &quot;xt-clean&quot;
+}
+</code></pre>
+<h2>Source</h2>
+<p><a href="/xt-clean.js.html">View latest source for this command here</a></p>
+<hr>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-clean.md">Edit this file on Github</a></p></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -188,3 +170,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->

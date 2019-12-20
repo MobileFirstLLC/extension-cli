@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>xt-clean</title>
+		<title>xt-sync</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,6 +14,7 @@
 		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
 		<link type="text/css" rel="stylesheet" href="css/template.min.css">
 			<link type="text/css" rel="stylesheet" href="data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ&#x3D;&#x3D;">
+			<link type="text/css" rel="stylesheet" href="data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19">
 			<style>
 				.page-header,
 				pre.code-toolbar > .toolbar:hover {
@@ -42,7 +44,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
 			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -64,8 +66,7 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li><a href="global.html">Globals</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -83,8 +84,8 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">namespace</span>
-				<h1><span class="name">xt-clean</span></h1>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">xt-sync</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -92,67 +93,55 @@
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="list_namespace.html">Namespaces</a></li>
-							<li class="active">xt-clean</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">xt-sync</li>
 						</ol>
-					<section>
-							<dl class="symbol primary">
-								<dt class="symbol-title namespace collapsible-symbol expanded">
-			<h2 class="namespace"><span class="name">xt-clean</span></h2>
-</dt>
-<dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Clean operation iterates over files and directories listed in the
-			project .gitignore file, and removes all ignored files and
-			directories, except node_modules, .idea/, and .vscode.</p>
-			<p>To remove these directories, you must explicitly pass a flag to delete
-			each one of them.</p></div>
-			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-caption"><p>Clear ignored files</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean</code></pre>
-					</div>
-					<div class="example-caption"><p>Clear ignored files, including node_modules</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean -m</code></pre>
-					</div>
-					<div class="example-caption"><p>Get help using this command</p></div>
-					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">npx xt-clean --help</code></pre>
-					</div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="xt-clean.js.html">xt-clean.js</a>, <a href="xt-clean.js.html#line-3">line 3</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-							</dl>
-							<article class="secondary">
-							</article>
-					</section>
+		<section class="tutorial-section">
+			<article><h1>xt-sync</h1>
+<blockquote>
+<p><code>xt-sync</code> command is intended for upgrading configuration files of
+a stale project to latest version</p>
+</blockquote>
+<p>When a project has not been worked on recently, it may need updates of
+various files, such as CI configuration files.</p>
+<p>The purpose of this command is to make that update process simple by
+allowing each project to choose which configuration files to update.
+The CLI will then supply the project with the most recent configuration
+files.</p>
+<p><strong>Note:</strong> If the configuration files have been modified heavily for
+an individual project, it is not advisable to upgrade them in this manner.
+Instead you should upgrade such configuration files manually.</p>
+<h2>Commands</h2>
+<p>You must pass at least one flag with this command.</p>
+<p>Synchronize all configuration files</p>
+<pre class="prettyprint source"><code>xt-sync --all
+</code></pre>
+<p>Synchronize ESLint configuration file</p>
+<pre class="prettyprint source"><code>xt-sync --eslint
+</code></pre>
+<p>Synchronize Gitlab CI configuration file</p>
+<pre class="prettyprint source"><code>xt-sync --gitlab
+</code></pre>
+<p>Synchronize Travis CI configuration file</p>
+<pre class="prettyprint source"><code>xt-sync --travis
+</code></pre>
+<p>Synchronize .gitignore file</p>
+<pre class="prettyprint source"><code>xt-sync --gitignore
+</code></pre>
+<p>Get help using this command</p>
+<pre class="prettyprint source"><code>xt-sync --help
+</code></pre>
+<p>After installing extension-cli, you can run these commands from a terminal using <code>npx xt-sync --all</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run sync</code>.</p>
+<pre class="prettyprint source"><code>&quot;scripts&quot;:{
+  &quot;sync&quot;: &quot;xt-sync --all&quot;
+}
+</code></pre>
+<h2>Source</h2>
+<p><a href="/xt-sync.js.html">View latest source for this command here</a></p>
+<hr>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-sync.md">Edit this file on Github</a></p></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -188,3 +177,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->

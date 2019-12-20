@@ -1,0 +1,323 @@
+<!-- start:readme.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>xt-build</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<link type="text/css" rel="stylesheet" href="data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ&#x3D;&#x3D;">
+			<link type="text/css" rel="stylesheet" href="data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #222136;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #222136;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #222136;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #222136;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
+			window.DOCLET_TOC_ENABLED = "true";
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">
+					Extension CLI
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">tutorial</span>
+				<h1><span class="title">xt-build</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">xt-build</li>
+						</ol>
+		<section class="tutorial-section">
+			<article><h1>xt-build</h1>
+<blockquote>
+<p><code>xt-build</code> command is used for generating a debuggable dev version of and extension, and a production ready, minified .zip file
+that can be uploaded to the chrome store.</p>
+</blockquote>
+<p>Successful build command always generates an extension <code>dist/</code> directory that can be debugged in the browser.  The underlying build system
+uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.com/babel/gulp-babel">babel</a> and <a href="https://github.com/webpack/webpack">webpack</a> to compile scripts (among other plugins).</p>
+<h3>Dev Build Artifacts</h3>
+<p>When you specify <code>dev</code> build flag, the build will complete using development settings. The output of a successful dev
+build is  a <code>dist/</code> directory which can be debugged using the chrome browser. The build command will always compile scripts using production settings, because extension scripts must be compiled prior to debugging.</p>
+<h3>Prod Build Artifacts</h3>
+<p>When specifying <code>prod</code> build flag (of not specifying any flag at all) will run a production build. Successful production build
+will generate a <code>dist/</code> directory of extension files which can be debugged in the browser. It will also generate a
+<code>release.zip</code> file in the project root strictly based on the files in the <code>dist</code> directory.
+This zip file can be uploaded directly to the Chrome Web Store. When running a production build, all code files (js, sass, html, json) will be minified automatically.</p>
+<h2>Commands</h2>
+<p>Default command: run production build</p>
+<pre class="prettyprint source"><code>xt-build
+</code></pre>
+<p>Run production build using explicit flag</p>
+<pre class="prettyprint source"><code>xt-build -e prod
+</code></pre>
+<p>Run development build</p>
+<pre class="prettyprint source"><code>xt-build -e dev
+</code></pre>
+<p>Command using custom configuration file path</p>
+<pre class="prettyprint source"><code>xt-build --config &quot;/path/to/config.json&quot;
+</code></pre>
+<p>Run development build and keep watching changes</p>
+<pre class="prettyprint source"><code>xt-build -e dev --watch
+</code></pre>
+<p>Get help using this command</p>
+<pre class="prettyprint source"><code>xt-build --help
+</code></pre>
+<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-build</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run build</code> or <code>npm run start</code>.</p>
+<pre class="prettyprint source"><code>&quot;scripts&quot;:{
+    &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
+    &quot;build&quot;: &quot;xt-build -e prod&quot;,
+}
+</code></pre>
+<h2>Configuration</h2>
+<p>By default the CLI will look for build configuration in two different
+places:</p>
+<ul>
+<li>in <code>package.json</code> using key <code>xtbuild</code></li>
+<li>in a file named <code>.xtbuild.json</code> in project root</li>
+</ul>
+<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>--config</code> (<code>-c</code>) flag,
+followed by path to file. <a href="#commands">See commands for an example</a>.</p>
+<br/>
+<h3>Default Configuration</h3>
+<p>The CLI uses a build configuration file shown below. You can override any of these key-value pairs at project level.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;projectRootDir&quot;: &quot;../../../&quot;,
+  &quot;dist&quot;: &quot;./dist&quot;,
+  &quot;source&quot;: &quot;./src&quot;,
+  &quot;releases&quot;: &quot;./&quot;,
+  &quot;manifest&quot;: &quot;./src/manifest.json&quot;,
+  &quot;js&quot;: &quot;./src/**/*.js&quot;,
+  &quot;js_bundles&quot;: null,
+  &quot;html&quot;: &quot;./src/**/*.html&quot;,
+  &quot;scss&quot;: &quot;./src/**/*.scss&quot;,
+  &quot;scss_bundles&quot;: null,
+  &quot;icons&quot;: [
+    &quot;./assets/img/**/*.png&quot;,
+    &quot;./assets/img/**/*.gif&quot;,
+    &quot;./assets/img/**/*.jpg&quot;,
+    &quot;./assets/img/**/*.svg&quot;
+  ],
+  &quot;copyAsIs&quot;: [],
+  &quot;locales_dir&quot;: &quot;./assets/locales/&quot;,
+  &quot;locales_list&quot;: [&quot;en&quot;]
+}
+</code></pre>
+<h3>Customizing Build Configurations</h3>
+<h4>Script and Style bundles</h4>
+<p><code>js_bundles</code> and <code>scss_bundles</code> are used to configure build settings for js files and scss files respectively.
+The expected value is an array with one or more items as shown in the example below.</p>
+<p>The property value <code>name</code> is the output bundle filename without file extension.</p>
+<p>Property value <code>src</code> specifies which files to include in each bundle; you can use a string value for a single file,
+array of files, or a path with wildcard. You may also use <code>!</code> as a way to negate the inclusion of a file. This
+syntax is directly expected by gulp. See example below.</p>
+<p><em>sample project-level configuration with js and style bundles</em></p>
+<pre class="prettyprint source"><code>  &quot;xtbuild&quot;: {
+    &quot;js_bundles&quot;: [
+      {
+        &quot;name&quot;: &quot;background&quot;,
+        &quot;src&quot;: &quot;./src/background.js&quot;
+      },
+      {
+        &quot;name&quot;: &quot;inbox&quot;,
+        &quot;src&quot;: &quot;./src/app/inbox/**/*.js&quot;
+      },
+      {
+        &quot;name&quot;: &quot;message&quot;,
+        &quot;src&quot;: &quot;./src/app/message/**/*.js&quot;
+      }
+    ],
+    &quot;scss_bundles&quot;: [
+      {
+        &quot;src&quot;: [
+          &quot;./src/**/*.scss&quot;,
+          &quot;!./src/app/styles/message.scss&quot;
+        ],
+        &quot;name&quot;: &quot;styles.css&quot;
+      },
+      {
+        &quot;src&quot;: [
+          &quot;./src/app/styles/message.scss&quot;
+        ],
+        &quot;name&quot;: &quot;display.css&quot;
+      }
+    ]
+  }
+</code></pre>
+<h4>CSS Support</h4>
+<p>If you are not a friend of SASS stylesheets, you can write your style sheets using regular CSS.
+However name your files using <code>.scss</code> file extension, or override the default configuration, since the
+CLI will, by default, look only for <code>.scss</code> style files.</p>
+<h4>Skip compiling</h4>
+<p>Use <code>copyAsIs</code> key to specify which files should not be compiled. These files can be located anywhere in your
+project. The build will copy them literally without any modification to the output directory root. Any path will
+be flattened.</p>
+<p><em>Example of skipping compilation of pre-compiled files</em></p>
+<pre class="prettyprint source"><code>  &quot;xtbuild&quot;: {
+    &quot;copyAsIs&quot;: [
+      &quot;./node_modules/material-design-lite/material.min.js&quot;,
+      &quot;./assets/ga.js&quot;
+    ]
+  }
+</code></pre>
+<h4>Supporting multiple and/or non-English languages</h4>
+<p>Browser extensions can support multiple languages. If the extension supports multiple languages, specify all
+supported languages using key <code>locales_list</code>. The default language value is <code>[&quot;en&quot;]</code>. This entry should be an array.</p>
+<p>This configuration assumes that under specified <code>locales_dir</code> exists a subdirectory named <code>en</code>. The default
+<code>locales_dir</code> is <code>./assets/locales/</code>, which you may change if you want.</p>
+<p>You can break down your locales files into multiple json files within the language-specific directory
+which may make the maintenance a bit easier if your files contain multiple entries. The build step will combine
+all files within a language directory into a single <code>messages.json</code> which is expected by the browser.</p>
+<p>Refer, for example, <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list for a full list of language codes</a>.</p>
+<p><strong>Multiple locales example</strong></p>
+<pre class="prettyprint source"><code>  &quot;xtbuild&quot;: {
+      &quot;locales_dir&quot;: &quot;./my/custom/locales/path/&quot;,
+      &quot;locales_list&quot;: [&quot;en&quot;,&quot;en-GB&quot;,&quot;pl&quot;]
+  }
+</code></pre>
+<p>Given the configuration above, the following project-level files are expected. Within a directory you can have
+any number of json files and the filenames can be anything; they will be bundled during build.</p>
+<table>
+<thead>
+<tr>
+<th>File Path</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>└ <strong><code>/my/custom/locales/path/</code></strong></td>
+<td>path to locales</td>
+</tr>
+<tr>
+<td>        └─ <code>en</code>/<code>messages.json</code></td>
+<td>Default English dictionary</td>
+</tr>
+<tr>
+<td>        └─ <code>en-GB</code>/<code>messages.json</code></td>
+<td>British dictionary</td>
+</tr>
+<tr>
+<td>        └─ <code>pl/</code></td>
+<td>Polish language dictionaries</td>
+</tr>
+<tr>
+<td>                └─ <code>app.json</code></td>
+<td>Polish language dictionaries</td>
+</tr>
+<tr>
+<td>                └─ <code>options.json</code></td>
+<td>Polish language dictionaries</td>
+</tr>
+</tbody>
+</table>
+<h2>Source</h2>
+<p><a href="/xt-build.js.html">View latest source for this command here</a></p>
+<hr>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-build.md">Edit this file on Github</a></p></article>
+		</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="copyright">Mobile First LLC</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Dec 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:readme.hbs -->

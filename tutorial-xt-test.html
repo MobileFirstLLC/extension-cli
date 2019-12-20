@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Globals</title>
+		<title>xt-test</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +45,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,21 +84,58 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">global</span>
-				<h1><span class="name">Globals</span></h1>
-				<div class="summary"><p>All documented globals.</p></div>			</div>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">xt-test</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Globals</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">xt-test</li>
 						</ol>
-					<section>
-							<article class="secondary">
-							</article>
-					</section>
+		<section class="tutorial-section">
+			<article><h1>xt-test</h1>
+<blockquote>
+<p><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
+</blockquote>
+<p>This command will setup extension testing environment that is pre-initialized
+with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised),
+and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage.</p>
+<p>Also the following browser API's are initialized: window, chrome. Window
+is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
+chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
+<p>This command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>.</p>
+<p>Mocha will execute with babel, meaning you can use this test environment to
+test ES6 modules with imports, arrows, and classes.</p>
+<p>You may extend this test environment with a single project; this is simply the base setup
+for running unit tests. Or you may create your own test environment if this is not suitable.</p>
+<h2>Commands</h2>
+<p>Default command: run unit tests</p>
+<pre class="prettyprint source"><code>xt-test
+</code></pre>
+<p>Execute tests and keep watching changes</p>
+<pre class="prettyprint source"><code>xt-test --watch
+</code></pre>
+<p>Execute tests and pipe result to <a href="https://coveralls.io">coveralls.io</a></p>
+<pre class="prettyprint source"><code>xt-test --coverage
+</code></pre>
+<p>Get help using this command</p>
+<pre class="prettyprint source"><code>xt-test --help
+</code></pre>
+<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run test</code>.</p>
+<pre class="prettyprint source"><code>&quot;scripts&quot;:{
+  &quot;test&quot;: &quot;xt-test&quot;
+}
+</code></pre>
+<h2>Source</h2>
+<p><a href="/xt-test.js.html">View latest source for this command here</a></p>
+<hr>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-test.md">Edit this file on Github</a></p></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -133,3 +171,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->

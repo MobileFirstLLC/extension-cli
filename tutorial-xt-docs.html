@@ -1,9 +1,10 @@
+<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Globals</title>
+		<title>xt-docs</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +45,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,21 +84,143 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">global</span>
-				<h1><span class="name">Globals</span></h1>
-				<div class="summary"><p>All documented globals.</p></div>			</div>
+				<span class="kind">tutorial</span>
+				<h1><span class="title">xt-docs</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
 			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li class="active">Globals</li>
+							<li><a href="list_tutorial.html">Tutorials</a></li>
+							<li class="active">xt-docs</li>
 						</ol>
-					<section>
-							<article class="secondary">
-							</article>
-					</section>
+		<section class="tutorial-section">
+			<article><h1>xt-docs</h1>
+<blockquote>
+<p><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
+</blockquote>
+<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc 3</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator, that converts your code comments to readable HTML/CSS files which you can host, for example, with github pages.</p>
+<p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more about templating here</a>.</p>
+<h2>Commands</h2>
+<p>Default command</p>
+<pre class="prettyprint source"><code>xt-docs
+</code></pre>
+<p>Command using custom configuration file path</p>
+<pre class="prettyprint source"><code>xt-docs --config &quot;/path/to/config.json&quot;
+</code></pre>
+<p>Get help using this command</p>
+<pre class="prettyprint source"><code>xt-docs --help
+</code></pre>
+<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-docs</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run docs</code>.</p>
+<pre class="prettyprint source"><code>&quot;scripts&quot;:{
+  &quot;docs&quot;: &quot;xt-docs&quot;
+}
+</code></pre>
+<h2>Configuration</h2>
+<p>By default the CLI will look for docs configuration in two different
+places:</p>
+<ul>
+<li>in <code>package.json</code> using key <code>xtdocs</code></li>
+<li>in a file named <code>.xtdocs.json</code> in project root</li>
+</ul>
+<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>--config</code> (<code>-c</code>) flag, followed by path to file. <a href="#commands">See commands for an example</a>.</p>
+<br/>
+<h3>Minimum Project-Level Configuration</h3>
+<p>Within the extension project you should define, at minimum, the following configuration options:</p>
+<pre class="prettyprint source"><code>&quot;xtdocs&quot;: {
+  &quot;templates&quot;: {
+    &quot;systemName&quot;: &quot;{extension name}&quot;,
+    &quot;systemSummary&quot;: &quot;{short description}&quot;,
+    &quot;systemColor&quot;: &quot;{css-color}&quot;
+  }
+}
+</code></pre>
+<p>where</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>Description of value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>systemName</code></td>
+<td>Name of you project</td>
+</tr>
+<tr>
+<td><code>systemSummary</code></td>
+<td>Provide a short description of your project; this will be shown as a subheading</td>
+</tr>
+<tr>
+<td><code>systemColor</code></td>
+<td>Choose a theme color for your documentation; css hex color definition will work, e.g. <code>#000000</code>.</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<h3>Default Configuration</h3>
+<p>The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they are intelligible to <a href="https://jsdoc.app/about-configuring-jsdoc.html">JSDoc</a>.</p>
+<pre class="prettyprint source"><code>&quot;xtdocs&quot;: {
+  &quot;tags&quot;: {
+    &quot;allowUnknownTags&quot;: true,
+    &quot;dictionaries&quot;: [
+      &quot;jsdoc&quot;
+    ]
+  },
+  &quot;source&quot;: {
+    &quot;include&quot;: [
+      &quot;src&quot;
+    ],
+    &quot;includePattern&quot;: &quot;.js$&quot;,
+    &quot;excludePattern&quot;: &quot;(node_modules/|docs)&quot;
+  },
+  &quot;plugins&quot;: [
+    &quot;plugins/markdown&quot;
+  ],
+  &quot;templates&quot;: {
+    &quot;footer&quot;: &quot;&quot;,
+    &quot;copyright&quot;: &quot;&quot;,
+    &quot;includeDate&quot;: &quot;true&quot;,
+    &quot;dateFormat&quot;: &quot;MMM YYYY&quot;,
+    &quot;inlineNav&quot;: &quot;true&quot;,
+    &quot;inverseNav&quot;: &quot;false&quot;,
+    &quot;linenums&quot;: &quot;true&quot;,
+    &quot;showTableOfContents&quot;: &quot;true&quot;,
+    &quot;showAccessFilter&quot;: &quot;true&quot;,
+    &quot;collapseSymbols&quot;: &quot;true&quot;,
+    &quot;methodHeadingReturns&quot;: &quot;false&quot;,
+    &quot;outputSourceFiles&quot;: &quot;true&quot;,
+    &quot;outputSourcePath&quot;: &quot;true&quot;,
+    &quot;search&quot;: &quot;true&quot;,
+    &quot;stylesheets&quot;: [
+      &quot;data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==&quot;
+    ],
+    &quot;scripts&quot;: [],
+    &quot;favicon&quot;: &quot;./assets/img/128x128.png&quot;
+  },
+  &quot;opts&quot;: {
+    &quot;destination&quot;: &quot;./public/documentation&quot;,
+    &quot;encoding&quot;: &quot;utf8&quot;,
+    &quot;private&quot;: true,
+    &quot;recurse&quot;: true,
+    &quot;template&quot;: &quot;./node_modules/foodoc/template&quot;
+  }
+}
+</code></pre>
+<h2>Templates</h2>
+<p><code>templates</code> key is used specifically by the template of choice. Currently the default template is
+<a href="https://github.com/steveush/foodoc#configuring-the-template">Foodoc</a> which has more configuration options than what was specified in the default configuration above.</p>
+<p>You can change the template by overriding <code>opts.template</code> in the project-level configuration, and by adding the template package of your choice to project-level dependencies.</p>
+<p><a href="https://cancerberosgx.github.io/jsdoc-templates-demo/demo/">This list</a> can help you get started with picking a custom template. If you cannot find one that you like, you can always make your own.</p>
+<h2>Source</h2>
+<p><a href="/xt-docs.js.html">View latest source for this command here</a></p>
+<hr>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-docs.md">Edit this file on Github</a></p></article>
+		</section>
 			</div>
 				<div class="col-md-3 side-content">
 					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
@@ -133,3 +256,4 @@
 	
 </body>
 </html>
+<!-- end:readme.hbs -->
