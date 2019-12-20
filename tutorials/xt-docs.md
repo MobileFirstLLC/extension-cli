@@ -140,7 +140,7 @@ You can change the template by overriding `opts.template` in the project-level c
 
 ## Source
 
-[View latest source for this command here](/xt-docs.js.html)
+[View latest source for this command here](xt-docs.js.html)
 
 ---
 

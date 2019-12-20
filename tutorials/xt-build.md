@@ -221,7 +221,7 @@ File Path | Description
 
 ## Source
 
-[View latest source for this command here](/xt-build.js.html)
+[View latest source for this command here](xt-build.js.html)
 
 ---
 

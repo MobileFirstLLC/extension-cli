@@ -60,7 +60,7 @@ Or you can add an option to `packages.json` scripts section (see example below) 
 
 ## Source
 
-[View latest source for this command here](/xt-test.js.html)
+[View latest source for this command here](xt-test.js.html)
 
 ---
 

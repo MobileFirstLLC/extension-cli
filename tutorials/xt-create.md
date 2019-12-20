@@ -22,7 +22,7 @@ This command should be run from outside existing project. May require global ins
 
 ## Source
 
-[View lacreate source for this command here](/xt-create.js.html)
+[View lacreate source for this command here](xt-create.js.html)
 
 ---
 
