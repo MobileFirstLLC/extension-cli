@@ -179,7 +179,7 @@ const keyReplace = (src, target) => {
 
 /** recursively overwrite default config options with project's own configs **/
 const iterateConfigs = projectConfig => {
-    for (let k in projectConfig || {}) {
+    for (let k in projectConfig) {
         if (projectConfig.hasOwnProperty(k)) {
             if (!defaultConfig[k]) defaultConfig[k] = {};
             keyReplace(projectConfig[k], defaultConfig[k]);
@@ -194,7 +194,9 @@ if (fs.existsSync(docFile)) {
         JSON.parse(fs.readFileSync(docFile, 'utf8')) :
         (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
 
-    iterateConfigs(projectConfig);
+    if (projectConfig) {
+        iterateConfigs(projectConfig);
+    }
 }
 
 /** write config to file so we can pass path to jsdoc **/
