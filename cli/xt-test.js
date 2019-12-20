@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/*
+/**
  * This command will run project unit tests located in test/ directory.
  *
  * This command will setup extension testing environment that is pre-initialized
@@ -18,6 +18,8 @@
  * for running unit tests. Or you may create your own test environment if this is not suitable.
  *
  * <a href="tutorial-xt-test.html">See detailed usage tutorial here</a>
+ *
+ * @module xt-test
  */
 
 const util = require('util');

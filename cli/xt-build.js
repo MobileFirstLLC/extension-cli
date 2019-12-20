@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/*
+/**
  * Build command generates an extension dist/ directory that
  * can be debugged in the browser.
  *
@@ -9,6 +9,8 @@
  * the web store for distribution.
  *
  * <a href="tutorial-xt-build.html">See detailed usage tutorial here</a>
+ *
+ * @module xt-build
  */
 
 const util = require('util');

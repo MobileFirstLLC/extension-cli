@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-/*
+/**
  * This command, once implemented, can be used to create a new extension project.
  *
  * <a href="tutorial-xt-create.html">See detailed usage tutorial here</a>
+ *
+ * @module xt-create
  */
 
 const chalk = require('chalk');

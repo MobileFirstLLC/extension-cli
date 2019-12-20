@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/*
+/**
  * The purpose of this command is to upgrade configuration files of
  * a stale project to latest version, where this CLI tool will provide
  * updated project configuration files. If the config files have been
@@ -8,6 +8,8 @@
  * in this manner. Instead you should upgrade such configs manually.
  *
  * <a href="tutorial-xt-sync.html">See detailed usage tutorial here</a>
+ *
+ * @module xt-sync
  */
 
 const fs = require('fs');
