@@ -65,10 +65,8 @@ bat.stderr.on('data', (data) => {
 
 bat.on('exit', (code) => {
     if (spinner) spinner.stop(true);
-    if (!code) {
-        console.log(chalk.bold.green('Build done'));
-    } else {
-        console.log(chalk.bold.red('Build failed'));
-    }
+    const msg = !code ? 'done' : 'failed';
+
+    console.log(chalk.bold[code ? 'red' : 'green'](`Build ${msg}`));
 });
 
