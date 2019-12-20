@@ -17,11 +17,11 @@ This approach helps with creating a common, consistent development approach betw
 
 <br/>
 
-| # | CORE FEATURES |
+|  | CORE FEATURES |
 | --- | :--- | 
 | ➊ | Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack) |
 | ➋ | Compiles and bundles [SASS files](https://sass-lang.com/guide) |
-| ➌ | Code linting scripts using [ESLint](https://eslint.org/) |
+| ➌ | Code linting using [ESLint](https://eslint.org/) |
 | ➍ | Generates distributable `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) |
 | ➎ | Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) |     
 | ➏ | Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) | 
@@ -90,7 +90,7 @@ Before using this program, you should have all of the following installed:
 **2. Update extension project `package.json`** with following options:
 
 
-<table>
+<table width="100%" cellpadding="0" cellspacing="0">
 <tr>
 <td style="padding:0">
 <pre>
