@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
 [![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
+![david](https://img.shields.io/david/mobilefirstllc/extension-cli)
+[![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
 
 > This application includes command-line build tools that facilitate rapid chrome extension development by providing
 systematic way to build, test and document extension projects.
@@ -86,6 +88,10 @@ Before using this program, you should have all of the following installed:
 ### Installation & Basic Configuration
 
 **1. Install latest CLI version** [from NPM](https://www.npmjs.com/package/extension-cli)
+
+```
+npm install extension-cli
+```
 
 **2. Update extension project `package.json`** with following options:
 
