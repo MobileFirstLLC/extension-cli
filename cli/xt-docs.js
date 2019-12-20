@@ -91,15 +91,13 @@ const iterateConfigs = projectConfig => {
 };
 
 /** locate & initialize project docs configuration **/
-if (fs.existsSync(docFile)) {
 
-    const projectConfig = fs.existsSync(docFile) ?
-        JSON.parse(fs.readFileSync(docFile, 'utf8')) :
-        (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
+const projectConfig = fs.existsSync(docFile) ?
+    JSON.parse(fs.readFileSync(docFile, 'utf8')) :
+    (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
 
-    if (projectConfig) {
-        iterateConfigs(projectConfig);
-    }
+if (projectConfig) {
+    iterateConfigs(projectConfig);
 }
 
 /** write config to file so we can pass path to jsdoc **/
