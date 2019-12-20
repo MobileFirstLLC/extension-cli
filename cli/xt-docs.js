@@ -69,7 +69,7 @@ spinner.start();
 
 const docFile = program.config || '.xtdocs.json';
 
-let keyReplace = (src, target) => {
+const keyReplace = (src, target) => {
     for (let key in src) {
         if (src.hasOwnProperty(key)) {
             if (typeof src[key] === 'object') {
@@ -82,21 +82,24 @@ let keyReplace = (src, target) => {
     }
 };
 
+/** recursively overwrite default config options with project's own configs **/
+const iterateConfigs = projectConfig => {
+    for (let k in projectConfig || {}) {
+        if (projectConfig.hasOwnProperty(k)) {
+            if (!defaultConfig[k]) defaultConfig[k] = {};
+            keyReplace(projectConfig[k], defaultConfig[k]);
+        }
+    }
+};
+
 /** locate & initialize project docs configuration **/
 if (fs.existsSync(docFile)) {
+
     const projectConfig = fs.existsSync(docFile) ?
         JSON.parse(fs.readFileSync(docFile, 'utf8')) :
         (JSON.parse(fs.readFileSync('./package.json', 'utf8'))).xtdocs;
 
-    /** recursively overwrite default config options with project's own configs **/
-    if (projectConfig) {
-        for (let k in projectConfig) {
-            if (projectConfig.hasOwnProperty(k)) {
-                if (!defaultConfig[k]) defaultConfig[k] = {};
-                keyReplace(projectConfig[k], defaultConfig[k]);
-            }
-        }
-    }
+    iterateConfigs(projectConfig);
 }
 
 /** write config to file so we can pass path to jsdoc **/
