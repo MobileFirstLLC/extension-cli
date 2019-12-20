@@ -6,9 +6,7 @@
     ]
   },
   "source": {
-    "include": [
-      "README.md"
-    ],
+    "include": ["README.md"],
     "includePattern": "",
     "excludePattern": ""
   },
@@ -28,11 +26,11 @@
     "linenums": "true",
     "showTableOfContents": "true",
     "showAccessFilter": "true",
-    "collapseSymbols": "true",
+    "collapseSymbols": "false",
     "methodHeadingReturns": "false",
     "outputSourceFiles": "true",
     "outputSourcePath": "true",
-    "search": "true",
+    "search": "false",
     "stylesheets": [
       "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==",
       "data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"
