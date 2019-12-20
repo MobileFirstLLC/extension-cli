@@ -2,6 +2,15 @@
   "name": "extension-cli",
   "version": "0.8.0",
   "description": "Chrome Extension CLI tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MobileFirstLLC/extension-cli.git"
+  },
+  "author": {
+    "name": "Mobile First>",
+    "email": "hello@mobilefirst.me",
+    "url": "https://mobilefirst.me"
+  },
   "bin": {
     "xt-build": "cli/xt-build.js",
     "xt-create": "cli/xt-create.js",
