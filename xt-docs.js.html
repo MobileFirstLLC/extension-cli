@@ -164,6 +164,19 @@ spinner.start();
 
 const docFile = program.config || '.xtdocs.json';
 
+let keyReplace = (src, target) => {
+    for (let key in src) {
+        if (src.hasOwnProperty(key)) {
+            if (typeof src[key] === 'object') {
+                if (!target[key]) target[key] = {};
+                keyReplace(src[key], target[key]);
+            } else {
+                target[key] = src[key];
+            }
+        }
+    }
+};
+
 /** locate &amp; initialize project docs configuration **/
 if (fs.existsSync(docFile)) {
     const projectConfig = fs.existsSync(docFile) ?
@@ -172,19 +185,6 @@ if (fs.existsSync(docFile)) {
 
     /** recursively overwrite default config options with project's own configs **/
     if (projectConfig) {
-        let keyReplace = (src, target) => {
-            for (let key in src) {
-                if (src.hasOwnProperty(key)) {
-                    if (typeof src[key] === 'object') {
-                        if (!target[key]) target[key] = {};
-                        keyReplace(src[key], target[key]);
-                    } else {
-                        target[key] = src[key];
-                    }
-                }
-            }
-        };
-
         for (let k in projectConfig) {
             if (projectConfig.hasOwnProperty(k)) {
                 if (!defaultConfig[k]) defaultConfig[k] = {};
