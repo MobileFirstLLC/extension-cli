@@ -1,10 +1,10 @@
-<!-- start:readme.hbs -->
+<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Extension CLI</title>
+		<title>xt-sync.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,7 +45,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"","copyright":"Mobile First LLC","linenums":"true","collapseSymbols":"true","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":null,"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"true","favicon":"favicon.png","stylesheets":["data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==","data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":[],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = "true";
+			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -85,116 +85,72 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">readme</span>
-				<h1><span class="name">Extension CLI</span></h1>
-				<div class="summary"><p>Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.</p></div>			</div>
+				<span class="kind">source</span>
+				<h1><span class="name">xt-sync.js</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-9 main-content">
-		<section class="readme-section">
-			<article><h1><a href="https://github.com/MobileFirstLLC/extension-cli">Extension CLI</a></h1>
-<p><a href="https://www.npmjs.com/package/extension-cli"><img src="https://img.shields.io/npm/v/extension-cli" alt="npm"></a>
-<a href="https://travis-ci.org/MobileFirstLLC/extension-cli"><img src="https://img.shields.io/travis/mobilefirstllc/extension-cli" alt="travis"></a>
-<img src="https://img.shields.io/david/mobilefirstllc/extension-cli" alt="david">
-<a href="https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability"><img src="https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability" alt="Maintainability"></a></p>
-<blockquote>
-<p>This application includes command-line build tools that facilitate rapid chrome extension development by providing
-systematic way to build, test and document extension projects.</p>
-</blockquote>
-<h2>Motivation</h2>
-<p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project.</p>
-<p>Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects.</p>
-<p>This approach helps with creating a common, consistent development approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects as many npm packages inevitably need to be updated (frequently!).</p>
-<br/>
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:left">CORE FEATURES</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>➊</td>
-<td style="text-align:left">Compiles and bundles javascript files (including <a href="http://es6-features.org/">ES6 syntax</a> w/ babel and webpack)</td>
-</tr>
-<tr>
-<td>➋</td>
-<td style="text-align:left">Compiles and bundles <a href="https://sass-lang.com/guide">SASS files</a></td>
-</tr>
-<tr>
-<td>➌</td>
-<td style="text-align:left">Code linting using <a href="https://eslint.org/">ESLint</a></td>
-</tr>
-<tr>
-<td>➍</td>
-<td style="text-align:left">Generates distributable <code>.zip</code> file for uploading to <a href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a></td>
-</tr>
-<tr>
-<td>➎</td>
-<td style="text-align:left">Generates code documentation using <a href="https://jsdoc.app/about-getting-started.html">JSDoc</a></td>
-</tr>
-<tr>
-<td>➏</td>
-<td style="text-align:left">Sets up a unit testing environment with <a href="https://mochajs.org">mocha</a>, <a href="https://www.chaijs.com/">chai</a>, <a href="https://github.com/acvetkov/sinon-chrome">sinon-chrome</a>, and <a href="https://github.com/rstacruz/jsdom-global">js-dom</a></td>
-</tr>
-</tbody>
-</table>
-<br/>
-<img src='https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5' alt='extension-cli' width="100%" /> 
-<h2>Quick Command Reference</h2>
-<p><a href="https://mobilefirstllc.github.io/extension-cli/list_tutorial.html">See tutorials</a> for more details on each command.</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>xt-build</code></td>
-<td>Run builds; env flags: <code>-e prod</code> and <code>-e dev</code></td>
-</tr>
-<tr>
-<td><code>xt-test</code></td>
-<td>Run unit tests</td>
-</tr>
-<tr>
-<td><code>xt-docs</code></td>
-<td>Generate docs</td>
-</tr>
-<tr>
-<td><code>xt-sync</code></td>
-<td>Update project config files to match the latest defaults supplied by this CLI</td>
-</tr>
-<tr>
-<td><code>xt-clean</code></td>
-<td>Remove automatically generated files</td>
-</tr>
-</tbody>
-</table>
-<p>Note that for each command <code>--help</code> and <code>--version</code> flags are also valid</p>
-<p><strong>Planned</strong></p>
-<ul>
-<li>[ ] <code>xt-create</code> -- create new extension project</li>
-<li>[ ] <code>xt-eject</code> -- remove CLI dependency</li>
-</ul>
-<br/>
-<h2>Getting Started &amp; Docs</h2>
-<p><a href="https://mobilefirstllc.github.io/extension-cli/tutorial-getting-started.html">Continue here for details</a></p>
-<h2>Issues and Feature Requests</h2>
-<p><a href="https://github.com/MobileFirstLLC/extension-cli/issues/new/choose">Submit on Github</a></p>
-<h2>Author</h2>
-<p>This is an open source project by <a href="https://mobilefirst.me">Mobile First</a>.</p>
-<h2>License</h2>
-<p>MIT</p></article>
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">#!/usr/bin/env node
+
+/**
+ * The purpose of this command is to upgrade configuration files of
+ * a stale project to latest version, where this CLI tool will provide
+ * updated project configuration files. If the config files have been
+ * modified heavily for the project, it is not advisable to upgrade them
+ * in this manner. Instead you should upgrade such configs manually.
+ *
+ * &lt;a href="tutorial-xt-sync.html">See detailed usage tutorial here&lt;/a>
+ *
+ * @module xt-sync
+ */
+
+const fs = require('fs');
+const path = require('path');
+const chalk = require('chalk');
+const program = require('commander');
+const pkg = require('../package.json');
+let counter = 0;
+
+const files = {
+    gitlab: {path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
+    travis: {path: '../config/travis.yml', out: '.travis.yml'},
+    eslint: {path: '../config/eslint.json', out: '.eslintrc'},
+    gitignore: {path: '../config/ignore', out: '.gitignore'}
+};
+
+program
+    .version(pkg.version)
+    .option('-l --gitlab', 'sync gitlab-ci.yml')
+    .option('-t --travis', 'sync travis.yml')
+    .option('-e --eslint', 'sync eslint')
+    .option('-g --gitignore', 'sync gitignore')
+    .option('-a --all', 'sync everything')
+    .parse(process.argv);
+
+Object.keys(files).map(opt => {
+    if (program[opt] !== undefined || program.all) {
+        const relativePath = path.resolve(__dirname, files[opt].path);
+        const outputFileName = files[opt].out;
+        const content = fs.readFileSync(relativePath, 'utf8');
+
+        let outPath = path.join(process.cwd(), outputFileName);
+        fs.writeFileSync(outPath, content);
+        console.log(chalk.bold.green(`✓ updated ${outputFileName}`));
+        counter++;
+    }
+});
+
+if (!counter)
+    console.log(chalk.red(`(!) Specify which files to sync using flags.`+
+        `\nSee --help for more details.`));
+
+</code></pre>
 		</section>
 			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
 		</div>
 	</div>
 	<footer>
@@ -226,4 +182,4 @@ systematic way to build, test and document extension projects.</p>
 	
 </body>
 </html>
-<!-- end:readme.hbs -->
+<!-- end:source.tmpl.hbs -->
