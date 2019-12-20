@@ -112,6 +112,7 @@ After adding scripts, you can execute commands by running
 </table>
 
 
+[See tutorials](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html) for more details on each command.
 
 
 
