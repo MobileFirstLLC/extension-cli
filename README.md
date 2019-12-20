@@ -53,7 +53,7 @@ Note that for each command `--help` and `--version` flags are also valid
 
 **Documentation**
 
-[More detailed usage instructions for each command are available here](https://mobilefirstllc.github.io/extension-cli/list_namespace.html).
+[More detailed usage instructions for each command are available here](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html).
 
 ---
 
@@ -76,6 +76,9 @@ Path | Description
 └ **`test`** | Unit tests
 └ `package.json` | Application root
 
+You can override most of these file paths when specifying build and documentation settings.
+This structure is the default organization and its usage will make your life easier.
+
 ### Prerequisites
 
 Before using this program, you should have all of the following installed:
@@ -87,14 +90,15 @@ Before using this program, you should have all of the following installed:
 
 ### Installation & Basic Configuration
 
-**1. Install latest CLI version** [from NPM](https://www.npmjs.com/package/extension-cli)
+#### 1. Install latest CLI version [from NPM](https://www.npmjs.com/package/extension-cli)
 
 ```
 npm install extension-cli
 ```
 
-**2. Update extension project `package.json`** with following options:
+#### 2. Update extension project `package.json`
 
+with following options:
 
 <table width="100%" cellpadding="0" cellspacing="0">
 <tr>
@@ -122,7 +126,7 @@ Needed to compile projects written in ES6.
 </td>
 <td valign='top'>
 <strong>ESLint ignore</strong><br/><br/>
-Add this so test files will not be linted. If your project includes compiled 3rd party libs (not imported from npm but literally <code>.js</code> files, you should exclude them also).
+Exclude test files from being linted. If your project includes compiled 3rd party libraries, you should exclude them also.
 </td>
 </tr>
 <tr>
@@ -141,35 +145,6 @@ Add this so test files will not be linted. If your project includes compiled 3rd
 <td valign='top'>
 <strong>Documentation Config</strong><br/><br/>
 Basic options for generating docs using the default template.
-</td>
-</tr>
-<tr>
-<td style="padding:0">
-<pre>
-  "xtbuild": {
-    "js_bundles": [
-      {
-        "name": "background-script",
-        "src": "./src/bg/**/*.js"
-      }, {
-          "name": "content-script",
-          "src": [
-            "./src/ct/index.js", 
-            "./src/ct/helper.js"
-          ]
-      }, {
-         "name": "coptions",
-         "src": "./src/options.js"
-     }
-    ]
-  }
-</pre>
-</td>
-<td valign='top'>
-<strong>Build Config</strong><br/><br/>
-Define javacsript bundles to build, where<br/>
-- <code>name</code> is the output filename without file extension and<br/>
-- <code>src</code> indicates which files to include in each bundle; can be a single file path, an array or files, or wildcard path. See examples on left.
 </td>
 </tr>
 <tr>

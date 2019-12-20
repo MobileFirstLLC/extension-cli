@@ -1,22 +1,13 @@
 #!/usr/bin/env node
 
-/**
+/*
  * The purpose of this command is to upgrade configuration files of
  * a stale project to latest version, where this CLI tool will provide
  * updated project configuration files. If the config files have been
  * modified heavily for the project, it is not advisable to upgrade them
  * in this manner. Instead you should upgrade such configs manually.
  *
- * @example <caption>Sync all configs</caption>
- * npx xt-sync --all
- *
- * @example <caption>Sync eslint config</caption>
- * npx xt-sync --eslint
- *
- * @example <caption>Get help using this command</caption>
- * npx xt-sync --help
- *
- * @namespace xt-sync
+ * <a href="tutorial-xt-sync.html">See detailed usage tutorial here</a>
  */
 
 const fs = require('fs');

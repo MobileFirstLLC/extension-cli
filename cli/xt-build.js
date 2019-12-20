@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-
-/**
+/*
  * Build command generates an extension dist/ directory that
  * can be debugged in the browser.
  *
@@ -9,16 +8,7 @@
  * will minify and compile a zip file that can be uploaded to
  * the web store for distribution.
  *
- * @namespace xt-build
- *
- * @example <caption>Run development build and watch changes</caption>
- * npx xt-build -e dev -w
- *
- * @example <caption>Build production version</caption>
- * npx xt-build -e prod
- *
- * @example <caption>Get help using this command</caption>
- * npx xt-build --help
+ * <a href="tutorial-xt-build.html">See detailed usage tutorial here</a>
  */
 
 const util = require('util');

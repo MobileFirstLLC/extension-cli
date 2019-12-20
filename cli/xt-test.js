@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-
-/**
+/*
  * This command will run project unit tests located in test/ directory.
  *
  * This command will setup extension testing environment that is pre-initialized
@@ -18,20 +17,7 @@
  * You may extend this test environment with a single project; this is simply the base setup
  * for running unit tests. Or you may create your own test environment if this is not suitable.
  *
- * @namespace xt-test
- *
- * @example <caption>Default test command</caption>
- * npx xt-test
- *
- * @example <caption>Execute tests and keep watching changes</caption>
- * npx xt-test --watch
- *
- * @example <caption>Execute tests and pipe result to coveralls.io</caption>
- * npx xt-test --coverage
- *
- * @example <caption>Get help using this command</caption>
- * npx xt-test --help
- *
+ * <a href="tutorial-xt-test.html">See detailed usage tutorial here</a>
  */
 
 const util = require('util');
@@ -40,7 +26,6 @@ const program = require('commander');
 const pkg = require('../package.json');
 const exec = require('child_process').exec;
 
-/** execute test runner in project working dir **/
 process.chdir(process.cwd());
 
 const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config', 'rootSuite.js');
@@ -77,10 +62,8 @@ const args = [
 
 ].join(' ');
 
-
 const bat = exec(args);
 
-/** display all test output on screen **/
 bat.stdout.on('data', data => {
     process.stdout.write(data.toString());
 });
