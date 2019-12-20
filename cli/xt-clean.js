@@ -10,7 +10,7 @@
  *
  * <a href="tutorial-xt-clean.html">See detailed usage tutorial here</a>
  *
- * @module xt-clean
+ * @file xt-clean
  */
 
 const fs = require('fs');

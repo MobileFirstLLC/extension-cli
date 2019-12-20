@@ -19,7 +19,7 @@
  *
  * <a href="tutorial-xt-docs.html">See detailed usage tutorial here</a>
  *
- * @module xt-docs
+ * @file xt-docs
  */
 
 const fs = require('fs');

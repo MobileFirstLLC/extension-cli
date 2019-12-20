@@ -5,7 +5,7 @@
  *
  * <a href="tutorial-xt-create.html">See detailed usage tutorial here</a>
  *
- * @module xt-create
+ * @file xt-create
  */
 
 const chalk = require('chalk');

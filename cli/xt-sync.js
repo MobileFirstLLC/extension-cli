@@ -9,7 +9,7 @@
  *
  * <a href="tutorial-xt-sync.html">See detailed usage tutorial here</a>
  *
- * @module xt-sync
+ * @file xt-sync
  */
 
 const fs = require('fs');

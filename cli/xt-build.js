@@ -10,7 +10,7 @@
  *
  * <a href="tutorial-xt-build.html">See detailed usage tutorial here</a>
  *
- * @module xt-build
+ * @file xt-build
  */
 
 const util = require('util');

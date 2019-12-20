@@ -19,7 +19,7 @@
  *
  * <a href="tutorial-xt-test.html">See detailed usage tutorial here</a>
  *
- * @module xt-test
+ * @file xt-test
  */
 
 const util = require('util');
