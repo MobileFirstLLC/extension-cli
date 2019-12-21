@@ -103,14 +103,13 @@
 </blockquote>
 <p>This command will setup extension testing environment that is pre-initialized
 with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised),
-and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage.</p>
-<p>Also the following browser API's are initialized: window, chrome. Window
+and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage.
+Also the following browser features are initialized: window, chrome. Window
 is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
 chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
 <p>This command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>.</p>
-<p>Mocha will execute with babel, meaning you can use this test environment to
-test ES6 modules with imports, arrows, and classes.</p>
-<p>You may extend this test environment with a single project; this is simply the base setup
+<p>Mocha will execute with babel, meaning you can use this test environment with ES6 modules.</p>
+<p>You may extend this test environment within an extension project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.</p>
 <h2>Commands</h2>
 <p>Default command: run unit tests</p>
@@ -126,7 +125,8 @@ for running unit tests. Or you may create your own test environment if this is n
 <pre class="prettyprint source"><code>xt-test --help
 </code></pre>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run test</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run test</code>.
+See example below.</p>
 <pre class="prettyprint source"><code>&quot;scripts&quot;:{
   &quot;test&quot;: &quot;xt-test&quot;
 }

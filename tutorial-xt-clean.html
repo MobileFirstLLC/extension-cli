@@ -104,28 +104,31 @@
 <p>Clean operation iterates over files and directories listed in the
 project <code>.gitignore</code> file, and removes all ignored files and
 directories, except <code>node_modules/</code>, <code>.idea/</code>, and <code>.vscode/</code>.</p>
-<p>(.idea is a collection of configuration files used by WebStorm IDE, and .vscode
-is the same for Visual Studio Code. The IDE will generate them automatically if they are absent.)</p>
-<p>To remove these directories, you must explicitly pass a flag to delete
+<p><code>.idea</code> is a collection of configuration files used by WebStorm IDE, and <code>.vscode</code>
+is the same for Visual Studio Code. The IDE will generate them automatically if they are absent.</p>
+<p>To remove these three directories, you must explicitly pass a flag to delete
 each directory respectively.</p>
 <h2>Commands</h2>
-<p>Default command: removes ignored files</p>
+<p>Remove ignored files (default)</p>
 <pre class="prettyprint source"><code>xt-clean
 </code></pre>
 <p>Clear ignored files, including <code>node_modules</code></p>
 <pre class="prettyprint source"><code>xt-clean -m
 </code></pre>
 <p>Clear ignored files, including <code>.idea/</code> directory</p>
-<pre class="prettyprint source"><code>xt-clean -m -i
+<pre class="prettyprint source"><code>xt-clean -i
 </code></pre>
 <p>Clear ignored files, including <code>.vscode/</code> directory</p>
-<pre class="prettyprint source"><code>xt-clean -m -v
+<pre class="prettyprint source"><code>xt-clean -v
+</code></pre>
+<p>Clear absolutely all ignored files</p>
+<pre class="prettyprint source"><code>xt-clean -v -i -m
 </code></pre>
 <p>Get help using this command</p>
 <pre class="prettyprint source"><code>xt-clean --help
 </code></pre>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-clean</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run clean</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run clean</code> See example below.</p>
 <pre class="prettyprint source"><code>&quot;scripts&quot;:{
   &quot;clean&quot;: &quot;xt-clean&quot;
 }

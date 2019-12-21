@@ -100,7 +100,7 @@
 			<article><h1>xt-sync</h1>
 <blockquote>
 <p><code>xt-sync</code> command is intended for upgrading configuration files of
-a stale project to latest version</p>
+a stale project to the latest versions</p>
 </blockquote>
 <p>When a project has not been worked on recently, it may need updates of
 various files, such as CI configuration files.</p>
@@ -112,7 +112,7 @@ files.</p>
 an individual project, it is not advisable to upgrade them in this manner.
 Instead you should upgrade such configuration files manually.</p>
 <h2>Commands</h2>
-<p>You must pass at least one flag with this command.</p>
+<p><strong>You must pass at least one flag with this command.</strong></p>
 <p>Synchronize all configuration files</p>
 <pre class="prettyprint source"><code>xt-sync --all
 </code></pre>
@@ -132,7 +132,8 @@ Instead you should upgrade such configuration files manually.</p>
 <pre class="prettyprint source"><code>xt-sync --help
 </code></pre>
 <p>After installing extension-cli, you can run these commands from a terminal using <code>npx xt-sync --all</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run sync</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run sync</code>.
+See example below.</p>
 <pre class="prettyprint source"><code>&quot;scripts&quot;:{
   &quot;sync&quot;: &quot;xt-sync --all&quot;
 }

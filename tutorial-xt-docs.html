@@ -101,7 +101,7 @@
 <blockquote>
 <p><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
 </blockquote>
-<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc 3</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator, that converts your code comments to readable HTML/CSS files which you can host, for example, with github pages.</p>
+<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc 3</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.</p>
 <p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more about templating here</a>.</p>
 <h2>Commands</h2>
 <p>Default command</p>
@@ -114,11 +114,12 @@
 <pre class="prettyprint source"><code>xt-docs --help
 </code></pre>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-docs</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run docs</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run docs</code>. See example below.</p>
 <pre class="prettyprint source"><code>&quot;scripts&quot;:{
   &quot;docs&quot;: &quot;xt-docs&quot;
 }
 </code></pre>
+<br/>
 <h2>Configuration</h2>
 <p>By default the CLI will look for docs configuration in two different
 places:</p>
@@ -126,7 +127,7 @@ places:</p>
 <li>in <code>package.json</code> using key <code>xtdocs</code></li>
 <li>in a file named <code>.xtdocs.json</code> in project root</li>
 </ul>
-<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>--config</code> (<code>-c</code>) flag, followed by path to file. <a href="#commands">See commands for an example</a>.</p>
+<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> (<code>--config</code>) flag, followed by path to file. <a href="#commands">See commands for an example</a>.</p>
 <br/>
 <h3>Minimum Project-Level Configuration</h3>
 <p>Within the extension project you should define, at minimum, the following configuration options:</p>
@@ -138,7 +139,8 @@ places:</p>
   }
 }
 </code></pre>
-<p>where</p>
+<br/>
+<p>where:</p>
 <table>
 <thead>
 <tr>
@@ -153,7 +155,7 @@ places:</p>
 </tr>
 <tr>
 <td><code>systemSummary</code></td>
-<td>Provide a short description of your project; this will be shown as a subheading</td>
+<td>Provide a short description of your project; this will be shown as a subheading in the generated docs</td>
 </tr>
 <tr>
 <td><code>systemColor</code></td>
@@ -211,11 +213,13 @@ places:</p>
   }
 }
 </code></pre>
+<br/>
 <h2>Templates</h2>
-<p><code>templates</code> key is used specifically by the template of choice. Currently the default template is
-<a href="https://github.com/steveush/foodoc#configuring-the-template">Foodoc</a> which has more configuration options than what was specified in the default configuration above.</p>
+<p><code>templates</code> key is used specifically to customize the options for a template of choice. This is useful if you want to change the look and feel of the generated documentation. The default template used by this CLI is
+<a href="https://github.com/steveush/foodoc#configuring-the-template">Foodoc</a>.</p>
 <p>You can change the template by overriding <code>opts.template</code> in the project-level configuration, and by adding the template package of your choice to project-level dependencies.</p>
-<p><a href="https://cancerberosgx.github.io/jsdoc-templates-demo/demo/">This list</a> can help you get started with picking a custom template. If you cannot find one that you like, you can always make your own.</p>
+<p><a href="https://cancerberosgx.github.io/jsdoc-templates-demo/demo/">This list</a> can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.</p>
+<p>This documentation you are reading currently was generated using JSDoc and Foodoc theme.</p>
 <h2>Source</h2>
 <p><a href="xt-docs.js.html">View latest source for this command here</a></p>
 <hr>
