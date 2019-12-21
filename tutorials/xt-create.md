@@ -1,7 +1,7 @@
-# xt-create
+# xt-create (planned)
 
 
-> `xt-create` command, once implemented, can be used to create a new extension project.
+> `xt-create` command is used to create a new extension project.
 
 ## Commands
 

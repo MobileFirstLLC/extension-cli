@@ -1,8 +1,7 @@
 # xt-build
 
 
-> `xt-build` command is used for generating a debuggable dev version of and extension, and a production ready, minified .zip file
-that can be uploaded to the chrome store.
+> `xt-build` command is used for generating a debuggable dev version of and extension, and a production ready, minified .zip file that can be uploaded to the chrome web store.
 
 
 Successful build command always generates an extension `dist/` directory that can be debugged in the browser.  The underlying build system
@@ -10,19 +9,15 @@ uses [gulp](https://github.com/gulpjs/gulp), [babel](https://github.com/babel/gu
 
 ### Dev Build Artifacts
 
-When you specify `dev` build flag, the build will complete using development settings. The output of a successful dev
-build is  a `dist/` directory which can be debugged using the chrome browser. The build command will always compile scripts using production settings, because extension scripts must be compiled prior to debugging.
+When specifying`dev` build flag, the build will complete using development settings. The output of a successful dev build is  a `dist/` directory which can be debugged using the chrome browser. The build command will always compile scripts using production settings, because extension scripts must be compiled prior to debugging (`eval` is not allowed).
 
 ### Prod Build Artifacts
 
-When specifying `prod` build flag (of not specifying any flag at all) will run a production build. Successful production build
-will generate a `dist/` directory of extension files which can be debugged in the browser. It will also generate a 
-`release.zip` file in the project root strictly based on the files in the `dist` directory. 
-This zip file can be uploaded directly to the Chrome Web Store. When running a production build, all code files (js, sass, html, json) will be minified automatically.
+When specifying `prod` build flag, the build will run a production build. Successful production build will generate a `dist/` directory of extension files which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded directly to the Chrome Web Store. When running a production build, all code files (js, sass, html, json) will be minified.
 
 ## Commands
 
-Default command: run production build
+Run production build (default)
 
 ```
 xt-build
@@ -70,7 +65,9 @@ Or you can add an option to `packages.json` scripts section (see example below) 
 }
 ```
 
-## Configuration
+<br/>
+
+## Build Configuration
 
 By default the CLI will look for build configuration in two different
 places:
@@ -84,7 +81,7 @@ If these two locations cause a conflict, alternatively you can provide a path to
 
 ### Default Configuration
 
-The CLI uses a build configuration file shown below. You can override any of these key-value pairs at project level.  
+The CLI uses a default build configuration file shown below. This tells the extension CLI where to look for files and where to output files. You can override any of these key-value pairs at project level. You can find more detailed explanations of usage of some of these keys [below](#custom-configurations).
 
 ```json
 {
@@ -98,7 +95,7 @@ The CLI uses a build configuration file shown below. You can override any of the
   "html": "./src/**/*.html",
   "scss": "./src/**/*.scss",
   "scss_bundles": null,
-  "icons": [
+  "icons":[
     "./assets/img/**/*.png",
     "./assets/img/**/*.gif",
     "./assets/img/**/*.jpg",
@@ -110,20 +107,24 @@ The CLI uses a build configuration file shown below. You can override any of the
 }
 ```
 
-### Customizing Build Configurations
+<br/>
 
-#### Script and Style bundles
+## Custom Configurations
 
-`js_bundles` and `scss_bundles` are used to configure build settings for js files and scss files respectively.
-The expected value is an array with one or more items as shown in the example below.
+### Script Bundles
 
-The property value `name` is the output bundle filename without file extension.
+`js_bundles` key used to configure build settings for javascript bundles. You will need to configure
+bundles when your compiled extension contains more than 1 javascript file. 
 
-Property value `src` specifies which files to include in each bundle; you can use a string value for a single file, 
-array of files, or a path with wildcard. You may also use `!` as a way to negate the inclusion of a file. This
-syntax is directly expected by gulp. See example below.
+The expected value for `js_bundles` is an array with one or more items as shown in the example below.
 
-*sample project-level configuration with js and style bundles*
+- `name` is the output bundle filename without file extension
+- `src` specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use `!` as a way to negate the inclusion of a file. This is the [globs syntax expected by gulp](https://gulpjs.com/docs/en/api/src) (without options).
+
+
+#### Example
+
+Sample project-level configuration with multiple javascript bundles
 
 ```
   "xtbuild": {
@@ -133,14 +134,60 @@ syntax is directly expected by gulp. See example below.
         "src": "./src/background.js"
       },
       {
-        "name": "inbox",
-        "src": "./src/app/inbox/**/*.js"
-      },
-      {
-        "name": "message",
-        "src": "./src/app/message/**/*.js"
+        "name": "app",
+        "src": ["./src/app/inbox/**/*.js", ./src/app/message/**/*.js"]
       }
-    ],
+    ]
+  }
+```
+
+### Skip Javascript Compilation and Linting
+
+Use `copyAsIs` key to specify an array of files which should not be compiled. These files can be located anywhere in your project. The build command will copy specified files exactly without any modification to the root of the output directory. Any path will be flattened.
+
+#### Example
+
+Sample configuration for skipping compilation of pre-compiled files
+
+```
+  "xtbuild": {
+    "copyAsIs": [
+      "./node_modules/material-design-lite/material.min.js",
+      "./assets/ga.js"
+    ]
+  }
+```
+In the project-level `package.json`, add the file paths to the list of ignored files
+to prevent them from being linted.
+
+```json
+  {  
+      "eslintIgnore": [
+        "test/**/*",
+        "./assets/ga.js"
+      ]
+  }
+```
+
+
+
+### Style bundles
+
+`scss_bundles` are used to configure build settings for css-style files. The expected value is an array with one or more items as shown in the example below.
+
+- The property value `name` is the output bundle filename with file extension
+- `src` specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use `!` as a way to negate the inclusion of a file. This is the [globs syntax expected by gulp](https://gulpjs.com/docs/en/api/src) (without options).
+
+When using production build the style files will be minified. Dev build does not minify style files.
+
+By default, the stylesheets are assumed to be written using [Sass](https://sass-lang.com/guide). If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. However name your files using `.scss` file extension, or override the default configuration: `"scss": "./src/**/*.scss",` because this means the CLI will by default only look for `.scss` style files.
+
+#### Example
+
+Sample project-level configuration with multiple style bundles
+
+```
+  "xtbuild": {
     "scss_bundles": [
       {
         "src": [
@@ -159,45 +206,17 @@ syntax is directly expected by gulp. See example below.
   }
 ```
 
-#### CSS Support
+### Localization
 
-If you are not a friend of SASS stylesheets, you can write your style sheets using regular CSS.
-However name your files using `.scss` file extension, or override the default configuration, since the 
-CLI will, by default, look only for `.scss` style files.
+If the extension supports multiple languages, specify all supported languages using key `locales_list`. The default language value is `["en"]`. 
 
-#### Skip compiling
+This `locales_list` should be an array that corresponds to a list of subdirectories under `locales_dir` in the extension project. The default `locales_dir` is `./assets/locales/`, which you may change if you want.
 
-Use `copyAsIs` key to specify which files should not be compiled. These files can be located anywhere in your
-project. The build will copy them literally without any modification to the output directory root. Any path will
-be flattened.
+Refer [to this list of language codes](https://developers.google.com/admin-sdk/directory/v1/languages) when naming individual language directories.
 
-*Example of skipping compilation of pre-compiled files*
+#### Example 
 
-```
-  "xtbuild": {
-    "copyAsIs": [
-      "./node_modules/material-design-lite/material.min.js",
-      "./assets/ga.js"
-    ]
-  }
-```
-
-
-#### Supporting multiple and/or non-English languages
-
-Browser extensions can support multiple languages. If the extension supports multiple languages, specify all
-supported languages using key `locales_list`. The default language value is `["en"]`. This entry should be an array. 
-
-This configuration assumes that under specified `locales_dir` exists a subdirectory named `en`. The default
-`locales_dir` is `./assets/locales/`, which you may change if you want.
-
-You can break down your locales files into multiple json files within the language-specific directory
-which may make the maintenance a bit easier if your files contain multiple entries. The build step will combine 
-all files within a language directory into a single `messages.json` which is expected by the browser.
-
-Refer, for example, [to this list for a full list of language codes](https://developers.google.com/admin-sdk/directory/v1/languages).
-
-**Multiple locales example**
+Multiple locales example with custom path to locales files
 
 ```
   "xtbuild": {
@@ -205,18 +224,53 @@ Refer, for example, [to this list for a full list of language codes](https://dev
       "locales_list": ["en","en-GB","pl"]
   }
 ```
+<br/>
 
-Given the configuration above, the following project-level files are expected. Within a directory you can have
-any number of json files and the filenames can be anything; they will be bundled during build.
+Given the configuration above, the following project-level directories are expected. 
+
+<br/>
 
 File Path | Description
 --- | ---
 └ **`/my/custom/locales/path/`** |  path to locales
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/`messages.json` | Default English dictionary
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `en-GB`/`messages.json` | British dictionary
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/messages.json | Default English dictionary
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `en-GB`/messages.json | British dictionary
 &nbsp; &nbsp; &nbsp; &nbsp; └─ `pl/` | Polish language dictionaries
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ `app.json` | Polish language dictionaries
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ `options.json` | Polish language dictionaries
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json | Polish language dictionaries
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json | Polish language dictionaries
+
+
+You can break down your locales files into multiple `.json` files within the language-specific directory as shown in the example above for `pl/`. This may make the maintenance locales files easier if the files contain multiple entries. The build step will automatically combine all files within a language directory into a single `messages.json` which is expected from browser extensions.
+
+### Image Assets
+
+By default extension CLI will look for image assets from the following paths:
+
+```
+"icons": [
+    "./assets/img/**/*.png",
+    "./assets/img/**/*.gif",
+    "./assets/img/**/*.jpg",
+    "./assets/img/**/*.svg"
+  ],
+```
+
+You may change this configuration if the project image assets are located elsewhere or
+if you want to support additional image file extensions.
+
+After the build step, all image assets will be located in the `/dist/icons` directory.
+Therefore, in your extension project `manifest.json` you would refer to them as follows:
+
+```
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "24": "icons/24x24.png",
+      "32": "icons/32x32.png"
+    }
+  }
+```
+
 
 
 ## Source

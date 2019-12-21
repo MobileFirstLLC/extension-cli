@@ -3,7 +3,7 @@
 
 > `xt-docs` command is used for generating source code documentation for an extension project.
 
-Extension CLI uses [JSDoc 3](https://jsdoc.app/index.html) specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator, that converts your code comments to readable HTML/CSS files which you can host, for example, with github pages.
+Extension CLI uses [JSDoc 3](https://jsdoc.app/index.html) specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.
 
 You can use any compatible template of choice to skin your docs. Learn [more about templating here](#templates).
 
@@ -30,7 +30,7 @@ xt-docs --help
 
 After installing extension-cli, you can run these commands from a terminal using syntax `npx xt-docs`.
  
- Or you can add an option to `packages.json` scripts section (see example below) and then execute the command as `npm run docs`.
+ Or you can add an option to `packages.json` scripts section and then execute the command as `npm run docs`. See example below.
  
 ```
 "scripts":{
@@ -38,7 +38,7 @@ After installing extension-cli, you can run these commands from a terminal using
 }
 ```
 
-
+<br/>
   
 
 ## Configuration
@@ -48,7 +48,7 @@ places:
 - in `package.json` using key `xtdocs`
 - in a file named `.xtdocs.json` in project root
 
-If these two locations cause a conflict, alternatively you can provide a path to configuration file with `--config` (`-c`) flag, followed by path to file. [See commands for an example](#commands).
+If these two locations cause a conflict, alternatively you can provide a path to configuration file with `-c` (`--config`) flag, followed by path to file. [See commands for an example](#commands).
 
 <br/>
 
@@ -66,12 +66,14 @@ Within the extension project you should define, at minimum, the following config
 }
 ```
 
-where
+<br/>
+
+where:
 
 | key | Description of value |
 | --- | --- |
 |`systemName`| Name of you project |
-| `systemSummary` | Provide a short description of your project; this will be shown as a subheading |
+| `systemSummary` | Provide a short description of your project; this will be shown as a subheading in the generated docs |
 | `systemColor` | Choose a theme color for your documentation; css hex color definition will work, e.g. `#000000`.
 
 <br/>
@@ -129,14 +131,18 @@ The CLI uses a documentation configuration file shown below. You can override an
 }
 ```
 
+<br/>
+
 ## Templates
 
-`templates` key is used specifically by the template of choice. Currently the default template is 
-[Foodoc](https://github.com/steveush/foodoc#configuring-the-template) which has more configuration options than what was specified in the default configuration above. 
+`templates` key is used specifically to customize the options for a template of choice. This is useful if you want to change the look and feel of the generated documentation. The default template used by this CLI is 
+[Foodoc](https://github.com/steveush/foodoc#configuring-the-template). 
 
 You can change the template by overriding `opts.template` in the project-level configuration, and by adding the template package of your choice to project-level dependencies.
 
-[This list](https://cancerberosgx.github.io/jsdoc-templates-demo/demo/) can help you get started with picking a custom template. If you cannot find one that you like, you can always make your own.
+[This list](https://cancerberosgx.github.io/jsdoc-templates-demo/demo/) can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.
+
+This documentation you are reading currently was generated using JSDoc and Foodoc theme.
 
 ## Source
 

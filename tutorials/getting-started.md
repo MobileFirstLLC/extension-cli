@@ -1,10 +1,13 @@
 # Getting Started
 
-Before you start, be aware that your project needs to have an expected file structure. If you are migrating an existing project, this may require substantial effort and perhaps not worthwhile. When starting a new project, follow the provided organization. Eventually we will add a command that will set this up automatically.
+Before you start, be aware that your project is expected to have a certain file structure.
 
-### File Organization
+You can override most of these paths when specifying build and documentation settings, but sticking to the
+default organization will make your life easier so we highly recommend its usage.
+ 
+Eventually we will [add a command](tutorial-xt-create) that will set up this structure automatically.
 
-The following project structure is expected:
+### Default Project Organization
 
 Path | Description
 --- | ---
@@ -17,33 +20,33 @@ Path | Description
 └ **`test`** | Unit tests
 └ `package.json` | Application root
 
-You can override most of these file paths when specifying build and documentation settings.
-This structure is the default organization and its usage will make your life easier.
+
 
 ### Prerequisites
 
-Before using this program, you should have all of the following installed:
+Before using extension CLI, you should have all of the following:
 
 - [Node.js](https://nodejs.org/en/download/)
 - Any web-friendly IDE
 - Terminal/cmd access
 - Chrome browser for debugging extensions
 
-### Installation & Basic Configuration
+### Installation
 
-#### 1. Install latest CLI version [from NPM](https://www.npmjs.com/package/extension-cli)
+Install latest CLI version [from NPM](https://www.npmjs.com/package/extension-cli)
 
 ```
 npm install extension-cli
 ```
 
-#### 2. Update extension project `package.json`
+### Basic Configuration
 
-with following options:
+Update extension project `package.json` with following options:
 
-<table width="100%" cellpadding="0" cellspacing="0">
+
+<table class='config'>
 <tr>
-<td style="padding:0">
+<td>
 <pre>
   "babel": {
     "presets": [
@@ -58,7 +61,7 @@ Needed to compile projects written in ES6.
 </td>
 </tr>
 <tr>
-<td style="padding:0">
+<td>
 <pre>
   "eslintIgnore": [
     "test/**/*"
@@ -74,7 +77,7 @@ Exclude test files from being linted. If your project includes compiled 3rd part
 </td>
 </tr>
 <tr>
-<td style="padding:0">
+<td>
 <pre>
   "xtdocs": {
     "templates": {
@@ -88,12 +91,12 @@ Exclude test files from being linted. If your project includes compiled 3rd part
 </td>
 <td valign='top'>
 <strong>Documentation Config</strong><br/><br/>
-Define minimum configrations for documentations if you plan to use the documentation command.
-[Learn more here](tutorial-xt-docs.html)
+Define minimum configrations for documentations if you plan to use the documentation command.<br/>
+<a href='tutorial-xt-docs.html'>Learn more here</a>
 </td>
 </tr>
 <tr>
-<td style="padding:0">
+<td>
 <pre>
   "scripts": {
       "start": "xt-build -e dev -w",
@@ -111,11 +114,16 @@ After adding scripts, you can execute commands by running
 </tr>
 </table>
 
+<style>
+td pre{background:transparent;border:none;}
+@media(max-width:850px){
+.config tr, .config td{display:block;border-top:none!important;}
+.config td, .config pre {white-space: pre-wrap; word-break: break-word;}
+</style>
 
-[See tutorials](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html) for more details on each command.
+### Usage
 
-
-
+[See tutorials](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html) for instructions on each command.
 
 ---
 

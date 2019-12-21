@@ -58,16 +58,14 @@ Note that for each command `--help` and `--version` flags are also valid
 
 [Continue here for details](https://mobilefirstllc.github.io/extension-cli/tutorial-getting-started.html)
 
-
 ## Issues and Feature Requests
 
 [Submit on Github](https://github.com/MobileFirstLLC/extension-cli/issues/new/choose)
 
-
 ## Author
 
-This is an open source project by [Mobile First](https://mobilefirst.me).
+This is an [open source](https://github.com/MobileFirstLLC/extension-cli) project by [Mobile First](https://mobilefirst.me).
 
 ## License 
 
-MIT
+[MIT](https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE)

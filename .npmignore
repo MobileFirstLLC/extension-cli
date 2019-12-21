@@ -3,6 +3,7 @@
 .docs.json
 .travis.yml
 .github/
+tutorials/
 node_modules/
 CHANGELOG.md
 CODE_OF_CONDUCT.md
