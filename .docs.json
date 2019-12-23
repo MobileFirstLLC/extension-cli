@@ -37,6 +37,10 @@
       "data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"
     ],
     "scripts": [],
+    "analytics": {
+      "ua": "UA-129118591-4",
+      "domain": "https://mobilefirstllc.github.io/"
+    },
     "favicon": "./assets/img/128x128.png"
   },
   "opts": {
