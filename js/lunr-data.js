@@ -70,10 +70,13 @@ window.lunrData = {
           "xt"
         ],
         "list_tutorial.html": [
-          "avail",
+          "cli",
+          "extens",
+          "guid",
+          "learn",
           "list",
           "list:tutori",
-          "tutori"
+          "us"
         ]
       },
       "length": 4
@@ -133,6 +136,10 @@ window.lunrData = {
                 "index.html": {
                   "ref": "index.html",
                   "tf": 300
+                },
+                "list_tutorial.html": {
+                  "ref": "list_tutorial.html",
+                  "tf": 17.5
                 }
               }
             },
@@ -265,6 +272,10 @@ window.lunrData = {
                       "index.html": {
                         "ref": "index.html",
                         "tf": 308.2352941176471
+                      },
+                      "list_tutorial.html": {
+                        "ref": "list_tutorial.html",
+                        "tf": 17.5
                       }
                     }
                   }
@@ -340,6 +351,23 @@ window.lunrData = {
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "list_tutorial.html": {
+                      "ref": "list_tutorial.html",
+                      "tf": 17.5
                     }
                   }
                 }
@@ -524,10 +552,6 @@ window.lunrData = {
                     "docs": {
                       "undefined": {
                         "tf": 110
-                      },
-                      "list_tutorial.html": {
-                        "ref": "list_tutorial.html",
-                        "tf": 635
                       }
                     }
                   }
@@ -557,6 +581,14 @@ window.lunrData = {
                     "tf": 4.117647058823529
                   }
                 }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "list_tutorial.html": {
+                "ref": "list_tutorial.html",
+                "tf": 17.5
               }
             }
           }
@@ -606,6 +638,20 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "u": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "list_tutorial.html": {
+                    "ref": "list_tutorial.html",
+                    "tf": 600
+                  }
+                }
+              }
+            }
           }
         },
         "x": {
@@ -617,32 +663,11 @@ window.lunrData = {
               }
             }
           }
-        },
-        "a": {
-          "docs": {},
-          "v": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "list_tutorial.html": {
-                      "ref": "list_tutorial.html",
-                      "tf": 35
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       },
-      "length": 46
+      "length": 49
     },
     "corpusTokens": [
-      "avail",
       "build",
       "chrome",
       "clean",
@@ -655,7 +680,9 @@ window.lunrData = {
       "extens",
       "get",
       "global",
+      "guid",
       "index",
+      "learn",
       "line",
       "list",
       "list:tutori",
@@ -670,6 +697,7 @@ window.lunrData = {
       "tool",
       "tutori",
       "up",
+      "us",
       "util",
       "way",
       "xt"
@@ -716,11 +744,11 @@ window.lunrData = {
     "list_tutorial.html": {
       "id": "list_tutorial.html",
       "kind": "list",
-      "title": "Tutorials",
+      "title": "Guide",
       "longname": "list:tutorial",
-      "name": "Tutorials",
+      "name": "Guide",
       "tags": "list:tutorial",
-      "summary": "All available tutorials.",
+      "summary": "Learn how to use extension CLI",
       "description": "",
       "body": ""
     }
