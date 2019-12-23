@@ -6,7 +6,9 @@
     ]
   },
   "source": {
-    "include": ["README.md"],
+    "include": [
+      "README.md"
+    ],
     "includePattern": "",
     "excludePattern": ""
   },
@@ -18,7 +20,7 @@
     "systemSummary": "Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.",
     "systemColor": "#222136",
     "footer": "",
-    "copyright": "Mobile First LLC",
+    "copyright": "Extension Cli is made by <a href='https://mobilefirst.me'>Mobile First</a> in the \uD83C\uDF51 state.",
     "includeDate": "true",
     "dateFormat": "MMM YYYY",
     "inlineNav": "true",
@@ -32,7 +34,6 @@
     "outputSourcePath": "true",
     "search": "false",
     "stylesheets": [
-      "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==",
       "data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"
     ],
     "scripts": [],
