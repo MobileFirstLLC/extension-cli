@@ -65,9 +65,9 @@ window.lunrData = {
           "global"
         ],
         "undefined": [
-          "test",
-          "tutori",
-          "xt"
+          "help",
+          "link",
+          "tutori"
         ],
         "list_tutorial.html": [
           "cli",
@@ -99,7 +99,7 @@ window.lunrData = {
                       "tf": 4.117647058823529
                     },
                     "undefined": {
-                      "tf": 950
+                      "tf": 964
                     }
                   }
                 }
@@ -127,6 +127,31 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "g": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "g": {
+                          "docs": {
+                            "undefined": {
+                              "tf": 1900
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "l": {
@@ -136,6 +161,9 @@ window.lunrData = {
                 "index.html": {
                   "ref": "index.html",
                   "tf": 300
+                },
+                "undefined": {
+                  "tf": 33.33333333333333
                 },
                 "list_tutorial.html": {
                   "ref": "list_tutorial.html",
@@ -172,9 +200,58 @@ window.lunrData = {
                         "index.html": {
                           "ref": "index.html",
                           "tf": 4.117647058823529
+                        },
+                        "undefined": {
+                          "tf": 11.666666666666666
                         }
                       }
                     }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "undefined": {
+                        "tf": 17.5
+                      }
+                    },
+                    "u": {
+                      "docs": {},
+                      "r": {
+                        "docs": {
+                          "undefined": {
+                            "tf": 11.666666666666666
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "undefined": {
+                    "tf": 17.5
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "undefined": {
+                    "tf": 11.666666666666666
                   }
                 }
               }
@@ -202,7 +279,11 @@ window.lunrData = {
           "e": {
             "docs": {},
             "v": {
-              "docs": {},
+              "docs": {
+                "undefined": {
+                  "tf": 14
+                }
+              },
               "e": {
                 "docs": {},
                 "l": {
@@ -227,7 +308,7 @@ window.lunrData = {
             "c": {
               "docs": {
                 "undefined": {
-                  "tf": 950
+                  "tf": 967.5
                 }
               },
               "u": {
@@ -255,6 +336,34 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "i": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "undefined": {
+                              "tf": 14
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "e": {
@@ -273,11 +382,27 @@ window.lunrData = {
                         "ref": "index.html",
                         "tf": 308.2352941176471
                       },
+                      "undefined": {
+                        "tf": 14
+                      },
                       "list_tutorial.html": {
                         "ref": "list_tutorial.html",
                         "tf": 17.5
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "undefined": {
+                    "tf": 17.5
                   }
                 }
               }
@@ -301,6 +426,22 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "undefined": {
+                        "tf": 11.666666666666666
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -315,6 +456,16 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 4.117647058823529
+                  },
+                  "undefined": {
+                    "tf": 11.666666666666666
+                  }
+                }
+              },
+              "k": {
+                "docs": {
+                  "undefined": {
+                    "tf": 950
                   }
                 }
               }
@@ -365,6 +516,9 @@ window.lunrData = {
                 "docs": {},
                 "n": {
                   "docs": {
+                    "undefined": {
+                      "tf": 17.5
+                    },
                     "list_tutorial.html": {
                       "ref": "list_tutorial.html",
                       "tf": 17.5
@@ -392,6 +546,9 @@ window.lunrData = {
                         "index.html": {
                           "ref": "index.html",
                           "tf": 4.117647058823529
+                        },
+                        "undefined": {
+                          "tf": 961.6666666666666
                         }
                       }
                     }
@@ -409,6 +566,26 @@ window.lunrData = {
                         "tf": 4.117647058823529
                       }
                     }
+                  }
+                }
+              },
+              "d": {
+                "docs": {
+                  "undefined": {
+                    "tf": 14
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "undefined": {
+                    "tf": 70
                   }
                 }
               }
@@ -430,6 +607,64 @@ window.lunrData = {
                       "tf": 110
                     }
                   }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "v": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 14
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 100
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "undefined": {
+                        "tf": 35
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {
+                "undefined": {
+                  "tf": 23.333333333333332
                 }
               }
             }
@@ -486,6 +721,22 @@ window.lunrData = {
                   "undefined": {
                     "tf": 950
                   }
+                },
+                "h": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "undefined": {
+                            "tf": 17.5
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -499,7 +750,45 @@ window.lunrData = {
                 "t": {
                   "docs": {
                     "undefined": {
-                      "tf": 950
+                      "tf": 961.6666666666666
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 17.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "s": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 950
+                        }
+                      }
                     }
                   }
                 }
@@ -520,7 +809,7 @@ window.lunrData = {
                     "tf": 4.117647058823529
                   },
                   "undefined": {
-                    "tf": 950
+                    "tf": 973.3333333333334
                   }
                 }
               }
@@ -535,6 +824,9 @@ window.lunrData = {
                   "index.html": {
                     "ref": "index.html",
                     "tf": 4.117647058823529
+                  },
+                  "undefined": {
+                    "tf": 11.666666666666666
                   }
                 }
               }
@@ -586,9 +878,25 @@ window.lunrData = {
           },
           "s": {
             "docs": {
+              "undefined": {
+                "tf": 11.666666666666666
+              },
               "list_tutorial.html": {
                 "ref": "list_tutorial.html",
                 "tf": 17.5
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "undefined": {
+                    "tf": 23.333333333333332
+                  }
+                }
               }
             }
           }
@@ -634,7 +942,20 @@ window.lunrData = {
             "t": {
               "docs": {
                 "undefined": {
-                  "tf": 950
+                  "tf": 50
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 14
+                    }
+                  }
                 }
               }
             }
@@ -645,9 +966,79 @@ window.lunrData = {
               "docs": {},
               "d": {
                 "docs": {
+                  "undefined": {
+                    "tf": 33.33333333333333
+                  },
                   "list_tutorial.html": {
                     "ref": "list_tutorial.html",
                     "tf": 600
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_": {
+          "docs": {},
+          "g": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "undefined": {
+                    "tf": 900
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "undefined": {
+                    "tf": 11.666666666666666
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "undefined": {
+                    "tf": 950
+                  }
+                }
+              }
+            }
+          }
+        },
+        "v": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "undefined": {
+                          "tf": 14
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -663,42 +1054,101 @@ window.lunrData = {
               }
             }
           }
+        },
+        "f": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "undefined": {
+                    "tf": 17.5
+                  }
+                }
+              }
+            }
+          }
+        },
+        "n": {
+          "docs": {},
+          "o": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "undefined": {
+                    "tf": 35
+                  }
+                }
+              }
+            }
+          }
         }
       },
-      "length": 49
+      "length": 98
     },
     "corpusTokens": [
+      "_get",
       "build",
+      "changelog",
       "chrome",
       "clean",
       "cli",
+      "code",
       "command",
+      "config",
+      "configur",
+      "cool",
       "creat",
+      "dev",
       "develop",
+      "directori",
       "doc",
       "document",
+      "each",
       "extens",
+      "file",
+      "gener",
       "get",
       "global",
       "guid",
+      "help",
+      "here",
       "index",
+      "instal",
       "learn",
       "line",
+      "link",
       "list",
       "list:tutori",
+      "note",
+      "plan",
+      "prod",
       "project",
       "provid",
       "readm",
+      "releas",
+      "remov",
+      "resourc",
+      "run",
+      "showcas",
+      "sourc",
       "speed",
       "start",
       "sync",
+      "synchron",
       "systemat",
       "test",
       "tool",
       "tutori",
+      "unit",
       "up",
       "us",
       "util",
+      "version",
       "way",
       "xt"
     ],
@@ -733,10 +1183,10 @@ window.lunrData = {
     },
     "undefined": {
       "kind": "tutorial",
-      "title": "xt-test",
-      "longname": "xt-test",
-      "name": "xt-test",
-      "tags": "xt-test",
+      "title": "Helpful Links",
+      "longname": "helpful-links",
+      "name": "helpful-links",
+      "tags": "helpful-links",
       "summary": "",
       "description": "",
       "body": ""
