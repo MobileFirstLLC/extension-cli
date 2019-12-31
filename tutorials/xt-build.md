@@ -1,7 +1,7 @@
 # xt-build
 
 
-> `xt-build` command is used for generating a debuggable dev version of and extension, and a production ready, minified .zip file that can be uploaded to the chrome web store.
+> `xt-build` command is used for generating a debuggable dev version of an extension project. It is also used to create a production ready, minified .zip file that can be uploaded to the chrome web store.
 
 
 Successful build command always generates an extension `dist/` directory that can be debugged in the browser.  The underlying build system

@@ -32,6 +32,20 @@ This approach helps with creating a common, consistent development approach betw
 
 <img src='https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5' alt='extension-cli' width="100%" /> 
 
+<br/>
+
+ 
+## Getting Started & Docs
+
+Basic install:
+
+```
+npm install extension-cli
+```
+
+**[See here for more details!](https://mobilefirstllc.github.io/extension-cli/tutorial-getting-started.html)**
+
+<br/>
 
 ## Quick Command Reference
 
@@ -53,10 +67,6 @@ Note that for each command `--help` and `--version` flags are also valid
 - [ ] `xt-eject` -- remove CLI dependency
 
 <br/>
-
-## Getting Started & Docs
-
-[Continue here for details](https://mobilefirstllc.github.io/extension-cli/tutorial-getting-started.html)
 
 ## Issues and Feature Requests
 
