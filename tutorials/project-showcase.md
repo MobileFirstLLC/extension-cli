@@ -17,7 +17,7 @@ Alphabetical list by app name
 
 ### Add your own project!
 
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-build.md)
+[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/project-showcase.md)
  
  
 <!-- ADD PROJECT LINKS HERE !
