@@ -1,8 +1,13 @@
 # Changelog
 
-
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-This is an internal changelog. All official releases are published on NPM.
+
+### [0.8.7](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.6...v0.8.7) (2020-01-17)
+
+
+### Bug Fixes
+
+* build scripts and update packages ([74f51d2](https://github.com/MobileFirstLLC/extension-cli/commit/74f51d2a1dfe1b4d1611ca4ef848f20dfc92b81e))
 
 ### [0.8.6](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.5...v0.8.6) (2019-12-21)
 
