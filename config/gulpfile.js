@@ -1,7 +1,6 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
-const path = require('path');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
@@ -43,20 +42,8 @@ const scripts = done => {
 
         return gulp.src(b.src)
             .pipe(webpack({
-                mode: 'production', // always use this option !
-                module: {
-                    rules: [{
-                        test: /(\.jsx|\.js)$/,
-                        loader: ['babel-loader', 'eslint-loader'],
-                        exclude: /(node_modules|bower_components)/
-                    }]
-                },
-                resolve: {
-                    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-                    extensions: ['.js']
-                },
-                plugins: []
-            }), require('webpack'))
+                mode: 'production' // always use this option !
+            }))
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
                 path.basename = b.name;

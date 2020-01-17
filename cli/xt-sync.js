@@ -17,6 +17,7 @@ const path = require('path');
 const chalk = require('chalk');
 const program = require('commander');
 const pkg = require('../package.json');
+
 let counter = 0;
 
 const files = {
@@ -42,13 +43,14 @@ Object.keys(files).map(opt => {
         const content = fs.readFileSync(relativePath, 'utf8');
 
         let outPath = path.join(process.cwd(), outputFileName);
+
         fs.writeFileSync(outPath, content);
         console.log(chalk.bold.green(`✓ updated ${outputFileName}`));
         counter++;
     }
 });
 
-if (!counter)
-    console.log(chalk.red(`(!) Specify which files to sync using flags.`+
-        `\nSee --help for more details.`));
-
+if (!counter) {
+    console.log(chalk.red('(!) Specify which files to sync using flags.' +
+        '\nSee --help for more details.'));
+}

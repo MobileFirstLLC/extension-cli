@@ -21,6 +21,7 @@ const program = require('commander');
 const readline = require('readline');
 const pkg = require('../package.json');
 const ignore = path.join(process.cwd(), '.gitignore');
+
 let counter = 0;
 
 program
@@ -29,7 +30,6 @@ program
     .option('-i --idea', 'Clean .idea/ directory')
     .option('-v --vscode', 'Clean .vscode/ directory')
     .parse(process.argv);
-
 
 readline.createInterface({input: fs.createReadStream(ignore)})
     .on('line', line => {
