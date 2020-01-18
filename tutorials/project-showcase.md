@@ -2,12 +2,12 @@
 
 Alphabetical list by app name
 
-| Name | Maker | Shield of Choice |
+| Name | Maker | &nbsp;|
 | --- | --- | --- |
-| [Customizable Chrome Navigation Menu][0010] | [Mobile First][0011] | ![img][0012] |
+| [Customizable Chrome Navigation Menu][0010] | [nkrusch][0011] | ![img][0012] |
 | [Download All Images][0020] | [Mobile First][0021] | ![img][0022] |
 | [Image Zoom for Instagram][0040] | [Mobile First][0041] | ![img][0042] |
-| [Sitemap Generator][0030]| [Mobile First][0031]| ![img][0032] |
+| [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
 
 <br/><br/>
 
@@ -32,7 +32,7 @@ Alphabetical list by app name
  Lastly add a row to project table on top ! -->
 
 [0010]: https://chrome.google.com/webstore/detail/jnmekaomnicdcpgdndekkmojfomifjal
-[0011]: https://mobilefirst.me
+[0011]: https://github.com/nkrusch
 [0012]: https://img.shields.io/chrome-web-store/stars/jnmekaomnicdcpgdndekkmojfomifjal
 
 [0020]: https://chrome.google.com/webstore/detail/ifipmflagepipjokmbdecpmjbibjnakm
@@ -40,7 +40,7 @@ Alphabetical list by app name
 [0022]: https://img.shields.io/chrome-web-store/users/ifipmflagepipjokmbdecpmjbibjnakm
 
 [0030]: https://chrome.google.com/webstore/detail/hcnjemngcihnhncobgdgkkfkhmleapah
-[0031]: https://mobilefirst.me
+[0031]: https://github.com/nkrusch
 [0032]: https://img.shields.io/chrome-web-store/users/hcnjemngcihnhncobgdgkkfkhmleapah
 
 [0040]: https://chrome.google.com/webstore/detail/nanjbfjnlglickigikllbdkdhmkjbhhk
