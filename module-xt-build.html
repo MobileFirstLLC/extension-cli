@@ -1,10 +1,9 @@
-<!-- start:readme.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Detailed CLI Commands Guide</title>
+		<title>xt-build</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -44,7 +43,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"tutorial","title":"Guide","summary":"Learn how to use extension CLI"}],"footer":"<a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli\" data-icon=\"octicon-star\" data-size=\"large\" aria-label=\"Star mobilefirstllc/extension-cli on GitHub\">Star</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/fork\" data-icon=\"octicon-repo-forked\" data-size=\"large\" aria-label=\"Fork mobilefirstllc/extension-cli on GitHub\">Fork</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/issues\" data-icon=\"octicon-issue-opened\" data-size=\"large\" aria-label=\"Issue mobilefirstllc/extension-cli on GitHub\">Issue</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/subscription\" data-icon=\"octicon-eye\" data-size=\"large\" aria-label=\"Watch mobilefirstllc/extension-cli on GitHub\">Watch</a><br/><br/>","copyright":"Extension CLI is made by <a href='https://mobilefirst.me'>Mobile First</a> in the 🍑 state.","linenums":"true","collapseSymbols":"false","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":{"ua":"UA-129118591-7","domain":"https://oss.mobilefirst.me/"},"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"false","favicon":"favicon.png","stylesheets":["data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":["https://buttons.github.io/buttons.js"],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_TOC_ENABLED = "true";
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -83,34 +82,73 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">tutorial</span>
-				<h1><span class="title">Detailed CLI Commands Guide</span></h1>
-				<div class="summary"><p>Learn how to use each command</p></div>			</div>
+				<span class="kind">module</span>
+				<h1><span class="name">xt-build</span></h1>
+			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-12 main-content">
+			<div class="col-md-9 main-content">
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="list_tutorial.html">Guide</a></li>
-							<li><a href="tutorial-getting-started.html">★ Getting Started</a></li>
-							<li class="active">Detailed CLI Commands Guide</li>
+							<li class="active">xt-build</li>
 						</ol>
-		<section class="tutorial-section">
-			<article></article>
-				<div class="related-tutorials">
-					<h2>Related Tutorials</h2>
-					<ul>
-							<li><a href="tutorial-xt-build.html">xt-build</a></li>
-							<li><a href="tutorial-xt-docs.html">xt-docs</a></li>
-							<li><a href="tutorial-xt-test.html">xt-test</a></li>
-							<li><a href="tutorial-xt-clean.html">xt-clean</a></li>
-							<li><a href="tutorial-xt-sync.html">xt-sync</a></li>
-							<li><a href="tutorial-xt-create.html">xt-create</a></li>
-					</ul>
-				</div>
-		</section>
+					<section>
+		<dl class="symbol">
+			<dt class="symbol-title "></dt>
+			<dd class="symbol-details ">
+				<div class="symbol-details-inner">
+					<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Build command generates a dist/ directory that can be
+					debugged in the browser.</p>
+					<p>When called with production env flag, <code>-e prod</code>, this command
+					will minify and compile a <code>release.zip</code> file that can be uploaded to
+					Chrome Web Store for distribution.</p></div>
+					</div>					<div class="callout callout-warning"><h5>Requires</h5>		<form class="form-horizontal requires">
+									<div class="form-group">
+										<label class="col-sm-3 control-label requires-type">module:gulpfile</label>
+										<div class="col-sm-9">
+											<div class="form-control-static requires-summary"></div>
+										</div>
+									</div>
+							</form>
+					</div>					<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+									<!-- source -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label">Source</label>
+										<div class="col-sm-9">
+											<p class="form-control-static"><a href="xt-build.js.html">xt-build.js</a>, <a href="xt-build.js.html#line-3">line 3</a></p>
+										</div>
+									</div>
+					
+					
+					
+					
+							</form>
+					</div>				</div>
+			</dd>
+		</dl>
+							<article class="secondary">
+							</article>
+					</section>
 			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
 		</div>
 	</div>
 	<footer>
@@ -153,4 +191,3 @@
 	
 </body>
 </html>
-<!-- end:readme.hbs -->
