@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * Clean operation iterates over files and directories listed in the
+ * @name xt-clean
+ * @module
+ * @public
+ *
+ * @description Clean operation iterates over files and directories listed in the
  * project .gitignore file, and removes all ignored files and
  * directories, except node_modules, .idea/, and .vscode.
  *
  * To remove these directories, you must explicitly pass a flag to delete
  * each one of them.
- *
- * <a href="tutorial-xt-clean.html">See detailed usage tutorial here</a>
- *
- * @file xt-clean
  */
 
 const fs = require('fs');

@@ -26,7 +26,8 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "docs": "jsdoc ./cli/*  -u ./tutorials/ -c .docs.json",
+    "docs": "npm run docs:alt & jsdoc ./cli/*  -u ./tutorials/ -c .docs.json",
+    "readme": "documentation readme cli/* -f md --section=Commands",
     "release": "standard-version"
   },
   "license": "MIT",
@@ -42,6 +43,7 @@
     "coveralls": "^3.0.11",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
+    "documentation": "^12.3.0",
     "eslint": "^6.8.0",
     "foodoc": "^0.0.9",
     "gulp": "^4.0.2",
@@ -70,6 +72,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "jsdoc-to-markdown": "^5.0.3",
     "standard-version": "^7.1.0"
   }
 }

@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * Docs command generates documentation for the project. This command uses
+ * @name xt-docs
+ * @module
+ * @public
+ *
+ *
+ * @description Docs command generates documentation for the project. This command uses
  * jsdocs syntax. See {@link https://jsdoc.app/index.html|About JSDoc} for more details,
  * including {@link https://jsdoc.app/about-configuring-jsdoc.html|configuration options here}.
  *
@@ -16,10 +21,6 @@
  *
  * If you want to define configuration in some other location, use -c/--config flag
  * to provide path and name of the configuration file.
- *
- * <a href="tutorial-xt-docs.html">See detailed usage tutorial here</a>
- *
- * @file xt-docs
  */
 
 const fs = require('fs');

@@ -16,7 +16,6 @@
       "expect": true,
       "sinon": true
     },
-    "parser": "babel-eslint",
     "plugins": [],
     "rules": {
       "block-scoped-var": 2,

@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 
 /**
- * Build command generates an extension dist/ directory that
- * can be debugged in the browser.
+ * @name xt-build
+ * @module
+ * @public
  *
- * When called with production env flag, -e prod, this command
- * will minify and compile a zip file that can be uploaded to
- * the web store for distribution.
+ * @requires gulpfile
  *
- * <a href="tutorial-xt-build.html">See detailed usage tutorial here</a>
+ * @description Build command generates a dist/ directory that can be
+ * debugged in the browser.
  *
- * @file xt-build
+ * When called with production env flag, `-e prod`, this command
+ * will minify and compile a `release.zip` file that can be uploaded to
+ * Chrome Web Store for distribution.
  */
 
 const util = require('util');

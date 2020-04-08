@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * This command will run project unit tests located in test/ directory.
+ * @name xt-test
+ * @module
+ * @public
+ *
+ *
+ * @description This command will run project unit tests located in test/ directory.
  *
  * This command will setup extension testing environment that is pre-initialized
  * with mocha {@link https://mochajs.org/}, chai (including chai-as-promised) {@link https://www.chaijs.com/},
@@ -16,10 +21,6 @@
  *
  * You may extend this test environment with a single project; this is simply the base setup
  * for running unit tests. Or you may create your own test environment if this is not suitable.
- *
- * <a href="tutorial-xt-test.html">See detailed usage tutorial here</a>
- *
- * @file xt-test
  */
 
 const util = require('util');
