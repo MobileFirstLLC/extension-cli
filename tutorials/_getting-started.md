@@ -123,7 +123,7 @@ td pre{background:transparent;border:none;}
 
 ### Usage
 
-[See tutorials](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html) for instructions on each command.
+[See tutorials](https://oss.mobilefirst.me/extension-cli/list_tutorial.html) for instructions on each command.
 
 ---
 

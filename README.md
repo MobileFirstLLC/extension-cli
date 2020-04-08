@@ -43,13 +43,13 @@ Basic install:
 npm install extension-cli
 ```
 
-**[See here for more details!](https://mobilefirstllc.github.io/extension-cli/tutorial-getting-started.html)**
+**[See here for more details!](https://oss.mobilefirst.me/extension-cli/tutorial-getting-started.html)**
 
 <br/>
 
 ## Quick Command Reference
 
-[See tutorials](https://mobilefirstllc.github.io/extension-cli/list_tutorial.html) for more details on each command.
+[See tutorials](https://oss.mobilefirst.me/extension-cli/list_tutorial.html) for more details on each command.
 
 Command | Description
 --- | ---
