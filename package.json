@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "docs": "npm run docs:alt & jsdoc ./cli/*  -u ./tutorials/ -c .docs.json",
+    "docs": "jsdoc ./cli/*  -u ./tutorials/ -c .docs.json",
     "readme": "documentation readme cli/* -f md --section=Commands",
     "release": "standard-version"
   },
