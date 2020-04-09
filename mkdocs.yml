@@ -20,7 +20,7 @@ nav:
     - 'xt-docs': guide/xt-docs.md
     - 'xt-sync': guide/xt-sync.md
     - 'xt-create': guide/xt-create.md
-  - "Useful Resources":
+  - "Resources":
     - Release Notes: release-notes.md
     - Showcase: showcase.md
     - Helpful References: helpful.md

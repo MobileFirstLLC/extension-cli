@@ -1,4 +1,12 @@
-# [Extension CLI](https://github.com/MobileFirstLLC/extension-cli)
+<p align="center">
+  <a href="https://squidfunk.github.io/mkdocs-material">
+    <img src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/favicon.png"
+     width="64" alt="Extension CLI">
+  </a>
+  
+  <h1>Extension CLI</h1>
+</p>
+
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
 [![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
@@ -12,7 +20,22 @@ systematic way to build, test and document extension projects.**
 
 * * *
 
-### Motivation
+## Features
+
+*  **Javascript Bundling** — Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)                                                                                                           
+
+*  **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS files](https://sass-lang.com/guide)                                                                                                                                                          
+
+*  **Linting** — Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        
+
+*  **.zip Generation** — Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)                                                                                         
+
+*  **Source Code Docs** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
+
+*  **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
+
+
+## Motivation
 
 After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. 
 
@@ -26,14 +49,6 @@ This approach helps with creating a common, consistent development approach betw
 
 **Issues and Feature Requests:** [Submit on Github](https://github.com/MobileFirstLLC/extension-cli/issues/new/choose)
 
-### CORE FEATURES
-
-1.  Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)                                                                                                           
-2.  Compiles and bundles [SASS files](https://sass-lang.com/guide)                                                                                                                                                          
-3.  Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        
-4.  Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)                                                                                         
-5.  Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
-6.  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
 
 ## Getting Started & Docs
 
@@ -104,3 +119,8 @@ test ES6 modules with imports, arrows, and classes.
 
 You may extend this test environment with a single project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.
+
+
+<p align="center">
+<h1><a href='https://oss.mobilefirst.me/extension-cli/'>View Complete User Guide &rarr;</a></h1>
+</p>
