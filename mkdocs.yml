@@ -35,8 +35,8 @@ extra_javascript:
 
 theme:
   name: material
-  logo: '/assets/images/icon.svg'
-  favicon: '/assets/images/favicon.png'
+  logo: '/extension-cli/assets/images/icon.svg'
+  favicon: '/extension-cli/assets/images/favicon.png'
   features:
     - tabs
   palette:
