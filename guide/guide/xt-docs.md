@@ -6,7 +6,7 @@
 
 * * *
 
-Extension CLI uses [JSDoc 3](https://jsdoc.app/index.html) specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.
+Extension CLI uses [JSDoc](https://jsdoc.app/index.html) specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.
 
 You can use any compatible template of choice to skin your docs. Learn [more about templating here](#templates).
 
@@ -48,7 +48,9 @@ After installing extension-cli, you can run these commands from a terminal using
  
 By default the CLI will look for docs configuration in two different
 places:
+
 - in `package.json` using key `xtdocs`
+
 - in a file named `.xtdocs.json` in project root
 
 If these two locations cause a conflict, alternatively you can provide a path to configuration file with `-c` (`--config`) flag, followed by path to file. [See commands for an example](#commands).
@@ -83,7 +85,7 @@ where:
 
 ### Default Configuration
 
-The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they are intelligible to [JSDoc](https://jsdoc.app/about-configuring-jsdoc.html).
+The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they follow to [JSDoc guidelines](https://jsdoc.app/about-configuring-jsdoc.html).
 
 ```
 "xtdocs": {
@@ -145,5 +147,5 @@ You can change the template by overriding `opts.template` in the project-level c
 
 [This list](https://cancerberosgx.github.io/jsdoc-templates-demo/demo/) can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.
 
-This documentation you are reading currently was generated using JSDoc and Foodoc theme.
+
 

@@ -23,6 +23,7 @@ nav:
   - "Resources":
     - Release Notes: release-notes.md
     - Showcase: showcase.md
+    - Tech Stack: stack.md
     - Helpful References: helpful.md
   - "Source Code":
     - 'Github Repo': https://github.com/MobileFirstLLC/extension-cli

@@ -20,5 +20,5 @@ Get help using this command
 xt-create --help
 ``` 
 
-This command should be run from outside existing project. May require global installation of the CLI (?).
+This command will generate initial files and directories for a new project.
 
