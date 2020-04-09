@@ -6,9 +6,6 @@
     ]
   },
   "source": {
-    "include": [
-      "README.md"
-    ],
     "includePattern": "",
     "excludePattern": ""
   },
@@ -53,10 +50,9 @@
     "favicon": "./assets/img/128x128.png"
   },
   "opts": {
-    "destination": "./out",
+    "destination": "./docs",
     "encoding": "utf8",
     "private": true,
-    "recurse": true,
-    "template": "./node_modules/foodoc/template"
+    "recurse": true
   }
 }

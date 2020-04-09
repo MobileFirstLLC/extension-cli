@@ -6,10 +6,10 @@
 tutorials/
 node_modules/
 CHANGELOG.md
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
 *.jpg
 *.png
 assets/
 docs/
-
+guide/
+site/
+tutorial-env/

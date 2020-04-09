@@ -1,0 +1,35 @@
+site_name: Extension CLI // Guide
+site_description: Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.
+site_author: '@mobilefirstllc'
+google_analytics: ['UA-129118591-7', 'extension-cli']
+docs_dir: ./guide
+site_url: https://oss.mobilefirst.me/extension-cli/
+repo_url: https://github.com/MobileFirstLLC/extension-cli
+repo_name: Github
+edit_uri: blob/master/guide/
+use_directory_urls: true
+
+nav:
+  - Home: index.md
+  - "Setup":
+    - '★ Getting Started': guide/getting-started.md
+    - 'Configuration': guide/configuration.md
+  - "Commands":
+    - 'xt-build': guide/xt-build.md
+    - 'xt-clean': guide/xt-clean.md
+    - 'xt-test': guide/xt-test.md
+    - 'xt-docs': guide/xt-docs.md
+    - 'xt-sync': guide/xt-sync.md
+    - 'xt-create': guide/xt-create.md
+  - "Useful Resources":
+    - Release Notes: release-notes.md
+    - Showcase: showcase.md
+    - Helpful References: helpful.md
+  - "Source Code":
+    - 'Github Repo': https://github.com/MobileFirstLLC/extension-cli
+    - '@ NPM.org': https://www.npmjs.com/package/extension-cli
+
+extra_javascript:
+  - "https://buttons.github.io/buttons.js"
+
+theme: readthedocs

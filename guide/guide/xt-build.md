@@ -1,8 +1,10 @@
 # xt-build
 
+* * *
 
-> `xt-build` command is used for generating a debuggable dev version of an extension project. It is also used to create a production ready, minified .zip file that can be uploaded to the chrome web store.
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-build</code> command is used for generating a debuggable dev version of an extension project. It is also used to create a production ready, minified .zip file that can be uploaded to the chrome web store.</p>
 
+* * *
 
 Successful build command always generates an extension `dist/` directory that can be debugged in the browser.  The underlying build system
 uses [gulp](https://github.com/gulpjs/gulp), [babel](https://github.com/babel/gulp-babel) and [webpack](https://github.com/webpack/webpack) to compile scripts (among other plugins).
@@ -77,10 +79,6 @@ places:
 If these two locations cause a conflict, alternatively you can provide a path to configuration file with `--config` (`-c`) flag,
  followed by path to file. [See commands for an example](#commands).
 
-<br/>
-
-### Default Configuration
-
 The CLI uses a default build configuration file shown below. This tells the extension CLI where to look for files and where to output files. You can override any of these key-value pairs at project level. You can find more detailed explanations of usage of some of these keys [below](#custom-configurations).
 
 ```json
@@ -135,7 +133,10 @@ Sample project-level configuration with multiple javascript bundles
       },
       {
         "name": "app",
-        "src": ["./src/app/inbox/**/*.js", ./src/app/message/**/*.js"]
+        "src": [
+            "./src/app/inbox/**/*.js",
+            "./src/app/message/**/*.js"
+         ]
       }
     ]
   }
@@ -168,8 +169,6 @@ to prevent them from being linted.
       ]
   }
 ```
-
-
 
 ### Style bundles
 
@@ -271,13 +270,3 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
   }
 ```
 
-
-
-## Source
-
-[View latest source for this command here](xt-build.js.html)
-
----
-
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-build.md)
- 

@@ -1,9 +1,12 @@
 # xt-sync
 
 
-> `xt-sync` command is intended for upgrading configuration files of
-a stale project to the latest versions
+* * *
 
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-sync</code> command is intended for upgrading configuration files of
+a stale project to the latest versions</p>
+
+* * *
 
 When a project has not been worked on recently, it may need updates of 
 various files, such as CI configuration files. 
@@ -69,12 +72,3 @@ See example below.
 }
 ```
 
-
-## Source
-
-[View latest source for this command here](xt-sync.js.html)
-
----
-
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-sync.md)
- 

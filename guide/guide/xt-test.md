@@ -1,8 +1,11 @@
 # xt-test
 
 
-> `xt-test` command will run unit tests located in `test/` directory.
+* * *
 
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
+
+* * *
 
 This command will setup extension testing environment that is pre-initialized
 with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised),
@@ -57,11 +60,3 @@ See example below.
 ```
 
 
-## Source
-
-[View latest source for this command here](xt-test.js.html)
-
----
-
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-test.md)
- 

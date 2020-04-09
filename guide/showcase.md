@@ -2,11 +2,9 @@
 
 Alphabetical list by app name
 
-| Name | Maker | &nbsp;|
+| Name | Maker | Badge |
 | --- | --- | --- |
-| [Customizable Chrome Navigation Menu][0010] | [nkrusch][0011] | ![img][0012] |
 | [Download All Images][0020] | [Mobile First][0021] | ![img][0022] |
-| [Image Zoom for Instagram][0040] | [Mobile First][0041] | ![img][0042] |
 | [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
 
 <br/><br/>
@@ -18,7 +16,7 @@ Alphabetical list by app name
 
 ### Add your own project!
 
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/project-showcase.md)
+Edit this file on Github to add your project, then submit a PR
  
  
 <!-- ADD PROJECT LINKS HERE !
@@ -31,10 +29,6 @@ Alphabetical list by app name
  
  Lastly add a row to project table on top ! -->
 
-[0010]: https://chrome.google.com/webstore/detail/jnmekaomnicdcpgdndekkmojfomifjal
-[0011]: https://github.com/nkrusch
-[0012]: https://img.shields.io/chrome-web-store/stars/jnmekaomnicdcpgdndekkmojfomifjal
-
 [0020]: https://chrome.google.com/webstore/detail/ifipmflagepipjokmbdecpmjbibjnakm
 [0021]: https://mobilefirst.me
 [0022]: https://img.shields.io/chrome-web-store/users/ifipmflagepipjokmbdecpmjbibjnakm
@@ -42,7 +36,3 @@ Alphabetical list by app name
 [0030]: https://chrome.google.com/webstore/detail/hcnjemngcihnhncobgdgkkfkhmleapah
 [0031]: https://github.com/nkrusch
 [0032]: https://img.shields.io/chrome-web-store/users/hcnjemngcihnhncobgdgkkfkhmleapah
-
-[0040]: https://chrome.google.com/webstore/detail/nanjbfjnlglickigikllbdkdhmkjbhhk
-[0041]: https://mobilefirst.me
-[0042]: https://img.shields.io/chrome-web-store/stars/nanjbfjnlglickigikllbdkdhmkjbhhk

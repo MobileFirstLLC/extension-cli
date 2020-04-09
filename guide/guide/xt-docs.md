@@ -1,7 +1,10 @@
 # xt-docs
 
+* * *
 
-> `xt-docs` command is used for generating source code documentation for an extension project.
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
+
+* * *
 
 Extension CLI uses [JSDoc 3](https://jsdoc.app/index.html) specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.
 
@@ -144,11 +147,3 @@ You can change the template by overriding `opts.template` in the project-level c
 
 This documentation you are reading currently was generated using JSDoc and Foodoc theme.
 
-## Source
-
-[View latest source for this command here](xt-docs.js.html)
-
----
-
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-docs.md)
- 

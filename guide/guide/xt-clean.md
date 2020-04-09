@@ -1,8 +1,11 @@
 # xt-clean
 
 
-> `xt-clean` command removes all automatically generated files from the project directories.
+* * *
 
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-clean</code> command removes all automatically generated files from the project directories.</p>
+
+* * *
 
 Clean operation iterates over files and directories listed in the
  project `.gitignore` file, and removes all ignored files and
@@ -65,11 +68,3 @@ Or you can add an option to `packages.json` scripts section and then execute the
 ```
 
 
-## Source
-
-[View latest source for this command here](xt-clean.js.html)
-
----
-
-[Edit this file on Github](https://github.com/MobileFirstLLC/extension-cli/blob/master/tutorials/xt-clean.md)
- 
