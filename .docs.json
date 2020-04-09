@@ -53,7 +53,7 @@
     "favicon": "./assets/img/128x128.png"
   },
   "opts": {
-    "destination": "./docs",
+    "destination": "./out",
     "encoding": "utf8",
     "private": true,
     "recurse": true,
