@@ -1,214 +1,247 @@
-<!-- start:readme.hbs -->
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-		<title>Extension CLI</title>
-		<link rel="icon" type="image/png" href="favicon.png"/>
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
-		<link type="text/css" rel="stylesheet" href="css/template.min.css">
-			<link type="text/css" rel="stylesheet" href="data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19">
-			<style>
-				.page-header,
-				pre.code-toolbar > .toolbar:hover {
-					background-color: #222136;
-				}
-				.callout-primary,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus,
-				pre.code-toolbar > .toolbar:hover {
-					border-left-color: #222136;
-				}
-				pre.code-toolbar > .toolbar:hover {
-					border-bottom-color: #222136;
-				}
-				.callout-primary h5,
-				.symbol-title.collapsible-symbol .toggle-icon,
-				.breadcrumb li a,
-				.toc .nav > li > a:hover,
-				.toc .nav > li > a:focus,
-				.toc .nav > li.active > a,
-				.toc .nav > li.active > a:hover,
-				.toc .nav > li.active > a:focus {
-					color: #222136;
-				}
-			</style>
-		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":"true","dateFormat":"MMM YYYY","systemName":"Extension CLI","systemSummary":"Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.","systemLogo":"","systemColor":"#222136","navMembers":[{"kind":"tutorial","title":"Guide","summary":"Learn how to use extension CLI"}],"footer":"<a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli\" data-icon=\"octicon-star\" data-size=\"large\" aria-label=\"Star mobilefirstllc/extension-cli on GitHub\">Star</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/fork\" data-icon=\"octicon-repo-forked\" data-size=\"large\" aria-label=\"Fork mobilefirstllc/extension-cli on GitHub\">Fork</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/issues\" data-icon=\"octicon-issue-opened\" data-size=\"large\" aria-label=\"Issue mobilefirstllc/extension-cli on GitHub\">Issue</a> &nbsp; <a class=\"github-button\" href=\"https://github.com/mobilefirstllc/extension-cli/subscription\" data-icon=\"octicon-eye\" data-size=\"large\" aria-label=\"Watch mobilefirstllc/extension-cli on GitHub\">Watch</a><br/><br/>","copyright":"Extension CLI is made by <a href='https://mobilefirst.me'>Mobile First</a> in the 🍑 state.","linenums":"true","collapseSymbols":"false","inverseNav":"false","inlineNav":"true","outputSourceFiles":"true","sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":"true","showTableOfContents":"true","showAccessFilter":"true","analytics":{"ua":"UA-129118591-7","domain":"https://oss.mobilefirst.me/"},"methodHeadingReturns":"false","sort":"linenum, longname, version, since","search":"false","favicon":"favicon.png","stylesheets":["data:text/css;base64,YXJ0aWNsZSBwLCBhcnRpY2xlIHVsLCBhcnRpY2xlIHRhYmxle2ZvbnQtc2l6ZTogMS4zZW07bGluZS1oZWlnaHQ6IDEuODt9aDMsaDQsaDUsaDZ7bWFyZ2luLXRvcDoyZW19"],"scripts":["https://buttons.github.io/buttons.js"],"monospaceLinks":false,"cleverLinks":false};
-			window.DOCLET_TOC_ENABLED = "true";
-			window.DOCLET_AFILTER_ENABLED = false;
-		</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.">
+  <meta name="author" content="@mobilefirstllc">
+  <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Extension CLI // Guide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/extension-cli/";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-129118591-7', 'extension-cli');
+      ga('send', 'pageview');
+  </script>
+  
 </head>
-<body>
-	<!-- start:navbar.hbs -->
-	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">
-					Extension CLI
-				</a>
-				<!-- displayed on small devices -->
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="topNavigation">
-				<ul class="nav navbar-nav">
-							<li><a href="list_tutorial.html">Guide</a></li>
-				</ul>
-					<!-- start:lunr-search-navbar.hbs -->
-					<form class="navbar-form navbar-right" role="search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
-							<div class="input-group-btn">
-								<button class="btn btn-default" id="lunr-search-submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-					<!-- start:lunr-search-navbar.hbs -->		</div>
-		</div>
-	</header>
-	<!-- end:navbar.hbs -->		<div class="page-header">
-			<div class="container">
-				<span class="kind">readme</span>
-				<h1><span class="name">Extension CLI</span></h1>
-				<div class="summary"><p>Command-line utility tool that speeds up chrome extension development by providing a systematic way to build, test and document extension projects.</p></div>			</div>
-		</div>
-	<div class="container content">
-		<div class="row">
-			<div class="col-md-9 main-content">
-		<section class="readme-section">
-			<article><h1><a href="https://github.com/MobileFirstLLC/extension-cli">Extension CLI</a></h1>
-<p><a href="https://www.npmjs.com/package/extension-cli"><img src="https://img.shields.io/npm/v/extension-cli" alt="npm"></a>
-<a href="https://travis-ci.org/MobileFirstLLC/extension-cli"><img src="https://img.shields.io/travis/mobilefirstllc/extension-cli" alt="travis"></a>
-<img src="https://img.shields.io/david/mobilefirstllc/extension-cli" alt="david">
-<a href="https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability"><img src="https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability" alt="Maintainability"></a></p>
-<hr>
-<p><strong>This application includes command-line build tools that facilitate rapid chrome extension development by providing
-systematic way to build, test and document extension projects.</strong></p>
-<hr>
-<h3>Motivation</h3>
-<p>After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project.</p>
-<p>Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects.</p>
-<p>This approach helps with creating a common, consistent development approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects as many npm packages inevitably need to be updated (frequently!).</p>
-<p><strong>Author:</strong> <a href="https://mobilefirst.me">Mobile First</a></p>
-<p><strong>License:</strong> <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE">MIT</a></p>
-<p><strong>Issues and Feature Requests:</strong> <a href="https://github.com/MobileFirstLLC/extension-cli/issues/new/choose">Submit on Github</a></p>
-<h3>CORE FEATURES</h3>
-<ol>
-<li>Compiles and bundles javascript files (including <a href="http://es6-features.org/">ES6 syntax</a> w/ babel and webpack)</li>
-<li>Compiles and bundles <a href="https://sass-lang.com/guide">SASS files</a></li>
-<li>Code linting using <a href="https://eslint.org/">ESLint</a></li>
-<li>Generates a <code>.zip</code> file for uploading to <a href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a></li>
-<li>Generates code documentation using <a href="https://jsdoc.app/about-getting-started.html">JSDoc</a></li>
-<li>Sets up a unit testing environment with <a href="https://mochajs.org">mocha</a>, <a href="https://www.chaijs.com/">chai</a>, <a href="https://github.com/acvetkov/sinon-chrome">sinon-chrome</a>, and <a href="https://github.com/rstacruz/jsdom-global">js-dom</a></li>
-</ol>
-<h2>Getting Started &amp; Docs</h2>
-<p><strong>Docs: <a href="https://oss.mobilefirst.me/extension-cli">View Full Guide</a></strong></p>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Extension CLI // Guide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started-docs">Getting Started &amp; Docs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-command-reference">Quick Command Reference</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/getting-started/">★ Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/configuration/">Configuration</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Commands</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-build/">xt-build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-clean/">xt-clean</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-test/">xt-test</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-docs/">xt-docs</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-sync/">xt-sync</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="guide/xt-create/">xt-create</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Useful Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="release-notes/">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="showcase/">Showcase</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="helpful/">Helpful References</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Source Code</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/MobileFirstLLC/extension-cli">Github Repo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://www.npmjs.com/package/extension-cli">@ NPM.org</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Extension CLI // Guide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/index.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="extension-cli">Extension CLI</h1>
+<p><img src='https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5' alt='extension-cli' width="100%" /> </p>
+<hr />
+<p style='font-size:1.3em;line-height:1.7;'>Extension CLI provides command-line build tools that facilitate rapid chrome extension development by providing
+systematic way to build, test and document extension projects.</p>
+
+<hr />
+<p><a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a></p>
+<h2 id="getting-started-docs">Getting Started &amp; Docs</h2>
 <p>Basic install:</p>
 <pre><code>npm install extension-cli
 </code></pre>
-<h2>Commands</h2>
-<!-- Generated by documentation.js. Update this documentation by updating the source code. -->
-<h3>xt-build</h3>
-<p>Build command generates a dist/ directory that can be
-debugged in the browser. When called with production env flag, <code>-e prod</code>,
-this command will minify and compile a <code>release.zip</code> file that can be
-uploaded to Chrome Web Store for distribution.</p>
-<h3>xt-clean</h3>
-<p>Clean operation iterates over files and directories listed in the
-project <code>.gitignore</code> file, and removes all ignored files and
-directories, except <code>node_modules</code>, <code>.idea/</code>, and <code>.vscode</code>. To remove these
-directories, you must explicitly pass a flag to delete each one of them.</p>
-<h3>xt-create</h3>
-<p>Once implemented, this command can be used to create a new extension project.</p>
-<h3>xt-docs</h3>
-<p>Docs command generates documentation for the project. This command uses
-jsdocs syntax. See <a href="https://jsdoc.app/index.html">About JSDoc</a> for more details,
-including <a href="https://jsdoc.app/about-configuring-jsdoc.html">configuration options here</a>.</p>
-<p>The default template for the docs is <a href="https://github.com/steveush/foodoc#readme">FooDoc</a>.
-You can override this theme in the project by changing <code>opts.template</code> in jsdoc config file.</p>
-<p>By default, this command will automatically look for configuration in the project <code>package.json</code>.
-Use <code>&quot;xtdocs&quot;</code> key to define config options in <code>package.json</code>. Alternatively add a separate
-configuration file <code>.xtdocs.json</code> in the project root; or explicitly provide a path to a config file.
-If you want to define configuration in some other location, use -c/--config flag
-to provide path and name of the configuration file.</p>
-<h3>xt-sync</h3>
-<p>The purpose of this command is to upgrade configuration files of
-a stale project to latest version, where this CLI tool will provide
-updated project configuration files. If the config files have been
-modified heavily for the project, it is not advisable to upgrade them
-in this manner. Instead you should upgrade such configs manually.</p>
-<h3>xt-test</h3>
-<p>This command will run project unit tests located in test/ directory.</p>
-<p>This command will setup extension testing environment that is pre-initialized
-with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised)
-and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage.
-The following browser APIs are also initialized: <code>window</code>, <code>chrome</code>. Window
-is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
-chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
-<p>Mocha will execute with babel, meaning you can use this test environment to
-test ES6 modules with imports, arrows, and classes.</p>
-<p>You may extend this test environment with a single project; this is simply the base setup
-for running unit tests. Or you may create your own test environment if this is not suitable.</p></article>
-		</section>
-			</div>
-				<div class="col-md-3 side-content">
-					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
-				</div>
-		</div>
-	</div>
-	<footer>
-				<div class="footer-option"><a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a><br/><br/></div>
-				<div class="copyright">Extension CLI is made by <a href='https://mobilefirst.me'>Mobile First</a> in the 🍑 state.</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Apr 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/clipboard.min.js"></script>
-	<script src="js/prism.min.js"></script>
-	<script src="js/template.min.js"></script>
-		<!-- start:lunr-search-modal.hbs -->
-		<div class="modal fade" id="lunr-search-modal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Search results</h4>
-					</div>
-					<div class="modal-body" id="lunr-search-body">
-					</div>
-					<div class="modal-footer" id="lunr-search-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div>
-		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
-		<script src="https://buttons.github.io/buttons.js"></script>
-	
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-129118591-7', 'https://oss.mobilefirst.me/');
-			ga('send', 'pageview');
-		</script>
-	
+
+<h2 id="quick-command-reference">Quick Command Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>xt-build</strong></td>
+<td>Run builds; env flags: <code>-e prod</code> and <code>-e dev</code></td>
+</tr>
+<tr>
+<td><strong>xt-test</strong></td>
+<td>Run unit tests</td>
+</tr>
+<tr>
+<td><strong>xt-docs</strong></td>
+<td>Generate docs</td>
+</tr>
+<tr>
+<td><strong>xt-sync</strong></td>
+<td>Update project config files to match the latest defaults supplied by this CLI</td>
+</tr>
+<tr>
+<td><strong>xt-clean</strong></td>
+<td>Remove automatically generated files</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong>Note that for each command <code>--help</code> and <code>--version</code> flags are also valid</strong></p>
+<p>Read these docs for more detailed guides!</p>
+<hr />
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE">MIT License</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="guide/getting-started/" class="btn btn-neutral float-right" title="★ Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="guide/getting-started/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="https://buttons.github.io/buttons.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
 </body>
 </html>
-<!-- end:readme.hbs -->
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-04-09 03:51:46
+-->

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="@mobilefirstllc">
+  <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/guide/xt-sync/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>xt-sync - Extension CLI // Guide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "xt-sync";
+    var mkdocs_page_input_path = "guide/xt-sync.md";
+    var mkdocs_page_url = "/extension-cli/guide/xt-sync/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-129118591-7', 'extension-cli');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Extension CLI // Guide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../getting-started/">★ Getting Started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Commands</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../xt-build/">xt-build</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../xt-clean/">xt-clean</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../xt-test/">xt-test</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../xt-docs/">xt-docs</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">xt-sync</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../xt-create/">xt-create</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Useful Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../showcase/">Showcase</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../helpful/">Helpful References</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Source Code</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/MobileFirstLLC/extension-cli">Github Repo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="https://www.npmjs.com/package/extension-cli">@ NPM.org</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Extension CLI // Guide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Commands &raquo;</li>
+        
+      
+    
+    <li>xt-sync</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/guide/xt-sync.md"
+          class="icon icon-github"> Edit on Github</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="xt-sync">xt-sync</h1>
+<hr />
+<p style='font-size:1.3em;line-height:1.7;'><code>xt-sync</code> command is intended for upgrading configuration files of
+a stale project to the latest versions</p>
+
+<hr />
+<p>When a project has not been worked on recently, it may need updates of 
+various files, such as CI configuration files. </p>
+<p>The purpose of this command is to make that update process simple by
+allowing each project to choose which configuration files to update.
+The CLI will then supply the project with the most recent configuration
+files.</p>
+<p><strong>Note:</strong> If the configuration files have been modified heavily for 
+an individual project, it is not advisable to upgrade them in this manner. 
+Instead you should upgrade such configuration files manually.</p>
+<h2 id="commands">Commands</h2>
+<p><strong>You must pass at least one flag with this command.</strong></p>
+<p>Synchronize all configuration files</p>
+<pre><code>xt-sync --all
+</code></pre>
+
+<p>Synchronize ESLint configuration file</p>
+<pre><code>xt-sync --eslint
+</code></pre>
+
+<p>Synchronize Gitlab CI configuration file</p>
+<pre><code>xt-sync --gitlab
+</code></pre>
+
+<p>Synchronize Travis CI configuration file</p>
+<pre><code>xt-sync --travis
+</code></pre>
+
+<p>Synchronize .gitignore file</p>
+<pre><code>xt-sync --gitignore
+</code></pre>
+
+<p>Get help using this command</p>
+<pre><code>xt-sync --help
+</code></pre>
+
+<p>After installing extension-cli, you can run these commands from a terminal using <code>npx xt-sync --all</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run sync</code>.
+See example below.</p>
+<pre><code>&quot;scripts&quot;:{
+  &quot;sync&quot;: &quot;xt-sync --all&quot;
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../xt-create/" class="btn btn-neutral float-right" title="xt-create">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../xt-docs/" class="btn btn-neutral" title="xt-docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../xt-docs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../xt-create/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://buttons.github.io/buttons.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
