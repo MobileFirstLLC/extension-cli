@@ -1,10 +1,7 @@
 <p align="center">
-  <a href="https://squidfunk.github.io/mkdocs-material">
     <img src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/favicon.png"
-     width="64" alt="Extension CLI">
-  </a>
-  
-  <h1>Extension CLI</h1>
+     width="64" alt="Extension CLI">  
+    <h1>Extension CLI</h1>
 </p>
 
 
