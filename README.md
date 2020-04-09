@@ -1,9 +1,6 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/favicon.png"
-     width="64" alt="Extension CLI">  
-    <h1>Extension CLI</h1>
-</p>
+<img src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/favicon.png" width="64" alt="Extension CLI">  
 
+# Extension CLI
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
 [![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
@@ -117,7 +114,10 @@ test ES6 modules with imports, arrows, and classes.
 You may extend this test environment with a single project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.
 
+---
 
 <p align="center">
-<h1><a href='https://oss.mobilefirst.me/extension-cli/'>View Complete User Guide &rarr;</a></h1>
+<strong><a href='https://oss.mobilefirst.me/extension-cli/'>View Complete User Guide &rarr;</a></strong>
 </p>
+
+---
