@@ -1,4 +1,4 @@
-## Changelog
+## Release Notes
 
 ### 0.8.7 (2020-01-17)
 
