@@ -10,7 +10,7 @@
  * jsdocs syntax. See {@link https://jsdoc.app/index.html|About JSDoc} for more details,
  * including {@link https://jsdoc.app/about-configuring-jsdoc.html|configuration options here}.
  *
- * The default template for the docs is {@link https://github.com/steveush/foodoc#readme|FooDoc}.
+ * The default template for the guide is {@link https://github.com/steveush/foodoc#readme|FooDoc}.
  * You can override this theme in the project by changing `opts.template` in jsdoc config file.
  *
  * By default, this command will automatically look for configuration in the project `package.json`.

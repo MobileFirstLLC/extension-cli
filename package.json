@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "docs": "jsdoc ./cli/*  -u ./docs/ -c .docs.json",
+    "docs": "jsdoc ./cli/*  -u guide/ -c .docs.json",
     "readme": "documentation readme cli/* -f md --section=Commands --markdown-toc=false",
     "release": "standard-version"
   },

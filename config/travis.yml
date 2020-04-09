@@ -7,13 +7,13 @@ cache:
 before_script:
   - npm run test -- --coveralls
 script:
-  - npm run docs
+  - npm run guide
   - npm run build
 deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $github_token
-    local_dir: docs
+    local_dir: guide
     on:
       branch: master
   - provider: releases
