@@ -94,10 +94,10 @@ The CLI uses a default build configuration file shown below. This tells the exte
   "scss": "./src/**/*.scss",
   "scss_bundles": null,
   "icons":[
-    "./assets/img/**/*.png",
-    "./assets/img/**/*.gif",
-    "./assets/img/**/*.jpg",
-    "./assets/img/**/*.svg"
+    images,
+    images,
+    images,
+    images
   ],
   "copyAsIs": [],
   "locales_dir": "./assets/locales/",

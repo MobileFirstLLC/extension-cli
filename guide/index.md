@@ -9,9 +9,6 @@ systematic way to build, test and document extension projects.</p>
 
 * * *
 
-<a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a>
-
- 
 ## Getting Started & Docs
 
 Basic install:
@@ -37,7 +34,11 @@ Command | Description
 Read these docs for more detailed guides!
 
 ---
- 
-[MIT License](https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE)
 
+<p align="center" style="margin-bottom:4em;">
+
+<a style='font-weight:700' href='https://mobilefirst.me'>Made by Mobile First</a>
+<br/><br/> 
+<a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a>
+</p>
 

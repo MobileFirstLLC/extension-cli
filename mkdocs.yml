@@ -1,7 +1,6 @@
-site_name: Extension CLI // Guide
+site_name: Extension CLI • Guide
 site_description: Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.
 site_author: '@mobilefirstllc'
-google_analytics: ['UA-129118591-7', 'extension-cli']
 docs_dir: ./guide
 site_url: https://oss.mobilefirst.me/extension-cli/
 repo_url: https://github.com/MobileFirstLLC/extension-cli
@@ -10,7 +9,7 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - Home: index.md
+  - About: index.md
   - "Setup":
     - '★ Getting Started': guide/getting-started.md
     - 'Configuration': guide/configuration.md
@@ -29,7 +28,36 @@ nav:
     - 'Github Repo': https://github.com/MobileFirstLLC/extension-cli
     - '@ NPM.org': https://www.npmjs.com/package/extension-cli
 
+extra_css:
+ - assets/custom.css
 extra_javascript:
   - "https://buttons.github.io/buttons.js"
 
-theme: readthedocs
+theme:
+  name: material
+  logo: '/assets/images/favicon.png'
+  favicon: '/assets/images/favicon.png'
+  features:
+    - tabs
+  palette:
+    primary: deep purple
+    accent: indigo
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://mobilefirst.me
+    - icon: fontawesome/brands/github
+      link: https://github.com/mobilefirstllc
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/mobilefirstllc
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mobilefirstllc
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/mobilefirstllc
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/mobilefirstllc
+
+google_analytics:
+  - !!python/object/apply:os.getenv ['UA-129118591-7']
+  - auto
