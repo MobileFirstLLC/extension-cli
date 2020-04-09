@@ -564,6 +564,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../stack/" title="Tech Stack" class="md-nav__link">
+      Tech Stack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../helpful/" title="Helpful References" class="md-nav__link">
       Helpful References
     </a>
@@ -720,7 +732,7 @@
 <p style='font-size:1.3em;line-height:1.7;'><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
 
 <hr />
-<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc 3</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.</p>
+<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.</p>
 <p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more about templating here</a>.</p>
 <h2 id="commands">Commands</h2>
 <p>Default command</p>
@@ -745,9 +757,15 @@
 <p><br/></p>
 <h2 id="configuration">Configuration</h2>
 <p>By default the CLI will look for docs configuration in two different
-places:
-- in <code>package.json</code> using key <code>xtdocs</code>
-- in a file named <code>.xtdocs.json</code> in project root</p>
+places:</p>
+<ul>
+<li>
+<p>in <code>package.json</code> using key <code>xtdocs</code></p>
+</li>
+<li>
+<p>in a file named <code>.xtdocs.json</code> in project root</p>
+</li>
+</ul>
 <p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> (<code>--config</code>) flag, followed by path to file. <a href="#commands">See commands for an example</a>.</p>
 <p><br/></p>
 <h3 id="minimum-project-level-configuration">Minimum Project-Level Configuration</h3>
@@ -787,7 +805,7 @@ places:
 </table>
 <p><br/></p>
 <h3 id="default-configuration">Default Configuration</h3>
-<p>The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they are intelligible to <a href="https://jsdoc.app/about-configuring-jsdoc.html">JSDoc</a>.</p>
+<p>The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they follow to <a href="https://jsdoc.app/about-configuring-jsdoc.html">JSDoc guidelines</a>.</p>
 <pre><code>&quot;xtdocs&quot;: {
   &quot;tags&quot;: {
     &quot;allowUnknownTags&quot;: true,
@@ -842,7 +860,6 @@ places:
 <a href="https://github.com/steveush/foodoc#configuring-the-template">Foodoc</a>. </p>
 <p>You can change the template by overriding <code>opts.template</code> in the project-level configuration, and by adding the template package of your choice to project-level dependencies.</p>
 <p><a href="https://cancerberosgx.github.io/jsdoc-templates-demo/demo/">This list</a> can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.</p>
-<p>This documentation you are reading currently was generated using JSDoc and Foodoc theme.</p>
                 
               
               
