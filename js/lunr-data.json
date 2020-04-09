@@ -144,6 +144,8 @@
           "xt"
         ],
         "module-xt-docs.html": [
+          "add",
+          "altern",
           "automat",
           "c",
           "chang",
@@ -155,6 +157,7 @@
           "detail",
           "doc",
           "document",
+          "explicitli",
           "file",
           "flag",
           "foodoc",
@@ -162,6 +165,7 @@
           "here",
           "includ",
           "jsdoc",
+          "key",
           "locat",
           "look",
           "modul",
@@ -177,6 +181,7 @@
           "provid",
           "root",
           "see",
+          "separ",
           "syntax",
           "templat",
           "theme",
@@ -214,7 +219,7 @@
           "xt"
         ],
         "module-xt-test.html": [
-          "api'",
+          "api",
           "arrow",
           "babel",
           "base",
@@ -236,11 +241,6 @@
           "extens",
           "follow",
           "global",
-          "https://mochajs.org",
-          "https://www.chaijs.com",
-          "https://www.npmjs.com/package/jsdom",
-          "https://www.npmjs.com/package/nyc",
-          "https://www.npmjs.com/package/sinon",
           "import",
           "includ",
           "initi",
@@ -316,7 +316,7 @@
                         },
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 0.6578947368421052
+                          "tf": 0.7246376811594203
                         }
                       }
                     }
@@ -335,7 +335,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -347,7 +347,7 @@
                 "docs": {
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 0.6578947368421052
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -358,7 +358,7 @@
           "docs": {
             "module-xt-docs.html": {
               "ref": "module-xt-docs.html",
-              "tf": 0.8064516129032258
+              "tf": 0.7246376811594203
             }
           },
           "h": {
@@ -381,7 +381,7 @@
                       },
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 2.631578947368421
+                        "tf": 2.1739130434782608
                       }
                     }
                   }
@@ -396,7 +396,7 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 0.8064516129032258
+                      "tf": 0.7246376811594203
                     }
                   },
                   "e": {
@@ -421,7 +421,7 @@
                 "docs": {
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 1.3157894736842104
+                    "tf": 1.4492753623188406
                   }
                 }
               }
@@ -473,7 +473,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -509,7 +509,7 @@
                         },
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
-                          "tf": 3.225806451612903
+                          "tf": 2.1739130434782608
                         },
                         "module-xt-sync.html": {
                           "ref": "module-xt-sync.html",
@@ -517,7 +517,7 @@
                         },
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 1.3157894736842104
+                          "tf": 1.4492753623188406
                         }
                       }
                     }
@@ -543,7 +543,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -563,7 +563,7 @@
                       },
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 2.4193548387096775
+                        "tf": 2.898550724637681
                       },
                       "module-xt-sync.html": {
                         "ref": "module-xt-sync.html",
@@ -579,7 +579,7 @@
                           },
                           "module-xt-docs.html": {
                             "ref": "module-xt-docs.html",
-                            "tf": 4.032258064516129
+                            "tf": 3.6231884057971016
                           },
                           "module-xt-sync.html": {
                             "ref": "module-xt-sync.html",
@@ -601,7 +601,7 @@
                   },
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 0.6578947368421052
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -628,7 +628,7 @@
                       "docs": {
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 0.6578947368421052
+                          "tf": 0.7246376811594203
                         }
                       }
                     }
@@ -654,7 +654,7 @@
                     },
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -717,7 +717,7 @@
                       },
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 0.8064516129032258
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -764,7 +764,7 @@
                       "docs": {
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
-                          "tf": 0.8064516129032258
+                          "tf": 1.4492753623188406
                         }
                       }
                     }
@@ -777,7 +777,7 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 1.6129032258064515
+                      "tf": 1.4492753623188406
                     }
                   }
                 }
@@ -793,7 +793,7 @@
                 },
                 "module-xt-docs.html": {
                   "ref": "module-xt-docs.html",
-                  "tf": 951.6129032258065
+                  "tf": 951.4492753623189
                 }
               },
               "u": {
@@ -816,7 +816,7 @@
                           },
                           "module-xt-docs.html": {
                             "ref": "module-xt-docs.html",
-                            "tf": 0.8064516129032258
+                            "tf": 0.7246376811594203
                           }
                         }
                       }
@@ -855,7 +855,7 @@
                             },
                             "module-xt-test.html": {
                               "ref": "module-xt-test.html",
-                              "tf": 0.6578947368421052
+                              "tf": 0.7246376811594203
                             }
                           }
                         }
@@ -932,7 +932,7 @@
                       },
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   },
@@ -940,7 +940,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -983,6 +983,10 @@
                               "module-xt-clean.html": {
                                 "ref": "module-xt-clean.html",
                                 "tf": 1.9230769230769231
+                              },
+                              "module-xt-docs.html": {
+                                "ref": "module-xt-docs.html",
+                                "tf": 0.7246376811594203
                               }
                             }
                           }
@@ -1000,7 +1004,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1017,7 +1021,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1061,7 +1065,7 @@
                       "docs": {
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 2.631578947368421
+                          "tf": 2.898550724637681
                         }
                       }
                     }
@@ -1075,7 +1079,7 @@
               "docs": {
                 "module-xt-test.html": {
                   "ref": "module-xt-test.html",
-                  "tf": 0.6578947368421052
+                  "tf": 0.7246376811594203
                 }
               }
             },
@@ -1140,11 +1144,11 @@
                     "docs": {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 0.8064516129032258
+                        "tf": 0.7246376811594203
                       },
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1159,7 +1163,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 1.3157894736842104
+                      "tf": 1.4492753623188406
                     }
                   }
                 }
@@ -1246,7 +1250,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1352,11 +1356,11 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 0.8064516129032258
+                      "tf": 0.7246376811594203
                     },
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -1368,7 +1372,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 1.6129032258064515
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -1426,7 +1430,7 @@
                         },
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
-                          "tf": 3.225806451612903
+                          "tf": 2.898550724637681
                         },
                         "module-xt-sync.html": {
                           "ref": "module-xt-sync.html",
@@ -1434,7 +1438,7 @@
                         },
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 1.3157894736842104
+                          "tf": 1.4492753623188406
                         }
                       }
                     }
@@ -1453,7 +1457,7 @@
                       },
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 0.8064516129032258
+                        "tf": 1.4492753623188406
                       },
                       "module-xt-sync.html": {
                         "ref": "module-xt-sync.html",
@@ -1496,7 +1500,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1507,7 +1511,7 @@
               "docs": {
                 "module-xt-test.html": {
                   "ref": "module-xt-test.html",
-                  "tf": 0.6578947368421052
+                  "tf": 0.7246376811594203
                 }
               }
             }
@@ -1560,7 +1564,7 @@
                                 "docs": {
                                   "module-xt-docs.html": {
                                     "ref": "module-xt-docs.html",
-                                    "tf": 1.6129032258064515
+                                    "tf": 1.4492753623188406
                                   }
                                 }
                               }
@@ -1579,7 +1583,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 1.4492753623188406
                   }
                 }
               }
@@ -1706,7 +1710,7 @@
                 },
                 "module-xt-test.html": {
                   "ref": "module-xt-test.html",
-                  "tf": 1.3157894736842104
+                  "tf": 1.4492753623188406
                 }
               }
             }
@@ -1719,7 +1723,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -1807,7 +1811,7 @@
                     "docs": {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 0.8064516129032258
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1900,7 +1904,21 @@
               "docs": {
                 "module-xt-docs.html": {
                   "ref": "module-xt-docs.html",
-                  "tf": 0.8064516129032258
+                  "tf": 0.7246376811594203
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "module-xt-docs.html": {
+                      "ref": "module-xt-docs.html",
+                      "tf": 0.7246376811594203
+                    }
+                  }
                 }
               }
             },
@@ -1912,7 +1930,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 1.9736842105263157
+                      "tf": 2.1739130434782608
                     }
                   }
                 }
@@ -1944,7 +1962,7 @@
                       "docs": {
                         "module-xt-test.html": {
                           "ref": "module-xt-test.html",
-                          "tf": 0.6578947368421052
+                          "tf": 0.7246376811594203
                         }
                       }
                     }
@@ -1965,7 +1983,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -1980,7 +1998,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -1991,7 +2009,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -2016,7 +2034,7 @@
                   },
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 955.2631578947369
+                    "tf": 955.7971014492754
                   }
                 }
               }
@@ -2033,7 +2051,7 @@
                       "docs": {
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
-                          "tf": 0.8064516129032258
+                          "tf": 0.7246376811594203
                         }
                       }
                     }
@@ -2092,7 +2110,7 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 0.8064516129032258
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -2187,11 +2205,11 @@
               },
               "module-xt-docs.html": {
                 "ref": "module-xt-docs.html",
-                "tf": 2.4193548387096775
+                "tf": 2.1739130434782608
               },
               "module-xt-test.html": {
                 "ref": "module-xt-test.html",
-                "tf": 2.631578947368421
+                "tf": 2.898550724637681
               }
             }
           },
@@ -2206,7 +2224,7 @@
                   },
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 1.3157894736842104
+                    "tf": 1.4492753623188406
                   }
                 }
               }
@@ -2231,7 +2249,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -2260,7 +2278,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 1.3157894736842104
+                        "tf": 1.4492753623188406
                       }
                     }
                   }
@@ -2287,7 +2305,7 @@
                       },
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 1.3157894736842104
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -2319,7 +2337,7 @@
                     },
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 0.8064516129032258
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -2383,7 +2401,7 @@
                   },
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -2411,220 +2429,6 @@
                         "module-xt-sync.html": {
                           "ref": "module-xt-sync.html",
                           "tf": 1.7241379310344827
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "s": {
-                  "docs": {},
-                  ":": {
-                    "docs": {},
-                    "/": {
-                      "docs": {},
-                      "/": {
-                        "docs": {},
-                        "m": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "c": {
-                              "docs": {},
-                              "h": {
-                                "docs": {},
-                                "a": {
-                                  "docs": {},
-                                  "j": {
-                                    "docs": {},
-                                    "s": {
-                                      "docs": {},
-                                      ".": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "g": {
-                                              "docs": {
-                                                "module-xt-test.html": {
-                                                  "ref": "module-xt-test.html",
-                                                  "tf": 0.6578947368421052
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "w": {
-                          "docs": {},
-                          "w": {
-                            "docs": {},
-                            "w": {
-                              "docs": {},
-                              ".": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {},
-                                  "h": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "i": {
-                                        "docs": {},
-                                        "j": {
-                                          "docs": {},
-                                          "s": {
-                                            "docs": {},
-                                            ".": {
-                                              "docs": {},
-                                              "c": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "m": {
-                                                    "docs": {
-                                                      "module-xt-test.html": {
-                                                        "ref": "module-xt-test.html",
-                                                        "tf": 0.6578947368421052
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "n": {
-                                  "docs": {},
-                                  "p": {
-                                    "docs": {},
-                                    "m": {
-                                      "docs": {},
-                                      "j": {
-                                        "docs": {},
-                                        "s": {
-                                          "docs": {},
-                                          ".": {
-                                            "docs": {},
-                                            "c": {
-                                              "docs": {},
-                                              "o": {
-                                                "docs": {},
-                                                "m": {
-                                                  "docs": {},
-                                                  "/": {
-                                                    "docs": {},
-                                                    "p": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {},
-                                                        "c": {
-                                                          "docs": {},
-                                                          "k": {
-                                                            "docs": {},
-                                                            "a": {
-                                                              "docs": {},
-                                                              "g": {
-                                                                "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "/": {
-                                                                    "docs": {},
-                                                                    "j": {
-                                                                      "docs": {},
-                                                                      "s": {
-                                                                        "docs": {},
-                                                                        "d": {
-                                                                          "docs": {},
-                                                                          "o": {
-                                                                            "docs": {},
-                                                                            "m": {
-                                                                              "docs": {
-                                                                                "module-xt-test.html": {
-                                                                                  "ref": "module-xt-test.html",
-                                                                                  "tf": 0.6578947368421052
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    },
-                                                                    "n": {
-                                                                      "docs": {},
-                                                                      "y": {
-                                                                        "docs": {},
-                                                                        "c": {
-                                                                          "docs": {
-                                                                            "module-xt-test.html": {
-                                                                              "ref": "module-xt-test.html",
-                                                                              "tf": 0.6578947368421052
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    },
-                                                                    "s": {
-                                                                      "docs": {},
-                                                                      "i": {
-                                                                        "docs": {},
-                                                                        "n": {
-                                                                          "docs": {},
-                                                                          "o": {
-                                                                            "docs": {},
-                                                                            "n": {
-                                                                              "docs": {
-                                                                                "module-xt-test.html": {
-                                                                                  "ref": "module-xt-test.html",
-                                                                                  "tf": 0.6578947368421052
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
                         }
                       }
                     }
@@ -2723,7 +2527,7 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 0.8064516129032258
+                      "tf": 0.7246376811594203
                     }
                   },
                   "s": {
@@ -2740,7 +2544,7 @@
                               "docs": {
                                 "module-xt-docs.html": {
                                   "ref": "module-xt-docs.html",
-                                  "tf": 0.8064516129032258
+                                  "tf": 0.7246376811594203
                                 }
                               }
                             }
@@ -2775,7 +2579,7 @@
                   },
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 2.4193548387096775
+                    "tf": 2.898550724637681
                   },
                   "module-xt-sync.html": {
                     "ref": "module-xt-sync.html",
@@ -2801,7 +2605,7 @@
                   },
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -2819,7 +2623,7 @@
                     "docs": {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 0.8064516129032258
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -2836,7 +2640,7 @@
                     "docs": {
                       "module-xt-test.html": {
                         "ref": "module-xt-test.html",
-                        "tf": 0.6578947368421052
+                        "tf": 0.7246376811594203
                       }
                     }
                   }
@@ -2908,7 +2712,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -2920,7 +2724,7 @@
               "docs": {
                 "module-xt-test.html": {
                   "ref": "module-xt-test.html",
-                  "tf": 0.6578947368421052
+                  "tf": 0.7246376811594203
                 }
               }
             }
@@ -2995,7 +2799,7 @@
                     "docs": {
                       "module-xt-docs.html": {
                         "ref": "module-xt-docs.html",
-                        "tf": 1.6129032258064515
+                        "tf": 1.4492753623188406
                       }
                     }
                   }
@@ -3017,7 +2821,7 @@
                             "docs": {
                               "module-xt-docs.html": {
                                 "ref": "module-xt-docs.html",
-                                "tf": 0.8064516129032258
+                                "tf": 0.7246376811594203
                               }
                             }
                           }
@@ -3048,7 +2852,7 @@
                       "docs": {
                         "module-xt-docs.html": {
                           "ref": "module-xt-docs.html",
-                          "tf": 0.8064516129032258
+                          "tf": 0.7246376811594203
                         }
                       }
                     }
@@ -3110,7 +2914,7 @@
                     },
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 110.65789473684211
+                      "tf": 110.72463768115942
                     }
                   },
                   "e": {
@@ -3173,7 +2977,7 @@
                 "docs": {
                   "module-xt-docs.html": {
                     "ref": "module-xt-docs.html",
-                    "tf": 0.8064516129032258
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -3186,7 +2990,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 1.3157894736842104
+                      "tf": 1.4492753623188406
                     }
                   }
                 }
@@ -3235,7 +3039,7 @@
                 "docs": {
                   "module-xt-test.html": {
                     "ref": "module-xt-test.html",
-                    "tf": 0.6578947368421052
+                    "tf": 0.7246376811594203
                   }
                 }
               }
@@ -3244,31 +3048,16 @@
         },
         "a": {
           "docs": {},
-          "u": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "module-xt-docs.html": {
-                          "ref": "module-xt-docs.html",
-                          "tf": 1.6129032258064515
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "d": {
             "docs": {},
+            "d": {
+              "docs": {
+                "module-xt-docs.html": {
+                  "ref": "module-xt-docs.html",
+                  "tf": 0.7246376811594203
+                }
+              }
+            },
             "v": {
               "docs": {},
               "i": {
@@ -3284,16 +3073,56 @@
               }
             }
           },
+          "l": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-xt-docs.html": {
+                        "ref": "module-xt-docs.html",
+                        "tf": 0.7246376811594203
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "module-xt-docs.html": {
+                          "ref": "module-xt-docs.html",
+                          "tf": 0.7246376811594203
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "p": {
             "docs": {},
             "i": {
-              "docs": {},
-              "'": {
-                "docs": {
-                  "module-xt-test.html": {
-                    "ref": "module-xt-test.html",
-                    "tf": 0.6578947368421052
-                  }
+              "docs": {
+                "module-xt-test.html": {
+                  "ref": "module-xt-test.html",
+                  "tf": 0.7246376811594203
                 }
               }
             }
@@ -3308,7 +3137,7 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
                 }
@@ -3328,7 +3157,7 @@
                   "docs": {
                     "module-xt-docs.html": {
                       "ref": "module-xt-docs.html",
-                      "tf": 2.4193548387096775
+                      "tf": 2.1739130434782608
                     }
                   }
                 },
@@ -3336,9 +3165,23 @@
                   "docs": {
                     "module-xt-test.html": {
                       "ref": "module-xt-test.html",
-                      "tf": 0.6578947368421052
+                      "tf": 0.7246376811594203
                     }
                   }
+                }
+              }
+            }
+          }
+        },
+        "k": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "y": {
+              "docs": {
+                "module-xt-docs.html": {
+                  "ref": "module-xt-docs.html",
+                  "tf": 0.7246376811594203
                 }
               }
             }
@@ -3348,8 +3191,10 @@
       "length": 277
     },
     "corpusTokens": [
+      "add",
       "advis",
-      "api'",
+      "altern",
+      "api",
       "arrow",
       "automat",
       "babel",
@@ -3409,11 +3254,6 @@
       "heavili",
       "help",
       "here",
-      "https://mochajs.org",
-      "https://www.chaijs.com",
-      "https://www.npmjs.com/package/jsdom",
-      "https://www.npmjs.com/package/nyc",
-      "https://www.npmjs.com/package/sinon",
       "idea",
       "ignor",
       "implement",
@@ -3426,6 +3266,7 @@
       "iter",
       "jsdoc",
       "jsdom",
+      "key",
       "latest",
       "learn",
       "line",
@@ -3475,6 +3316,7 @@
       "root",
       "run",
       "see",
+      "separ",
       "setup",
       "showcas",
       "simpli",
@@ -3604,7 +3446,7 @@
       "name": "xt-docs",
       "tags": "module:xt-docs",
       "summary": "",
-      "description": "Docs command generates documentation for the project. This command uses jsdocs syntax. See About JSDoc for more details, including configuration options here. The default template for the docs is FooDoc. You can override this theme in the project by changing opts.template in jsdoc config file. This command will automatically look for configuration in the project package.json. Use \"xtdocs\" to define config options in package.json. This command will also automatically look for a configuration file .xtdocs.json in the project root. If you want to define configuration in some other location, use -c/--config flag to provide path and name of the configuration file.",
+      "description": "Docs command generates documentation for the project. This command uses jsdocs syntax. See About JSDoc for more details, including configuration options here. The default template for the docs is FooDoc. You can override this theme in the project by changing opts.template in jsdoc config file. By default, this command will automatically look for configuration in the project package.json. Use \"xtdocs\" key to define config options in package.json. Alternatively add a separate configuration file .xtdocs.json in the project root; or explicitly provide a path to a config file. If you want to define configuration in some other location, use -c/--config flag to provide path and name of the configuration file.",
       "body": ""
     },
     "module-xt-sync.html": {
@@ -3626,7 +3468,7 @@
       "name": "xt-test",
       "tags": "module:xt-test",
       "summary": "",
-      "description": "This command will run project unit tests located in test/ directory. This command will setup extension testing environment that is pre-initialized with mocha https://mochajs.org/, chai (including chai-as-promised) https://www.chaijs.com/, and expect. nyc is used for computing code coverage https://www.npmjs.com/package/nyc. Also the following browser API's are initialized: window, chrome. Window is setup using jsdom-global https://www.npmjs.com/package/jsdom-global and chrome using sinon-chrome https://www.npmjs.com/package/sinon-chrome. Mocha will execute with babel, meaning you can use this test environment to test ES6 modules with imports, arrows, and classes. You may extend this test environment with a single project; this is simply the base setup for running unit tests. Or you may create your own test environment if this is not suitable.",
+      "description": "This command will run project unit tests located in test/ directory. This command will setup extension testing environment that is pre-initialized with mocha, chai (including chai-as-promised) and expect. nyc is used for computing code coverage. The following browser APIs are also initialized: window, chrome. Window is setup using jsdom-global and chrome using sinon-chrome. Mocha will execute with babel, meaning you can use this test environment to test ES6 modules with imports, arrows, and classes. You may extend this test environment with a single project; this is simply the base setup for running unit tests. Or you may create your own test environment if this is not suitable.",
       "body": ""
     }
   }

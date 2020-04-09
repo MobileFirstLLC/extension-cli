@@ -100,11 +100,11 @@
 				<div class="symbol-details-inner">
 					<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>This command will run project unit tests located in test/ directory.</p>
 					<p>This command will setup extension testing environment that is pre-initialized
-					with mocha <a href="https://mochajs.org/">https://mochajs.org/</a>, chai (including chai-as-promised) <a href="https://www.chaijs.com/">https://www.chaijs.com/</a>,
-					and expect. nyc is used for computing code coverage <a href="https://www.npmjs.com/package/nyc">https://www.npmjs.com/package/nyc</a>.</p>
-					<p>Also the following browser API's are initialized: window, chrome. Window
-					is setup using jsdom-global <a href="https://www.npmjs.com/package/jsdom-global">https://www.npmjs.com/package/jsdom-global</a> and
-					chrome using sinon-chrome <a href="https://www.npmjs.com/package/sinon-chrome">https://www.npmjs.com/package/sinon-chrome</a>.</p>
+					with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised)
+					and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage.
+					The following browser APIs are also initialized: <code>window</code>, <code>chrome</code>. Window
+					is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
+					chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
 					<p>Mocha will execute with babel, meaning you can use this test environment to
 					test ES6 modules with imports, arrows, and classes.</p>
 					<p>You may extend this test environment with a single project; this is simply the base setup
