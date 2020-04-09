@@ -9,12 +9,11 @@
  * @description This command will run project unit tests located in test/ directory.
  *
  * This command will setup extension testing environment that is pre-initialized
- * with mocha {@link https://mochajs.org/}, chai (including chai-as-promised) {@link https://www.chaijs.com/},
- * and expect. nyc is used for computing code coverage {@link https://www.npmjs.com/package/nyc}.
- *
- * Also the following browser API's are initialized: window, chrome. Window
- * is setup using jsdom-global {@link https://www.npmjs.com/package/jsdom-global} and
- * chrome using sinon-chrome {@link https://www.npmjs.com/package/sinon-chrome}.
+ * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
+ * and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
+ * The following browser APIs are also initialized: `window`, `chrome`. Window
+ * is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
+ * chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
  *
  * Mocha will execute with babel, meaning you can use this test environment to
  * test ES6 modules with imports, arrows, and classes.

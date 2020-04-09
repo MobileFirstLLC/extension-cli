@@ -26,14 +26,14 @@ This approach helps with creating a common, consistent development approach betw
 
 **Issues and Feature Requests:** [Submit on Github](https://github.com/MobileFirstLLC/extension-cli/issues/new/choose)
 
-### CORE FEATURES                                                                                                                                                                                                           |
+### CORE FEATURES
 
-1.  Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)                                                                                                           |
-2.  Compiles and bundles [SASS files](https://sass-lang.com/guide)                                                                                                                                                          \|
-3.  Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        \|
-4.  Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)                                                                                         \|
-5.  Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                \|
-6.  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) \|
+1.  Compiles and bundles javascript files (including [ES6 syntax](http://es6-features.org/) w/ babel and webpack)                                                                                                           
+2.  Compiles and bundles [SASS files](https://sass-lang.com/guide)                                                                                                                                                          
+3.  Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        
+4.  Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)                                                                                         
+5.  Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
+6.  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
 
 ## Getting Started & Docs
 
@@ -50,20 +50,16 @@ Basic install:
 ### xt-build
 
 Build command generates a dist/ directory that can be
-debugged in the browser.
-
-When called with production env flag, `-e prod`, this command
-will minify and compile a `release.zip` file that can be uploaded to
-Chrome Web Store for distribution.
+debugged in the browser. When called with production env flag, `-e prod`,
+this command will minify and compile a `release.zip` file that can be
+uploaded to Chrome Web Store for distribution.
 
 ### xt-clean
 
 Clean operation iterates over files and directories listed in the
-project .gitignore file, and removes all ignored files and
-directories, except node_modules, .idea/, and .vscode.
-
-To remove these directories, you must explicitly pass a flag to delete
-each one of them.
+project `.gitignore` file, and removes all ignored files and
+directories, except `node_modules`, `.idea/`, and `.vscode`. To remove these
+directories, you must explicitly pass a flag to delete each one of them.
 
 ### xt-create
 
@@ -76,14 +72,11 @@ jsdocs syntax. See [About JSDoc](https://jsdoc.app/index.html) for more details,
 including [configuration options here](https://jsdoc.app/about-configuring-jsdoc.html).
 
 The default template for the docs is [FooDoc](https://github.com/steveush/foodoc#readme).
-You can override this theme in the project by changing opts.template in jsdoc config file.
+You can override this theme in the project by changing `opts.template` in jsdoc config file.
 
-This command will automatically look for configuration in the project package.json.
-Use "xtdocs" to define config options in package.json.
-
-This command will also automatically look for a configuration file .xtdocs.json in
-the project root.
-
+By default, this command will automatically look for configuration in the project `package.json`.
+Use `"xtdocs"` key to define config options in `package.json`. Alternatively add a separate
+configuration file `.xtdocs.json` in the project root; or explicitly provide a path to a config file.
 If you want to define configuration in some other location, use -c/--config flag
 to provide path and name of the configuration file.
 
@@ -100,12 +93,11 @@ in this manner. Instead you should upgrade such configs manually.
 This command will run project unit tests located in test/ directory.
 
 This command will setup extension testing environment that is pre-initialized
-with mocha <https://mochajs.org/>, chai (including chai-as-promised) <https://www.chaijs.com/>,
-and expect. nyc is used for computing code coverage <https://www.npmjs.com/package/nyc>.
-
-Also the following browser API's are initialized: window, chrome. Window
-is setup using jsdom-global <https://www.npmjs.com/package/jsdom-global> and
-chrome using sinon-chrome <https://www.npmjs.com/package/sinon-chrome>.
+with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
+and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
+The following browser APIs are also initialized: `window`, `chrome`. Window
+is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
+chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 
 Mocha will execute with babel, meaning you can use this test environment to
 test ES6 modules with imports, arrows, and classes.
