@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.9-alpha.1](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9-alpha.0...v0.8.9-alpha.1) (2020-04-10)
+
+
+### Features
+
+* **xt-create:** minor fixes ([c3c7b31](https://github.com/MobileFirstLLC/extension-cli/commit/c3c7b31fc8ca8c92be0e546287f474e3744439e3))
+
 ### [0.8.9-alpha.0](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.8...v0.8.9-alpha.0) (2020-04-10)
 
 
