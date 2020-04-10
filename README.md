@@ -129,8 +129,8 @@ The following browser APIs are also initialized: `window`, `chrome`. Window
 is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
 chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 
-You may extend this test environment with a single project; this is simply the base setup
-for running unit tests. Or you may create your own test environment if this is not suitable.
+You may extend this test environment within a single project. This is simply the base setup
+for running unit tests. Or create your own testing environment at project level if this is not suitable.
 
 ## Read the Docs!
 
