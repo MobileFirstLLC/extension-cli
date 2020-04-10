@@ -7,7 +7,6 @@
 ![david](https://img.shields.io/david/mobilefirstllc/extension-cli)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
 
-
 **Extension CLI is a command-line application that facilitates rapid chrome extension development by providing
 a systematic way to build, test and document extension projects.**
 
@@ -78,14 +77,13 @@ Once implemented, this command can be used to create a new extension project.
 Docs command generates documentation for the project. This command uses
 jsdocs syntax. See [About JSDoc](https://jsdoc.app/index.html) for more details,
 including [configuration options here](https://jsdoc.app/about-configuring-jsdoc.html).
-
 The default template for the guide is [FooDoc](https://github.com/steveush/foodoc#readme).
 You can override this theme in the project by changing `opts.template` in jsdoc config file.
 
 By default, this command will automatically look for configuration in the project `package.json`.
 Use `"xtdocs"` key to define config options in `package.json`. Alternatively add a separate
 configuration file `.xtdocs.json` in the project root; or explicitly provide a path to a config file.
-If you want to define configuration in some other location, use -c/--config flag
+If you want to define configuration in some other location, use `-c` / `--config` flag
 to provide path and name of the configuration file.
 
 #### xt-sync
