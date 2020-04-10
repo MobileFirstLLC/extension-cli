@@ -6,7 +6,13 @@
  * @public
  *
  *
- * @description Docs command generates documentation for the project. This command uses
+ * @description
+ *
+ * ```text
+ * xt-docs [--config filename]
+ * ```
+ *
+ * Docs command generates documentation for the project. This command uses
  * jsdocs syntax. See {@link https://jsdoc.app/index.html|About JSDoc} for more details,
  * including {@link https://jsdoc.app/about-configuring-jsdoc.html|configuration options here}.
  * The default template for the guide is {@link https://github.com/steveush/foodoc#readme|FooDoc}.

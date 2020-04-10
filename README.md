@@ -56,12 +56,20 @@ npm install extension-cli
 
 #### xt-build
 
+```text
+xt-build --env {prod|dev} [--config filename] [--watch]
+```
+
 Build command generates a dist/ directory that can be
 debugged in the browser. When called with production env flag, `-e prod`,
 this command will minify and compile a `release.zip` file that can be
 uploaded to Chrome Web Store for distribution.
 
 #### xt-clean
+
+```text
+xt-clean [--modules] [--idea] [--vscode]
+```
 
 Clean operation iterates over files and directories listed in the
 project `.gitignore` file, and removes all ignored files and
@@ -70,9 +78,17 @@ directories, you must explicitly pass a flag to delete each one of them.
 
 #### xt-create
 
+```text
+xt-create
+```
+
 Once implemented, this command can be used to create a new extension project.
 
 #### xt-docs
+
+```text
+xt-docs [--config filename]
+```
 
 Docs command generates documentation for the project. This command uses
 jsdocs syntax. See [About JSDoc](https://jsdoc.app/index.html) for more details,
@@ -88,6 +104,10 @@ to provide path and name of the configuration file.
 
 #### xt-sync
 
+```text
+xt-sync [--gitignore] [--eslint] [--gitlab] [--travis] [--all]
+```
+
 The purpose of this command is to upgrade configuration files of
 a stale project to latest version, where this CLI tool will provide
 updated project configuration files. If the config files have been
@@ -96,25 +116,22 @@ in this manner. Instead you should upgrade such configs manually.
 
 #### xt-test
 
+```text
+xt-test [--coverage] [--watch]
+```
+
 This command will run project unit tests located in test/ directory.
 
-This command will setup extension testing environment that is pre-initialized
+Command sets up extension unit testing environment with ES6 syntax support that is pre-initialized
 with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
 and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
 The following browser APIs are also initialized: `window`, `chrome`. Window
 is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
 chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 
-Mocha will execute with babel, meaning you can use this test environment to
-test ES6 modules with imports, arrows, and classes.
-
 You may extend this test environment with a single project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.
 
-* * *
+## Read the Docs!
 
-<p align="center">
-<strong><a href='https://oss.mobilefirst.me/extension-cli/'>View Complete User Guide &rarr;</a></strong>
-</p>
-
-* * *
+**[View Complete User Guide →](https://oss.mobilefirst.me/extension-cli/)**

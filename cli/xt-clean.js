@@ -5,7 +5,13 @@
  * @module
  * @public
  *
- * @description Clean operation iterates over files and directories listed in the
+ * @description
+ *
+ *```text
+ * xt-clean [--modules] [--idea] [--vscode]
+ * ```
+ *
+ * Clean operation iterates over files and directories listed in the
  * project `.gitignore` file, and removes all ignored files and
  * directories, except `node_modules`, `.idea/`, and `.vscode`. To remove these
  * directories, you must explicitly pass a flag to delete each one of them.

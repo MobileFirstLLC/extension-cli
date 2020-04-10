@@ -5,7 +5,13 @@
  * @module
  * @public
  *
- * @description The purpose of this command is to upgrade configuration files of
+ * @description
+ *
+ * ```text
+ * xt-sync [--gitignore] [--eslint] [--gitlab] [--travis] [--all]
+ * ```
+ *
+ * The purpose of this command is to upgrade configuration files of
  * a stale project to latest version, where this CLI tool will provide
  * updated project configuration files. If the config files have been
  * modified heavily for the project, it is not advisable to upgrade them

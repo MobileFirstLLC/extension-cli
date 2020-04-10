@@ -5,7 +5,13 @@
  * @module
  * @public
  *
- * @description Once implemented, this command can be used to create a new extension project.
+ * @description
+ *
+ *```text
+ * xt-create
+ * ```
+ *
+ * Once implemented, this command can be used to create a new extension project.
  */
 
 const chalk = require('chalk');
@@ -33,7 +39,7 @@ function displayLogo() {
 
 program
     .version(pkg.version)
-    .arguments('<name>')
+    // .arguments('<name>')
     .action(function (name) {
         // projName = name;
     }).parse(process.argv);

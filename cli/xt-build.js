@@ -5,9 +5,13 @@
  * @module
  * @public
  *
- * @requires gulpfile
+ * @description
  *
- * @description Build command generates a dist/ directory that can be
+ * ```text
+ * xt-build --env {prod|dev} [--config filename] [--watch]
+ * ```
+ *
+ * Build command generates a dist/ directory that can be
  * debugged in the browser. When called with production env flag, `-e prod`,
  * this command will minify and compile a `release.zip` file that can be
  * uploaded to Chrome Web Store for distribution.

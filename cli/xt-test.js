@@ -6,17 +6,20 @@
  * @public
  *
  *
- * @description This command will run project unit tests located in test/ directory.
+ * @description
  *
- * This command will setup extension testing environment that is pre-initialized
+ * ```text
+ * xt-test [--coverage] [--watch]
+ * ```
+ *
+ * This command will run project unit tests located in test/ directory.
+ *
+ * Command sets up extension unit testing environment with ES6 syntax support that is pre-initialized
  * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
  * and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
  * The following browser APIs are also initialized: `window`, `chrome`. Window
  * is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
  * chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
- *
- * Mocha will execute with babel, meaning you can use this test environment to
- * test ES6 modules with imports, arrows, and classes.
  *
  * You may extend this test environment with a single project; this is simply the base setup
  * for running unit tests. Or you may create your own test environment if this is not suitable.
@@ -34,7 +37,7 @@ const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config'
 
 program
     .version(pkg.version)
-    .option('-c --coverage', 'pipe coverage')
+    .option('-c --coverage', 'display coverage')
     .option('-w --watch', 'enable watch')
     .parse(process.argv);
 
@@ -60,7 +63,7 @@ const args = [
 
     // lastly: pipe to coveralls -->
     // this has to happen last after all tests have run
-    program.coveralls ? '&& nyc report --reporter=text-lcov | coveralls' : ''
+    program.coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
 
 ].join(' ');
 
