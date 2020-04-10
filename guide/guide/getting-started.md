@@ -9,9 +9,15 @@ Before using extension CLI, you should have all of the following:
 - Terminal/cmd access
 - Chrome browser for debugging extensions
 
-### Installation
+### Setup
 
-Install latest CLI version [from NPM](https://www.npmjs.com/package/extension-cli)
+Create a new extension project:
+
+```text
+npx extension-cli
+```
+
+Add CLI to an existing project:
 
 ```
 npm install extension-cli
@@ -20,7 +26,9 @@ npm install extension-cli
 ### Default Project Organization
 
 Before you start using the CLI, inspect your project file structure. You can override most of 
-these paths when specifying build and documentation settings, but this organization matches the CLI defaults:
+these paths when specifying build and documentation settings, but this organization matches the CLI defaults.
+
+If you created an extension using the command above, your file structure will look like this.
 
 Path | Description
 --- | ---

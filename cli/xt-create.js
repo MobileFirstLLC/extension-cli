@@ -37,7 +37,7 @@ const questions = [
     {
         type: 'text',
         name: 'homepage',
-        message: 'Homepage URL (if any)',
+        message: 'Homepage URL (leave blank if you do not have one yet)',
     }
 ];
 
@@ -49,38 +49,6 @@ const images = {
         "24": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAQ3wAAEN8BdFVeMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE9SURBVEiJ1dU7SgRBEAbgj1UMFVR8YGYooolgIgiCsWKoiZGhF1AQD+ABBD2CmSYKYmKwiY/EwD2AJoKoGCi7azC7sDY9Mww7Bv5QNFRV/39XP6rJxhhO8IoHrObkF8Ylmh32hdmyyIcC8rbtFSGpZMQGC/qj6G2NC5gKYiMpc6axFfjecYa32IRd8a0oajX0xwReShJoYj0kryi4pzkYjgn8Kf6/QA9OcYQrTGK8C74BzGNO0l6ew4Q+3CjnRn1jpScQqOMDa11U0UYFM7EzeCqBvI2JmMBiiQLnoWMZn8o5gwuMwiGOUUWjS9J9yU381R3K6kNNbIdbkvfQPiUfzBI2cJuTH0Xaahot4k7kvZNoBY0U4arkT+7EFw4yFluPCdynJNdS/I8ZAncxgU1J2WElaZXF/C/YwXUY+AG1rqwFMTDOiwAAAABJRU5ErkJggg==",
         "16": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALQAAAC0ABGxbo1gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADZSURBVDiNldIxTsNAEAXQpwRFSPQgKkRBLsMFOEHScYBIXCDHgA5RcBJqKGjoICRIkCh2mqRYIy2DsfGXptj9f/7sfg2/McAdlrhGv0bTiAtsszpvEvdq7g7D+aht4gRvWFS1Ci9YZdwrLqPBOjS01Sx+Yb/tiQE/9HUZdEIfBR5whoN/9GylzI7xnBNDbHTL4ya6P3U0+MybT1F2NLjdw0halrG0xm0opV34wP13KLEKPP6RyVd0jIIXnFTcUEq80aAIgqvATwP/npO9SlBmd4tgMA/Dpjm5A0zncdXNyOYbAAAAAElFTkSuQmCC"
     }
-};
-
-const onError = msg => {
-    console.error(chalk.bold.red(`${msg || 'Terminating'}`));
-    process.exit(1);
-};
-
-const onDone = dir => {
-    spinner.stop(true);
-    console.log(chalk.bold.green(`DONE! `) + "Your extension starter is ready.");
-    console.log(chalk.bold.green('What Next: ') + `Open ${dir} in your favorite web IDE`);
-    process.exit(0);
-};
-
-const createDir = path => {
-    // doesn't exist
-    if (!fs.existsSync(path)) {
-        fs.mkdirSync(path);
-        return true;
-    }
-    // check if empty
-    return !fs.readdirSync(path).length;
-};
-
-const generateDirectoryName = name => {
-    return name.toLowerCase()
-        .replace(/[\u{0080}-\u{FFFF}]/gu, "")
-        .replace(/ /g, "-");
-}
-
-const writeImage = (filename, data) => {
-    fs.writeFileSync(filename, data.replace(/^data:image\/png;base64,/, ""), 'base64');
 };
 
 const generateFiles = ({name, description, homepage, version}) => {
@@ -190,6 +158,39 @@ Read this guide if you are new to extension development:
         }
     }
 };
+
+const onError = msg => {
+    console.error(chalk.bold.red(`${msg || 'Terminating'}`));
+    process.exit(1);
+};
+
+const onDone = dir => {
+    spinner.stop(true);
+    console.log(chalk.bold.green(`DONE! `) + "Your extension starter is ready.");
+    console.log(chalk.bold.green('What Next: ') + `Open ${dir} in your favorite web IDE`);
+    process.exit(0);
+};
+
+const createDir = path => {
+    // doesn't exist
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path);
+        return true;
+    }
+    // check if empty
+    return !fs.readdirSync(path).length;
+};
+
+const generateDirectoryName = name => {
+    return name.toLowerCase()
+        .replace(/[\u{0080}-\u{FFFF}]/gu, "")
+        .replace(/ /g, "-");
+}
+
+const writeImage = (filename, data) => {
+    fs.writeFileSync(filename, data.replace(/^data:image\/png;base64,/, ""), 'base64');
+};
+
 
 /**
  * Run the setup script
