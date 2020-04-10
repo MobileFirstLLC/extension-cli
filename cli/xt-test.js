@@ -12,7 +12,7 @@
  * xt-test [--coverage] [--watch]
  * ```
  *
- * This command will run project unit tests located in test/ directory.
+ * This command will run project unit tests located in `./test` directory.
  *
  * Command sets up extension unit testing environment with ES6 syntax support that is pre-initialized
  * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
