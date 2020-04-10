@@ -21,7 +21,7 @@ npm install extension-cli
 
 Before you start using the CLI, inspect your project file structure. You can override most of 
 these paths when specifying build and documentation settings, but if you are starting a new project, this organization
-will matches the CLI defaults.
+ matches the CLI defaults:
 
 Path | Description
 --- | ---
