@@ -1,16 +1,8 @@
-# Configuration
+# Configuration for Existing Applications
 
-Before you start using Extension CLI, you have to add some configuration options to your `package.json`.
+**If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.**
 
-If your project does not contain `package.json`, first run
-
-```text
-npm init
-```
-
-And follow the on-screen setup.
-
-Then, update extension project `package.json` with following options:
+Before using Extension CLI, you have to add some configuration options to your `package.json`. Add the following options:
 
 ### Babel Presets
 
