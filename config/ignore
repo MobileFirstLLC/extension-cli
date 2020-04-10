@@ -1,9 +1,9 @@
 .idea/
+.vscode/
 node_modules/
-.nyc_output
+.nyc_output/
 coverage/
 dist/
-docs/
 public/documentation/
 release.zip
 yarn-error.log

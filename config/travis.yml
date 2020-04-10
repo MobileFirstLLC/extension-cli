@@ -1,14 +1,19 @@
 language: node_js
+
 node_js:
   - "12.13.1"
+
 cache:
   directories:
   - node_modules
+
 before_script:
-  - npm run test -- --coveralls
+  - npm run test -- --coverage
+
 script:
   - npm run guide
   - npm run build
+
 deploy:
   - provider: pages
     skip_cleanup: true
@@ -16,13 +21,15 @@ deploy:
     local_dir: guide
     on:
       branch: master
+
   - provider: releases
     skip_cleanup: true
     api_key: $github_token
     file: $zip
     on:
       tags: true
-after_deploy:
-  - if [ ! -z  "$TRAVIS_TAG" ]; then
-      npx cws-upload $cid $sec $tkn $zip $eid;
-    fi
+
+#after_deploy:
+#  - if [ ! -z  "$TRAVIS_TAG" ]; then
+#      npx cws-upload $cid $sec $tkn $zip $eid;
+#    fi
