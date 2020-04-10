@@ -1,5 +1,10 @@
 ## Release Notes
 
+### 0.8.9 (2020-04-10)
+
+- Implemented command to create new extension
+- Updated docs to reflect this new command
+
 ### 0.8.8 (2020-04-08)
 
 - Upgraded project dependencies
