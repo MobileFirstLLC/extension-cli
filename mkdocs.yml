@@ -19,7 +19,7 @@ nav:
     - 'xt-test': guide/xt-test.md
     - 'xt-docs': guide/xt-docs.md
     - 'xt-sync': guide/xt-sync.md
-    - 'xt-create': guide/xt-create.md
+    - 'extension-cli': guide/xt-create.md
   - "Resources":
     - Release Notes: release-notes.md
     - Showcase: showcase.md
