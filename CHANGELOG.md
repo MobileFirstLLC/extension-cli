@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+This is automatically generated changelog and maybe not very nice. You can read more [human readable release notes here](https://oss.mobilefirst.me/extension-cli/release-notes/).
+
+
 ### [0.8.9-alpha.2](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9-alpha.1...v0.8.9-alpha.2) (2020-04-10)
 
 
