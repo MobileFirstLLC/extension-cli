@@ -11,7 +11,13 @@ systematic way to build, test and document extension projects.</p>
 
 ## Getting Started & Docs
 
-Basic install:
+Create a new extension project:
+
+```text
+npx extension-cli
+```
+
+Add CLI to an existing project:
 
 ```
 npm install extension-cli

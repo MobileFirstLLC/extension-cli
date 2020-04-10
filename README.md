@@ -44,7 +44,13 @@ This approach helps with creating a common, consistent development approach betw
 
 **Docs: [View Full Guide](https://oss.mobilefirst.me/extension-cli)**
 
-### Installation
+#### Create new extension project
+
+```text
+npx extension-cli
+```
+
+#### Add to an existing project
 
 ```text
 npm install extension-cli
@@ -76,13 +82,13 @@ project `.gitignore` file, and removes all ignored files and
 directories, except `node_modules`, `.idea/`, and `.vscode`. To remove these
 directories, you must explicitly pass a flag to delete each one of them.
 
-#### xt-create
+#### extension-cli
 
 ```text
-xt-create
+npx extension-cli
 ```
 
-Once implemented, this command can be used to create a new extension project.
+This command will create a new extension project and initial code files. This command takes no arguments.
 
 #### xt-docs
 

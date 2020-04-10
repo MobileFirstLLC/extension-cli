@@ -1,24 +1,25 @@
 #!/usr/bin/env node
 
 /**
- * @name xt-create
+ * @name extension-cli
  * @module
  * @public
  *
  * @description
  *
  *```text
- * xt-create
+ * npx extension-cli
  * ```
+ *
+ * This command will create a new extension project and initial code files. This command takes no arguments.
  */
 
 const chalk = require('chalk');
 const prompts = require('prompts');
-// const images = require('../config/images.json');
-const exec = require('child_process').exec;
-const Spinner = require('cli-spinner').Spinner;
 const fs = require("fs");
 const path = require('path');
+const exec = require('child_process').exec;
+const Spinner = require('cli-spinner').Spinner;
 const spinner = new Spinner(' %s ');
 
 const questions = [
@@ -130,7 +131,7 @@ const generateFiles = ({name, description, homepage, version}) => {
             },
             "babel": {
                 "presets": [
-                    "env"
+                    "@babel/preset-env"
                 ]
             },
             "eslintIgnore": [
@@ -156,12 +157,43 @@ const generateFiles = ({name, description, homepage, version}) => {
                 ]
             }
         },
-        background: {code: "window.alert('Greetings from background! Edit Me!');"}
+        background: {code: "window.alert('Greetings from background! Edit Me!');"},
+        test: {
+            starter: "describe('Test extension', () => {\n" +
+                "\n" +
+                "    it('This is a dummy test', () => {\n" +
+                "        expect(true).to.be.true;\n" +
+                "    });\n" +
+                "});"
+        },
+        readme: {
+            text: `# ${name}\n\n${description}\n\n## Development 
+
+This extension was bootstrapped with [Extension CLI](https://oss.mobilefirst.me/extension-cli/)!
+
+### Available Commands
+
+| Commands | Description |
+| --- | --- |
+| \`npm run start\` | build extension, watch file changes |
+| \`npm run build\` | generate release version |
+| \`npm run docs\` | generate source code docs |
+| \`npm clean\` | remove temporary files |
+| \`npm test\` | run unit tests |
+| \`npm sync\` | update config files |
+
+### Learn more
+
+Read this guide if you are new to extension development:
+
+[https://developer.chrome.com/extensions/getstarted](https://developer.chrome.com/extensions/getstarted)`
+        }
     }
 };
 
 /**
  * Run the setup script
+ * @private
  */
 (async () => {
 
@@ -175,7 +207,10 @@ const generateFiles = ({name, description, homepage, version}) => {
     }
 
     console.log(`Creating extension ${name} in directory ${chalk.bold.green(dirname)}...`);
-    const {messages, manifest, pkg, background} = generateFiles({...{name, description, homepage}, version: '0.0.1'});
+    const {messages, manifest, pkg, background, test, readme} = generateFiles({
+        ...{name, description, homepage},
+        version: '0.0.1'
+    });
 
     spinner.start();
 
@@ -199,9 +234,11 @@ const generateFiles = ({name, description, homepage, version}) => {
         dir + '/src/index.js',
         background.code);
     createDir(dir + '/test');
+    fs.writeFileSync(dir + '/test/sample.js', test.starter);
     fs.writeFileSync(
         dir + '/package.json',
         JSON.stringify(pkg, null, 4));
+    fs.writeFileSync(dir + '/README.md', readme.text);
 
     spinner.stop(true);
     console.log("Installing packages - this may take a while...");

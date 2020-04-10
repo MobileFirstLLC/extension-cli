@@ -1,24 +1,20 @@
-# xt-create (planned)
+# extension-cli
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-create</code> command is used to create a new extension project.</p>
+<p style='font-size:1.3em;line-height:1.7;'><code>extension-cli</code> command is used to create a new extension project.</p>
 
 * * *
 
 ## Commands
 
-Default command
-
 ```text
-xt-create
+npx extension-cli
 ```
  
-Get help using this command
-
-```text
-xt-create --help
-``` 
-
+This command will prompt you with necessary questions. You do not need to call it with any arguments. 
+ 
 This command will generate initial files and directories for a new project.
+
+Run it in the directory where you want to create the extension.
 
