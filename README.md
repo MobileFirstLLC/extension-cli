@@ -29,9 +29,9 @@ a systematic way to build, test and document extension projects.**
 
 ## Motivation
 
-After developing multiple browser extension, it became clear that there were several steps in the development process that stayed the same between every project. 
+After developing multiple browser extensions, it became clear that there were several steps in the development process that stayed the same between every project. 
 
-Instead of setting up these tasks individually for each project, it made more sense to wrap everything in a utility tool that could be shared between projects. 
+Instead of setting up these tasks individually for each project, it made more sense to combine everything in a utility tool that could be shared between projects. 
 
 This approach helps with creating a common, consistent development approach between multiple projects, reduces time to get started, and makes it easier to update build tools and scripts across multiple projects as many npm packages inevitably need to be updated (frequently!).
 
@@ -97,64 +97,6 @@ modified heavily for the project, it is not advisable to upgrade them
 in this manner. Instead you should upgrade such configs manually.
 
 #### xt-test
-
-This command will run project unit tests located in test/ directory.
-
-This command will setup extension testing environment that is pre-initialized
-with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
-and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
-The following browser APIs are also initialized: `window`, `chrome`. Window
-is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
-chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
-
-Mocha will execute with babel, meaning you can use this test environment to
-test ES6 modules with imports, arrows, and classes.
-
-You may extend this test environment with a single project; this is simply the base setup
-for running unit tests. Or you may create your own test environment if this is not suitable.
-
-### xt-build
-
-Build command generates a dist/ directory that can be
-debugged in the browser. When called with production env flag, `-e prod`,
-this command will minify and compile a `release.zip` file that can be
-uploaded to Chrome Web Store for distribution.
-
-### xt-clean
-
-Clean operation iterates over files and directories listed in the
-project `.gitignore` file, and removes all ignored files and
-directories, except `node_modules`, `.idea/`, and `.vscode`. To remove these
-directories, you must explicitly pass a flag to delete each one of them.
-
-### xt-create
-
-Once implemented, this command can be used to create a new extension project.
-
-### xt-docs
-
-Docs command generates documentation for the project. This command uses
-jsdocs syntax. See [About JSDoc](https://jsdoc.app/index.html) for more details,
-including [configuration options here](https://jsdoc.app/about-configuring-jsdoc.html).
-
-The default template for the docs is [FooDoc](https://github.com/steveush/foodoc#readme).
-You can override this theme in the project by changing `opts.template` in jsdoc config file.
-
-By default, this command will automatically look for configuration in the project `package.json`.
-Use `"xtdocs"` key to define config options in `package.json`. Alternatively add a separate
-configuration file `.xtdocs.json` in the project root; or explicitly provide a path to a config file.
-If you want to define configuration in some other location, use -c/--config flag
-to provide path and name of the configuration file.
-
-### xt-sync
-
-The purpose of this command is to upgrade configuration files of
-a stale project to latest version, where this CLI tool will provide
-updated project configuration files. If the config files have been
-modified heavily for the project, it is not advisable to upgrade them
-in this manner. Instead you should upgrade such configs manually.
-
-### xt-test
 
 This command will run project unit tests located in test/ directory.
 
