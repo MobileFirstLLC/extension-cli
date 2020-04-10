@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "0.8.8",
+  "version": "0.8.9-alpha.0",
   "description": "Chrome Extension CLI tools",
   "repository": {
     "type": "git",
