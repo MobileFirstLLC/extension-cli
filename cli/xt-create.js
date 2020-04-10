@@ -156,7 +156,7 @@ const generateFiles = ({name, description, homepage, version}) => {
                 ]
             }
         },
-        background: {code: "window.alert('Greetings from background!\nEdit Me!');"}
+        background: {code: "window.alert('Greetings from background! Edit Me!');"}
     }
 };
 
@@ -213,6 +213,7 @@ const generateFiles = ({name, description, homepage, version}) => {
             stdout.write(data.toString());
             stderr.write(data.toString());
         }).on('exit', code => {
+        // TODO: show some warning if returns with non-zero?
         onDone(dir)
     });
 })();

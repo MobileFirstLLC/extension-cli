@@ -3,7 +3,7 @@
 .docs.json
 .travis.yml
 .github/
-tutorials/
+requirements.txt
 node_modules/
 CHANGELOG.md
 *.jpg
