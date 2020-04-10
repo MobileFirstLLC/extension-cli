@@ -4,8 +4,11 @@
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
 [![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
-![david](https://img.shields.io/david/mobilefirstllc/extension-cli)
+[![david](https://img.shields.io/david/mobilefirstllc/extension-cli)](https://david-dm.org/mobilefirstllc/extension-cli)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
+![Commit activity](https://img.shields.io/github/commit-activity/m/mobilefirstllc/extension-cli)
+![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)
+
 
 **Extension CLI is a command-line application that facilitates rapid chrome extension development by providing
 a systematic way to build, test and document extension projects.**
