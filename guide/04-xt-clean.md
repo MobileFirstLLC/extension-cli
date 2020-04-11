@@ -3,19 +3,11 @@
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-clean</code> command removes all automatically generated files from the project directories.</p>
+<p class='page-intro'><code>xt-clean</code> command removes all automatically generated files from the project directories.</p>
 
 * * *
 
-Clean operation iterates over files and directories listed in the
- project `.gitignore` file, and removes all ignored files and
- directories, except `node_modules/`, `.idea/`, and `.vscode/`. 
-
-`.idea` is a collection of configuration files used by WebStorm IDE, and `.vscode`
- is the same for Visual Studio Code. The IDE will generate them automatically if they are absent.
-
- To remove these three directories, you must explicitly pass a flag to delete
- each directory respectively.
+Clean operation iterates over files and directories listed in the project `.gitignore` file, and removes all ignored files and directories, except `node_modules/`, `.idea/`, and `.vscode/`. `.idea` is a collection of configuration files used by WebStorm IDE, and `.vscode` is the same for Visual Studio Code. The IDE will generate them automatically if they are absent. To remove these three directories, you must explicitly pass a flag to delete each directory respectively.
 
 
 ## Commands
@@ -29,19 +21,19 @@ xt-clean
 Clear ignored files, including `node_modules`
 
 ```
-xt-clean -m
+xt-clean {-m|--modules}
 ```
 
 Clear ignored files, including `.idea/` directory
 
 ```
-xt-clean -i
+xt-clean {-i|--idea}
 ```
 
 Clear ignored files, including `.vscode/` directory
 
 ```
-xt-clean -v
+xt-clean {-v|--vscode}
 ```
 
 Clear absolutely all ignored files

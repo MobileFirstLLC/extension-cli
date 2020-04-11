@@ -2,7 +2,7 @@
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
+<p class='page-intro'><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
 
 * * *
 
@@ -22,7 +22,7 @@ xt-docs
 Command using custom configuration file path
 
 ```
-xt-docs --config "/path/to/config.json"
+xt-docs {-c|--config} "/path/to/config.json"
 ```
  
 Get help using this command

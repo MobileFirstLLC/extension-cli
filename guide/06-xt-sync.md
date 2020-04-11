@@ -3,7 +3,7 @@
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-sync</code> command is intended for upgrading configuration files of
+<p class='page-intro'><code>xt-sync</code> command is intended for upgrading configuration files of
 a stale project to the latest versions</p>
 
 * * *

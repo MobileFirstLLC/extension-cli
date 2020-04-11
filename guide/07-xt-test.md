@@ -3,7 +3,7 @@
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
+<p class='page-intro'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
 
 * * *
 

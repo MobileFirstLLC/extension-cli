@@ -2,7 +2,7 @@
 
 * * *
 
-<p style='font-size:1.3em;line-height:1.7;'><code>extension-cli</code> command is used to create a new extension project.</p>
+<p class='page-intro'><code>extension-cli</code> command is used to create a new extension project.</p>
 
 * * *
 

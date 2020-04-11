@@ -9,25 +9,26 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - About: index.md
-  - "Setup":
-    - '★ Getting Started': guide/getting-started.md
-    - 'Configuration': guide/configuration.md
+  - About:
+    - 'Intro': 00-index.md
+  - "Getting Started":
+    - 'Installation': 01-getting-started.md
+    - 'Configuration': 02-configuration.md
   - "Commands":
-    - 'xt-build': guide/xt-build.md
-    - 'xt-clean': guide/xt-clean.md
-    - 'xt-test': guide/xt-test.md
-    - 'xt-docs': guide/xt-docs.md
-    - 'xt-sync': guide/xt-sync.md
-    - 'extension-cli': guide/xt-create.md
+    - 'xt-build': 03-xt-build.md
+    - 'xt-clean': 04-xt-clean.md
+    - 'xt-docs': 05-xt-docs.md
+    - 'xt-sync': 06-xt-sync.md
+    - 'xt-test': 07-xt-test.md
+    - 'extension-cli': 08-xt-create.md
   - "Resources":
-    - Release Notes: release-notes.md
-    - Showcase: showcase.md
-    - Tech Stack: stack.md
-    - Helpful References: helpful.md
+    - Release Notes: 09-release-notes.md
+    - Showcase: 10-showcase.md
+    - Helpful References: 12-helpful.md
+    - Tech Stack: 11-stack.md
+    - CLI Development: 13-cli-development.md
   - "Source Code":
-    - 'Github Repo': https://github.com/MobileFirstLLC/extension-cli
-    - '@ NPM.org': https://www.npmjs.com/package/extension-cli
+    - Github: https://github.com/MobileFirstLLC/extension-cli
 
 extra_css:
  - assets/custom.css

@@ -1,4 +1,4 @@
-# Getting Started
+# Installation
 
 ### Prerequisites
 
@@ -26,9 +26,9 @@ npm install extension-cli
 ### Default Project Organization
 
 Before you start using the CLI, inspect your project file structure. You can override most of 
-these paths when specifying build and documentation settings, but this organization matches the CLI defaults.
+these paths in configurations, but this organization matches the CLI defaults.
 
-If you created an extension using the command above, your file structure will look like this.
+If you created a new extension using the command above, your file structure already looks like this.
 
 Path | Description
 --- | ---
@@ -41,4 +41,3 @@ Path | Description
 └ **test** | Unit tests
 └ package.json | Application root
 
-<br/>

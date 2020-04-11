@@ -2,11 +2,11 @@
 
 **If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.**
 
-Before using Extension CLI, you have to add some configuration options to your `package.json`. Add the following options:
+For an existing application, before using Extension CLI, add these configuration options to `package.json`:
 
 ### Babel Presets
 
-Needed to compile projects written in ES6.
+This is needed to compile projects written in ES6.
 
 ```text
   "babel": {
