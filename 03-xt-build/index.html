@@ -11,7 +11,7 @@
         <meta name="description" content="Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.">
       
       
-        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/guide/xt-build/">
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build/">
       
       
         <meta name="author" content="@mobilefirstllc">
@@ -25,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.07c9fbf5.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.07c9fbf5.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecd4686e.min.css">
       
       
         
@@ -45,7 +45,7 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/custom.css">
+      <link rel="stylesheet" href="../assets/custom.css">
     
     
       
@@ -165,13 +165,16 @@
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
-      <a href="../.." class="md-tabs__link">
-        About
-      </a>
-    
-  </li>
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../00-index/" class="md-tabs__link">
+          About
+        </a>
+      
+    </li>
+  
 
       
         
@@ -179,8 +182,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../getting-started/" class="md-tabs__link">
-          Setup
+        <a href="../01-getting-started/" class="md-tabs__link">
+          Getting Started
         </a>
       
     </li>
@@ -205,7 +208,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../release-notes/" class="md-tabs__link">
+        <a href="../09-release-notes/" class="md-tabs__link">
           Resources
         </a>
       
@@ -268,10 +271,40 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../.." title="About" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
       About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00-index/" title="Intro" class="md-nav__link">
+      Intro
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -285,17 +318,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Setup
+      Getting Started
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Setup" data-md-level="1">
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
-        Setup
+        Getting Started
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -306,8 +339,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting-started/" title="★ Getting Started" class="md-nav__link">
-      ★ Getting Started
+    <a href="../01-getting-started/" title="Installation" class="md-nav__link">
+      Installation
     </a>
   </li>
 
@@ -318,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../configuration/" title="Configuration" class="md-nav__link">
+    <a href="../02-configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
   </li>
@@ -418,6 +451,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-configuration" class="md-nav__link">
     Build Configuration
   </a>
@@ -437,38 +477,12 @@
     Script Bundles
   </a>
   
-    <nav class="md-nav" aria-label="Script Bundles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
     Skip Javascript Compilation and Linting
   </a>
-  
-    <nav class="md-nav" aria-label="Skip Javascript Compilation and Linting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -477,38 +491,12 @@
     Style bundles
   </a>
   
-    <nav class="md-nav" aria-label="Style bundles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_2" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#localization" class="md-nav__link">
-    Localization
+  <a href="#text-localization" class="md-nav__link">
+    Text Localization
   </a>
-  
-    <nav class="md-nav" aria-label="Localization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_3" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -537,7 +525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../xt-clean/" title="xt-clean" class="md-nav__link">
+    <a href="../04-xt-clean/" title="xt-clean" class="md-nav__link">
       xt-clean
     </a>
   </li>
@@ -549,19 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../xt-test/" title="xt-test" class="md-nav__link">
-      xt-test
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../xt-docs/" title="xt-docs" class="md-nav__link">
+    <a href="../05-xt-docs/" title="xt-docs" class="md-nav__link">
       xt-docs
     </a>
   </li>
@@ -573,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../xt-sync/" title="xt-sync" class="md-nav__link">
+    <a href="../06-xt-sync/" title="xt-sync" class="md-nav__link">
       xt-sync
     </a>
   </li>
@@ -585,7 +561,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../xt-create/" title="extension-cli" class="md-nav__link">
+    <a href="../07-xt-test/" title="xt-test" class="md-nav__link">
+      xt-test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../08-xt-create/" title="extension-cli" class="md-nav__link">
       extension-cli
     </a>
   </li>
@@ -627,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../release-notes/" title="Release Notes" class="md-nav__link">
+    <a href="../09-release-notes/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -639,7 +627,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../showcase/" title="Showcase" class="md-nav__link">
+    <a href="../10-showcase/" title="Showcase" class="md-nav__link">
       Showcase
     </a>
   </li>
@@ -651,7 +639,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../stack/" title="Tech Stack" class="md-nav__link">
+    <a href="../12-helpful/" title="Helpful References" class="md-nav__link">
+      Helpful References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../11-stack/" title="Tech Stack" class="md-nav__link">
       Tech Stack
     </a>
   </li>
@@ -663,8 +663,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../helpful/" title="Helpful References" class="md-nav__link">
-      Helpful References
+    <a href="../13-cli-development/" title="CLI Development" class="md-nav__link">
+      CLI Development
     </a>
   </li>
 
@@ -705,20 +705,8 @@
 
 
   <li class="md-nav__item">
-    <a href="https://github.com/MobileFirstLLC/extension-cli" title="Github Repo" class="md-nav__link">
-      Github Repo
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="https://www.npmjs.com/package/extension-cli" title="@ NPM.org" class="md-nav__link">
-      @ NPM.org
+    <a href="https://github.com/MobileFirstLLC/extension-cli" title="Github" class="md-nav__link">
+      Github
     </a>
   </li>
 
@@ -775,6 +763,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#build-configuration" class="md-nav__link">
     Build Configuration
   </a>
@@ -794,38 +789,12 @@
     Script Bundles
   </a>
   
-    <nav class="md-nav" aria-label="Script Bundles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
   <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
     Skip Javascript Compilation and Linting
   </a>
-  
-    <nav class="md-nav" aria-label="Skip Javascript Compilation and Linting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -834,38 +803,12 @@
     Style bundles
   </a>
   
-    <nav class="md-nav" aria-label="Style bundles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_2" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#localization" class="md-nav__link">
-    Localization
+  <a href="#text-localization" class="md-nav__link">
+    Text Localization
   </a>
-  
-    <nav class="md-nav" aria-label="Localization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example_3" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -893,7 +836,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/guide/xt-build.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/03-xt-build.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -903,7 +846,7 @@
                 
                 <h1 id="xt-build">xt-build</h1>
 <hr />
-<p style='font-size:1.3em;line-height:1.7;'><code>xt-build</code> command is used for generating a debuggable dev version of an extension project. It is also used to create a production ready, minified .zip file that can be uploaded to the chrome web store.</p>
+<p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to the chrome web store.</p>
 
 <hr />
 <p>Successful build command always generates an extension <code>dist/</code> directory that can be debugged in the browser.  The underlying build system
@@ -913,32 +856,34 @@ uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.
 <h3 id="prod-build-artifacts">Prod Build Artifacts</h3>
 <p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build will generate a <code>dist/</code> directory of extension files which can be debugged in the browser. It will also generate a <code>release.zip</code> file in the project root strictly based on the files in the <code>dist</code> directory. This zip file can be uploaded directly to the Chrome Web Store. When running a production build, all code files (js, sass, html, json) will be minified.</p>
 <h2 id="commands">Commands</h2>
-<p>Run production build (default)</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p><strong>Run production build (default)</strong></p>
 <pre><code>xt-build
 </code></pre>
 
-<p>Run production build using explicit flag</p>
-<pre><code>xt-build -e prod
+<p><strong>Run production build using explicit flag <code>-e</code> or <code>--env</code></strong></p>
+<pre><code>xt-build {-e|--env} prod
 </code></pre>
 
-<p>Run development build</p>
-<pre><code>xt-build -e dev
+<p><strong>Run development build</strong></p>
+<pre><code>xt-build {-e|--env} dev
 </code></pre>
 
-<p>Command using custom configuration file path</p>
-<pre><code>xt-build --config &quot;/path/to/config.json&quot;
+<p><strong>Run command using custom configuration file path</strong></p>
+<pre><code>xt-build {-c|--config} &quot;/path/to/config.json&quot;
 </code></pre>
 
-<p>Run development build and keep watching changes</p>
-<pre><code>xt-build -e dev --watch
+<p><strong>Run development build and keep watching changes</strong></p>
+<pre><code>xt-build {-e|--env} dev {-w|--watch}
 </code></pre>
 
-<p>Get help using this command</p>
+<p><strong>Get help using this command</strong></p>
 <pre><code>xt-build --help
 </code></pre>
 
-<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-build</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section (see example below) and then execute the command as <code>npm run build</code> or <code>npm run start</code>.</p>
+<h2 id="packagejson-scripts">Package.json scripts</h2>
+<p>After adding Extension CLI to your project, you can run these commands from a terminal using syntax <code>npx xt-build</code>. 
+Or you can add an option to <code>packages.json</code> scripts section as shown below, and then execute the command as <code>npm run build</code> or <code>npm run start</code>.</p>
 <pre><code>&quot;scripts&quot;:{
     &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
     &quot;build&quot;: &quot;xt-build -e prod&quot;,
@@ -948,10 +893,16 @@ uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.
 <p><br/></p>
 <h2 id="build-configuration">Build Configuration</h2>
 <p>By default the CLI will look for build configuration in two different
-places:
-- in <code>package.json</code> using key <code>xtbuild</code>
-- in a file named <code>.xtbuild.json</code> in project root</p>
-<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>--config</code> (<code>-c</code>) flag,
+places:</p>
+<ul>
+<li>
+<p>in <code>package.json</code> using key <code>xtbuild</code></p>
+</li>
+<li>
+<p>in a file named <code>.xtbuild.json</code> in project root</p>
+</li>
+</ul>
+<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> or <code>--config</code> flag,
  followed by path to file. <a href="#commands">See commands for an example</a>.</p>
 <p>The CLI uses a default build configuration file shown below. This tells the extension CLI where to look for files and where to output files. You can override any of these key-value pairs at project level. You can find more detailed explanations of usage of some of these keys <a href="#custom-configurations">below</a>.</p>
 <pre><code class="json">{
@@ -987,8 +938,13 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
 <li><code>name</code> is the output bundle filename without file extension</li>
 <li><code>src</code> specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use <code>!</code> as a way to negate the inclusion of a file. This is the <a href="https://gulpjs.com/docs/en/api/src">globs syntax expected by gulp</a> (without options).</li>
 </ul>
-<h4 id="example">Example</h4>
-<p>Sample project-level configuration with multiple javascript bundles</p>
+<p><strong>Example</strong></p>
+<p>Sample project-level configuration with multiple javascript bundles. </p>
+<p>This configuration will produce two javascript files in the <code>/dist</code> directory. </p>
+<ul>
+<li>One file contains exactly <code>src/background.js</code> and </li>
+<li>One file contains all <code>.js</code> files under <code>scr/app/dir1</code> and <code>scr/app/dir2</code></li>
+</ul>
 <pre><code>  &quot;xtbuild&quot;: {
     &quot;js_bundles&quot;: [
       {
@@ -998,8 +954,8 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
       {
         &quot;name&quot;: &quot;app&quot;,
         &quot;src&quot;: [
-            &quot;./src/app/inbox/**/*.js&quot;,
-            &quot;./src/app/message/**/*.js&quot;
+            &quot;./src/app/dir1/**/*.js&quot;,
+            &quot;./src/app/dir2/**/*.js&quot;
          ]
       }
     ]
@@ -1007,9 +963,10 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
 </code></pre>
 
 <h3 id="skip-javascript-compilation-and-linting">Skip Javascript Compilation and Linting</h3>
-<p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project. The build command will copy specified files exactly without any modification to the root of the output directory. Any path will be flattened.</p>
-<h4 id="example_1">Example</h4>
-<p>Sample configuration for skipping compilation of pre-compiled files</p>
+<p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. The build command will copy specified files exactly without any modification to the root of the output directory. Directory path will be flattened.</p>
+<p><strong>Example</strong></p>
+<p>Sample configuration for skipping compilation of pre-compiled files.</p>
+<p>This configuration will copy material theme directly from node modules and include it in the <code>dist</code> directory. It will also copy a project level <code>ga.js</code> script in the <code>dist</code> directory. No modification will occur to these files during the build step.  </p>
 <pre><code>  &quot;xtbuild&quot;: {
     &quot;copyAsIs&quot;: [
       &quot;./node_modules/material-design-lite/material.min.js&quot;,
@@ -1018,7 +975,8 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
   }
 </code></pre>
 
-<p>In the project-level <code>package.json</code>, add the file paths to the list of ignored files
+<p>Note that when you include precompiled javascript files to your extension project, you should also disable linting for those files.
+In the project-level <code>package.json</code>, add the file paths to the list of ignored files
 to prevent them from being linted.</p>
 <pre><code class="json">  {  
       &quot;eslintIgnore&quot;: [
@@ -1034,9 +992,10 @@ to prevent them from being linted.</p>
 <li>The property value <code>name</code> is the output bundle filename with file extension</li>
 <li><code>src</code> specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use <code>!</code> as a way to negate the inclusion of a file. This is the <a href="https://gulpjs.com/docs/en/api/src">globs syntax expected by gulp</a> (without options).</li>
 </ul>
-<p>When using production build the style files will be minified. Dev build does not minify style files.</p>
-<p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. However name your files using <code>.scss</code> file extension, or override the default configuration: <code>"scss": "./src/**/*.scss",</code> because this means the CLI will by default only look for <code>.scss</code> style files.</p>
-<h4 id="example_2">Example</h4>
+<p>The production build will minify style files. Dev build does not minify style files.</p>
+<p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. Any CSS you write is valid Sass as well.</p>
+<p>When you name stylesheet files, use <code>.scss</code> file extension. The default CLI configuration looks for this file extension. Otherwise you must override this default configuration: <code>"scss": "./src/**/*.scss"</code> to include other file extensions in the style bundles.</p>
+<p><strong>Example</strong></p>
 <p>Sample project-level configuration with multiple style bundles</p>
 <pre><code>  &quot;xtbuild&quot;: {
     &quot;scss_bundles&quot;: [
@@ -1057,11 +1016,12 @@ to prevent them from being linted.</p>
   }
 </code></pre>
 
-<h3 id="localization">Localization</h3>
+<h3 id="text-localization">Text Localization</h3>
 <p>If the extension supports multiple languages, specify all supported languages using key <code>locales_list</code>. The default language value is <code>["en"]</code>. </p>
 <p>This <code>locales_list</code> should be an array that corresponds to a list of subdirectories under <code>locales_dir</code> in the extension project. The default <code>locales_dir</code> is <code>./assets/locales/</code>, which you may change if you want.</p>
 <p>Refer <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list of language codes</a> when naming individual language directories.</p>
-<h4 id="example_3">Example</h4>
+<p>Also read this guide <a href="https://developer.chrome.com/extensions/i18n">to learn how to internationalize extensions</a>.</p>
+<p><strong>Example</strong> </p>
 <p>Multiple locales example with custom path to locales files</p>
 <pre><code>  &quot;xtbuild&quot;: {
       &quot;locales_dir&quot;: &quot;./my/custom/locales/path/&quot;,
@@ -1069,9 +1029,7 @@ to prevent them from being linted.</p>
   }
 </code></pre>
 
-<p><br/></p>
-<p>Given the configuration above, the following project-level directories are expected. </p>
-<p><br/></p>
+<p>The configuration above translates to the following project-level directory structure: </p>
 <table>
 <thead>
 <tr>
@@ -1089,7 +1047,7 @@ to prevent them from being linted.</p>
 <td>Default English dictionary</td>
 </tr>
 <tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>en-GB</code>/messages.json</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>en-GB</code>/myFile.json</td>
 <td>British dictionary</td>
 </tr>
 <tr>
@@ -1106,9 +1064,9 @@ to prevent them from being linted.</p>
 </tr>
 </tbody>
 </table>
-<p>You can break down your locales files into multiple <code>.json</code> files within the language-specific directory as shown in the example above for <code>pl/</code>. This may make the maintenance locales files easier if the files contain multiple entries. The build step will automatically combine all files within a language directory into a single <code>messages.json</code> which is expected from browser extensions.</p>
+<p>You can break down your locales files into multiple <code>.json</code> files within the language-specific directory as shown in the example above for <code>pl/</code>. This may make the maintenance locales files easier if the files contain multiple entries. The build step will automatically combine all files within a language directory into a single <code>messages.json</code> which is expected from a browser extensions.</p>
 <h3 id="image-assets">Image Assets</h3>
-<p>By default extension CLI will look for image assets from the following paths:</p>
+<p>By default extension CLI will look for image assets using these configurations:</p>
 <pre><code>&quot;icons&quot;: [
     &quot;./assets/img/**/*.png&quot;,
     &quot;./assets/img/**/*.gif&quot;,
@@ -1147,7 +1105,7 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../configuration/" title="Configuration" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02-configuration/" title="Configuration" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -1162,7 +1120,7 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
           </a>
         
         
-          <a href="../xt-clean/" title="xt-clean" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../04-xt-clean/" title="xt-clean" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1235,15 +1193,15 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
-      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

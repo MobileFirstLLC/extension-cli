@@ -11,6 +11,8 @@
         <meta name="description" content="Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.">
       
       
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/07-xt-test/">
+      
       
         <meta name="author" content="@mobilefirstllc">
       
@@ -19,13 +21,13 @@
     
     
       
-        <title>Extension CLI • Guide</title>
+        <title>xt-test - Extension CLI • Guide</title>
       
     
     
-      <link rel="stylesheet" href="/extension-cli/assets/stylesheets/main.07c9fbf5.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.07c9fbf5.min.css">
       
-        <link rel="stylesheet" href="/extension-cli/assets/stylesheets/palette.ecd4686e.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecd4686e.min.css">
       
       
         
@@ -43,7 +45,7 @@
     
     
     
-      <link rel="stylesheet" href="/extension-cli/assets/custom.css">
+      <link rel="stylesheet" href="../assets/custom.css">
     
     
       
@@ -65,6 +67,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#xt-test" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -89,7 +96,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              
+              xt-test
             
           </span>
         </div>
@@ -151,7 +158,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -160,7 +169,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/extension-cli/00-index/" class="md-tabs__link">
+        <a href="../00-index/" class="md-tabs__link">
           About
         </a>
       
@@ -173,7 +182,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/extension-cli/01-getting-started/" class="md-tabs__link">
+        <a href="../01-getting-started/" class="md-tabs__link">
           Getting Started
         </a>
       
@@ -186,7 +195,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/extension-cli/03-xt-build/" class="md-tabs__link">
+        <a href="../03-xt-build/" class="md-tabs__link md-tabs__link--active">
           Commands
         </a>
       
@@ -199,7 +208,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/extension-cli/09-release-notes/" class="md-tabs__link">
+        <a href="../09-release-notes/" class="md-tabs__link">
           Resources
         </a>
       
@@ -288,7 +297,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/00-index/" title="Intro" class="md-nav__link">
+    <a href="../00-index/" title="Intro" class="md-nav__link">
       Intro
     </a>
   </li>
@@ -330,7 +339,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/01-getting-started/" title="Installation" class="md-nav__link">
+    <a href="../01-getting-started/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -342,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/02-configuration/" title="Configuration" class="md-nav__link">
+    <a href="../02-configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
   </li>
@@ -357,10 +366,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Commands
@@ -384,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/03-xt-build/" title="xt-build" class="md-nav__link">
+    <a href="../03-xt-build/" title="xt-build" class="md-nav__link">
       xt-build
     </a>
   </li>
@@ -396,7 +407,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/04-xt-clean/" title="xt-clean" class="md-nav__link">
+    <a href="../04-xt-clean/" title="xt-clean" class="md-nav__link">
       xt-clean
     </a>
   </li>
@@ -408,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/05-xt-docs/" title="xt-docs" class="md-nav__link">
+    <a href="../05-xt-docs/" title="xt-docs" class="md-nav__link">
       xt-docs
     </a>
   </li>
@@ -420,7 +431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/06-xt-sync/" title="xt-sync" class="md-nav__link">
+    <a href="../06-xt-sync/" title="xt-sync" class="md-nav__link">
       xt-sync
     </a>
   </li>
@@ -430,11 +441,53 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/extension-cli/07-xt-test/" title="xt-test" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        xt-test
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="xt-test" class="md-nav__link md-nav__link--active">
       xt-test
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -444,7 +497,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/08-xt-create/" title="extension-cli" class="md-nav__link">
+    <a href="../08-xt-create/" title="extension-cli" class="md-nav__link">
       extension-cli
     </a>
   </li>
@@ -486,7 +539,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/09-release-notes/" title="Release Notes" class="md-nav__link">
+    <a href="../09-release-notes/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -498,7 +551,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/10-showcase/" title="Showcase" class="md-nav__link">
+    <a href="../10-showcase/" title="Showcase" class="md-nav__link">
       Showcase
     </a>
   </li>
@@ -510,7 +563,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/12-helpful/" title="Helpful References" class="md-nav__link">
+    <a href="../12-helpful/" title="Helpful References" class="md-nav__link">
       Helpful References
     </a>
   </li>
@@ -522,7 +575,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/11-stack/" title="Tech Stack" class="md-nav__link">
+    <a href="../11-stack/" title="Tech Stack" class="md-nav__link">
       Tech Stack
     </a>
   </li>
@@ -534,7 +587,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/extension-cli/13-cli-development/" title="CLI Development" class="md-nav__link">
+    <a href="../13-cli-development/" title="CLI Development" class="md-nav__link">
       CLI Development
     </a>
   </li>
@@ -594,12 +647,92 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/07-xt-test.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="xt-test">xt-test</h1>
+<hr />
+<p class='page-intro'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
 
+<hr />
+<p>This command will setup extension testing environment that is pre-initialized
+with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised),
+and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage. 
+Also the following browser features are initialized: window, chrome. Window
+is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
+chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
+<p>This command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>.</p>
+<p>Mocha will execute with babel, meaning you can use this test environment with ES6 modules.</p>
+<p>You may extend this test environment within an extension project; this is simply the base setup
+for running unit tests. Or you may create your own test environment if this is not suitable.</p>
+<h2 id="commands">Commands</h2>
+<p>Default command: run unit tests</p>
+<pre><code>xt-test
+</code></pre>
+
+<p>Execute tests and keep watching changes</p>
+<pre><code>xt-test --watch
+</code></pre>
+
+<p>Execute tests and pipe result to <a href="https://coveralls.io">coveralls.io</a></p>
+<pre><code>xt-test --coverage
+</code></pre>
+
+<p>Get help using this command</p>
+<pre><code>xt-test --help
+</code></pre>
+
+<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run test</code>. 
+See example below.</p>
+<pre><code>&quot;scripts&quot;:{
+  &quot;test&quot;: &quot;xt-test&quot;
+}
+</code></pre>
+                
+              
               
                 
 
@@ -612,6 +745,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../06-xt-sync/" title="xt-sync" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                xt-sync
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../08-xt-create/" title="extension-cli" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                extension-cli
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -669,15 +837,15 @@
       
     </div>
     
-      <script src="/extension-cli/assets/javascripts/vendor.36cbf620.min.js"></script>
-      <script src="/extension-cli/assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "/extension-cli/",
+          base: "..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "/extension-cli/assets/javascripts/worker/search.7f7c8775.min.js"
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
