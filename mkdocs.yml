@@ -9,8 +9,8 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - About:
-    - 'Intro': 00-index.md
+  - Intro:
+    - 'Hello World': index.md
   - "Getting Started":
     - 'Installation': 01-getting-started.md
     - 'Configuration': 02-configuration.md

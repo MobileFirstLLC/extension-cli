@@ -185,7 +185,7 @@ const generateDirectoryName = name => {
     return name.toLowerCase()
         .replace(/[\u{0080}-\u{FFFF}]/gu, "")
         .replace(/ /g, "-");
-}
+};
 
 const writeImage = (filename, data) => {
     fs.writeFileSync(filename, data.replace(/^data:image\/png;base64,/, ""), 'base64');
