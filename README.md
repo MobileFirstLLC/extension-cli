@@ -141,6 +141,10 @@ chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 You may extend this test environment within a single project. This is simply the base setup
 for running unit tests. Or create your own testing environment at project level if this is not suitable.
 
-## Read the Docs!
+## CLI User: Read the Docs!
 
 **[View Complete User Guide →](https://oss.mobilefirst.me/extension-cli/)**
+
+## CLI Developer Guide
+
+If you are interested in extending this project or making your own fork **[see this guide &rarr;](https://oss.mobilefirst.me/extension-cli/13-cli-development/)**
