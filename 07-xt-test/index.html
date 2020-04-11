@@ -484,6 +484,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -672,6 +679,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -708,22 +722,25 @@ chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</
 <p>You may extend this test environment within an extension project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.</p>
 <h2 id="commands">Commands</h2>
-<p>Default command: run unit tests</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p><strong>Run unit tests (default)</strong></p>
 <pre><code>xt-test
 </code></pre>
 
-<p>Execute tests and keep watching changes</p>
-<pre><code>xt-test --watch
+<p><strong>Execute tests and keep watching changes</strong></p>
+<pre><code>xt-test {-w|--watch}
 </code></pre>
 
-<p>Execute tests and pipe result to <a href="https://coveralls.io">coveralls.io</a></p>
-<pre><code>xt-test --coverage
+<p><strong>Execute tests then pipe result to <a href="https://coveralls.io">coveralls.io</a></strong></p>
+<p>The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.</p>
+<pre><code>xt-test {-c|--coverage}
 </code></pre>
 
-<p>Get help using this command</p>
+<p><strong>Get help using this command</strong></p>
 <pre><code>xt-test --help
 </code></pre>
 
+<h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run test</code>. 
 See example below.</p>

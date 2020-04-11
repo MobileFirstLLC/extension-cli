@@ -461,6 +461,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
   </a>
@@ -707,6 +714,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
   </a>
@@ -768,18 +782,20 @@
 <p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.</p>
 <p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more about templating here</a>.</p>
 <h2 id="commands">Commands</h2>
-<p>Default command</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p><strong>Default command</strong></p>
 <pre><code>xt-docs
 </code></pre>
 
-<p>Command using custom configuration file path</p>
+<p><strong>Command using custom configuration file path</strong></p>
 <pre><code>xt-docs {-c|--config} &quot;/path/to/config.json&quot;
 </code></pre>
 
-<p>Get help using this command</p>
+<p><strong>Get help using this command</strong></p>
 <pre><code>xt-docs --help
 </code></pre>
 
+<h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-docs</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run docs</code>. See example below.</p>
 <pre><code>&quot;scripts&quot;:{

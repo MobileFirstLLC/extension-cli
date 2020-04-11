@@ -448,6 +448,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -672,6 +679,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -699,30 +713,32 @@
 <hr />
 <p>Clean operation iterates over files and directories listed in the project <code>.gitignore</code> file, and removes all ignored files and directories, except <code>node_modules/</code>, <code>.idea/</code>, and <code>.vscode/</code>. <code>.idea</code> is a collection of configuration files used by WebStorm IDE, and <code>.vscode</code> is the same for Visual Studio Code. The IDE will generate them automatically if they are absent. To remove these three directories, you must explicitly pass a flag to delete each directory respectively.</p>
 <h2 id="commands">Commands</h2>
-<p>Remove ignored files (default)</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p><strong>Remove ignored files (default)</strong></p>
 <pre><code>xt-clean
 </code></pre>
 
-<p>Clear ignored files, including <code>node_modules</code></p>
+<p><strong>Clear ignored files, including <code>node_modules</code></strong></p>
 <pre><code>xt-clean {-m|--modules}
 </code></pre>
 
-<p>Clear ignored files, including <code>.idea/</code> directory</p>
+<p><strong>Clear ignored files, including <code>.idea/</code> directory</strong></p>
 <pre><code>xt-clean {-i|--idea}
 </code></pre>
 
-<p>Clear ignored files, including <code>.vscode/</code> directory</p>
+<p><strong>Clear ignored files, including <code>.vscode/</code> directory</strong></p>
 <pre><code>xt-clean {-v|--vscode}
 </code></pre>
 
-<p>Clear absolutely all ignored files</p>
+<p><strong>Clear absolutely all ignored files</strong></p>
 <pre><code>xt-clean -v -i -m
 </code></pre>
 
-<p>Get help using this command</p>
+<p><strong>Get help using this command</strong></p>
 <pre><code>xt-clean --help
 </code></pre>
 
+<h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-clean</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run clean</code> See example below. </p>
 <pre><code>&quot;scripts&quot;:{

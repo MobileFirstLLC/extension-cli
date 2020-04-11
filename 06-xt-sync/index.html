@@ -472,6 +472,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -672,6 +679,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#packagejson-scripts" class="md-nav__link">
+    Package.json scripts
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -708,31 +722,33 @@ files.</p>
 an individual project, it is not advisable to upgrade them in this manner. 
 Instead you should upgrade such configuration files manually.</p>
 <h2 id="commands">Commands</h2>
-<p><strong>You must pass at least one flag with this command.</strong></p>
-<p>Synchronize all configuration files</p>
-<pre><code>xt-sync --all
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p>You must pass at least one flag with this command.</p>
+<p><strong>Synchronize all configuration files</strong></p>
+<pre><code>xt-sync {-a|--all}
 </code></pre>
 
-<p>Synchronize ESLint configuration file</p>
-<pre><code>xt-sync --eslint
+<p><strong>Synchronize ESLint configuration file</strong></p>
+<pre><code>xt-sync {-e|--eslint}
 </code></pre>
 
-<p>Synchronize Gitlab CI configuration file</p>
-<pre><code>xt-sync --gitlab
+<p><strong>Synchronize Gitlab CI configuration file</strong></p>
+<pre><code>xt-sync {-l|--gitlab}
 </code></pre>
 
-<p>Synchronize Travis CI configuration file</p>
-<pre><code>xt-sync --travis
+<p><strong>Synchronize Travis CI configuration file</strong></p>
+<pre><code>xt-sync {-t|--travis}
 </code></pre>
 
-<p>Synchronize .gitignore file</p>
-<pre><code>xt-sync --gitignore
+<p><strong>Synchronize .gitignore file</strong></p>
+<pre><code>xt-sync {-g|--gitignore}
 </code></pre>
 
-<p>Get help using this command</p>
+<p><strong>Get help using this command</strong></p>
 <pre><code>xt-sync --help
 </code></pre>
 
+<h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using <code>npx xt-sync --all</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run sync</code>.
 See example below.</p>
