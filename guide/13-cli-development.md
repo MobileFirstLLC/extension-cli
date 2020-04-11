@@ -40,9 +40,9 @@ Path | Description
 
 3. The docs use Python package called `mkdocs`. You need to have that installed.
 
-    1. Create a virtual environment: `python3 -m venv tutorial-env`
-    2. Activate the environment: `source tutorial-env/bin/activate`
-       <br/>(Win: `tutorial-env\Scripts\activate.bat`)
+    1. Create a virtual environment: `python3 -m venv env`
+    2. Activate the environment: `source env/bin/activate`
+       <br/>(Win: `env\Scripts\activate.bat`)
     3. Install requirements `pip install -r requirements.txt`
 
 4. Run the docs locally: `mkdocs serve`
