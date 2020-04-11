@@ -23,30 +23,36 @@ for running unit tests. Or you may create your own test environment if this is n
 
 ## Commands
 
-Default command: run unit tests
+Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+
+
+**Run unit tests (default)**
 
 ```
 xt-test
 ```
 
-Execute tests and keep watching changes
+**Execute tests and keep watching changes**
 
 ```
-xt-test --watch
+xt-test {-w|--watch}
 ```
 
-Execute tests and pipe result to [coveralls.io](https://coveralls.io)
+**Execute tests then pipe result to [coveralls.io](https://coveralls.io)**
+
+The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.
 
 ```
-xt-test --coverage
+xt-test {-c|--coverage}
 ```
 
-Get help using this command
+**Get help using this command**
 
 ```
 xt-test --help
 ``` 
 
+## Package.json scripts
 
 After installing extension-cli, you can run these commands from a terminal using syntax `npx xt-test`.
  

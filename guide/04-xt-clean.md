@@ -12,42 +12,45 @@ Clean operation iterates over files and directories listed in the project `.giti
 
 ## Commands
 
-Remove ignored files (default)
+Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+
+**Remove ignored files (default)**
 
 ```
 xt-clean
 ```
 
-Clear ignored files, including `node_modules`
+**Clear ignored files, including `node_modules`**
 
 ```
 xt-clean {-m|--modules}
 ```
 
-Clear ignored files, including `.idea/` directory
+**Clear ignored files, including `.idea/` directory**
 
 ```
 xt-clean {-i|--idea}
 ```
 
-Clear ignored files, including `.vscode/` directory
+**Clear ignored files, including `.vscode/` directory**
 
 ```
 xt-clean {-v|--vscode}
 ```
 
-Clear absolutely all ignored files
+**Clear absolutely all ignored files**
 
 ```
 xt-clean -v -i -m
 ```
 
-Get help using this command
+**Get help using this command**
 
 ```
 xt-clean --help
 ``` 
 
+## Package.json scripts
 
 After installing extension-cli, you can run these commands from a terminal using syntax `npx xt-clean`.
  

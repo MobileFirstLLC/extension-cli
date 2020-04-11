@@ -13,23 +13,27 @@ You can use any compatible template of choice to skin your docs. Learn [more abo
 
 ## Commands
 
-Default command
+Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+
+**Default command**
 
 ```
 xt-docs
 ```
  
-Command using custom configuration file path
+**Command using custom configuration file path**
 
 ```
 xt-docs {-c|--config} "/path/to/config.json"
 ```
  
-Get help using this command
+**Get help using this command**
 
 ```
 xt-docs --help
 ``` 
+
+## Package.json scripts
 
 After installing extension-cli, you can run these commands from a terminal using syntax `npx xt-docs`.
  

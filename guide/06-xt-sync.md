@@ -22,44 +22,48 @@ Instead you should upgrade such configuration files manually.
 
 ## Commands
 
-**You must pass at least one flag with this command.**
+Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
 
-Synchronize all configuration files
+You must pass at least one flag with this command.
 
-```
-xt-sync --all
-```
 
-Synchronize ESLint configuration file
+**Synchronize all configuration files**
 
 ```
-xt-sync --eslint
+xt-sync {-a|--all}
 ```
 
-Synchronize Gitlab CI configuration file
+**Synchronize ESLint configuration file**
 
 ```
-xt-sync --gitlab
+xt-sync {-e|--eslint}
 ```
 
-Synchronize Travis CI configuration file
+**Synchronize Gitlab CI configuration file**
 
 ```
-xt-sync --travis
+xt-sync {-l|--gitlab}
+```
+
+**Synchronize Travis CI configuration file**
+
+```
+xt-sync {-t|--travis}
 ``` 
 
-Synchronize .gitignore file
+**Synchronize .gitignore file**
 
 ```
-xt-sync --gitignore
+xt-sync {-g|--gitignore}
 ``` 
 
-Get help using this command
+**Get help using this command**
 
 ```
 xt-sync --help
 ``` 
 
+## Package.json scripts
 
 After installing extension-cli, you can run these commands from a terminal using `npx xt-sync --all`.
  
