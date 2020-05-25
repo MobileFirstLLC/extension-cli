@@ -2,6 +2,7 @@
   "name": "extension-cli",
   "version": "0.8.10",
   "description": "Chrome Extension CLI tools",
+  "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
     "type": "git",
     "url": "https://github.com/MobileFirstLLC/extension-cli.git"
