@@ -17,5 +17,10 @@
   ],
   "copyAsIs": [],
   "locales_dir": "./assets/locales/",
-  "locales_list": ["en"]
+  "locales_list": [
+    "en"
+  ],
+  "webpack": {
+    "mode": "production"
+  }
 }
