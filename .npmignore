@@ -13,3 +13,6 @@ docs/
 guide/
 site/
 tutorial-env/
+.eslintrc
+inch.json
+mkdocs.yml
