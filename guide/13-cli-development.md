@@ -16,7 +16,7 @@ Path | Description
 └ `/*` | Application root; various project config files
 
 
-## Debugging the CLI Locally
+## Debugging and Extending the CLI Locally
 
 1. [Fork the repo](https://github.com/MobileFirstLLC/extension-cli/fork)
 
@@ -30,21 +30,26 @@ Path | Description
 
 6. When debugging the build command, you may need to go into `./config/build.json` and change value of `projectRootDir` as it assumes it is running from `node_modules` of the extension project. This may not be true if you are using a locally linked package.
 
-7. When you are done, unlink the package: run `npm unlink --no-save extension-cli` on your project's directory to remove the local symlink. Run `npm unlink` on the module's directory to remove the global symlink.
+7. When you are done unlink the package: 
 
-## Debugging & Extending Documentation
+    1. run `npm unlink --no-save extension-cli` on your project's directory to remove the local symlink. 
+    
+    2. Run `npm unlink extension-cli` on the module's directory to remove the global symlink.
+
+## Debugging & Extending CLI Documentation
 
 1. [Fork the repo](https://github.com/MobileFirstLLC/extension-cli/fork)
 
 2. Clone the forked repo and launch your favorite markdown editor + terminal.
 
-3. The docs use Python package called `mkdocs`. You need to have that installed.
+3. The docs use Python package called `mkdocs`. You need to have python and `mkdocs` installed if you want to preview your changes (or skip this step if you are not interested in previewing the changes!)
 
     1. Create a virtual environment: `python3 -m venv env`
     2. Activate the environment: `source env/bin/activate`
        <br/>(Win: `env\Scripts\activate.bat`)
     3. Install requirements `pip install -r requirements.txt`
+    4. Run the docs locally: `mkdocs serve`
 
-4. Run the docs locally: `mkdocs serve`
+4. All written docs are in the `guide` directory. These are the files you want to edit to make changes to the documentation. 
 
-5. All written docs are in the `guide` directory. The configs are in `mkdocs.yml` in the root. These are the files you want to edit to make changes to the documentation.
+5. After editing the docs, commit your changes. Travis CI is used to compile and publish the docs automatically.
