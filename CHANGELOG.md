@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.10](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9...v0.8.10) (2020-05-25)
+
+
+### Bug Fixes
+
+* **xt-build:** [#2](https://github.com/MobileFirstLLC/extension-cli/issues/2) Updating manifest while watching causes looping behavior ([935377a](https://github.com/MobileFirstLLC/extension-cli/commit/935377a2ee4ebbf68e1bd2165de6a6dd641397b9))
+* **xt-build:** [#3](https://github.com/MobileFirstLLC/extension-cli/issues/3) make webpack options configurable to user ([74af14f](https://github.com/MobileFirstLLC/extension-cli/commit/74af14f3ed6eacf26f7534636412b20151b76909))
+* **xt-build:** JS build on watch doesn't rebuild js files correctly [#4](https://github.com/MobileFirstLLC/extension-cli/issues/4) ([e80c2d6](https://github.com/MobileFirstLLC/extension-cli/commit/e80c2d635e15a27c6c5f0c53fa63e25ba50a6233))
+* **xt-build:** make webpack options configurable to user [#3](https://github.com/MobileFirstLLC/extension-cli/issues/3) ([4148890](https://github.com/MobileFirstLLC/extension-cli/commit/4148890e1c7d925214974710c515746009033f91))
+
 ### [0.8.9](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9-alpha.2...v0.8.9) (2020-04-10)
 
 ### [0.8.9-alpha.2](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9-alpha.1...v0.8.9-alpha.2) (2020-04-10)
