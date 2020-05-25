@@ -1,5 +1,11 @@
 ## Release Notes
 
+### 0.8.10 (2020-05-25)
+
+- `xt-build` bug fixes
+- Made webpack options configurable, to enable adding loaders etc.
+- Upgraded project dependencies
+
 ### 0.8.9 (2020-04-10)
 
 - Implemented command to create new extension
