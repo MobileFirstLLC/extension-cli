@@ -31,7 +31,7 @@ if (customPaths) {
 const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
-    let bundles = Array.isArray(paths.js_bundles) ? paths.js_bundles : [];
+    let bundles = [...Array.isArray(paths.js_bundles) ? paths.js_bundles : []];
 
     const buildScript = () => {
         if (!bundles.length) {
@@ -149,12 +149,12 @@ const release = done => {
 
 const watch = () => {
     console.log('watching...');
-    gulp.watch(paths.js, scripts);
+    gulp.watch([paths.js], scripts);
     gulp.watch([paths.scss], styles);
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(paths.icons, copyImages);
-    gulp.watch(paths.locales + '**/*.json', locales);
-    gulp.watch(paths.html, buildHtml);
+    gulp.watch([paths.locales_dir + '**/*.json'], locales);
+    gulp.watch([paths.html], buildHtml);
 };
 
 const build = gulp.series(
