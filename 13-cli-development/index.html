@@ -555,15 +555,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-the-cli-locally" class="md-nav__link">
-    Debugging the CLI Locally
+  <a href="#debugging-and-extending-the-cli-locally" class="md-nav__link">
+    Debugging and Extending the CLI Locally
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-extending-documentation" class="md-nav__link">
-    Debugging &amp; Extending Documentation
+  <a href="#debugging-extending-cli-documentation" class="md-nav__link">
+    Debugging &amp; Extending CLI Documentation
   </a>
   
 </li>
@@ -655,15 +655,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-the-cli-locally" class="md-nav__link">
-    Debugging the CLI Locally
+  <a href="#debugging-and-extending-the-cli-locally" class="md-nav__link">
+    Debugging and Extending the CLI Locally
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-extending-documentation" class="md-nav__link">
-    Debugging &amp; Extending Documentation
+  <a href="#debugging-extending-cli-documentation" class="md-nav__link">
+    Debugging &amp; Extending CLI Documentation
   </a>
   
 </li>
@@ -722,7 +722,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="debugging-the-cli-locally">Debugging the CLI Locally</h2>
+<h2 id="debugging-and-extending-the-cli-locally">Debugging and Extending the CLI Locally</h2>
 <ol>
 <li>
 <p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the repo</a></p>
@@ -743,10 +743,18 @@
 <p>When debugging the build command, you may need to go into <code>./config/build.json</code> and change value of <code>projectRootDir</code> as it assumes it is running from <code>node_modules</code> of the extension project. This may not be true if you are using a locally linked package.</p>
 </li>
 <li>
-<p>When you are done, unlink the package: run <code>npm unlink --no-save extension-cli</code> on your project's directory to remove the local symlink. Run <code>npm unlink</code> on the module's directory to remove the global symlink.</p>
+<p>When you are done unlink the package: </p>
+<ol>
+<li>
+<p>run <code>npm unlink --no-save extension-cli</code> on your project's directory to remove the local symlink. </p>
+</li>
+<li>
+<p>Run <code>npm unlink extension-cli</code> on the module's directory to remove the global symlink.</p>
 </li>
 </ol>
-<h2 id="debugging-extending-documentation">Debugging &amp; Extending Documentation</h2>
+</li>
+</ol>
+<h2 id="debugging-extending-cli-documentation">Debugging &amp; Extending CLI Documentation</h2>
 <ol>
 <li>
 <p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the repo</a></p>
@@ -755,19 +763,20 @@
 <p>Clone the forked repo and launch your favorite markdown editor + terminal.</p>
 </li>
 <li>
-<p>The docs use Python package called <code>mkdocs</code>. You need to have that installed.</p>
+<p>The docs use Python package called <code>mkdocs</code>. You need to have python and <code>mkdocs</code> installed if you want to preview your changes (or skip this step if you are not interested in previewing the changes!)</p>
 <ol>
 <li>Create a virtual environment: <code>python3 -m venv env</code></li>
 <li>Activate the environment: <code>source env/bin/activate</code>
    <br/>(Win: <code>env\Scripts\activate.bat</code>)</li>
 <li>Install requirements <code>pip install -r requirements.txt</code></li>
+<li>Run the docs locally: <code>mkdocs serve</code></li>
 </ol>
 </li>
 <li>
-<p>Run the docs locally: <code>mkdocs serve</code></p>
+<p>All written docs are in the <code>guide</code> directory. These are the files you want to edit to make changes to the documentation. </p>
 </li>
 <li>
-<p>All written docs are in the <code>guide</code> directory. The configs are in <code>mkdocs.yml</code> in the root. These are the files you want to edit to make changes to the documentation.</p>
+<p>After editing the docs, commit your changes. Travis CI is used to compile and publish the docs automatically.</p>
 </li>
 </ol>
                 
