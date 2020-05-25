@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "0.8.9",
+  "version": "0.9.0",
   "description": "Chrome Extension CLI tools",
   "repository": {
     "type": "git",
@@ -42,7 +42,7 @@
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
-    "eslint": "^7.0.0",
+    "eslint": "^7.1.0",
     "foodoc": "^0.0.9",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -52,7 +52,7 @@
     "gulp-json-editor": "^2.5.4",
     "gulp-jsonminify": "^1.1.0",
     "gulp-load-plugins": "^2.0.3",
-    "gulp-merge-json": "^2.1.0",
+    "gulp-merge-json": "^2.1.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
@@ -61,7 +61,7 @@
     "jsdoc": "^3.6.4",
     "jsdom": "16.2.2",
     "jsdom-global": "3.0.2",
-    "mocha": "^7.1.2",
+    "mocha": "^7.2.0",
     "npm": "^6.14.5",
     "nyc": "^15.0.1",
     "prompts": "^2.3.2",
@@ -71,7 +71,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "documentation": "^12.3.0",
+    "documentation": "^13.0.0",
     "standard-version": "^8.0.0"
   }
 }
