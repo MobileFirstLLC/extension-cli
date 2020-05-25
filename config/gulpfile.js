@@ -41,9 +41,7 @@ const scripts = done => {
         const b = bundles.pop();
 
         return gulp.src(b.src)
-            .pipe(webpack({
-                mode: 'production' // always use this option !
-            }))
+            .pipe(webpack(paths.webpack))
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
                 path.basename = b.name;
