@@ -90,15 +90,10 @@ const copyAs = done => {
 
 const copyManifest = () => {
 
-    const {version} = pkg,
-        manifest_dir = require('path').dirname(paths.manifest);
+    const {version} = pkg;
 
     return gulp.src(paths.manifest)
-        .pipe(plugins.jsonEditor({
-            'version': version,
-            'version_name': version
-        }))
-        .pipe(gulp.dest(manifest_dir))
+        .pipe(plugins.jsonEditor({version}))
         .pipe(plugins.jsonminify())
         .pipe(gulp.dest(paths.dist));
 };
