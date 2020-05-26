@@ -31,7 +31,8 @@ if (customPaths) {
 const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
-    let bundles = [...Array.isArray(paths.js_bundles) ? paths.js_bundles : []];
+    const _bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : []);
+    let bundles = [..._bundles];
 
     const buildScript = () => {
         if (!bundles.length) {
@@ -41,7 +42,7 @@ const scripts = done => {
         const b = bundles.pop();
 
         return gulp.src(b.src)
-            .pipe(webpack(paths.webpack))
+            .pipe(webpack({'mode': 'production'}))
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
                 path.basename = b.name;

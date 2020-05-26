@@ -108,10 +108,7 @@ The CLI uses a default build configuration file shown below. This tells the exte
   "locales_dir": "./assets/locales/",
   "locales_list": [
     "en"
-  ],
-  "webpack": {
-    "mode": "production"
-  }
+  ]
 }
 
 ```
@@ -157,18 +154,6 @@ This configuration will produce two javascript files in the `/dist` directory.
     ]
   }
 ```
-
-### Overriding and Adding Webpack Options
-
-Any script files in the project will be compiled and minified using webpack. There default configs for webpack are:
-
-```text
-  "webpack": {
-    "mode": "production"
-  }
-```
-
-You can override these settings in your `xt-build` configuration. Note however that you should always use production mode with webpack, because the development output may not be allowed to execute in the extension context.
 
 ### Skip Javascript Compilation and Linting
 
