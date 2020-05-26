@@ -24,7 +24,7 @@ Path | Description
 
 3. Install packages `npm install`
 
-4. [Link the local package](https://docs.npmjs.com/cli/link.html) `npm link extension-cli`
+4. [Link the local package](https://docs.npmjs.com/cli/link.html) `npm link` (append `sudo` if necessary)
 
 5. You can now run any commands against the local source; you will need an extension project for this to make any sense though. You can create a new starter project by running `npx extension-cli`.
 
@@ -34,7 +34,7 @@ Path | Description
 
     1. run `npm unlink --no-save extension-cli` on your project's directory to remove the local symlink. 
     
-    2. Run `npm unlink extension-cli` on the module's directory to remove the global symlink.
+    2. Run `npm unlink` on the module's directory to remove the global symlink.
 
 ## Debugging & Extending CLI Documentation
 

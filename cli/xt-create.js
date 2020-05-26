@@ -96,6 +96,7 @@ const generateFiles = ({name, description, homepage, version}) => {
                 "clean": "xt-clean",
                 "docs": "xt-docs",
                 "test": "xt-test",
+                "sync": "xt-sync --all"
             },
             "babel": {
                 "presets": [
@@ -111,8 +112,8 @@ const generateFiles = ({name, description, homepage, version}) => {
             "xtdocs": {
                 "source": {"include": ["README.md", "src"]},
                 "templates": {
-                    "systemName": {name},
-                    "systemSummary": {description},
+                    "systemName": name,
+                    "systemSummary": description,
                     "systemColor": "#4CAF50"
                 }
             },
@@ -146,9 +147,9 @@ This extension was bootstrapped with [Extension CLI](https://oss.mobilefirst.me/
 | \`npm run start\` | build extension, watch file changes |
 | \`npm run build\` | generate release version |
 | \`npm run docs\` | generate source code docs |
-| \`npm clean\` | remove temporary files |
-| \`npm test\` | run unit tests |
-| \`npm sync\` | update config files |
+| \`npm run clean\` | remove temporary files |
+| \`npm run test\` | run unit tests |
+| \`npm run sync\` | update config files |
 
 ### Learn more
 

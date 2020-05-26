@@ -11,14 +11,14 @@ before_script:
   - npm run test -- --coverage
 
 script:
-  - npm run guide
+  - npm run docs
   - npm run build
 
 deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $github_token
-    local_dir: guide
+    local_dir: /public/documentation
     on:
       branch: master
 
@@ -28,8 +28,3 @@ deploy:
     file: $zip
     on:
       tags: true
-
-#after_deploy:
-#  - if [ ! -z  "$TRAVIS_TAG" ]; then
-#      npx cws-upload $cid $sec $tkn $zip $eid;
-#    fi

@@ -86,8 +86,8 @@ fs.writeFileSync(tmpFile, JSON.stringify(defaultConfig));
 const bat = exec(util.format('"%s" -c %s', jsdoc, tmpFile),
     (_, stdout, stderr) => {
 
-        // console.log(stdout);
-        // console.log(stderr);
+        console.log(stdout);
+        console.log(stderr);
 
         del.sync(tmpFile);
         process.exit(0);

@@ -21,7 +21,7 @@ pages:
   stage: pages
   script:
     - npm run test
-    - npm run guide
+    - npm run docs
   artifacts:
     paths:
       - public/
