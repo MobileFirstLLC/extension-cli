@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.11](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.10...v0.8.11) (2020-05-26)
+
+
+### Bug Fixes
+
+* **xt-docs:** fix docs command related issue with init configs ([88c5f58](https://github.com/MobileFirstLLC/extension-cli/commit/88c5f58986b9b2c33c8b86d774e466c7a9f24e03))
+
 ### [0.8.10](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.9...v0.8.10) (2020-05-25)
 
 
