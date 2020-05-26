@@ -1,5 +1,10 @@
 ## Release Notes
 
+### 0.8.11 (2020-05-25)
+
+- fix issue with create command docs configs
+- add new/missing docs dependency
+
 ### 0.8.10 (2020-05-25)
 
 - `xt-build` bug fixes
