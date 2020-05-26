@@ -27,7 +27,6 @@
   ],
   "scripts": {
     "test": "echo \"Pass: no tests specified\" && exit 0",
-    "readme": "documentation readme cli/* -f md --section=Commands --markdown-toc=false",
     "release": "standard-version"
   },
   "license": "MIT",
@@ -73,7 +72,6 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "documentation": "^13.0.0",
     "standard-version": "^8.0.0"
   }
 }
