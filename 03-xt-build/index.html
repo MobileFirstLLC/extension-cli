@@ -17,7 +17,7 @@
         <meta name="author" content="@mobilefirstllc">
       
       <link rel="shortcut icon" href="/extension-cli/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
@@ -25,9 +25,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.71dfd922.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.616af814.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -448,13 +448,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overriding-and-adding-webpack-options" class="md-nav__link">
-    Overriding and Adding Webpack Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
     Skip Javascript Compilation and Linting
   </a>
@@ -767,13 +760,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#overriding-and-adding-webpack-options" class="md-nav__link">
-    Overriding and Adding Webpack Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
     Skip Javascript Compilation and Linting
   </a>
@@ -908,10 +894,7 @@ places:</p>
   &quot;locales_dir&quot;: &quot;./assets/locales/&quot;,
   &quot;locales_list&quot;: [
     &quot;en&quot;
-  ],
-  &quot;webpack&quot;: {
-    &quot;mode&quot;: &quot;production&quot;
-  }
+  ]
 }
 
 </code></pre>
@@ -950,14 +933,6 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
   }
 </code></pre>
 
-<h3 id="overriding-and-adding-webpack-options">Overriding and Adding Webpack Options</h3>
-<p>Any script files in the project will be compiled and minified using webpack. There default configs for webpack are:</p>
-<pre><code class="text">  &quot;webpack&quot;: {
-    &quot;mode&quot;: &quot;production&quot;
-  }
-</code></pre>
-
-<p>You can override these settings in your <code>xt-build</code> configuration. Note however that you should always use production mode with webpack, because the development output may not be allowed to execute in the extension context.</p>
 <h3 id="skip-javascript-compilation-and-linting">Skip Javascript Compilation and Linting</h3>
 <p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. The build command will copy specified files exactly without any modification to the root of the output directory. Directory path will be flattened.</p>
 <p><strong>Example</strong></p>
