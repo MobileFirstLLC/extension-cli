@@ -68,7 +68,7 @@
     "prompts": "^2.3.2",
     "sinon": "^9.0.2",
     "sinon-chrome": "^3.0.1",
-    "yargs": "^15.4.1",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.4.1"
   }
 }
