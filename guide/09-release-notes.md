@@ -1,5 +1,13 @@
 ## Release Notes
 
+### 0.8.13 (2020-07-26)
+
+- updated packages
+
+### 0.8.12 (2020-05-26)
+
+- update build command
+
 ### 0.8.11 (2020-05-25)
 
 - fix issue with create command docs configs
