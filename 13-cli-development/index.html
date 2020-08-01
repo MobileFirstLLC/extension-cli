@@ -562,8 +562,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-extending-cli-documentation" class="md-nav__link">
-    Debugging &amp; Extending CLI Documentation
+  <a href="#editing-these-docs" class="md-nav__link">
+    Editing These Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-extending-cli-documentation-locally" class="md-nav__link">
+    Debugging &amp; Extending CLI Documentation Locally
   </a>
   
 </li>
@@ -662,8 +669,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debugging-extending-cli-documentation" class="md-nav__link">
-    Debugging &amp; Extending CLI Documentation
+  <a href="#editing-these-docs" class="md-nav__link">
+    Editing These Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-extending-cli-documentation-locally" class="md-nav__link">
+    Debugging &amp; Extending CLI Documentation Locally
   </a>
   
 </li>
@@ -734,7 +748,7 @@
 <p>Install packages <code>npm install</code></p>
 </li>
 <li>
-<p><a href="https://docs.npmjs.com/cli/link.html">Link the local package</a> <code>npm link</code> (append <code>sudo</code> if necessary)</p>
+<p><a href="https://docs.npmjs.com/cli/link.html">Link the local package</a> <code>npm link</code> (prepend <code>sudo</code> if necessary)</p>
 </li>
 <li>
 <p>You can now run any commands against the local source; you will need an extension project for this to make any sense though. You can create a new starter project by running <code>npx extension-cli</code>.</p>
@@ -746,15 +760,19 @@
 <p>When you are done unlink the package: </p>
 <ol>
 <li>
-<p>run <code>npm unlink --no-save extension-cli</code> on your project's directory to remove the local symlink. </p>
+<p>run <code>npm unlink --no-save extension-cli</code> on your extension project's directory to remove the local symlink. </p>
 </li>
 <li>
-<p>Run <code>npm unlink</code> on the module's directory to remove the global symlink.</p>
+<p>Run <code>npm unlink</code> on the extension-cli root directory to remove the global symlink.</p>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="debugging-extending-cli-documentation">Debugging &amp; Extending CLI Documentation</h2>
+<h2 id="editing-these-docs">Editing These Docs</h2>
+<p>If you are not interested in the layout of this documentation site, just edit the markdown directly.
+There is a pen icon linking to the markdown source on each page of these docs.</p>
+<h2 id="debugging-extending-cli-documentation-locally">Debugging &amp; Extending CLI Documentation Locally</h2>
+<p>When you want to edit the layout and theme of these docs:</p>
 <ol>
 <li>
 <p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the repo</a></p>
