@@ -138,7 +138,7 @@ const generateFiles = ({name, description, homepage, version}) => {
         readme: {
             text: `# ${name}\n\n${description}\n\n## Development 
 
-This extension was bootstrapped with [Extension CLI](https://oss.mobilefirst.me/extension-cli/)!
+This extension was created with [Extension CLI](https://oss.mobilefirst.me/extension-cli/)!
 
 ### Available Commands
 
@@ -151,7 +151,7 @@ This extension was bootstrapped with [Extension CLI](https://oss.mobilefirst.me/
 | \`npm run test\` | run unit tests |
 | \`npm run sync\` | update config files |
 
-### Learn more
+### Learn More
 
 Read this guide if you are new to extension development:
 
