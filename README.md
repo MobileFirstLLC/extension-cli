@@ -25,7 +25,7 @@ a systematic way to build, test and document extension projects.**
 
 -   **Linting** — Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        
 
--   **.zip Generation** — Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions)                                                                                         
+-   **.zip Generation** — Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions), [Edge Add-On Marketplace](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home), and other compatible marketplaces.                                                                                       
 
 -   **Source Code Docs** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
 
