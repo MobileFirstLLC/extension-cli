@@ -15,6 +15,8 @@ a systematic way to build, test and document extension projects.**
 
 * * *
 
+![feature image](https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5)
+
 ## Features
 
 -   **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/))                                                                                                           
