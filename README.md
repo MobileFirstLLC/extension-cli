@@ -11,7 +11,8 @@
 
 
 **Extension CLI is a command-line application that facilitates rapid chrome extension development by providing
-a systematic way to build, test and document extension projects.**
+a systematic way to build, test and document extension projects. It handles the project setup to let you focus 
+on the extension you are creating.**
 
 * * *
 
