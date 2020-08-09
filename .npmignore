@@ -16,3 +16,4 @@ tutorial-env/
 .eslintrc
 inch.json
 mkdocs.yml
+.npmrc
