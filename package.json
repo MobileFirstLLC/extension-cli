@@ -5,7 +5,7 @@
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MobileFirstLLC/extension-cli.git"
+    "url": "https://github.com/mobilefirstllc/extension-cli.git"
   },
   "author": {
     "name": "Mobile First>",
