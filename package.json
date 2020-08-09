@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "0.8.15",
+  "version": "0.8.16",
   "description": "Chrome Extension CLI tools",
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
@@ -29,7 +29,9 @@
     "test": "echo \"Pass: no tests specified\" && exit 0",
     "release": "npx standard-version"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.11.0",
