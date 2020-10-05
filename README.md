@@ -32,6 +32,8 @@ on the extension you are creating.**
 
 -   **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
 
+-  **Cross-Browser Compatibility** - While primarily inteded for Chrome extensions, it can also be used to create extensions for Edge, Firefox or Opera.
+
 ## Motivation
 
 After developing multiple browser extensions, it became clear that there were several steps in the development process that stayed the same between every project. 
