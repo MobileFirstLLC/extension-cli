@@ -9,7 +9,7 @@
  * @description
  *
  * ```text
- * xt-test [--coverage] [--watch]
+ * xt-test [--pattern] [--coverage] [--watch]
  * ```
  *
  * This command will run project unit tests located in `./test` directory.
@@ -32,25 +32,26 @@ const pkg = require('../package.json');
 const exec = require('child_process').exec;
 
 process.chdir(process.cwd());
-
-const rootSuite = path.resolve(process.cwd(), 'node_modules', pkg.name, 'config', 'rootSuite.js');
-
 program
     .version(pkg.version)
+    .option('-p --pattern <string>', 'test file/directory match pattern')
     .option('-c --coverage', 'display coverage')
-    .option('-w --watch', 'enable watch')
-    .parse(process.argv);
+    .option('-w --watch', 'enable watch');
 
-const args = [
+program.parse(process.argv);
+
+exec([
 
     // use nyc && mocha
     'nyc mocha',
 
     // where to look for tests
-    './test/**/*.js',
+    program.pattern ? program.pattern : './test/**/*.js',
 
     // setup test environment
-    util.format('--file "%s"', rootSuite),
+    util.format('--file "%s"',
+        path.resolve(process.cwd(), 'node_modules',
+            pkg.name, 'config', 'rootSuite.js')),
 
     // enable watch
     program.watch ? '--watch' : '',
@@ -65,14 +66,11 @@ const args = [
     // this has to happen last after all tests have run
     program.coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
 
-].join(' ');
-
-const bat = exec(args);
-
-bat.stdout.on('data', data => {
-    process.stdout.write(data.toString());
-});
-
-bat.stderr.on('data', data => {
-    process.stdout.write(data.toString());
+].join(' ')).then(({stdout, stderr}) => {
+    stdout.on('data', data => {
+        process.stdout.write(data.toString());
+    });
+    stderr.on('data', data => {
+        process.stdout.write(data.toString());
+    });
 });
