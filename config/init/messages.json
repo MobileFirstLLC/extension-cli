@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "${name}"
+  },
+  "appShortName": {
+    "message": "${name}"
+  },
+  "appDescription": {
+    "message": "${description}"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "${safeName}",
+  "description": "${description}",
+  "version": "${version}",
+  "homepage": "${homepage}",
+  "author": "ENTER YOUR NAME HERE",
+  "repository": {
+    "type": "git",
+    "url": "ENTER GIT REPO URL"
+  },
+  "scripts": {
+    "start": "xt-build -e dev -w",
+    "build": "xt-build -e prod",
+    "clean": "xt-clean",
+    "docs": "xt-docs",
+    "test": "xt-test",
+    "sync": "xt-sync --all"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintIgnore": [
+    "test/**/*"
+  ],
+  "devDependencies": {
+    "extension-cli": "latest"
+  },
+  "xtdocs": {
+    "source": {
+      "include": [
+        "README.md",
+        "src"
+      ]
+    },
+    "templates": {
+      "systemName": "${name}",
+      "systemSummary": "${description}",
+      "systemColor": "#4CAF50"
+    }
+  },
+  "xtbuild": {
+    "js_bundles": [
+      {
+        "name": "background",
+        "src": "./src/**/*.js"
+      }
+    ]
+  }
+}
