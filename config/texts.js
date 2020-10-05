@@ -22,3 +22,7 @@ exports.xtDocs = {
     failure: chalk.bold.red('Docs failed'),
     configArg: 'Path to config file; defaults to `.xtdocs.json` in project root, or `xtdocs` in package.json'
 };
+
+exports.xtClean = {
+    result: count => chalk.bold[count === 0 ? 'yellow' : 'green'](`Done. Cleaned: ${count}`)
+};

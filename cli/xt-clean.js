@@ -25,6 +25,7 @@ const program = require('commander');
 const readline = require('readline');
 const pkg = require('../package.json');
 const ignore = path.join(process.cwd(), '.gitignore');
+const texts = require('../config/texts').xtClean;
 
 let counter = 0;
 
@@ -36,12 +37,13 @@ program
     .parse(process.argv);
 
 readline.createInterface({input: fs.createReadStream(ignore)})
-    .on('line', line => {
+    .on('line', function (line) {
         if ((line.indexOf('.idea/') > -1 && !program.idea) ||
             (line.indexOf('node_modules/') > -1 && !program.modules)) {
             return false;
         }
-        let basePath = path.join(process.cwd(), line);
+        const basePath = path.join(process.cwd(), line);
+
         if (fs.existsSync(basePath)) {
             try {
                 if (fs.lstatSync(basePath).isDirectory()) {
@@ -56,9 +58,9 @@ readline.createInterface({input: fs.createReadStream(ignore)})
                 console.log(chalk.bold.red(e), line);
             }
         }
+        return true;
     })
     .on('close', () => {
-        console.log(chalk.bold[counter === 0 ?
-            'yellow' : 'green'](`Done. Cleaned: ${counter}`));
+        console.log(texts.result(counter));
         process.exit(0);
     });
