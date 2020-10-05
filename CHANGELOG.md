@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.8.16...v0.9.0) (2020-10-05)
+
+
+### Features
+
+* **xt-clean:** refactor command ([8acf9c8](https://github.com/mobilefirstllc/extension-cli/commit/8acf9c80757c44265c9bf605882d8a06fd97d7bb))
+* **xt-create:** refactor command ([1c64f93](https://github.com/mobilefirstllc/extension-cli/commit/1c64f932966c405b3958ce6069323661ac5079d9))
+* **xt-create:** refactor create command ([6ac7f95](https://github.com/mobilefirstllc/extension-cli/commit/6ac7f95f1e08ea278498293c4f4d3048b5bc8190))
+* **xt-docs:** refactor docs command ([432fa79](https://github.com/mobilefirstllc/extension-cli/commit/432fa7979ca7dc686c31cdd6d92fa5911ad467f1))
+* **xt-sync:** refactor sync ([c938eec](https://github.com/mobilefirstllc/extension-cli/commit/c938eec37a6ce3a4ad8bba1c5a22519a01242761))
+* **xt-test:** add configurable test path ([876fb8a](https://github.com/mobilefirstllc/extension-cli/commit/876fb8a0afbaeab196df6aebd09fc92a977150de))
+
 ### [0.8.16](https://github.com/mobilefirstllc/extension-cli/compare/v0.8.15...v0.8.16) (2020-08-09)
 
 ### [0.8.15](https://github.com/MobileFirstLLC/extension-cli/compare/v0.8.14...v0.8.15) (2020-08-04)
