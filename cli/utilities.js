@@ -44,22 +44,14 @@ class Utilities {
         });
     }
 
-    createDir(dirPath, terminateOnError = false) {
+    createDir(dirPath) {
         // doesn't exist
         if (!fs.existsSync(dirPath)) {
             fs.mkdirSync(dirPath);
             return true;
         }
         // check if empty
-        const success = !fs.readdirSync(dirPath).length;
-
-        // handle error
-        if (!success && terminateOnError) {
-            return this.onError(`Cannot create directory: ${dirPath} ` +
-                'because it already exists, is not empty, or is not writable.');
-        }
-
-        return success;
+        return !fs.readdirSync(dirPath).length;
     };
 
     readFile(filePath) {

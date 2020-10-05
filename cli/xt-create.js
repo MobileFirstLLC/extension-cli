@@ -15,14 +15,14 @@
  * Command takes no arguments; just follow prompts on screen.
  */
 
-const chalk = require('chalk');
 const prompts = require('prompts');
 const path = require('path');
 const exec = require('child_process').exec;
 const Spinner = require('cli-spinner').Spinner;
 const spinner = new Spinner(' %s ');
 const Utilities = require('./utilities').Utilities;
-const questions = require('../config/createPrompts');
+const texts = require('../config/texts').xtCreate;
+const createPrompts = require('../config/createPrompts');
 const defaultHomepage = 'http://chrome.google.com/webstore'
 const initFilesPath = '../config/init/';
 
@@ -32,22 +32,29 @@ const initFilesPath = '../config/init/';
  */
 (async () => {
 
-    const {name, description, homepage = defaultHomepage} = await prompts(questions);
-    if (!name) process.exit(1);
-
+    const promptOptions = {onCancel: () => process.exit(0)};
+    const response = await prompts(createPrompts.name, promptOptions);
+    const name = response.name;
     const dirname = Utilities.generateDirectoryName(name);
     const dir = path.join(process.cwd(), `/${dirname}`);
-    const vars = {name, description, homepage, safeName: dirname, version: '0.0.1'}
 
+    // create project directory
+    const success = Utilities.createDir(dir);
+    if (!success) {
+        console.error(texts.dirError(dirname));
+        return process.exit(0);
+    }
+
+    const {description, homepage} = await prompts(createPrompts.optional, promptOptions);
+    const vars = {
+        name, description, safeName: dirname,
+        version: '0.0.1', homepage: homepage || defaultHomepage
+    }
     const fn = fileName => path.resolve(__dirname, initFilesPath + fileName);
     const rv = path => Utilities.readAndReplaceTextFile(path, vars);
     const rvj = path => Utilities.readAndReplaceJSONFile(path, vars);
 
-    // create project directory
-    Utilities.createDir(dir, true);
-
-    console.log(`Press CTRL+C if you want to terminate process early`);
-    console.log(`Creating extension ${name} in directory ${chalk.bold.green(dirname)}...`);
+    console.log(texts.start(dirname, name));
     spinner.start();
 
     // SETUP files structure and starter files
@@ -78,7 +85,7 @@ const initFilesPath = '../config/init/';
 
     // INSTALL packages
     spinner.stop(true);
-    console.log("Installing packages - this may take a while...");
+    console.log(texts.install);
     spinner.start();
 
     exec('npm install', {cwd: dir},
@@ -89,11 +96,9 @@ const initFilesPath = '../config/init/';
         .on('exit', code => {
             spinner.stop(true);
             if (code !== 0) {
-                console.log(chalk.bold.yellow('ATTN! ') + `npm install did not complete successfully`);
-                console.log('You may have to run npm install again in project directory');
+                console.log(texts.installError);
             }
-            console.log(`${chalk.bold.green('DONE! ')}Your extension starter is ready.`);
-            console.log(chalk.bold.green('What Next: ') + `Open ${dir} in your favorite web IDE`);
+            console.log(texts.success(dir));
             process.exit(0);
         });
 })();
