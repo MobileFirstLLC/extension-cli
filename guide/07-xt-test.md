@@ -3,7 +3,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
+<p class='page-intro'><code>xt-test</code> command will run unit tests</p>
 
 * * *
 
@@ -14,7 +14,7 @@ Also the following browser features are initialized: window, chrome. Window
 is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
 chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 
-This command will look for tests in `test/` directory, in any file ending with `.js`.
+By default this command will look for tests in `test/` directory, in any file ending with `.js`, but you can change this default value.
 
 Mocha will execute with babel, meaning you can use this test environment with ES6 modules.
 
@@ -30,6 +30,14 @@ Braces `{ }` indicate that the user must choose one — and only one — of the 
 
 ```
 xt-test
+```
+
+**Configure custom test directory path or match pattern**
+
+Defaults to `./test/**/*.js` if not specified
+
+```
+xt-test {-p|--pattern}
 ```
 
 **Execute tests and keep watching changes**
