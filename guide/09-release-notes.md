@@ -1,5 +1,26 @@
 ## Release Notes
 
+### 0.9.0 (2020-10-05)
+
+- xt-test: add configurable test path
+- xt-create: sanitize package name
+- update packages
+- xt-clean: refactor command
+- xt-docs: refactor docs command
+- xt-sync: refactor sync command
+
+### 0.8.16 (2020-08-09)
+
+- update packages
+
+### 0.8.15  (2020-08-04)
+
+- update packages
+
+### 0.8.14 (2020-08-01)
+
+- update xt-create
+
 ### 0.8.13 (2020-07-26)
 
 - updated packages
