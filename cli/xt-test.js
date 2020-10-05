@@ -40,7 +40,7 @@ program
 
 program.parse(process.argv);
 
-exec([
+const proc = exec([
 
     // use nyc && mocha
     'nyc mocha',
@@ -66,11 +66,12 @@ exec([
     // this has to happen last after all tests have run
     program.coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
 
-].join(' ')).then(({stdout, stderr}) => {
-    stdout.on('data', data => {
-        process.stdout.write(data.toString());
-    });
-    stderr.on('data', data => {
-        process.stdout.write(data.toString());
-    });
+].join(' '));
+
+proc.stdout.on('data', data => {
+    process.stdout.write(data.toString());
+});
+
+proc.stderr.on('data', data => {
+    process.stdout.write(data.toString());
 });
