@@ -577,7 +577,7 @@
                 
                 <h1 id="xt-test">xt-test</h1>
 <hr />
-<p class='page-intro'><code>xt-test</code> command will run unit tests located in <code>test/</code> directory.</p>
+<p class='page-intro'><code>xt-test</code> command will run unit tests</p>
 
 <hr />
 <p>This command will setup extension testing environment that is pre-initialized
@@ -586,7 +586,7 @@ and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for comp
 Also the following browser features are initialized: window, chrome. Window
 is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
 chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
-<p>This command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>.</p>
+<p>By default this command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>, but you can change this default value.</p>
 <p>Mocha will execute with babel, meaning you can use this test environment with ES6 modules.</p>
 <p>You may extend this test environment within an extension project; this is simply the base setup
 for running unit tests. Or you may create your own test environment if this is not suitable.</p>
@@ -594,6 +594,11 @@ for running unit tests. Or you may create your own test environment if this is n
 <p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
 <p><strong>Run unit tests (default)</strong></p>
 <pre><code>xt-test
+</code></pre>
+
+<p><strong>Configure custom test directory path or match pattern</strong></p>
+<p>Defaults to <code>./test/**/*.js</code> if not specified</p>
+<pre><code>xt-test {-p|--pattern}
 </code></pre>
 
 <p><strong>Execute tests and keep watching changes</strong></p>
