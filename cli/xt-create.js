@@ -88,11 +88,7 @@ const initFilesPath = '../config/init/';
     console.log(texts.install);
     spinner.start();
 
-    exec('npm install', {cwd: dir},
-        (error, stdout, stderr) => {
-            stdout.write(data.toString());
-            stderr.write(data.toString());
-        })
+    exec('npm install', {cwd: dir})
         .on('exit', code => {
             spinner.stop(true);
             if (code !== 0) {
