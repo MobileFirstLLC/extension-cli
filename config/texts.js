@@ -16,3 +16,9 @@ exports.xtSync = {
     onError: chalk.red('Specify which files to sync using flags.\nSee --help for more details.'),
     updateSuccess: (what) => chalk.bold.green(`✓ updated ${what}`)
 };
+
+exports.xtDocs = {
+    success: chalk.bold.green('Docs done!'),
+    failure: chalk.bold.red('Docs failed'),
+    configArg: 'Path to config file; defaults to `.xtdocs.json` in project root, or `xtdocs` in package.json'
+};

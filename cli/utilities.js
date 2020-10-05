@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
@@ -58,6 +57,14 @@ class Utilities {
         return fs.readFileSync(filePath, 'utf8');
     }
 
+    readJSON(filePath) {
+        return JSON.parse(this.readFile(filePath));
+    }
+
+    fileExists(filePath) {
+        return fs.existsSync(filePath);
+    }
+
     writeFile(filePath, content) {
         fs.writeFileSync(filePath, content);
     }
@@ -75,11 +82,29 @@ class Utilities {
         return JSON.stringify(JSON.parse(this.readAndReplaceTextFile(path, vars)), null, 4);
     }
 
-    onError(msg) {
-        console.error(chalk.bold.red(`${msg || 'Terminating'}`));
-        process.exit(1);
-    };
+    keyReplace(src, target) {
+        for (let key in src) {
+            if (!src.hasOwnProperty(key)) continue;
+            if (typeof src[key] !== 'object') {
+                target[key] = src[key];
+                continue;
+            }
+            if (!target[key]) target[key] = {};
+            this.keyReplace(src[key], target[key]);
+        }
+    }
 
+    iterateConfigs(defaultConfig, projectConfig) {
+        if (!projectConfig) return defaultConfig;
+        let temp = Object.assign({}, defaultConfig);
+
+        for (let k in projectConfig) {
+            if (!projectConfig.hasOwnProperty(k)) continue;
+            if (!temp[k]) temp[k] = {};
+            this.keyReplace(projectConfig[k], temp[k]);
+        }
+        return temp;
+    }
 }
 
 exports.Utilities = new Utilities();
