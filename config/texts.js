@@ -11,3 +11,8 @@ exports.xtCreate = {
     success: (dir) => `${chalk.bold.green('DONE! ')}Your extension starter is ready.\n` +
         `${chalk.bold.green('What Next: ')} Open ${dir} in your favorite web IDE\``
 };
+
+exports.xtSync = {
+    onError: chalk.red('Specify which files to sync using flags.\nSee --help for more details.'),
+    updateSuccess: (what) => chalk.bold.green(`✓ updated ${what}`)
+};

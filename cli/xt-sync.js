@@ -18,13 +18,11 @@
  * in this manner. Instead you should upgrade such configs manually.
  */
 
-const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
 const program = require('commander');
 const pkg = require('../package.json');
-
-let counter = 0;
+const texts = require('../config/texts').xtSync;
+const Utilities = require('./utilities').Utilities;
 
 const files = {
     gitlab: {path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
@@ -42,21 +40,19 @@ program
     .option('-a --all', 'sync everything')
     .parse(process.argv);
 
+let counter = 0;
+
 Object.keys(files).map(opt => {
     if (program[opt] !== undefined || program.all) {
         const relativePath = path.resolve(__dirname, files[opt].path);
         const outputFileName = files[opt].out;
-        const content = fs.readFileSync(relativePath, 'utf8');
+        const content = Utilities.readFile(relativePath, 'utf8');
+        const outPath = path.join(process.cwd(), outputFileName);
 
-        let outPath = path.join(process.cwd(), outputFileName);
-
-        fs.writeFileSync(outPath, content);
-        console.log(chalk.bold.green(`✓ updated ${outputFileName}`));
+        Utilities.writeFile(outPath, content);
+        console.log(texts.updateSuccess(outputFileName));
         counter++;
     }
 });
 
-if (!counter) {
-    console.log(chalk.red('(!) Specify which files to sync using flags.' +
-        '\nSee --help for more details.'));
-}
+if (!counter) console.log(texts.onError);
