@@ -2,3 +2,4 @@
 node_modules/
 site/
 tutorial-env/
+.nyc_output
