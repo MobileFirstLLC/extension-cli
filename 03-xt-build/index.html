@@ -729,27 +729,21 @@ uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.
 <p><strong>Run production build (default)</strong></p>
 <pre><code>xt-build
 </code></pre>
-
 <p><strong>Run production build using explicit flag <code>-e</code> or <code>--env</code></strong></p>
 <pre><code>xt-build {-e|--env} prod
 </code></pre>
-
 <p><strong>Run development build</strong></p>
 <pre><code>xt-build {-e|--env} dev
 </code></pre>
-
 <p><strong>Run command using custom configuration file path</strong></p>
 <pre><code>xt-build {-c|--config} &quot;/path/to/config.json&quot;
 </code></pre>
-
 <p><strong>Run development build and keep watching changes</strong></p>
 <pre><code>xt-build {-e|--env} dev {-w|--watch}
 </code></pre>
-
 <p><strong>Get help using this command</strong></p>
 <pre><code>xt-build --help
 </code></pre>
-
 <h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After adding Extension CLI to your project, you can run these commands from a terminal using syntax <code>npx xt-build</code>. 
 Or you can add an option to <code>packages.json</code> scripts section as shown below, and then execute the command as <code>npm run build</code> or <code>npm run start</code>.</p>
@@ -758,7 +752,6 @@ Or you can add an option to <code>packages.json</code> scripts section as shown 
     &quot;build&quot;: &quot;xt-build -e prod&quot;,
 }
 </code></pre>
-
 <p><br/></p>
 <h2 id="build-configuration">Build Configuration</h2>
 <p>By default the CLI will look for build configuration in two different
@@ -774,7 +767,7 @@ places:</p>
 <p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> or <code>--config</code> flag,
  followed by path to file. <a href="#commands">See commands for an example</a>.</p>
 <p>The CLI uses a default build configuration file shown below. This tells the extension CLI where to look for files and where to output files. You can override any of these key-value pairs at project level. You can find more detailed explanations of usage of some of these keys <a href="#custom-configurations">below</a>.</p>
-<pre><code class="json">{
+<pre><code class="language-json">{
   &quot;projectRootDir&quot;: &quot;../../../&quot;,
   &quot;dist&quot;: &quot;./dist&quot;,
   &quot;source&quot;: &quot;./src&quot;,
@@ -799,7 +792,6 @@ places:</p>
 }
 
 </code></pre>
-
 <p><br/></p>
 <h2 id="custom-configurations">Custom Configurations</h2>
 <h3 id="script-bundles">Script Bundles</h3>
@@ -833,7 +825,6 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
     ]
   }
 </code></pre>
-
 <h3 id="skip-javascript-compilation-and-linting">Skip Javascript Compilation and Linting</h3>
 <p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. The build command will copy specified files exactly without any modification to the root of the output directory. Directory path will be flattened.</p>
 <p><strong>Example</strong></p>
@@ -846,18 +837,16 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
     ]
   }
 </code></pre>
-
 <p>Note that when you include precompiled javascript files to your extension project, you should also disable linting for those files.
 In the project-level <code>package.json</code>, add the file paths to the list of ignored files
 to prevent them from being linted.</p>
-<pre><code class="json">  {  
+<pre><code class="language-json">  {  
       &quot;eslintIgnore&quot;: [
         &quot;test/**/*&quot;,
         &quot;./assets/ga.js&quot;
       ]
   }
 </code></pre>
-
 <h3 id="style-bundles">Style bundles</h3>
 <p><code>scss_bundles</code> are used to configure build settings for css-style files. The expected value is an array with one or more items as shown in the example below.</p>
 <ul>
@@ -887,7 +876,6 @@ to prevent them from being linted.</p>
     ]
   }
 </code></pre>
-
 <h3 id="text-localization">Text Localization</h3>
 <p>If the extension supports multiple languages, specify all supported languages using key <code>locales_list</code>. The default language value is <code>["en"]</code>. </p>
 <p>This <code>locales_list</code> should be an array that corresponds to a list of subdirectories under <code>locales_dir</code> in the extension project. The default <code>locales_dir</code> is <code>./assets/locales/</code>, which you may change if you want.</p>
@@ -900,7 +888,6 @@ to prevent them from being linted.</p>
       &quot;locales_list&quot;: [&quot;en&quot;,&quot;en-GB&quot;,&quot;pl&quot;]
   }
 </code></pre>
-
 <p>The configuration above translates to the following project-level directory structure: </p>
 <table>
 <thead>
@@ -946,7 +933,6 @@ to prevent them from being linted.</p>
     &quot;./assets/img/**/*.svg&quot;
   ],
 </code></pre>
-
 <p>You may change this configuration if the project image assets are located elsewhere or
 if you want to support additional image file extensions.</p>
 <p>After the build step, all image assets will be located in the <code>/dist/icons</code> directory.

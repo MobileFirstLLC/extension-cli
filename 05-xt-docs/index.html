@@ -655,15 +655,12 @@
 <p><strong>Default command</strong></p>
 <pre><code>xt-docs
 </code></pre>
-
 <p><strong>Command using custom configuration file path</strong></p>
 <pre><code>xt-docs {-c|--config} &quot;/path/to/config.json&quot;
 </code></pre>
-
 <p><strong>Get help using this command</strong></p>
 <pre><code>xt-docs --help
 </code></pre>
-
 <h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-docs</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run docs</code>. See example below.</p>
@@ -671,7 +668,6 @@
   &quot;docs&quot;: &quot;xt-docs&quot;
 }
 </code></pre>
-
 <p><br/></p>
 <h2 id="configuration">Configuration</h2>
 <p>By default the CLI will look for docs configuration in two different
@@ -696,7 +692,6 @@ places:</p>
   }
 }
 </code></pre>
-
 <p><br/></p>
 <p>where:</p>
 <table>
@@ -771,7 +766,6 @@ places:</p>
   }
 }
 </code></pre>
-
 <p><br/></p>
 <h2 id="templates">Templates</h2>
 <p><code>templates</code> key is used specifically to customize the options for a template of choice. This is useful if you want to change the look and feel of the generated documentation. The default template used by this CLI is 

@@ -594,23 +594,21 @@
 <p>For an existing application, before using Extension CLI, add these configuration options to <code>package.json</code>:</p>
 <h3 id="babel-presets">Babel Presets</h3>
 <p>This is needed to compile projects written in ES6.</p>
-<pre><code class="text">  &quot;babel&quot;: {
+<pre><code class="language-text">  &quot;babel&quot;: {
     &quot;presets&quot;: [
       &quot;@babel/preset-env&quot;
     ]
   }
 </code></pre>
-
 <h3 id="eslint-ignore">ESLint Ignore</h3>
 <p>Exclude test files from being linted. If your project includes compiled 3rd party libraries, you should exclude them also.</p>
-<pre><code class="text">  &quot;eslintIgnore&quot;: [
+<pre><code class="language-text">  &quot;eslintIgnore&quot;: [
     &quot;test/**/*&quot;
   ]
 </code></pre>
-
 <h3 id="add-scripts">Add Scripts</h3>
 <p>Add these scripts to <code>package.json</code> then you can run, for example, <code>npm run start</code>.</p>
-<pre><code class="text">  &quot;scripts&quot;: {
+<pre><code class="language-text">  &quot;scripts&quot;: {
       &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
       &quot;build&quot;: &quot;xt-build -e prod&quot;,
       &quot;clean&quot;: &quot;xt-clean&quot;,

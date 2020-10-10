@@ -595,25 +595,20 @@ for running unit tests. Or you may create your own test environment if this is n
 <p><strong>Run unit tests (default)</strong></p>
 <pre><code>xt-test
 </code></pre>
-
 <p><strong>Configure custom test directory path or match pattern</strong></p>
 <p>Defaults to <code>./test/**/*.js</code> if not specified</p>
 <pre><code>xt-test {-p|--pattern}
 </code></pre>
-
 <p><strong>Execute tests and keep watching changes</strong></p>
 <pre><code>xt-test {-w|--watch}
 </code></pre>
-
 <p><strong>Execute tests then pipe result to <a href="https://coveralls.io">coveralls.io</a></strong></p>
 <p>The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.</p>
 <pre><code>xt-test {-c|--coverage}
 </code></pre>
-
 <p><strong>Get help using this command</strong></p>
 <pre><code>xt-test --help
 </code></pre>
-
 <h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run test</code>. 
