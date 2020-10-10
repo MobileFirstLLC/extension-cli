@@ -6,7 +6,7 @@ Alphabetical list by app name
 | --- | --- | --- |
 | [Download All Images][0020] | [Mobile First][0021] | ![img][0022] |
 | [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
-| [Shortcuts for chrome][0040] | [Mobile First][0021] | ![img][0042] |
+| [Shortcuts for Chrome][0040] | [Mobile First][0021] | ![img][0042] |
 
 <br/><br/>
 
