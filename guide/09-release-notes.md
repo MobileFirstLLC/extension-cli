@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.9.1 (2020-10-11)
+
+- fix: xt-docs config keys replace when value is an array
+
 ### 0.9.0 (2020-10-05)
 
 - xt-test: add configurable test path
