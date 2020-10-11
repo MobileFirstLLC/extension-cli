@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.0...v0.9.1) (2020-10-11)
+
+
+### Bug Fixes
+
+* [#8](https://github.com/mobilefirstllc/extension-cli/issues/8) xt-docs fix config keys replace when value is an array ([98d72ca](https://github.com/mobilefirstllc/extension-cli/commit/98d72ca8f3df251e36bd1b2da3ecea9e2832496d))
+
 ## [0.9.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.8.16...v0.9.0) (2020-10-05)
 
 
