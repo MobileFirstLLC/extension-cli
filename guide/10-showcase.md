@@ -5,6 +5,7 @@ Alphabetical list by app name
 | Name | Maker | Badge |
 | --- | --- | --- |
 | [Download All Images][0020] | [Mobile First][0021] | ![img][0022] |
+| [Shortcuts for Chrome][0040] | [Mobile First][0021] | ![img][0042] |
 | [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
 
 <br/><br/>
@@ -36,3 +37,6 @@ Edit this file on Github to add your project, then submit a PR
 [0030]: https://chrome.google.com/webstore/detail/hcnjemngcihnhncobgdgkkfkhmleapah
 [0031]: https://github.com/nkrusch
 [0032]: https://img.shields.io/chrome-web-store/users/hcnjemngcihnhncobgdgkkfkhmleapah
+
+[0040]: https://chrome.google.com/webstore/detail/jnmekaomnicdcpgdndekkmojfomifjal
+[0042]: https://img.shields.io/chrome-web-store/users/jnmekaomnicdcpgdndekkmojfomifjal
