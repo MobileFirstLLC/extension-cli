@@ -1,6 +1,6 @@
 # Developing Extension CLI
 
-This CLI is built with numerous tools (see Tech Stack) and written in Javascript. 
+This CLI is built with numerous tools (see [Tech Stack](extension-cli/11-stack/)) and written in Javascript. 
 
 The source code is available on [Github](https://github.com/MobileFirstLLC/extension-cli).
 
