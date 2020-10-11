@@ -85,6 +85,10 @@ class Utilities {
     keyReplace(src, target) {
         for (let key in src) {
             if (!src.hasOwnProperty(key)) continue;
+            if (Array.isArray(src[key])) {
+                target[key] = src[key];
+                continue;
+            }
             if (typeof src[key] !== 'object') {
                 target[key] = src[key];
                 continue;
