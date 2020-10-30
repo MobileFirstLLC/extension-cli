@@ -53,7 +53,7 @@ When you want to edit the layout and theme of these docs:
 
     1. Create a virtual environment: `python3 -m venv env`
     2. Activate the environment: `source env/bin/activate`
-       <br/>(Win: `env\Scripts\activate.bat`)
+       <br/>(on Windows: `env\Scripts\activate.bat`)
     3. Install requirements `pip install -r requirements.txt`
     4. Run the docs locally: `mkdocs serve`
 
