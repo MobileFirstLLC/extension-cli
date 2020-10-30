@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.">
+        <meta name="description" content="Command-line build tools for chromium extension development.">
       
       
         <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/13-cli-development/">
@@ -15,7 +15,7 @@
         <meta name="author" content="@mobilefirstllc">
       
       <link rel="shortcut icon" href="/extension-cli/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
       
@@ -23,14 +23,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
         
           
           
-          <meta name="theme-color" content="#7e56c2">
+          <meta name="theme-color" content="#4051b5">
         
       
     
@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="pink">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -81,7 +81,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://oss.mobilefirst.me/extension-cli/" title="Extension CLI • Guide" class="md-header-nav__button md-logo" aria-label="Extension CLI • Guide">
       
@@ -165,7 +167,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://oss.mobilefirst.me/extension-cli/" title="Extension CLI • Guide" class="md-nav__button md-logo" aria-label="Extension CLI • Guide">
       
@@ -197,7 +201,7 @@
 
   <li class="md-nav__item">
     <a href=".." class="md-nav__link">
-      Hello World
+      Introduction
     </a>
   </li>
 
@@ -279,6 +283,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../08-xt-create/" class="md-nav__link">
+      extension-cli
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../03-xt-build/" class="md-nav__link">
       xt-build
     </a>
@@ -329,18 +345,6 @@
   <li class="md-nav__item">
     <a href="../07-xt-test/" class="md-nav__link">
       xt-test
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../08-xt-create/" class="md-nav__link">
-      extension-cli
     </a>
   </li>
 
@@ -686,7 +690,7 @@ There is a pen icon linking to the markdown source on each page of these docs.</
 <ol>
 <li>Create a virtual environment: <code>python3 -m venv env</code></li>
 <li>Activate the environment: <code>source env/bin/activate</code>
-   <br/>(Win: <code>env\Scripts\activate.bat</code>)</li>
+   <br/>(on Windows: <code>env\Scripts\activate.bat</code>)</li>
 <li>Install requirements <code>pip install -r requirements.txt</code></li>
 <li>Run the docs locally: <code>mkdocs serve</code></li>
 </ol>
@@ -808,8 +812,8 @@ There is a pen icon linking to the markdown source on each page of these docs.</
       
     </div>
     
-      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
