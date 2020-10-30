@@ -1,5 +1,5 @@
 site_name: Extension CLI • Guide
-site_description: Command-line build tools that facilitate rapid chrome extension development by providing systematic way to build, test and document extension projects.
+site_description: Command-line build tools for chromium extension development.
 site_author: '@mobilefirstllc'
 docs_dir: ./guide
 site_url: https://oss.mobilefirst.me/extension-cli/
@@ -9,17 +9,17 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - 'Hello World': index.md
+  - 'Introduction': index.md
   - "Getting Started":
     - 'Installation': 01-getting-started.md
     - 'Configuration': 02-configuration.md
   - "Commands":
+    - 'extension-cli': 08-xt-create.md
     - 'xt-build': 03-xt-build.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
-    - 'extension-cli': 08-xt-create.md
   - "Resources":
     - Release Notes: 09-release-notes.md
     - Showcase: 10-showcase.md
@@ -41,8 +41,8 @@ theme:
   features:
     - tabs
   palette:
-    primary: deep purple
-    accent: indigo
+    primary: indigo
+    accent: pink
 
 extra:
   social:

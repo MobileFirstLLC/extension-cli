@@ -1,10 +1,10 @@
 # Extension CLI
 
-<img src='https://github-production-repository-image-32fea6.s3.amazonaws.com/228303750/377f2000-228e-11ea-9d8a-a77af7765cd5' alt='extension-cli' width="100%" /> 
+<img src='https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c' alt='extension-cli' width="100%" /> 
 
 * * *
 
-<p class='page-intro'>Extension CLI provides command-line build tools that facilitate rapid chrome extension development by providing
+<p class='page-intro'>Extension CLI is a command-line build tool that facilitate rapid extension development by providing
 systematic way to build, test and document extension projects.</p>
 
 * * *
