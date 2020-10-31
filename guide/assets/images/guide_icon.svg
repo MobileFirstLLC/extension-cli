@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2"
+   viewBox="0 0 128 128"
+   height="128"
+   width="128"
+   version="1.1">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4181">
+      <path
+         style="opacity:0.8;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -746.42773,330.64844 a 176.42857,176.42857 0 0 0 -163.09766,109.35547 176.42857,176.42857 0 0 0 163.09766,109.50195 176.42857,176.42857 0 0 0 163.0957,-109.35742 176.42857,176.42857 0 0 0 -163.0957,-109.5 z"
+         id="path4183" />
+    </clipPath>
+  </defs>
+  <g
+     transform="matrix(0.50560073,0,0,0.50560076,-65.43379,-32.292464)"
+     id="g972">
+    <path
+       style="fill:#000000;fill-opacity:1;stroke-width:2.37665"
+       d="M 256.00232,63.869493 A 126.58209,126.58209 0 0 0 129.41791,190.44926 126.58209,126.58209 0 0 0 256.00232,317.03367 126.58209,126.58209 0 0 0 382.5821,190.44926 126.58209,126.58209 0 0 0 256.00232,63.869493 Z"
+       id="path4187" />
+    <path
+       id="path5340"
+       d="m 272.51813,245.83979 v -27.6941 h 73.85095 v 27.6941 h -73.85095 m -41.54117,-55.38821 -55.66515,-55.38821 h 39.141 l 45.7876,45.69529 c 5.35418,5.44649 5.35418,14.30861 0,19.57049 l -45.51065,45.51064 h -39.14101 z"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:2.37665" />
+  </g>
+</svg>

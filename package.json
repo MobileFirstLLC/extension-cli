@@ -30,6 +30,9 @@
     "release": "npx standard-version"
   },
   "license": "MIT",
+  "standard-version": {
+    "infile": ".github/CHANGELOG.md"
+  },
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",

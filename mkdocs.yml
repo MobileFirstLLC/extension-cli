@@ -36,7 +36,7 @@ extra_javascript:
 
 theme:
   name: material
-  logo: '/extension-cli/assets/images/icon.svg'
+  logo: '/extension-cli/assets/images/guide_icon.svg'
   favicon: '/extension-cli/assets/images/favicon.png'
   features:
     - tabs

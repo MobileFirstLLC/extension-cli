@@ -58,10 +58,10 @@ Command | Description
 
 ### Read the Docs!
 
-<img align="left" width="32" src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/guide.svg" alt="" /> &nbsp; 
-<strong><a href="https://oss.mobilefirst.me/extension-cli/">View Complete User Guide →</a></strong>
+<img align="left" width="64" src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/guide.svg" alt="" /> &nbsp; 
+<br/><strong><a href="https://oss.mobilefirst.me/extension-cli/">View Complete User Guide →</a></strong><br/><br/>
 
-##### CLI Developer Guide
+### CLI Developer Guide
 
 If you are interested in extending this project or forking **[see this guide &rarr;](https://oss.mobilefirst.me/extension-cli/13-cli-development/)**
 
