@@ -1,5 +1,11 @@
 ## Release Notes
 
+### 0.9.2
+
+* xt-clean: improve xt-clean command handling of files
+* change icon
+* update docs
+
 ### 0.9.1 (2020-10-11)
 
 - fix: xt-docs config keys replace when value is an array

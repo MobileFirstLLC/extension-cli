@@ -2,12 +2,12 @@
 
 ### Prerequisites
 
-Before using extension CLI, you should have all of the following:
+Before using extension CLI, you must have the following:
 
 - [Node.js](https://nodejs.org/en/download/)
-- Any web-friendly IDE
-- Terminal/cmd access
-- Chrome browser for debugging extensions
+- JavaScript IDE
+- Terminal access
+- Browser for debugging extensions
 
 ### Setup
 
