@@ -38,10 +38,22 @@ program
 
 readline.createInterface({input: fs.createReadStream(ignore)})
     .on('line', function (line) {
-        if ((line.indexOf('.idea/') > -1 && !program.idea) ||
-            (line.indexOf('node_modules/') > -1 && !program.modules)) {
+
+        // never clean these
+        if (line.trim().indexOf('#') === 0 ||
+            line.trim().indexOf('.env') === 0 ||
+            !(line || '').trim().length) {
             return false;
         }
+
+        // clean these only if flagged
+        if ((line.indexOf('.idea') > -1 && !program.idea) ||
+            (line.indexOf('.vscode') > -1 && !program.vscode) ||
+            (line.indexOf('node_modules') > -1 && !program.modules)) {
+            return false;
+        }
+
+        // otherwise clean if exists
         const basePath = path.join(process.cwd(), line);
 
         if (fs.existsSync(basePath)) {
