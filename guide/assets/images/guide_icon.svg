@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg2"
-   viewBox="0 0 128 128"
-   height="128"
+   version="1.1"
    width="128"
-   version="1.1">
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg2">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -25,24 +25,20 @@
   <defs
      id="defs8">
     <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath4181">
+       id="clipPath4181"
+       clipPathUnits="userSpaceOnUse">
       <path
-         style="opacity:0.8;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4183"
          d="m -746.42773,330.64844 a 176.42857,176.42857 0 0 0 -163.09766,109.35547 176.42857,176.42857 0 0 0 163.09766,109.50195 176.42857,176.42857 0 0 0 163.0957,-109.35742 176.42857,176.42857 0 0 0 -163.0957,-109.5 z"
-         id="path4183" />
+         style="opacity:0.8;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </clipPath>
   </defs>
-  <g
-     transform="matrix(0.50560073,0,0,0.50560076,-65.43379,-32.292464)"
-     id="g972">
-    <path
-       style="fill:#000000;fill-opacity:1;stroke-width:2.37665"
-       d="M 256.00232,63.869493 A 126.58209,126.58209 0 0 0 129.41791,190.44926 126.58209,126.58209 0 0 0 256.00232,317.03367 126.58209,126.58209 0 0 0 382.5821,190.44926 126.58209,126.58209 0 0 0 256.00232,63.869493 Z"
-       id="path4187" />
-    <path
-       id="path5340"
-       d="m 272.51813,245.83979 v -27.6941 h 73.85095 v 27.6941 h -73.85095 m -41.54117,-55.38821 -55.66515,-55.38821 h 39.141 l 45.7876,45.69529 c 5.35418,5.44649 5.35418,14.30861 0,19.57049 l -45.51065,45.51064 h -39.14101 z"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:2.37665" />
-  </g>
+  <path
+     style="fill:none;fill-opacity:1;stroke-width:1.20164"
+     d="M 64.00117,2.0161468e-7 A 63.999997,64.000001 0 0 0 -2.2892569e-7,63.998827 63.999997,64.000001 0 0 0 64.00117,128 63.999997,64.000001 0 0 0 128,63.998827 63.999997,64.000001 0 0 0 64.00117,2.0161468e-7 Z"
+     id="path4187" />
+  <path
+     id="path5340"
+     d="M 72.351575,92.004321 V 78.002163 H 109.69067 V 92.004321 H 72.351575 M 51.34833,64 23.203989,35.995679 h 19.789718 l 23.150244,23.103573 c 2.707078,2.753749 2.707078,7.234444 0,9.894854 L 43.133733,92.004321 H 23.34401 Z"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:1.20164" />
 </svg>
