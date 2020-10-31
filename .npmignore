@@ -18,3 +18,5 @@ inch.json
 mkdocs.yml
 .npmrc
 .nyc_output
+env/
+test/

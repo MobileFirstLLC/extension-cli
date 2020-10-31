@@ -1,6 +1,6 @@
 ## Release Notes
 
-### 0.9.2
+### 0.9.3
 
 * xt-clean: improve xt-clean command handling of files
 * change icon
