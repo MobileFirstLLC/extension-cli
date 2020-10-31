@@ -1,7 +1,7 @@
 # Tech Stack
 
 
-Extension CLI is built primarily with these tools:
+Extension CLI is built with:
 
 | Tech Stack | | |
 | --- | --- | --- |
