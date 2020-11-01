@@ -32,7 +32,7 @@ on the extension you are creating.**
 
 -  **Cross-Browser Compatibility** - While primarily inteded for Chrome extensions, it can also be used to create extensions for Edge, Firefox or Opera.
 
-## Getting Started & Docs
+## Getting Started
 
 ##### Create new extension project
 
@@ -56,7 +56,9 @@ Command | Description
 **xt-sync**| Update project config files to match the latest defaults supplied by this CLI
 **xt-clean** | Remove automatically generated files
 
-### Read the Docs!
+* * *
+
+## Read the Docs
 
 <img align="left" width="64" src="https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/guide/assets/images/guide.svg" alt="" /> &nbsp; 
 <br/><strong><a href="https://oss.mobilefirst.me/extension-cli/">User Guide →</a></strong><br/><br/>
