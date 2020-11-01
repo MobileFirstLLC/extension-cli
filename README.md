@@ -14,23 +14,19 @@ on the extension you are creating.**
 
 * * *
 
-![feature image](https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c)
-
 ## Features
 
 -   **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/))                                                                                                           
+-   **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files                                                                                                                                                         
+-   **Linting** — lint JavaScript using [ESLint](https://eslint.org/)                                                                                                                                                                        
+-   **ZIP Generation** — Generates a `.zip` file for uploading to extension marketplace ([Chrome Web Store](https://chrome.google.com/webstore/category/extensions) etc.)
 
--   **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS files](https://sass-lang.com/guide)                                                                                                                                                          
-
--   **Linting** — Code linting using [ESLint](https://eslint.org/)                                                                                                                                                                        
-
--   **.zip Generation** — Generates a `.zip` file for uploading to [Chrome Web Store](https://chrome.google.com/webstore/category/extensions), [Edge Add-On Marketplace](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home), and other compatible marketplaces.                                                                                       
-
--   **Source Code Docs** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
-
+-   **Document Source Code** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
 -   **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
 
--  **Cross-Browser Compatibility** - While primarily inteded for Chrome extensions, it can also be used to create extensions for Edge, Firefox or Opera.
+-  **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera.
+
+![feature image](https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c)
 
 ## Getting Started
 
