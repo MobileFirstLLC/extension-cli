@@ -9,7 +9,7 @@ exports.xtCreate = {
     installError: chalk.bold.yellow('ATTN! ') + 'npm install did not complete successfully\n`+' +
         '`You may have to run npm install again in project directory',
     success: (dir) => `${chalk.bold.green('DONE! ')}Your extension starter is ready.\n` +
-        `${chalk.bold.green('What Next: ')} Open ${dir} in your favorite web IDE\``
+        `${chalk.bold.green('What Next: ')} Open ${dir} in your favorite web IDE`
 };
 
 exports.xtSync = {
