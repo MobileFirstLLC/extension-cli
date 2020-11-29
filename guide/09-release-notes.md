@@ -1,6 +1,11 @@
 ## Release Notes
 
-### 0.9.3
+### 0.9.4 (2020-11-29)
+
+* extension-cli: fix typo
+* update packages
+
+### 0.9.3 (2020-10-31)
 
 * xt-clean: improve xt-clean command handling of files
 * change icon
