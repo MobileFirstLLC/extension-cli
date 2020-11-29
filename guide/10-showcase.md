@@ -1,4 +1,4 @@
-### List of Projects 
+### List of Projects built with Extension-CLI
 
 Alphabetical list by app name
 
