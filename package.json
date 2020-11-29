@@ -34,7 +34,7 @@
     "infile": ".github/CHANGELOG.md"
   },
   "dependencies": {
-    "@babel/core": "^7.12.7",
+    "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@babel/register": "^7.12.1",
     "chai": "^4.2.0",
@@ -55,7 +55,7 @@
     "gulp-if": "^3.0.0",
     "gulp-json-editor": "^2.5.4",
     "gulp-jsonminify": "^1.1.0",
-    "gulp-load-plugins": "^2.0.5",
+    "gulp-load-plugins": "^2.0.6",
     "gulp-merge-json": "^2.1.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
