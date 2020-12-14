@@ -35,7 +35,7 @@ process.chdir(process.cwd());
 program
     .version(pkg.version)
     .option('-p --pattern <string>', 'test file/directory match pattern')
-    .option('-c --coverage', 'display coverage')
+    .option('-c --coverage', 'report coverage to coveralls during builds')
     .option('-w --watch', 'enable watch');
 
 program.parse(process.argv);
@@ -74,4 +74,7 @@ proc.stdout.on('data', data => {
 
 proc.stderr.on('data', data => {
     process.stdout.write(data.toString());
+    if (program.coverage) {
+        process.exit(1);
+    }
 });
