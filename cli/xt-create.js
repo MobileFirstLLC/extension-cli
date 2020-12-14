@@ -50,9 +50,9 @@ const initFilesPath = '../config/init/';
         name, description, safeName: dirname,
         version: '0.0.1', homepage: homepage || defaultHomepage
     }
-    const fn = fileName => path.resolve(__dirname, initFilesPath + fileName);
-    const rv = path => Utilities.readAndReplaceTextFile(path, vars);
-    const rvj = path => Utilities.readAndReplaceJSONFile(path, vars);
+    const _file = fileName => path.resolve(__dirname, initFilesPath + fileName);
+    const _readtext = path => Utilities.readAndReplaceTextFile(path, vars);
+    const _readjson = path => Utilities.readAndReplaceJSONFile(path, vars);
 
     console.log(texts.start(dirname, name));
     spinner.start();
@@ -61,27 +61,28 @@ const initFilesPath = '../config/init/';
     // initialize extension image assets
     Utilities.createDir(dir + '/assets');
     Utilities.createDir(dir + '/assets/img');
-    Utilities.copyFolderSync(fn('assets'), dir + '/assets')
+    Utilities.copyFolderSync(_file('assets'), dir + '/assets')
+    Utilities.copyFolderSync(_file('assets/img'), dir + '/assets/img')
 
     // setup locales
     Utilities.createDir(dir + '/assets/locales');
     Utilities.createDir(dir + '/assets/locales/en');
-    Utilities.writeFile(dir + '/assets/locales/en/messages.json', rvj(fn('messages.json')));
+    Utilities.writeFile(dir + '/assets/locales/en/messages.json', _readjson(_file('messages.json')));
 
     // setup source code
     Utilities.createDir(dir + '/src');
-    Utilities.writeFile(dir + '/src/manifest.json', rvj(fn('manifest.json')));
-    Utilities.copyFile(fn('background.js'), dir + '/src/index.js');
+    Utilities.writeFile(dir + '/src/manifest.json', _readjson(_file('manifest.json')));
+    Utilities.copyFile(_file('background.js'), dir + '/src/index.js');
 
     // setup test files
     Utilities.createDir(dir + '/test');
-    Utilities.copyFile(fn('test.js'), dir + '/test/sample.js');
+    Utilities.copyFile(_file('test.js'), dir + '/test/sample.js');
 
     // create package.json
-    Utilities.writeFile(dir + '/package.json', rvj(fn('package.json')));
+    Utilities.writeFile(dir + '/package.json', _readjson(_file('package.json')));
 
     // create readme
-    Utilities.writeFile(dir + '/README.md', rv(fn('intro.md')));
+    Utilities.writeFile(dir + '/README.md', _readtext(_file('intro.md')));
 
     // INSTALL packages
     spinner.stop(true);
