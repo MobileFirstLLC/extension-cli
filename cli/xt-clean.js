@@ -24,6 +24,7 @@ const chalk = require('chalk');
 const program = require('commander');
 const readline = require('readline');
 const pkg = require('../package.json');
+const Utilities = require('./utilities').Utilities;
 const ignore = path.join(process.cwd(), '.gitignore');
 const texts = require('../config/texts').xtClean;
 
@@ -35,6 +36,11 @@ program
     .option('-i --idea', 'Clean .idea/ directory')
     .option('-v --vscode', 'Clean .vscode/ directory')
     .parse(process.argv);
+
+if (!Utilities.fileExists(ignore)) {
+    console.log(texts.onConfigError(ignore));
+    process.exit(0);
+}
 
 readline.createInterface({input: fs.createReadStream(ignore)})
     .on('line', function (line) {

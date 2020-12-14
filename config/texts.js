@@ -24,5 +24,6 @@ exports.xtDocs = {
 };
 
 exports.xtClean = {
+    onConfigError: path => chalk.yellow(`File does not exist: ${path}`),
     result: count => chalk.bold[count === 0 ? 'yellow' : 'green'](`Done. Cleaned: ${count}`)
 };
