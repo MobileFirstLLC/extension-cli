@@ -1,5 +1,11 @@
 ## Release Notes
 
+### 0.10.0
+
+* update test configs 
+* check if gitignore exists before xt-clean
+* **xt-create:** change default icon to high contrast
+
 ### 0.9.4 (2020-11-29)
 
 * extension-cli: fix typo
