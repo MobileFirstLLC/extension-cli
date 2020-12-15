@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.1](https://github.com/mobilefirstllc/extension-cli/compare/v0.10.0...v0.10.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* xt-create images ([b6ad50f](https://github.com/mobilefirstllc/extension-cli/commit/b6ad50f0367a20d45d2ea677591e3869c3f4fff3))
+
 ## [0.10.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.4...v0.10.0) (2020-12-15)
 
 
