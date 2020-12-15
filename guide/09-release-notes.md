@@ -1,6 +1,6 @@
 ## Release Notes
 
-### 0.10.0 (2020-12-15)
+### 0.10.1 (2020-12-15)
 
 * update test configs 
 * check if gitignore exists before xt-clean
