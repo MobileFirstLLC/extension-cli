@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.4...v0.10.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* [#16](https://github.com/mobilefirstllc/extension-cli/issues/16) update test configs ([7f57bf5](https://github.com/mobilefirstllc/extension-cli/commit/7f57bf527ab6fcccec53fd4544e2fc134b5083ee))
+* [#17](https://github.com/mobilefirstllc/extension-cli/issues/17) check if gitignore exists ([b96edc9](https://github.com/mobilefirstllc/extension-cli/commit/b96edc9a01e0077b0d68f994782c2b5c840199c1))
+* **xt-create:** change default icon to high contrast ([4895f43](https://github.com/mobilefirstllc/extension-cli/commit/4895f43bf16b63309bc9e3d14248843050bc164c))
+
 ### [0.9.4](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.3...v0.9.4) (2020-11-29)
 
 ### [0.9.3](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.2...v0.9.3) (2020-10-31)
