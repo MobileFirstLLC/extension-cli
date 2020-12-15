@@ -1,7 +1,7 @@
 # Extension CLI
 
 [![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
-[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
+[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.com/github/MobileFirstLLC/extension-cli)
 [![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
 ![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)
 
