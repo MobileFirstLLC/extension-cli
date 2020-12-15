@@ -62,7 +62,6 @@ const initFilesPath = '../config/init/';
     Utilities.createDir(dir + '/assets');
     Utilities.createDir(dir + '/assets/img');
     Utilities.copyFolderSync(_file('assets'), dir + '/assets')
-    Utilities.copyFolderSync(_file('assets/img'), dir + '/assets/img')
 
     // setup locales
     Utilities.createDir(dir + '/assets/locales');
