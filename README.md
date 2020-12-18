@@ -14,15 +14,13 @@ on the extension you are creating.**
 
 ## Features
 
--   **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/))                                                                                                           
--   **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files                                                                                                                                                         
--   **Linting** — lint JavaScript using [ESLint](https://eslint.org/)                                                                                                                                                                        
--   **ZIP Generation** — Generates a `.zip` file for uploading to extension marketplace ([Chrome Web Store](https://chrome.google.com/webstore/category/extensions) etc.)
-
--   **Document Source Code** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
--   **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
-
--  **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera.
+-  🖥️ **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/))                                                                                                           
+-  🎨 **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files                                                                                                                                                         
+-  🔧 **Linting** — lint JavaScript using [ESLint](https://eslint.org/)                                                                                                                                                                        
+-  📦 **ZIP Generation** — Generates a `.zip` file for uploading to extension marketplace ([Chrome Web Store](https://chrome.google.com/webstore/category/extensions) etc.)
+-  📝 **Document Source Code** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html)                                                                                                                                
+-  ⚗️ **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) 
+-  ⚔️ **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera.
 
 ![feature image](https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c)
 
@@ -75,6 +73,6 @@ This approach helps with creating a common, consistent development approach betw
 
 **Issues & Feature Requests:** [Submit on Github](https://github.com/MobileFirstLLC/extension-cli/issues/new/choose)
 
-**Maker:** [Mobile First](https://mobilefirst.me)
+**Maker:** [Mobile First](https://mobilefirst.me) &nbsp;  [![Twitter Follow](https://img.shields.io/twitter/follow/mobilefirstllc?label=follow&style=social)](https://twitter.com/intent/follow?screen_name=mobilefirstllc&tw_p=followbutton)
 
 **License:** [MIT](https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE)
