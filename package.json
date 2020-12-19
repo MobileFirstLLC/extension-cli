@@ -7,11 +7,20 @@
     "type": "git",
     "url": "https://github.com/mobilefirstllc/extension-cli.git"
   },
+  "bugs": {
+    "url": "https://github.com/mobilefirstllc/extension-cli.git"
+  },
   "author": {
-    "name": "Mobile First>",
+    "name": "Mobile First",
     "email": "hello@mobilefirst.me",
     "url": "https://mobilefirst.me"
   },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/MobileFirstLLC"
+    }
+  ],
   "bin": {
     "extension-cli": "cli/xt-create.js",
     "xt-build": "cli/xt-build.js",
@@ -26,8 +35,7 @@
     "utility"
   ],
   "scripts": {
-    "test": "mocha",
-    "release": "npx standard-version"
+    "test": "mocha"
   },
   "license": "MIT",
   "standard-version": {
@@ -35,7 +43,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@babel/register": "^7.12.10",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
@@ -45,7 +53,7 @@
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.16.0",
     "foodoc": "^0.0.9",
     "globby": "^11.0.1",
     "gulp": "^4.0.2",
@@ -66,7 +74,6 @@
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "mocha": "^8.2.1",
-    "npm": "^6.14.9",
     "nyc": "^15.1.0",
     "prompts": "^2.4.0",
     "sinon": "^9.2.2",
