@@ -20,5 +20,6 @@
   "locales_list": [
     "en"
   ],
-  "commands": ""
+  "commands": "",
+  "commands_watch_path": null
 }

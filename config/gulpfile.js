@@ -13,6 +13,7 @@ process.chdir(paths.projectRootDir);
 /** override default paths with project paths **/
 let customPaths = null;
 const pkg = JSON.parse(fs.readFileSync(argv.pkg, 'utf8'));
+const getArray = path => Array.isArray(path) ? path : [path];
 
 if (fs.existsSync(argv.config)) {
     customPaths = JSON.parse(fs.readFileSync(argv.config, 'utf8'));
@@ -31,8 +32,7 @@ if (customPaths) {
 const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
-    const _bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : []);
-    let bundles = [..._bundles];
+    let bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : [paths.js_bundles]);
 
     const buildScript = () => {
         if (!bundles.length) {
@@ -139,7 +139,7 @@ const buildHtml = () => {
         .pipe(gulp.dest(paths.dist));
 };
 
-const commands = done => {
+const custom_commands = done => {
     return (!paths.commands.length) ?
         done() :
         require('child_process')
@@ -159,12 +159,13 @@ const release = done => {
 
 const watch = () => {
     console.log('watching...');
-    gulp.watch([paths.js], scripts);
-    gulp.watch([paths.scss], styles);
-    gulp.watch(paths.manifest, copyManifest);
-    gulp.watch(paths.icons, copyImages);
+    gulp.watch(getArray(paths.js), scripts);
+    gulp.watch(getArray(paths.scss), styles);
+    gulp.watch(getArray(paths.html), buildHtml);
     gulp.watch([paths.locales_dir + '**/*.json'], locales);
-    gulp.watch([paths.html], buildHtml);
+    gulp.watch(paths.manifest, copyManifest);
+    gulp.watch(getArray(paths.icons), copyImages);
+    gulp.watch(getArray(paths.commands_watch_path), custom_commands);
 };
 
 const build = gulp.series(
@@ -176,8 +177,9 @@ const build = gulp.series(
         copyManifest,
         copyImages,
         locales,
-        buildHtml),
-    commands,
+        buildHtml,
+        custom_commands
+    ),
     release
 );
 

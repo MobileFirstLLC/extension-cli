@@ -109,10 +109,9 @@ The CLI uses a default build configuration file shown below. This tells the exte
   "locales_list": [
     "en"
   ],
-  "commands": ""
+  "commands": "",
+  "commands_watch_path": null
 }
-
-
 ```
 
 <br/>
@@ -228,42 +227,48 @@ Sample project-level configuration with multiple style bundles
 
 ### Text Localization
 
-If the extension supports multiple languages, specify all supported languages using key `locales_list`. The default language value is `["en"]`. 
+If the extension supports multiple languages, specify all supported languages in `locales_list` as an array. The default value is `["en"]`. 
+Refer [to this list of language codes](https://developers.google.com/admin-sdk/directory/v1/languages) when specifying this configuration.
 
-This `locales_list` should be an array that corresponds to a list of subdirectories under `locales_dir` in the extension project. The default `locales_dir` is `./assets/locales/`, which you may change if you want.
+`locales_list` should be an array corresponding to subdirectories under `locales_dir`. The default `locales_dir` is `./assets/locales/`.
+If you prefer a different directory value, override this default path.
 
-Refer [to this list of language codes](https://developers.google.com/admin-sdk/directory/v1/languages) when naming individual language directories.
+You may include multiple `.json` files within the language-specific directory to improve maintainability of these files (see example below).
+The build step will automatically combine all files within a language directory into a single `messages.json` which is expected from a browser extensions.
 
-Also read this guide [to learn how to internationalize extensions](https://developer.chrome.com/extensions/i18n).
+Recommended reading: [learn how to internationalize extensions](https://developer.chrome.com/extensions/i18n).
 
 **Example** 
 
-Multiple locales example with custom path to locales files
+Multiple locales example with a custom locales path and multiple `.json` language files
+
+_build configuration:_
 
 ```
   "xtbuild": {
       "locales_dir": "./my/custom/locales/path/",
-      "locales_list": ["en","en-GB","pl"]
+      "locales_list": ["en","fr","pl"]
   }
 ```
 
-The configuration above translates to the following project-level directory structure: 
+_project level file structure:_ 
 
 File Path | Description
 --- | ---
-└ **`/my/custom/locales/path/`** |  path to locales
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/messages.json | Default English dictionary
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `en-GB`/myFile.json | British dictionary
-&nbsp; &nbsp; &nbsp; &nbsp; └─ `pl/` | Polish language dictionaries
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json | Polish language dictionaries
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json | Polish language dictionaries
+└ **`/my/custom/locales/path/`** |  locales directory
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `en`/messages.json |  English dictionary
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `fr`/myFile.json | French dictionary
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `pl/` | 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json | Polish dictionary, part 1
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json | Polish dictionary, part 2
 
-
-You can break down your locales files into multiple `.json` files within the language-specific directory as shown in the example above for `pl/`. This may make the maintenance locales files easier if the files contain multiple entries. The build step will automatically combine all files within a language directory into a single `messages.json` which is expected from a browser extensions.
+- During build, `myFile.json` will be renamed to `messages.json` 
+- During build, `app.json` and `options.json` will me combined and renamed to `messages.json`
+- extension will be available in 3 languages
 
 ### Image Assets
 
-By default extension CLI will look for image assets using these configurations:
+By default, extension CLI will look for image assets using these configurations:
 
 ```
 "icons": [
@@ -290,3 +295,43 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
   }
 ```
 
+### Custom commands
+
+Starting from 0.11.0 it will be possible to specify custom commands to run during build steps. These commands will be
+executed during the build: 
+
+- _after_ script, styles, html and other bundles have been built, and
+- _before_ a release `.zip` file is compiled
+
+These custom commands are run for both dev and prod builds. 
+
+To configure custom commands specify following build configuration:
+
+```
+  "commands": "", 
+```
+
+For example:
+
+```
+  "commands": "python do_something.py", 
+```
+
+would first build the extension, then run a custom Python script, then (if prod) build the extension zip file.
+
+For dev builds, it is also be possible to specify a watch path, such that changes under the specified path will 
+cause the custom commands to re-execute. 
+
+Specify watch path using following configuration option:
+
+```
+  "commands_watch_path": null
+``` 
+
+For example:
+
+```
+  "commands_watch_path": "./src"
+```
+
+then run build in dev mode with watch enabled. Any changes under `./src` directory will cause custom commands to re-run.
