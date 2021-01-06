@@ -297,7 +297,7 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
 
 ### Custom commands
 
-Starting from v. 0.11.0 it will be possible to specify custom commands to run between build steps. These commands will be
+Starting from v. 0.11.1 it will be possible to specify custom commands to run between build steps. These commands will be
 executed: 
 
 - _after_ script, styles, html and other bundles have been built, and

@@ -7,7 +7,6 @@ requirements.txt
 node_modules/
 CHANGELOG.md
 *.jpg
-*.png
 assets/
 docs/
 guide/
