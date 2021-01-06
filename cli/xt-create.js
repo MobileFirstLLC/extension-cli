@@ -61,7 +61,11 @@ const initFilesPath = '../config/init/';
     // initialize extension image assets
     Utilities.createDir(dir + '/assets');
     Utilities.createDir(dir + '/assets/img');
-    Utilities.copyFolderSync(_file('assets'), dir + '/assets')
+    Utilities.copyFile(_file('icon.svg'), dir + '/assets/icon.svg');
+    Utilities.copyFile(_file('16x16.png'), dir + '/assets/img/16x16.png');
+    Utilities.copyFile(_file('24x24.png'), dir + '/assets/img/24x24.png');
+    Utilities.copyFile(_file('32x32.png'), dir + '/assets/img/32x32.png');
+    Utilities.copyFile(_file('128x128.png'), dir + '/assets/img/128x128.png');
 
     // setup locales
     Utilities.createDir(dir + '/assets/locales');
