@@ -1,5 +1,12 @@
 ## Release Notes
 
+### 0.11.0 (2021-01-06)
+
+* **xt-build:** allow specifying custom build commands
+* **xt-create:** fix image generation issue
+* update packages
+
+
 ### 0.10.1 (2020-12-15)
 
 * update test configs 

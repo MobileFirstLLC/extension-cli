@@ -1,4 +1,4 @@
-# Helpful References
+# Helpful References for Extension Development
 
 Some generally helpful links that may be useful when working with extension projects.
 

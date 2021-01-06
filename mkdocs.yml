@@ -21,11 +21,11 @@ nav:
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
   - "Resources":
-    - Release Notes: 09-release-notes.md
     - Showcase: 10-showcase.md
     - Helpful References: 12-helpful.md
     - Tech Stack: 11-stack.md
-    - CLI Development: 13-cli-development.md
+  - "Release Notes": 09-release-notes.md
+  - "Development": 13-cli-development.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
 
