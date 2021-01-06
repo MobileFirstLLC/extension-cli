@@ -10,6 +10,11 @@ All notable changes to this project will be documented in this file. See [standa
 * **custom commands:** [#18](https://github.com/mobilefirstllc/extension-cli/issues/18) enable custom commands watch ([3cfe52b](https://github.com/mobilefirstllc/extension-cli/commit/3cfe52ba38779d1570943a74a0a2e45203159d54))
 * [#18](https://github.com/mobilefirstllc/extension-cli/issues/18) add configuration option for custom commands before building release zip file ([f8126e6](https://github.com/mobilefirstllc/extension-cli/commit/f8126e6838faa043fe38844f8941cc465ec2425a))
 
+### Bug Fixes
+
+* xt-create images fix (again)
+
+
 ### [0.10.1](https://github.com/mobilefirstllc/extension-cli/compare/v0.9.4...v0.10.1) (2020-12-15)
 
 ### Bug Fixes
