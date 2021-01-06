@@ -246,8 +246,8 @@ _build configuration:_
 
 ```
   "xtbuild": {
-      "locales_dir": "./my/custom/locales/path/",
-      "locales_list": ["en","fr","pl"]
+      "locales_list": ["en","fr","pl"],
+      "locales_dir": "./my/custom/locales/path/"
   }
 ```
 
@@ -297,13 +297,13 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
 
 ### Custom commands
 
-Starting from 0.11.0 it will be possible to specify custom commands to run during build steps. These commands will be
-executed during the build: 
+Starting from v. 0.11.0 it will be possible to specify custom commands to run between build steps. These commands will be
+executed: 
 
 - _after_ script, styles, html and other bundles have been built, and
 - _before_ a release `.zip` file is compiled
 
-These custom commands are run for both dev and prod builds. 
+Custom commands are run for both `dev` and `prod` builds. 
 
 To configure custom commands specify following build configuration:
 
@@ -317,9 +317,9 @@ For example:
   "commands": "python do_something.py", 
 ```
 
-would first build the extension, then run a custom Python script, then (if prod) build the extension zip file.
+would first build the extension, then run a custom Python script, then (if `prod`) build the extension zip file.
 
-For dev builds, it is also be possible to specify a watch path, such that changes under the specified path will 
+For `dev` builds, it is also be possible to specify a watch path, such that changes under the specified path will 
 cause the custom commands to re-execute. 
 
 Specify watch path using following configuration option:
@@ -334,4 +334,4 @@ For example:
   "commands_watch_path": "./src"
 ```
 
-then run build in dev mode with watch enabled. Any changes under `./src` directory will cause custom commands to re-run.
+then run build in `dev` mode with `--watch` flag. Any changes under `./src` directory will cause custom commands to re-run.
