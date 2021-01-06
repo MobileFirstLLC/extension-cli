@@ -108,8 +108,10 @@ The CLI uses a default build configuration file shown below. This tells the exte
   "locales_dir": "./assets/locales/",
   "locales_list": [
     "en"
-  ]
+  ],
+  "commands": ""
 }
+
 
 ```
 

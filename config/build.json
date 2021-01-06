@@ -19,5 +19,6 @@
   "locales_dir": "./assets/locales/",
   "locales_list": [
     "en"
-  ]
+  ],
+  "commands": ""
 }

@@ -139,11 +139,22 @@ const buildHtml = () => {
         .pipe(gulp.dest(paths.dist));
 };
 
+const commands = done => {
+    return (!paths.commands.length) ?
+        done() :
+        require('child_process')
+            .exec(paths.commands, () => {
+                done();
+            });
+};
+
 const release = done => {
-    return isProd ? gulp.src(paths.dist + '/**/*')
-        .pipe(plugins.zip('release.zip'))
-        .pipe(gulp.dest(paths.releases))
-        .on('end', done) : done();
+    return isProd ?
+        gulp.src(paths.dist + '/**/*')
+            .pipe(plugins.zip('release.zip'))
+            .pipe(gulp.dest(paths.releases))
+            .on('end', done) :
+        done();
 };
 
 const watch = () => {
@@ -166,6 +177,7 @@ const build = gulp.series(
         copyImages,
         locales,
         buildHtml),
+    commands,
     release
 );
 
