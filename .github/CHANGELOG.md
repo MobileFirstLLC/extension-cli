@@ -4,9 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.11.1](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.0...v0.11.1) (2021-01-06)
 
-## [0.11.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.10.1...v0.11.0) (2021-01-06)
-
-
 ### Features
 
 * **custom commands:** [#18](https://github.com/mobilefirstllc/extension-cli/issues/18) enable custom commands watch ([3cfe52b](https://github.com/mobilefirstllc/extension-cli/commit/3cfe52ba38779d1570943a74a0a2e45203159d54))
