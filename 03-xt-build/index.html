@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build/">
-      
-      
         <meta name="author" content="@mobilefirstllc">
       
+      
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build/">
+      
       <link rel="shortcut icon" href="/extension-cli/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -39,7 +39,7 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -67,6 +67,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="pink">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -95,18 +96,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             Extension CLI • Guide
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               xt-build
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -165,10 +168,14 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
+
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
@@ -200,6 +207,7 @@
       
 
 
+
   <li class="md-nav__item">
     <a href=".." class="md-nav__link">
       Introduction
@@ -212,9 +220,13 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -232,6 +244,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../01-getting-started/" class="md-nav__link">
       Installation
@@ -242,6 +255,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -260,12 +274,16 @@
       
       
 
+
   
 
 
+  
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
     <label class="md-nav__link" for="nav-3">
       Commands
       <span class="md-nav__icon md-icon"></span>
@@ -283,6 +301,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../08-xt-create/" class="md-nav__link">
       extension-cli
@@ -293,6 +312,7 @@
           
           
           
+
 
   
 
@@ -404,6 +424,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#custom-commands" class="md-nav__link">
+    Custom commands
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -421,6 +448,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../04-xt-clean/" class="md-nav__link">
       xt-clean
@@ -431,6 +459,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -445,6 +474,7 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../06-xt-sync/" class="md-nav__link">
       xt-sync
@@ -455,6 +485,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -474,9 +505,13 @@
       
 
 
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
     <label class="md-nav__link" for="nav-4">
       Resources
       <span class="md-nav__icon md-icon"></span>
@@ -494,17 +529,6 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../09-release-notes/" class="md-nav__link">
-      Release Notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
     <a href="../10-showcase/" class="md-nav__link">
@@ -516,6 +540,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -530,21 +555,10 @@
           
 
 
+
   <li class="md-nav__item">
     <a href="../11-stack/" class="md-nav__link">
       Tech Stack
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../13-cli-development/" class="md-nav__link">
-      CLI Development
     </a>
   </li>
 
@@ -559,15 +573,45 @@
       
 
 
+
+  <li class="md-nav__item">
+    <a href="../09-release-notes/" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../13-cli-development/" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
   <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
-    <label class="md-nav__link" for="nav-5">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    
+    <label class="md-nav__link" for="nav-7">
       Source Code
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Source Code" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Source Code
       </label>
@@ -577,6 +621,7 @@
           
           
           
+
 
 
   <li class="md-nav__item">
@@ -598,7 +643,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -688,6 +734,13 @@
           <li class="md-nav__item">
   <a href="#image-assets" class="md-nav__link">
     Image Assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-commands" class="md-nav__link">
+    Custom commands
   </a>
   
 </li>
@@ -789,9 +842,10 @@ places:</p>
   &quot;locales_dir&quot;: &quot;./assets/locales/&quot;,
   &quot;locales_list&quot;: [
     &quot;en&quot;
-  ]
+  ],
+  &quot;commands&quot;: &quot;&quot;,
+  &quot;commands_watch_path&quot;: null
 }
-
 </code></pre>
 <p><br/></p>
 <h2 id="custom-configurations">Custom Configurations</h2>
@@ -878,18 +932,22 @@ to prevent them from being linted.</p>
   }
 </code></pre>
 <h3 id="text-localization">Text Localization</h3>
-<p>If the extension supports multiple languages, specify all supported languages using key <code>locales_list</code>. The default language value is <code>["en"]</code>. </p>
-<p>This <code>locales_list</code> should be an array that corresponds to a list of subdirectories under <code>locales_dir</code> in the extension project. The default <code>locales_dir</code> is <code>./assets/locales/</code>, which you may change if you want.</p>
-<p>Refer <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list of language codes</a> when naming individual language directories.</p>
-<p>Also read this guide <a href="https://developer.chrome.com/extensions/i18n">to learn how to internationalize extensions</a>.</p>
+<p>If the extension supports multiple languages, specify all supported languages in <code>locales_list</code> as an array. The default value is <code>["en"]</code>. 
+Refer <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list of language codes</a> when specifying this configuration.</p>
+<p><code>locales_list</code> should be an array corresponding to subdirectories under <code>locales_dir</code>. The default <code>locales_dir</code> is <code>./assets/locales/</code>.
+If you prefer a different directory value, override this default path.</p>
+<p>You may include multiple <code>.json</code> files within the language-specific directory to improve maintainability of these files (see example below).
+The build step will automatically combine all files within a language directory into a single <code>messages.json</code> which is expected from a browser extensions.</p>
+<p>Recommended reading: <a href="https://developer.chrome.com/extensions/i18n">learn how to internationalize extensions</a>.</p>
 <p><strong>Example</strong> </p>
-<p>Multiple locales example with custom path to locales files</p>
+<p>Multiple locales example with a custom locales path and multiple <code>.json</code> language files</p>
+<p><em>build configuration:</em></p>
 <pre><code>  &quot;xtbuild&quot;: {
-      &quot;locales_dir&quot;: &quot;./my/custom/locales/path/&quot;,
-      &quot;locales_list&quot;: [&quot;en&quot;,&quot;en-GB&quot;,&quot;pl&quot;]
+      &quot;locales_list&quot;: [&quot;en&quot;,&quot;fr&quot;,&quot;pl&quot;],
+      &quot;locales_dir&quot;: &quot;./my/custom/locales/path/&quot;
   }
 </code></pre>
-<p>The configuration above translates to the following project-level directory structure: </p>
+<p><em>project level file structure:</em> </p>
 <table>
 <thead>
 <tr>
@@ -900,33 +958,37 @@ to prevent them from being linted.</p>
 <tbody>
 <tr>
 <td>└ <strong><code>/my/custom/locales/path/</code></strong></td>
-<td>path to locales</td>
+<td>locales directory</td>
 </tr>
 <tr>
 <td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>en</code>/messages.json</td>
-<td>Default English dictionary</td>
+<td>English dictionary</td>
 </tr>
 <tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>en-GB</code>/myFile.json</td>
-<td>British dictionary</td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>fr</code>/myFile.json</td>
+<td>French dictionary</td>
 </tr>
 <tr>
 <td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>pl/</code></td>
-<td>Polish language dictionaries</td>
+<td></td>
 </tr>
 <tr>
 <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json</td>
-<td>Polish language dictionaries</td>
+<td>Polish dictionary, part 1</td>
 </tr>
 <tr>
 <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json</td>
-<td>Polish language dictionaries</td>
+<td>Polish dictionary, part 2</td>
 </tr>
 </tbody>
 </table>
-<p>You can break down your locales files into multiple <code>.json</code> files within the language-specific directory as shown in the example above for <code>pl/</code>. This may make the maintenance locales files easier if the files contain multiple entries. The build step will automatically combine all files within a language directory into a single <code>messages.json</code> which is expected from a browser extensions.</p>
+<ul>
+<li>During build, <code>myFile.json</code> will be renamed to <code>messages.json</code> </li>
+<li>During build, <code>app.json</code> and <code>options.json</code> will me combined and renamed to <code>messages.json</code></li>
+<li>extension will be available in 3 languages</li>
+</ul>
 <h3 id="image-assets">Image Assets</h3>
-<p>By default extension CLI will look for image assets using these configurations:</p>
+<p>By default, extension CLI will look for image assets using these configurations:</p>
 <pre><code>&quot;icons&quot;: [
     &quot;./assets/img/**/*.png&quot;,
     &quot;./assets/img/**/*.gif&quot;,
@@ -946,6 +1008,30 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
     }
   }
 </code></pre>
+<h3 id="custom-commands">Custom commands</h3>
+<p>Starting from v. 0.11.0 it will be possible to specify custom commands to run between build steps. These commands will be
+executed: </p>
+<ul>
+<li><em>after</em> script, styles, html and other bundles have been built, and</li>
+<li><em>before</em> a release <code>.zip</code> file is compiled</li>
+</ul>
+<p>Custom commands are run for both <code>dev</code> and <code>prod</code> builds. </p>
+<p>To configure custom commands specify following build configuration:</p>
+<pre><code>  &quot;commands&quot;: &quot;&quot;, 
+</code></pre>
+<p>For example:</p>
+<pre><code>  &quot;commands&quot;: &quot;python do_something.py&quot;, 
+</code></pre>
+<p>would first build the extension, then run a custom Python script, then (if <code>prod</code>) build the extension zip file.</p>
+<p>For <code>dev</code> builds, it is also be possible to specify a watch path, such that changes under the specified path will 
+cause the custom commands to re-execute. </p>
+<p>Specify watch path using following configuration option:</p>
+<pre><code>  &quot;commands_watch_path&quot;: null
+</code></pre>
+<p>For example:</p>
+<pre><code>  &quot;commands_watch_path&quot;: &quot;./src&quot;
+</code></pre>
+<p>then run build in <code>dev</code> mode with <code>--watch</code> flag. Any changes under <code>./src</code> directory will cause custom commands to re-run.</p>
                 
               
               
@@ -1070,15 +1156,15 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
       
     </div>
     
-      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
-      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ['tabs'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
