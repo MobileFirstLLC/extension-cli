@@ -165,7 +165,7 @@ const watch = () => {
     gulp.watch([paths.locales_dir + '**/*.json'], locales);
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(getArray(paths.icons), copyImages);
-    gulp.watch(getArray(paths.commands_watch_path), custom_commands);
+    gulp.watch(getArray(paths.commands_watch_path || ""), custom_commands);
 };
 
 const build = gulp.series(
