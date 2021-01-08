@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.11.2 (2021-01-08)
+
+* **xt-build:** command path fix
+
 ### 0.11.1 (2021-01-06)
 
 * **xt-build:** allow specifying custom build commands
