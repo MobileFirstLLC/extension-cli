@@ -19,14 +19,11 @@ jobs:
       script:
         - pip install -r requirements.txt
         - mkdocs build
-
-#    - language: python
-#      python: "3.7"
-#      deploy:
-#        - provider: pages
-#          skip_cleanup: true
-#          github_token: $GITHUB_TOKEN
-#          keep_history: true
-#          local_dir: site
-#          on:
-#            branch: master
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          keep_history: true
+          local_dir: site
+          on:
+            branch: master
