@@ -1,4 +1,4 @@
-language: bash  # python
+language: bash
 
 node_js:
   - "14.15.1"
@@ -12,7 +12,7 @@ jobs:
       node_js: 14.15.1
       script:
         - npm install
-        - npm run test || travis_terminate 1
+        - npm run test:travis || travis_terminate 1
 
     - language: python
       python: 3.7

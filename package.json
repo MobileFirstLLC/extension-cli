@@ -35,7 +35,9 @@
     "utility"
   ],
   "scripts": {
-    "test": "nyc mocha ./test/**/*.js --colors nyc report"
+    "test": "nyc mocha ./test/**/*.js --colors",
+    "test:report": "npm run test -- nyc report",
+    "test:travis" : "npm run test && nyc report --reporter=text-lcov | coveralls"
   },
   "license": "MIT",
   "standard-version": {
