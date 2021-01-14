@@ -7,10 +7,11 @@ class Utilities {
 
     }
 
-    generateDirectoryName(name) {
-        return name.toLowerCase()
-            .replace(/[\W_]+/g, ' ')
-            .replace(/ /g, '-');
+    generateDirectoryName(name, defaultName = 'extension-1') {
+        return ((name || '').toLowerCase()
+                .replace(/[\W_]+/g, ' ')
+                .replace(/ /g, '-')
+                .replace(/-$/, '')) || defaultName;
     };
 
     replaceVars(content, vars) {
