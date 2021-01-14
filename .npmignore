@@ -19,3 +19,4 @@ mkdocs.yml
 .nyc_output
 env/
 test/
+examples/
