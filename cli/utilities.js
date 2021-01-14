@@ -3,17 +3,35 @@ const path = require('path');
 
 class Utilities {
 
-    constructor() {
-
-    }
-
+    /**
+     * Given some string value, generate another string
+     * from it, such that the generated string can be
+     * used as a directory name. This function will
+     * normalize the input and remove special characters.
+     *
+     * @param name - suggested directory name
+     * @param defaultName - value to return if
+     *      no characters in name can be used
+     * @return {string} directory name
+     */
     generateDirectoryName(name, defaultName = 'extension-1') {
         return ((name || '').toLowerCase()
-                .replace(/[\W_]+/g, ' ')
-                .replace(/ /g, '-')
-                .replace(/-$/, '')) || defaultName;
+            .replace(/[\W_]+/g, ' ')
+            .replace(/ /g, '-')
+            .replace(/-$/, '')) || defaultName;
     };
 
+    /**
+     * Replace string interpolation expressions in
+     * a content string.
+     *
+     * @param content - string with placeholder values,
+     *  @example "sample ${key}"
+     * @param vars - dictionary of <K,V> pairs
+     *  @example { key : "value" }
+     * @return {string} -
+     *  @example "sample value"
+     */
     replaceVars(content, vars) {
         let temp = content.toString();
 
@@ -83,19 +101,41 @@ class Utilities {
         return JSON.stringify(JSON.parse(this.readAndReplaceTextFile(path, vars)), null, 4);
     }
 
-    keyReplace(src, target) {
-        for (let key in src) {
-            if (!src.hasOwnProperty(key)) continue;
-            if (Array.isArray(src[key])) {
-                target[key] = src[key];
+    /**
+     * Given two objects
+     * - add all keys from parent to child
+     * - override parent keys with child keys
+     *
+     * in other words: a union of child and
+     * parent with child values overriding
+     * all shared keys.
+     *
+     * This operation happens in place and
+     * result will be stored in parent object.
+     *
+     * @example
+     * let child = {a:1, b:5, c:{x:1}}
+     * let parent = {b:8, c:{y:9}}
+
+     * // expected result (parent):
+     * // {a:1, b:8, c:{x:1, y:9}}
+     *
+     * @param child - source object
+     * @param parent - parent object
+     */
+    keyReplace(child, parent) {
+        for (let key in child) {
+            if (!child.hasOwnProperty(key)) continue;
+            if (Array.isArray(child[key])) {
+                parent[key] = child[key];
                 continue;
             }
-            if (typeof src[key] !== 'object') {
-                target[key] = src[key];
+            if (typeof child[key] !== 'object') {
+                parent[key] = child[key];
                 continue;
             }
-            if (!target[key]) target[key] = {};
-            this.keyReplace(src[key], target[key]);
+            if (!parent[key]) parent[key] = {};
+            this.keyReplace(child[key], parent[key]);
         }
     }
 

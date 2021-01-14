@@ -35,7 +35,7 @@
     "utility"
   ],
   "scripts": {
-    "test": "nyc mocha ./test/**/*.js --colors",
+    "test": "nyc mocha ./test/*.test.js --colors",
     "test:report": "npm run test -- nyc report",
     "test:travis" : "npm run test && nyc report --reporter=text-lcov | coveralls"
   },
