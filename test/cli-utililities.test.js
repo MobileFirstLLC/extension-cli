@@ -83,14 +83,35 @@ describe('Test utility functions', () => {
         });
         it('...replaces array', async () => {
             let b = {arr: [1, 2, 3]};
-            Utilities.keyReplace({arr: [1, 2]}, b);
-            expect(b.arr).to.have.length(2);
+            Utilities.keyReplace({arr: [4, 5]}, b);
+            expect(b.arr).to.have.length(2)
+                .and.to.contain(4).and.to.contain(5);
         });
         it('...replaces nested properties', async () => {
             let b = {c: {d: 8, e: 10}};
             Utilities.keyReplace({c: {e: 11}}, b);
             expect(b.c.d).to.equal(8);
             expect(b.c.e).to.equal(11);
+        });
+
+        it('...nested replace with addition', async () => {
+            let b = {b: 8, c: {y: 9}};
+            Utilities.keyReplace({a: 1, b: 5, c: {x: 1}}, b);
+            expect(b.a).to.equal(1);
+            expect(b.b).to.equal(5);
+            expect(b.c.x).to.equal(1);
+            expect(b.c.y).to.equal(9);
+        });
+    });
+
+    describe('iterateConfigs', () => {
+        const defaultConfig = {name: "my app", version: '0.0.1'};
+
+        it('...returns default if project config is undefined', async () => {
+            const result = Utilities.iterateConfigs(defaultConfig, undefined);
+            expect(result.name).to.equal(defaultConfig.name);
+            expect(result.version).to.equal(defaultConfig.version);
+            expect(Object.keys(result)).to.have.length(2);
         });
     });
 });

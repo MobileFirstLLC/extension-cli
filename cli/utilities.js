@@ -102,13 +102,8 @@ class Utilities {
     }
 
     /**
-     * Given two objects
-     * - add all keys from parent to child
-     * - override parent keys with child keys
-     *
-     * in other words: a union of child and
-     * parent with child values overriding
-     * all shared keys.
+     * a union of two objects, child and parent,
+     * with child values overriding all shared keys.
      *
      * This operation happens in place and
      * result will be stored in parent object.
@@ -118,7 +113,7 @@ class Utilities {
      * let parent = {b:8, c:{y:9}}
 
      * // expected result (parent):
-     * // {a:1, b:8, c:{x:1, y:9}}
+     * // {a:1, b:5, c:{x:1, y:9}}
      *
      * @param child - source object
      * @param parent - parent object
@@ -139,6 +134,23 @@ class Utilities {
         }
     }
 
+    /**
+     * Given defaultConfig and project-level config
+     * replace default configs with project-specific
+     * configuration.
+     *
+     * Any property that is specified at project level
+     * but not in default config, will be added to
+     * the result configuration.
+     *
+     * Any property that exists in default config that
+     * is not overwritten at project level, will hold
+     * default value in the result configuration.
+     *
+     * @param defaultConfig
+     * @param projectConfig
+     * @return {Object}
+     */
     iterateConfigs(defaultConfig, projectConfig) {
         if (!projectConfig) return defaultConfig;
         let temp = Object.assign({}, defaultConfig);
