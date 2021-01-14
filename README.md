@@ -1,9 +1,10 @@
 # Extension CLI
 
-[![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
-[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.com/github/MobileFirstLLC/extension-cli)
-[![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
-![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)
+[![npm](https://img.shields.io/npm/v/extension-cli?style=flat-square)](https://www.npmjs.com/package/extension-cli)
+[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli?style=flat-square)](https://travis-ci.com/github/MobileFirstLLC/extension-cli)
+[![Coveralls github](https://img.shields.io/coveralls/github/MobileFirstLLC/extension-cli?style=flat-square)](https://coveralls.io/github/MobileFirstLLC/extension-cli)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/MobileFirstLLC/extension-cli?style=flat-square)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
+![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli?style=flat-square)
 
 
 **Extension CLI is a command-line application that facilitates chromium&#8727;-based extension development by providing
