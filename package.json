@@ -55,7 +55,7 @@
     "del": "^6.0.0",
     "eslint": "^7.17.0",
     "foodoc": "^0.0.9",
-    "globby": "^11.0.1",
+    "globby": "^11.0.2",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
@@ -76,7 +76,7 @@
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "prompts": "^2.4.0",
-    "sinon": "^9.2.2",
+    "sinon": "^9.2.3",
     "sinon-chrome": "^3.0.1",
     "webpack-stream": "^6.1.1",
     "yargs": "^16.2.0"
