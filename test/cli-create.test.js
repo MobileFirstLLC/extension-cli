@@ -1,4 +1,4 @@
-// TODO: #21: how to require this without running the command?
+// TODO: #21: how to require this without actually running the command?
 // const BuildScript = require('../cli/xt-build');
 
 // const expect = require('chai').expect;

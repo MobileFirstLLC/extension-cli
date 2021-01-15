@@ -44,63 +44,6 @@ class Utilities {
         return temp;
     };
 
-    copyFolderSync(from, to) {
-        try {
-            fs.mkdirSync(to);
-        } catch (e) {
-        }
-        fs.readdirSync(from).forEach((element) => {
-            const stat = fs.lstatSync(path.join(from, element));
-
-            if (stat.isFile()) {
-                fs.copyFileSync(path.join(from, element), path.join(to, element));
-            } else if (stat.isSymbolicLink()) {
-                fs.symlinkSync(fs.readlinkSync(path.join(from, element)), path.join(to, element));
-            } else if (stat.isDirectory()) {
-                this.copyFolderSync(path.join(from, element), path.join(to, element));
-            }
-        });
-    }
-
-    createDir(dirPath) {
-        // doesn't exist
-        if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath);
-            return true;
-        }
-        // check if empty
-        return !fs.readdirSync(dirPath).length;
-    };
-
-    readFile(filePath) {
-        return fs.readFileSync(filePath, 'utf8');
-    }
-
-    readJSON(filePath) {
-        return JSON.parse(this.readFile(filePath));
-    }
-
-    fileExists(filePath) {
-        return fs.existsSync(filePath);
-    }
-
-    writeFile(filePath, content) {
-        fs.writeFileSync(filePath, content);
-    }
-
-    copyFile(from, to) {
-        fs.createReadStream(from)
-            .pipe(fs.createWriteStream(to));
-    }
-
-    readAndReplaceTextFile(path, vars) {
-        return this.replaceVars(this.readFile(path), vars);
-    }
-
-    readAndReplaceJSONFile(path, vars) {
-        return JSON.stringify(JSON.parse(this.readAndReplaceTextFile(path, vars)), null, 4);
-    }
-
     /**
      * a union of two objects, child and parent,
      * with child values overriding all shared keys.
@@ -161,6 +104,112 @@ class Utilities {
             this.keyReplace(projectConfig[k], temp[k]);
         }
         return temp;
+    }
+
+    /**
+     * Recursively copy directory
+     * @param from - path to current location
+     * @param to - target location path
+     */
+    copyFolderSync(from, to) {
+        try {
+            fs.mkdirSync(to);
+        } catch (e) {
+        }
+        fs.readdirSync(from).forEach((element) => {
+            const stat = fs.lstatSync(path.join(from, element));
+
+            if (stat.isFile()) {
+                fs.copyFileSync(path.join(from, element), path.join(to, element));
+            } else if (stat.isSymbolicLink()) {
+                fs.symlinkSync(fs.readlinkSync(path.join(from, element)), path.join(to, element));
+            } else if (stat.isDirectory()) {
+                this.copyFolderSync(path.join(from, element), path.join(to, element));
+            }
+        });
+    }
+
+    /**
+     * Copy single file from one location to another (synchronous)
+     * @param from - source
+     * @param to - target
+     */
+    copyFile(from, to) {
+        fs.createReadStream(from)
+            .pipe(fs.createWriteStream(to));
+    }
+
+    /**
+     * Create empty directory.
+     *
+     * @param dirPath - path to directory
+     * @return {boolean} - true if exists and empty (should be
+     *   writable) and false otherwise
+     */
+    createDir(dirPath) {
+        // doesn't exist
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
+            return true;
+        }
+        // check if empty
+        return !fs.readdirSync(dirPath).length;
+    };
+
+    /**
+     * Read utf-8 encoded file (synchronous)
+     * @param filePath - path to file
+     * @return {string} - file contents
+     */
+    readFile(filePath) {
+        return fs.readFileSync(filePath, 'utf8');
+    }
+
+    /**
+     * Write file to disk (syncronous)
+     * @param filePath - path to file
+     * @param content - file contents
+     */
+    writeFile(filePath, content) {
+        fs.writeFileSync(filePath, content);
+    }
+
+    /**
+     * Read JSON file
+     * @param filePath - path to file
+     * @return {any} - Object
+     */
+    readJSON(filePath) {
+        return JSON.parse(this.readFile(filePath));
+    }
+
+    /**
+     * Check if file exists
+     * @param filePath - path to file
+     * @return {boolean} - true/false
+     */
+    fileExists(filePath) {
+        return fs.existsSync(filePath);
+    }
+
+    /**
+     * Reads text file then replaces all variable placeholders, e.g. ${var1}
+     * @param path - path to file
+     * @param vars - variables Object <K, V>
+     * @return {string} - file contents with all matched variables replaced
+     */
+    readAndReplaceTextFile(path, vars) {
+        return this.replaceVars(this.readFile(path), vars);
+    }
+
+    /**
+     * Reads JSON file then replaces all variable placeholders, e.g. ${var1}
+     * @param path - path to file
+     * @param vars - variables Object <K, V>
+     * @return {string} - file contents with all matched variables replaced
+     */
+    readAndReplaceJSONFile(path, vars) {
+        return JSON.stringify(JSON.parse(this.readAndReplaceTextFile(path, vars)), null, 4);
     }
 }
 

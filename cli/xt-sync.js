@@ -33,11 +33,11 @@ const files = {
 
 program
     .version(pkg.version)
-    .option('-l --gitlab', 'sync gitlab-ci.yml')
-    .option('-t --travis', 'sync travis.yml')
-    .option('-e --eslint', 'sync eslint')
-    .option('-g --gitignore', 'sync gitignore')
-    .option('-a --all', 'sync everything')
+    .option('-l --gitlab', texts.argGitlab)
+    .option('-t --travis', texts.argTravis)
+    .option('-e --eslint', texts.argLint)
+    .option('-g --gitignore', texts.argGitIgnore)
+    .option('-a --all', texts.argAll)
     .parse(process.argv);
 
 let counter = 0;

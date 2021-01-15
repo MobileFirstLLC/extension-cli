@@ -20,21 +20,20 @@
 const fs = require('fs');
 const del = require('del');
 const path = require('path');
-const chalk = require('chalk');
 const program = require('commander');
 const readline = require('readline');
 const pkg = require('../package.json');
-const Utilities = require('./utilities').Utilities;
 const ignore = path.join(process.cwd(), '.gitignore');
+const Utilities = require('./utilities').Utilities;
 const texts = require('../config/texts').xtClean;
 
 let counter = 0;
 
 program
     .version(pkg.version)
-    .option('-m --modules', 'Clean node_modules')
-    .option('-i --idea', 'Clean .idea/ directory')
-    .option('-v --vscode', 'Clean .vscode/ directory')
+    .option('-m --modules', texts.argModules)
+    .option('-i --idea', texts.argIdea)
+    .option('-v --vscode', texts.argVS)
     .parse(process.argv);
 
 if (!Utilities.fileExists(ignore)) {
@@ -70,10 +69,10 @@ readline.createInterface({input: fs.createReadStream(ignore)})
                 if (fs.existsSync(basePath)) {
                     del.sync(basePath);
                 }
-                console.log(`- ${line}`);
+                console.log(texts.onCleanFile(line));
                 counter++;
             } catch (e) {
-                console.log(chalk.bold.red(e), line);
+                console.log(texts.onCleanError(e, line));
             }
         }
         return true;

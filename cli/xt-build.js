@@ -19,20 +19,19 @@
 
 const util = require('util');
 const path = require('path');
-const chalk = require('chalk');
 const program = require('commander');
 const Spinner = require('cli-spinner').Spinner;
 const exec = require('child_process').exec;
 const pkg = require('../package.json');
 const env = {prod: 'prod', dev: 'dev'};
+const texts = require('../config/texts').xtBuild;
 const gulpfile = path.resolve(__dirname, '../config/gulpfile.js');
 
 program
     .version(pkg.version)
-    .option('-e --env <env>', 'Environment', /^(dev|prod)$/i, env.prod)
-    .option('-c --config <config>', 'Path to configuration file,  ' +
-        'default: .xtbuild.json in root, or xtbuild in package.json)', /^(.*)$/i)
-    .option('-w --watch', 'Enable watch')
+    .option('-e --env <env>', texts.envArg, /^(dev|prod)$/i, env.prod)
+    .option('-c --config <config>', texts.configFileArg, /^(.*)$/i)
+    .option('-w --watch', texts.watchArg)
     .parse(process.argv);
 
 const args = [
@@ -59,10 +58,9 @@ bat.stderr.on('data', (data) => {
     process.stdout.write(data.toString());
 });
 
-bat.on('exit', (code) => {
+bat.on('exit', (err) => {
     if (spinner) spinner.stop(true);
-    const msg = !code ? 'done' : 'failed';
-
-    console.log(chalk.bold[code ? 'red' : 'green'](`Build ${msg}`));
+    console.log(!err ?
+        texts.onBuildSuccess() :
+        texts.onBuildError());
 });
-

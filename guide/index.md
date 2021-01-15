@@ -18,6 +18,8 @@ systematic way to build, test and document extension projects.</p>
 
 ## Getting Started & Docs
 
+**Note:** Using this CLI assumes you have Node.js installed. If you do not, you can [install it here](https://nodejs.org/en/download/).
+
 Create a new extension project:
 
 ```text
@@ -37,8 +39,8 @@ Command | Description
 **xt-build** | Run builds; env flags: `-e prod` and `-e dev`
 **xt-test**| Run unit tests
 **xt-docs**| Generate docs
+**xt-clean** | Remove generated files
 **xt-sync**| Update project config files to match the latest defaults supplied by this CLI
-**xt-clean** | Remove automatically generated files
 
 <br/>
 

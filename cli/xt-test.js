@@ -30,13 +30,15 @@ const path = require('path');
 const program = require('commander');
 const pkg = require('../package.json');
 const exec = require('child_process').exec;
+const texts = require('../config/texts').xtTest;
 
 process.chdir(process.cwd());
+
 program
     .version(pkg.version)
-    .option('-p --pattern <string>', 'test file/directory match pattern')
-    .option('-c --coverage', 'report coverage to coveralls during builds')
-    .option('-w --watch', 'enable watch');
+    .option('-p --pattern <string>', texts.argPattern)
+    .option('-c --coverage', texts.argCoverage)
+    .option('-w --watch', texts.argWatch);
 
 program.parse(process.argv);
 

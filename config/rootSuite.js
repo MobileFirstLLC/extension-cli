@@ -1,15 +1,17 @@
 const sinon = require('sinon');
 const chrome = require('sinon-chrome');
 const chai = require('chai');
-const chalk = require('chalk');
 const sandbox = sinon.createSandbox();
 const argv = require('yargs').argv;
 const chaiAsPromised = require('chai-as-promised');
+const texts = require('../config/texts').xtTest;
 
 require('jsdom-global')();
 
-// simulate "window"
-
+/**
+ * Setup unit test environment
+ * and simulate window
+ */
 before(function () {
     process.env.NODE_ENV = 'test';
     chai.use(chaiAsPromised);
@@ -20,20 +22,24 @@ before(function () {
     global.sandbox = sandbox;
     window.sandbox = sandbox;
     window.chrome = chrome;
-    console.log(["ENV: ",
-        chalk.bold.green(" window "),
-        chalk.bold.green(" chrome "),
-        chalk.bold.green(" chai "),
-        chalk.bold.green(" expect "),
-        chalk.bold.green(" sandbox (sinon) ")
-    ].join(" ") + "\n")
+    console.log(texts.onRootSetup(
+        'window,chrome,chai,expect,sandbox(sinon)'
+            .split(',')));
 });
 
+/**
+ * Clean up after every test
+ */
+// eslint-disable-next-line no-undef
 afterEach(function () {
     chrome.flush();
     sandbox.restore();
 });
 
+/**
+ * Clean up after all tests
+ */
+// eslint-disable-next-line no-undef
 after(function () {
     if (argv.watch) return;
     delete window.chrome;
@@ -46,11 +52,16 @@ after(function () {
     delete global.dispatchEvent;
 });
 
+/**
+ * Simulate window mouse event so mouse events
+ * can be fired during unit testing.
+ */
 global.mouseEvent = function (type, sx, sy, cx, cy) {
-    var evt;
-    var e = {
+    let evt;
+
+    const e = {
         bubbles: true,
-        cancelable: (type != "mousemove"),
+        cancelable: (type !== 'mousemove'),
         view: window,
         detail: 0,
         screenX: sx,
@@ -64,8 +75,9 @@ global.mouseEvent = function (type, sx, sy, cx, cy) {
         button: 0,
         relatedTarget: undefined
     };
-    if (typeof (document.createEvent) == "function") {
-        evt = document.createEvent("MouseEvents");
+
+    if (typeof (document.createEvent) === 'function') {
+        evt = document.createEvent('MouseEvents');
         evt.initMouseEvent(type,
             e.bubbles, e.cancelable, e.view, e.detail,
             e.screenX, e.screenY, e.clientX, e.clientY,
@@ -73,7 +85,7 @@ global.mouseEvent = function (type, sx, sy, cx, cy) {
             e.button, document.body.parentNode);
     } else if (document.createEventObject) {
         evt = document.createEventObject();
-        for (prop in e) {
+        for (const prop in e) {
             evt[prop] = e[prop];
         }
         evt.button = {0: 1, 1: 4, 2: 2}[evt.button] || evt.button;
@@ -81,11 +93,16 @@ global.mouseEvent = function (type, sx, sy, cx, cy) {
     return evt;
 };
 
-global.dispatchEvent = function (el, evt) {
-    if (el.dispatchEvent) {
-        el.dispatchEvent(evt);
-    } else if (el.fireEvent) {
-        el.fireEvent('on' + type, evt);
+/**
+ * Simulate dispatching an event on some DOM element
+ * @param elem - element to dispatch event on
+ * @param evt - Event to dispatch
+ */
+global.dispatchEvent = function (elem, evt) {
+    if (elem.dispatchEvent) {
+        elem.dispatchEvent(evt);
+    } else if (elem.fireEvent) {
+        elem.fireEvent('on' + evt.type, evt);
     }
     return evt;
 };

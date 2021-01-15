@@ -33,6 +33,8 @@ on the extension you are creating.**
 
 ## Getting Started
 
+**Note:** Using this CLI assumes you have Node.js installed. If you do not, you can [install it here](https://nodejs.org/en/download/).
+
 ##### Create new extension project
 
 ```text
