@@ -1,6 +1,6 @@
 # Extension CLI
 
-<img src='https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c' alt='extension-cli' width="100%" /> 
+<img src='https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f' alt='extension-cli' width="100%" /> 
 
 * * *
 
