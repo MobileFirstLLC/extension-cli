@@ -29,7 +29,7 @@ on the extension you are creating.**
 
 -  ⚔️ &nbsp; **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera. <br/>
 
-![feature image](https://repository-images.githubusercontent.com/228303750/f3ff6000-1ab3-11eb-9953-96599690937c)
+![feature image](https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/.github/feature.png)
 
 ## Getting Started
 
