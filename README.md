@@ -29,7 +29,7 @@ on the extension you are creating.**
 
 -  ⚔️ &nbsp; **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera. <br/>
 
-![feature image](https://repository-images.githubusercontent.com/228303750/c5c12f00-581d-11eb-8921-cdcb52f953f6)
+![feature image](https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f)
 
 ## Getting Started
 
