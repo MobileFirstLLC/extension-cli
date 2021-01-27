@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.11.2](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.1...v0.11.2) (2021-01-08)
 
-
 ### Bug Fixes
 
 * **xt-build:** command path fix ([c0c2e08](https://github.com/mobilefirstllc/extension-cli/commit/c0c2e08bcfbb348ce8bb8d9980d4db22e2713d37))

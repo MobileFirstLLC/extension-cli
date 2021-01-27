@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.11.3 (2021-01-27)
+
+* **xt-build:** file watch fix
+
 ### 0.11.2 (2021-01-08)
 
 * **xt-build:** command path fix
