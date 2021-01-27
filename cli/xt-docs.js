@@ -44,7 +44,7 @@ program
     .parse(process.argv);
 
 const tmpFile = path.join(process.cwd(), './node_modules', pkg.name, 'tmpDocsconfig.json');
-const docFile = program.config || '.xtdocs.json';
+const docFile = program.opts().config || '.xtdocs.json';
 const projectConfig = Utilities.fileExists(docFile) ?
     Utilities.readJSON(docFile) :
     Utilities.readJSON('./package.json').xtdocs;

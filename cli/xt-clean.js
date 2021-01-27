@@ -41,6 +41,8 @@ if (!Utilities.fileExists(ignore)) {
     process.exit(0);
 }
 
+const {modules, idea, vscode} = program.opts();
+
 readline.createInterface({input: fs.createReadStream(ignore)})
     .on('line', function (line) {
 
@@ -52,9 +54,9 @@ readline.createInterface({input: fs.createReadStream(ignore)})
         }
 
         // clean these only if flagged
-        if ((line.indexOf('.idea') > -1 && !program.idea) ||
-            (line.indexOf('.vscode') > -1 && !program.vscode) ||
-            (line.indexOf('node_modules') > -1 && !program.modules)) {
+        if ((line.indexOf('.idea') > -1 && !idea) ||
+            (line.indexOf('.vscode') > -1 && !vscode) ||
+            (line.indexOf('node_modules') > -1 && !modules)) {
             return false;
         }
 

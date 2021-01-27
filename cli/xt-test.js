@@ -38,9 +38,10 @@ program
     .version(pkg.version)
     .option('-p --pattern <string>', texts.argPattern)
     .option('-c --coverage', texts.argCoverage)
-    .option('-w --watch', texts.argWatch);
+    .option('-w --watch', texts.argWatch)
+    .parse(process.argv);
 
-program.parse(process.argv);
+const {pattern, coverage, watch} = program.opts();
 
 const proc = exec([
 
@@ -48,7 +49,7 @@ const proc = exec([
     'nyc mocha',
 
     // where to look for tests
-    program.pattern ? program.pattern : './test/**/*.js',
+    pattern ? pattern : './test/**/*.js',
 
     // setup test environment
     util.format('--file "%s"',
@@ -56,7 +57,7 @@ const proc = exec([
             pkg.name, 'config', 'rootSuite.js')),
 
     // enable watch
-    program.watch ? '--watch' : '',
+    watch ? '--watch' : '',
 
     // babel
     ' --require @babel/register ',
@@ -66,7 +67,7 @@ const proc = exec([
 
     // lastly: pipe to coveralls -->
     // this has to happen last after all tests have run
-    program.coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
+    coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
 
 ].join(' '));
 
@@ -76,7 +77,7 @@ proc.stdout.on('data', data => {
 
 proc.stderr.on('data', data => {
     process.stdout.write(data.toString());
-    if (program.coverage) {
+    if (coverage) {
         process.exit(1);
     }
 });

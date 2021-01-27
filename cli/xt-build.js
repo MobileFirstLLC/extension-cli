@@ -34,16 +34,18 @@ program
     .option('-w --watch', texts.watchArg)
     .parse(process.argv);
 
+const {watch, env: programEnv, config} = program.opts();
+
 const args = [
-    program.watch ? 'gulp watch' : 'gulp',
+    watch ? 'gulp watch' : 'gulp',
     util.format('--gulpfile "%s"', gulpfile),
-    util.format('--config "%s"', path.resolve(process.cwd(), program.config || './.xtbuild.json')),
+    util.format('--config "%s"', path.resolve(process.cwd(), config || './.xtbuild.json')),
     util.format('--pkg', path.resolve(process.cwd(), './package.json')),
-    util.format('--%s', program.env),
+    util.format('--%s', programEnv),
     '--colors'
 ].join(' ');
 
-const spinner = (!program.watch) ? new Spinner(' %s ') : null;
+const spinner = (!watch) ? new Spinner(' %s ') : null;
 
 if (spinner) spinner.start();
 

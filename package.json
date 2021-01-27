@@ -80,7 +80,7 @@
     "prompts": "^2.4.0",
     "sinon": "^9.2.4",
     "sinon-chrome": "^3.0.1",
-    "webpack-stream": "^6.1.1",
+    "webpack-stream": "^6.1.2",
     "yargs": "^16.2.0"
   }
 }

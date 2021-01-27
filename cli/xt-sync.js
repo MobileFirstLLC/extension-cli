@@ -42,8 +42,10 @@ program
 
 let counter = 0;
 
+const options = program.opts();
+
 Object.keys(files).map(opt => {
-    if (program[opt] !== undefined || program.all) {
+    if (options[opt] !== undefined || options.all) {
         const relativePath = path.resolve(__dirname, files[opt].path);
         const outputFileName = files[opt].out;
         const content = Utilities.readFile(relativePath, 'utf8');
