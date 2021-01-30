@@ -1,6 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * @class
+ * @classdesc Utility class provides helper methods
+ * for performing commonly recurring operations such
+ * as IO; and reading, writing, merging objects.
+ *
+ * When performing these operations, it is preferable
+ * to use these utility methods to ensure same behavior
+ * for these operations everywhere, and to establish one
+ * place of change, should these operations change in the
+ * future.
+ */
 class Utilities {
 
     /**
@@ -162,6 +174,15 @@ class Utilities {
     }
 
     /**
+     * Check if file exists
+     * @param filePath - path to file
+     * @return {boolean} - true/false
+     */
+    fileExists(filePath) {
+        return fs.existsSync(filePath);
+    }
+
+    /**
      * Create empty directory.
      *
      * @param dirPath - path to directory
@@ -185,15 +206,6 @@ class Utilities {
      */
     readJSON(filePath) {
         return JSON.parse(this.readFile(filePath));
-    }
-
-    /**
-     * Check if file exists
-     * @param filePath - path to file
-     * @return {boolean} - true/false
-     */
-    fileExists(filePath) {
-        return fs.existsSync(filePath);
     }
 
     /**

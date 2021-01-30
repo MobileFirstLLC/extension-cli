@@ -5,6 +5,46 @@ const fs = require('fs');
 
 describe('Test utility functions', () => {
 
+    /**
+     * Stub Node.js IO methods
+     */
+    // eslint-disable-next-line no-undef
+    beforeEach(() => {
+        sinon.stub(fs, 'readFileSync');
+        sinon.stub(fs, 'existsSync');
+        sinon.stub(fs, 'mkdirSync');
+        sinon.stub(fs, 'readdirSync');
+        sinon.stub(fs, 'writeFileSync');
+        sinon.stub(fs, 'createReadStream');
+        sinon.stub(fs, 'createWriteStream');
+        sinon.stub(fs, 'lstatSync');
+        sinon.stub(fs, 'copyFileSync');
+        sinon.stub(fs, 'symlinkSync');
+        sinon.stub(fs, 'readlinkSync');
+
+        fs.createReadStream.returns({
+            pipe: () => true
+        });
+    });
+
+    /**
+     * Restore stubbed IO methods
+     */
+    // eslint-disable-next-line no-undef
+    afterEach(() => {
+        fs.existsSync.restore();
+        fs.mkdirSync.restore();
+        fs.readdirSync.restore();
+        fs.readFileSync.restore();
+        fs.writeFileSync.restore();
+        fs.createReadStream.restore();
+        fs.createWriteStream.restore();
+        fs.lstatSync.restore();
+        fs.copyFileSync.restore();
+        fs.symlinkSync.restore();
+        fs.readlinkSync.restore();
+    });
+
     describe('generateDirectoryName...', () => {
 
         it('...returns lowercase name', () => {
@@ -141,26 +181,6 @@ describe('Test utility functions', () => {
 
     describe('copyFolderSync', () => {
 
-        // eslint-disable-next-line no-undef
-        beforeEach(() => {
-            sinon.stub(fs, 'mkdirSync');
-            sinon.stub(fs, 'readdirSync');
-            sinon.stub(fs, 'lstatSync');
-            sinon.stub(fs, 'copyFileSync');
-            sinon.stub(fs, 'symlinkSync');
-            sinon.stub(fs, 'readlinkSync');
-        });
-
-        // eslint-disable-next-line no-undef
-        afterEach(() => {
-            fs.mkdirSync.restore();
-            fs.readdirSync.restore();
-            fs.lstatSync.restore();
-            fs.copyFileSync.restore();
-            fs.symlinkSync.restore();
-            fs.readlinkSync.restore();
-        });
-
         it('...copies directory with files to new location', () => {
             fs.readdirSync.returns(['file1.txt', 'file2.txt']);
             fs.lstatSync.returns({isFile: () => true});
@@ -184,24 +204,23 @@ describe('Test utility functions', () => {
             expect(fs.readdirSync.callCount).to.equal(2);
         });
 
+        it('...does nothing when not file/dir/symlink', () => {
+            sinon.spy(Utilities, 'copyFolderSync');
+            fs.readdirSync.returns(['invalid']);
+            fs.lstatSync.onCall(0).returns({
+                isFile: () => false,
+                isSymbolicLink: () => false,
+                isDirectory: () => false
+            });
+            Utilities.copyFolderSync('a', 'b');
+            expect(fs.copyFileSync.callCount).to.equal(0);
+            expect(fs.symlinkSync.callCount).to.equal(0);
+            expect(Utilities.copyFolderSync.callCount).to.equal(1);
+        });
+
     });
 
     describe('copyFile', () => {
-
-        // eslint-disable-next-line no-undef
-        beforeEach(() => {
-            sinon.stub(fs, 'createReadStream');
-            sinon.stub(fs, 'createWriteStream');
-            fs.createReadStream.returns({
-                pipe: () => true
-            });
-        });
-
-        // eslint-disable-next-line no-undef
-        afterEach(() => {
-            fs.createReadStream.restore();
-            fs.createWriteStream.restore();
-        });
 
         it('...copies file from old location to new location', () => {
             Utilities.copyFile('./test1', './test2');
@@ -213,16 +232,6 @@ describe('Test utility functions', () => {
 
     describe('readFile', () => {
 
-        // eslint-disable-next-line no-undef
-        beforeEach(() => {
-            sinon.stub(fs, 'readFileSync');
-        });
-
-        // eslint-disable-next-line no-undef
-        afterEach(() => {
-            fs.readFileSync.restore();
-        });
-
         it('...calls read file', () => {
             Utilities.readFile('xyz');
             expect(fs.readFileSync.calledOnce).to.equal(true);
@@ -231,20 +240,113 @@ describe('Test utility functions', () => {
 
     describe('writeFile', () => {
 
-        // eslint-disable-next-line no-undef
-        beforeEach(() => {
-            sinon.stub(fs, 'writeFileSync');
-        });
-
-        // eslint-disable-next-line no-undef
-        afterEach(() => {
-            fs.writeFileSync.restore();
-        });
-
         it('...calls write file', () => {
             Utilities.writeFile('xyz', 'text content...');
             expect(fs.writeFileSync.calledOnce).to.equal(true);
         });
+
     });
 
+    describe('fileExists', () => {
+
+        it('...returns true for existing file', () => {
+            fs.existsSync.returns(true);
+            expect(Utilities.fileExists('im_here')).to.equal(true);
+        });
+
+        it('...returns false when file does not exist', () => {
+            fs.existsSync.returns(false);
+            expect(Utilities.fileExists('nope')).to.equal(false);
+        });
+
+    });
+
+    describe('createDir', () => {
+
+        it('...will create a directory when it doesn\'t exist', () => {
+            fs.existsSync.returns(false);
+            const result = Utilities.createDir('my_dir');
+
+            expect(fs.mkdirSync.calledOnce).to.equal(true);
+            expect(result).to.equal(true);
+        });
+
+        it('...returns true for empty folder', () => {
+            fs.existsSync.returns(true);
+            fs.readdirSync.returns({length: 0});
+            const result = Utilities.createDir('empty_dir');
+
+            expect(fs.mkdirSync.notCalled).to.equal(true);
+            expect(result).to.equal(true);
+        });
+
+        it('...returns false for non-empty folder', () => {
+            fs.existsSync.returns(true);
+            fs.readdirSync.returns({length: 1});
+            expect(Utilities.createDir('non_empty_dir')).to.equal(false);
+        });
+
+    });
+
+    describe('readJSON', () => {
+
+        it('...returns a parsed JSON object', () => {
+            fs.readFileSync.returns('{ "title" : "test"}');
+
+            const obj = Utilities.readJSON('xyz');
+
+            expect(obj.title).to.equal('test');
+        });
+
+        it('...throws error for non-JSON format file content', () => {
+            fs.readFileSync.returns('this is some plain text');
+            expect(() => Utilities.readJSON('xyz')).to
+                .throw('Unexpected token');
+        });
+
+    });
+
+    describe('readAndReplaceTextFile', () => {
+
+        it('...replaces single variable', () => {
+            fs.readFileSync.returns('Text with ${variable} in the middle!');
+            const variables = {variable: 'find me'};
+            const result = Utilities.readAndReplaceTextFile('some_file', variables);
+
+            expect(result).to.contain(variables.variable);
+        });
+
+        it('...replaces multiple variables', () => {
+            fs.readFileSync.returns('Some math ${a} + ${b} = ${c}');
+            const math = {a: 1, b: 2, c: 3};
+            const result = Utilities.readAndReplaceTextFile('my_file', math);
+
+            expect(result).to.contain('1 + 2 = 3');
+        });
+
+    });
+
+    describe('readAndReplaceJSONFile', () => {
+
+        it('...replaces variables in an object', () => {
+            fs.readFileSync.returns(
+                '{ "name":"${name}", "version" : "v-${version}" }'
+            );
+            const values = {name: 'my_app', version: '1.0.0'};
+            const jsonString = Utilities.readAndReplaceJSONFile('manifest', values);
+            const obj = JSON.parse(jsonString);
+
+            expect(obj.name).to.equal(values.name);
+            expect(obj.version).to.equal('v-1.0.0');
+        });
+
+        it('...replaces nested variables', () => {
+            fs.readFileSync.returns('{ "config": { "count" : "${n}" }}');
+            const values = {n: 10};
+            const result = Utilities.readAndReplaceJSONFile('manifest', values);
+
+            expect(result).to.contain('10');
+        });
+
+    });
 });
