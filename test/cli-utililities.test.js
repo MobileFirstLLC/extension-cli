@@ -291,8 +291,7 @@ describe('Test utility functions', () => {
     describe('readJSON', () => {
 
         it('...returns a parsed JSON object', () => {
-            fs.readFileSync.returns('{ "title" : "test"}');
-
+            fs.readFileSync.returns('{ "title" : "test" }');
             const obj = Utilities.readJSON('xyz');
 
             expect(obj.title).to.equal('test');
@@ -329,9 +328,7 @@ describe('Test utility functions', () => {
     describe('readAndReplaceJSONFile', () => {
 
         it('...replaces variables in an object', () => {
-            fs.readFileSync.returns(
-                '{ "name":"${name}", "version" : "v-${version}" }'
-            );
+            fs.readFileSync.returns('{ "name":"${name}", "version" : "v-${version}" }');
             const values = {name: 'my_app', version: '1.0.0'};
             const jsonString = Utilities.readAndReplaceJSONFile('manifest', values);
             const obj = JSON.parse(jsonString);
