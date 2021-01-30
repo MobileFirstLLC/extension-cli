@@ -78,9 +78,11 @@
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "prompts": "^2.4.0",
-    "sinon": "^9.2.4",
     "sinon-chrome": "^3.0.1",
     "webpack-stream": "^6.1.2",
     "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "sinon": "^9.2.4"
   }
 }

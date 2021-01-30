@@ -100,14 +100,18 @@ class Utilities {
 
         for (let k in projectConfig) {
             if (!projectConfig.hasOwnProperty(k)) continue;
-            if (!temp[k]) temp[k] = {};
-            this.keyReplace(projectConfig[k], temp[k]);
+            if (typeof projectConfig[k] === 'object') {
+                if (!temp[k]) temp[k] = {};
+                this.keyReplace(projectConfig[k], temp[k]);
+            } else {
+                temp[k] = projectConfig[k];
+            }
         }
         return temp;
     }
 
     /**
-     * Recursively copy directory
+     * Recursively copy a directory and all its files to a new location
      * @param from - path to current location
      * @param to - target location path
      */
@@ -130,31 +134,14 @@ class Utilities {
     }
 
     /**
-     * Copy single file from one location to another (synchronous)
-     * @param from - source
-     * @param to - target
+     * Copy single file from one location to another (synchronous).
+     *
+     * @param from - source file path
+     * @param to - target file path
      */
     copyFile(from, to) {
-        fs.createReadStream(from)
-            .pipe(fs.createWriteStream(to));
+        fs.createReadStream(from).pipe(fs.createWriteStream(to));
     }
-
-    /**
-     * Create empty directory.
-     *
-     * @param dirPath - path to directory
-     * @return {boolean} - true if exists and empty (should be
-     *   writable) and false otherwise
-     */
-    createDir(dirPath) {
-        // doesn't exist
-        if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath);
-            return true;
-        }
-        // check if empty
-        return !fs.readdirSync(dirPath).length;
-    };
 
     /**
      * Read utf-8 encoded file (synchronous)
@@ -173,6 +160,23 @@ class Utilities {
     writeFile(filePath, content) {
         fs.writeFileSync(filePath, content);
     }
+
+    /**
+     * Create empty directory.
+     *
+     * @param dirPath - path to directory
+     * @return {boolean} - true if exists and empty (should be
+     *   writable) and false otherwise
+     */
+    createDir(dirPath) {
+        // doesn't exist
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
+            return true;
+        }
+        // check if empty
+        return !fs.readdirSync(dirPath).length;
+    };
 
     /**
      * Read JSON file
