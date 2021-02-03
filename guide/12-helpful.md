@@ -11,7 +11,7 @@ Some generally helpful links that may be useful when working with extension proj
   - [Supporting multiple languages](https://developer.chrome.com/extensions/i18n)
   - [Language locales list](https://developers.google.com/admin-sdk/directory/v1/languages)
 
-### Resources for Publishing at Chrome Web Store
+### Extension Publishing Guides
 
 - **Chrome**
     - [Webstore Image Guide](https://developer.chrome.com/webstore/images)
