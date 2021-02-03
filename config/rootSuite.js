@@ -1,16 +1,41 @@
+/** * * * * * * * * * * * * * * * * * * * *
+ * Extension-CLI
+ * Command line build tool for building
+ * browser extensions
+ *
+ * Author: Mobile First LLC
+ * Website: https://mobilefirst.me
+ *
+ * @description
+ * This rootsuite sets up unit testing
+ * environment
+ * * * * * * * * * * * * * * * * * * * * */
+
 const sinon = require('sinon');
 const chrome = require('sinon-chrome');
 const chai = require('chai');
-const sandbox = sinon.createSandbox();
-const argv = require('yargs').argv;
 const chaiAsPromised = require('chai-as-promised');
+const argv = require('yargs').argv;
 const texts = require('../config/texts').xtTest;
 
+/**
+ * Create sinon sandbox
+ *
+ * Sandboxes removes the need to keep track of
+ * every fake created, which greatly simplifies cleanup.
+ *
+ * @see {@link https://sinonjs.org/releases/latest/sandbox/}
+ */
+const sandbox = sinon.createSandbox();
+
+/**
+ * Setup global DOM
+ */
 require('jsdom-global')();
 
 /**
- * Setup unit test environment
- * and simulate window
+ * Before running any tests -
+ * setup the test environment
  */
 before(function () {
     process.env.NODE_ENV = 'test';
@@ -22,22 +47,29 @@ before(function () {
     global.sandbox = sandbox;
     window.sandbox = sandbox;
     window.chrome = chrome;
+
+    // output list of namespaces that
+    // are available in test environment
     console.log(texts.onRootSetup(
         'window,chrome,chai,expect,sandbox(sinon)'
             .split(',')));
 });
 
 /**
- * Clean up after every test
+ * After each test -
+ * reset chrome and sandbox
  */
 // eslint-disable-next-line no-undef
 afterEach(function () {
+    // noinspection JSUnresolvedFunction
     chrome.flush();
     sandbox.restore();
 });
 
 /**
- * Clean up after all tests
+ * After all tests -
+ * Clean up everything that was
+ * initially set up
  */
 // eslint-disable-next-line no-undef
 after(function () {
@@ -45,6 +77,7 @@ after(function () {
     delete window.chrome;
     delete global.sinon;
     delete global.chrome;
+    // noinspection JSUnresolvedVariable
     delete global.jsdom;
     delete global.chai;
     delete global.expect;
@@ -53,11 +86,22 @@ after(function () {
 });
 
 /**
- * Simulate window mouse event so mouse events
- * can be fired during unit testing.
+ * Simulate mouse events globally
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent}
+ *
+ * @param {String} type - event type
+ * @param {number} sx - screen X coordinate
+ * @param {number} sy - screen Y coordinate
+ * @param {number} cx - client X coordinate
+ * @param {number} cy - client Y coordinate
+ * @return {Event} - the event
  */
-global.mouseEvent = function (type, sx, sy, cx, cy) {
-    let evt;
+global.mouseEvent = function (
+    type,
+    sx, sy,
+    cx, cy
+) {
+    let _event;
 
     const e = {
         bubbles: true,
@@ -77,32 +121,42 @@ global.mouseEvent = function (type, sx, sy, cx, cy) {
     };
 
     if (typeof (document.createEvent) === 'function') {
-        evt = document.createEvent('MouseEvents');
-        evt.initMouseEvent(type,
+        _event = document.createEvent('MouseEvents');
+        _event.initMouseEvent(type,
             e.bubbles, e.cancelable, e.view, e.detail,
             e.screenX, e.screenY, e.clientX, e.clientY,
             e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
             e.button, document.body.parentNode);
-    } else if (document.createEventObject) {
-        evt = document.createEventObject();
-        for (const prop in e) {
-            evt[prop] = e[prop];
+    } else {
+        // noinspection JSUnresolvedVariable
+        if (document.createEventObject) {
+            _event = document.createEventObject();
+            for (const prop in e) {
+                _event[prop] = e[prop];
+            }
+            _event.button = {0: 1, 1: 4, 2: 2}[_event.button] ||
+                _event.button;
         }
-        evt.button = {0: 1, 1: 4, 2: 2}[evt.button] || evt.button;
     }
-    return evt;
+    return _event;
 };
 
+// noinspection JSValidateTypes
 /**
  * Simulate dispatching an event on some DOM element
- * @param elem - element to dispatch event on
- * @param evt - Event to dispatch
+ *
+ * @param {EventTarget} target - element on which to dispatch event
+ * @param {Event} event - the event to dispatch
+ * @return {Event} - the event
  */
-global.dispatchEvent = function (elem, evt) {
-    if (elem.dispatchEvent) {
-        elem.dispatchEvent(evt);
-    } else if (elem.fireEvent) {
-        elem.fireEvent('on' + evt.type, evt);
+global.dispatchEvent = function (target, event) {
+    if (target.dispatchEvent) {
+        target.dispatchEvent(event);
+    } else {
+        // noinspection JSUnresolvedVariable
+        if (target.fireEvent) {
+            target.fireEvent('on' + event.type, event);
+        }
     }
-    return evt;
+    return event;
 };
