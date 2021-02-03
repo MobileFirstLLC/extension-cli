@@ -8,6 +8,6 @@ The intent is to provide a starting point for more elaborate and useful implemen
 
 Plan: implement these using extension v3 manifest, service worker
 
-- [] **Current Time** - shows current time in popup window (add preview)
-- [] **Simple Blocker** - create example that blocks requests (add preview)
-- [] ???
+- [ ] **Current Time** - shows current time in popup window (add preview)
+- [ ] **Simple Blocker** - create example that blocks requests (add preview)
+- [ ] ???
