@@ -31,7 +31,7 @@ const sandbox = sinon.createSandbox();
 /**
  * Setup global DOM
  */
-require('jsdom-global')();
+global.jsdom = require('jsdom-global')();
 
 /**
  * Before running any tests -
@@ -68,25 +68,28 @@ afterEach(function () {
 
 /**
  * After all tests -
- * Clean up everything that was
- * initially set up
+ * Clean up everything that was initially set up
  */
 // eslint-disable-next-line no-undef
 after(function () {
+    // important!
+    // do not clean when running in watch mode
     if (argv.watch) return;
-    delete window.chrome;
+
+    delete global.jsdom;
     delete global.sinon;
     delete global.chrome;
-    // noinspection JSUnresolvedVariable
-    delete global.jsdom;
     delete global.chai;
     delete global.expect;
+    delete global.sandbox;
+    delete window.sandbox;
+    delete window.chrome;
     delete global.mouseEvent;
     delete global.dispatchEvent;
 });
 
 /**
- * Simulate mouse events globally
+ * Enable mouse events globally during unit testing
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent}
  *
  * @param {String} type - event type
@@ -96,11 +99,7 @@ after(function () {
  * @param {number} cy - client Y coordinate
  * @return {Event} - the event
  */
-global.mouseEvent = function (
-    type,
-    sx, sy,
-    cx, cy
-) {
+global.mouseEvent = function (type, sx, sy, cx, cy) {
     let _event;
 
     const e = {
@@ -143,7 +142,7 @@ global.mouseEvent = function (
 
 // noinspection JSValidateTypes
 /**
- * Simulate dispatching an event on some DOM element
+ * Enable dispatching an event on some DOM element during unit testing
  *
  * @param {EventTarget} target - element on which to dispatch event
  * @param {Event} event - the event to dispatch
