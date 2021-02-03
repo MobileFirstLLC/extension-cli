@@ -1,10 +1,23 @@
+/** * * * * * * * * * * * * * * * * * * * *
+ * Extension-CLI
+ * Command line build tool for building
+ * browser extensions
+ *
+ * Author: Mobile First LLC
+ * Website: https://mobilefirst.me
+ *
+ * @description
+ * This module specifies terminal/console
+ * output for all commands
+ * * * * * * * * * * * * * * * * * * * * */
+
 const chalk = require('chalk');
 
-/**
- * This file contains terminal/console output for all commands.
- */
-
 exports.xtCreate = {
+    promptName: 'What do you want to call the extension?',
+    promptNameError: 'You must choose a name',
+    prompDescription: 'What does it do?',
+    promptHomepage: 'Homepage URL (leave blank if you do not have one yet)',
     dirError: dirname => chalk.bold.red(`Cannot create directory: ${dirname}.\n` +
         'It already exists, is not empty, or is not writable.'),
     start: (dirname, name) => 'Press CTRL+C if you want to terminate process early.\n' +

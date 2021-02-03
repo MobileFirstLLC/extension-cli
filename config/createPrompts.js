@@ -1,29 +1,38 @@
-exports.optional = [
-    {
+/** * * * * * * * * * * * * * * * * * * * *
+ * Extension-CLI
+ * Command line build tool for building
+ * browser extensions
+ *
+ * Author: Mobile First LLC
+ * Website: https://mobilefirst.me
+ *
+ * @description
+ * This module specifies xt-create command
+ * prompts that guide user through creating
+ * a new extension project.
+ * * * * * * * * * * * * * * * * * * * * */
+
+const texts = require('../config/texts').xtCreate;
+
+exports.prompts = {
+    name: {
         type: 'text',
-        name: 'description',
-        message: 'What does it do?'
+        name: 'name',
+        message: texts.promptName,
+        validate: value =>
+            // basic null check is sufficient
+            !value || value.trim().length < 1 ?
+                texts.promptNameError : true
     },
-    {
-        type: 'text',
-        name: 'homepage',
-        message: 'Homepage URL (leave blank if you do not have one yet)'
-    }
-];
-
-exports.name = {
-    type: 'text',
-    name: 'name',
-    message: 'What do you want to call the extension?',
-    validate: value => !value || value.trim().length < 2 ? 'You must choose a name' : true
-};
-
-exports.retry = {
-    type: 'select',
-    name: 'retry',
-    message: 'Try another name?',
-    choices: [
-        {title: 'Yes', value: true},
-        {title: 'No', value: false}
+    optional: [
+        {
+            type: 'text',
+            name: 'description',
+            message: texts.prompDescription
+        }, {
+            type: 'text',
+            name: 'homepage',
+            message: texts.promptHomepage
+        }
     ]
 };

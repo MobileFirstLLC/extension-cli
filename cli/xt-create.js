@@ -22,7 +22,7 @@ const Spinner = require('cli-spinner').Spinner;
 const spinner = new Spinner(' %s ');
 const Utilities = require('./utilities').Utilities;
 const texts = require('../config/texts').xtCreate;
-const createPrompts = require('../config/createPrompts');
+const createPrompts = require('../config/createPrompts').prompts;
 const defaultHomepage = 'http://chrome.google.com/webstore'
 const initFilesPath = '../config/init/';
 
