@@ -71,7 +71,7 @@ If you are interested in extending this project or forking **[see this guide &ra
 
 ## Motivation
 
-After developing multiple browser extensions, it became clear that there were several steps in the development process that stayed the same between every project. 
+After developing multiple browser extensions, it became clear that there are several steps in the development process that stay the same between every project. 
 
 Instead of setting up these tasks individually for each project, it made more sense to combine everything in a utility tool that could be shared between projects. 
 
