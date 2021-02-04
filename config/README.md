@@ -1,6 +1,10 @@
-# Config Files
+# CLI configuration files
 
 This directory contains various files that are used by the available CLI commands. Below is a short summary of each to explain their purpose.
+
+* * * 
+
+## `config/` directory
 
 Path | Description
 :--- | :---
@@ -20,9 +24,9 @@ Path | Description
 - eslint, CI configuration files, (git)ignore can be pulled into a project through `xt-sync` command, or a project can specify these files independently.
   The idea is not having to start from scratch at project level unless it is by choice. 
 
-<br/>  
-  
-### New extension template files
+* * *
+
+## `init/` directory
 
 Path | Description
 :--- | :---
