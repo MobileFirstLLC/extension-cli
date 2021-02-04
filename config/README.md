@@ -1,28 +1,28 @@
 # Config Files
 
-This directory contains various files that are used by the available CLI commands. 
-
-Below is a short summary of each to explain their purpose.
+This directory contains various files that are used by the available CLI commands. Below is a short summary of each to explain their purpose.
 
 Path | Description
 :--- | :---
-**`build.json`** |  default file paths for build script
+**`build.json`** |  default file paths used by the build script
 **`createPrompts.js`** | text promps for guiding user through new extension creation
 **`docs.json`** | JSDoc documentation template
 **`eslint.json`** | default eslint configuration
 **`gitlab.yml`** | gitlab ci starter configuration
 **`gulpfile.js`** | gulp.js build script
 **`ignore`** | gitignore starter
-**`rootSuite.js`** | used for setting up unit testing environment
-**`texts.js`** | all command output texts
+**`rootSuite.js`** | root suite is used for setting up unit testing environment
+**`texts.js`** | command output texts for all commands
 **`travis.yml`** | Travis CI starter configuration
 
 **Notes**
 
 - eslint, CI configuration files, (git)ignore can be pulled into a project through `xt-sync` command, or a project can specify these files independently.
   The idea is not having to start from scratch at project level unless it is by choice. 
+
+<br/>  
   
-#### New extension template files
+### New extension template files
 
 Path | Description
 :--- | :---
