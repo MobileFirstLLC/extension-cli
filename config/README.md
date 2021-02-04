@@ -4,7 +4,7 @@ This directory contains various files that are used by the available CLI command
 
 * * * 
 
-## `config/` directory
+### `config/` directory
 
 Path | Description
 :--- | :---
@@ -26,7 +26,7 @@ Path | Description
 
 * * *
 
-## `init/` directory
+### `init/` directory
 
 Path | Description
 :--- | :---
