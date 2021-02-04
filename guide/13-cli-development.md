@@ -11,8 +11,10 @@ Path | Description
 --- | ---
 └ **.github** | Github markdown files
 └ **cli** |  all commands are defined here
-└ **config** | Static resources used by the commands in `cli`
-└ **guide** | Docs
+└ **config** | Resources used by the commands in `cli`
+└ **examples** | Examples (future)
+└ **guide** | User guide
+└ **test** | Unit tests
 └ `/*` | Application root; various project config files
 
 
