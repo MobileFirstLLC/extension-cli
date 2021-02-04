@@ -26,7 +26,7 @@ Path | Description
 
 Path | Description
 :--- | :---
-**`init/`** | Files for bootstrapping a new extension project 
+**`init`** | Files for bootstrapping a new extension project 
  &nbsp; **`└── NNxNN.png`** | icons
  &nbsp; **`└── background.js`** | background script
  &nbsp; **`└── icon.svg`** | vector icon
@@ -39,9 +39,7 @@ Path | Description
 **Notes**
 
 - All files in this directory are included in a new extensions project
-- if a file is used for creating a new extension but should
-    not be included in the generated project; put it in the parent (`/config`)
-    directory
+  - files that should not be included in the generated project go in `/config` directory
 - keep this directory flat on purpose to keep things simple &mdash; create command will generate
-  the necessary file structure     
+  the necessary structure     
     
