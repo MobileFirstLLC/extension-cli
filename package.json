@@ -44,14 +44,14 @@
     "infile": ".github/CHANGELOG.md"
   },
   "dependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
     "@babel/register": "^7.12.13",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chalk": "^4.1.0",
     "cli-spinner": "^0.2.10",
-    "commander": "^7.0.0",
+    "commander": "^7.1.0",
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",

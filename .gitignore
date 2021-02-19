@@ -5,3 +5,4 @@ tutorial-env/
 .nyc_output
 env
 icon.png
+venv

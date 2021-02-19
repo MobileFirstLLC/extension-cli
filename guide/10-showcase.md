@@ -4,6 +4,7 @@ Alphabetical list by app name
 
 | Name | Maker | Badge |
 | --- | --- | --- |
+| [Doucheblock for Twitter][0050] | [Mobile First][0021] | ![img][0052] |
 | [Download All Images][0020] | [Mobile First][0021] | ![img][0022] |
 | [Shortcuts for Chrome][0040] | [Mobile First][0021] | ![img][0042] |
 | [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
@@ -40,3 +41,6 @@ Edit this file on Github to add your project, then submit a PR
 
 [0040]: https://chrome.google.com/webstore/detail/jnmekaomnicdcpgdndekkmojfomifjal
 [0042]: https://img.shields.io/chrome-web-store/users/jnmekaomnicdcpgdndekkmojfomifjal
+
+[0050]: https://chrome.google.com/webstore/detail/eeledoologbepiegnccedjigjkblhmhi
+[0052]: https://img.shields.io/chrome-web-store/users/eeledoologbepiegnccedjigjkblhmhi
