@@ -63,11 +63,7 @@ const proc = exec([
     ' --require @babel/register ',
 
     // output colors
-    '--colors',
-
-    // lastly: pipe to coveralls -->
-    // this has to happen last after all tests have run
-    coverage ? '&& nyc report --reporter=text-lcov | coveralls' : ''
+    '--colors'
 
 ].join(' '));
 
@@ -77,7 +73,18 @@ proc.stdout.on('data', data => {
 
 proc.stderr.on('data', data => {
     process.stdout.write(data.toString());
-    if (coverage) {
-        process.exit(1);
+});
+
+proc.on('exit', code => {
+    // unit test proc must finish without error
+    if (code === 0) {
+        if (coverage) {
+            // lastly: pipe to coveralls -->
+            // after all tests have run AND
+            // only if tests completed without error
+            exec('nyc report --reporter=text-lcov | coveralls');
+        }
     }
+    // exit main process with the unit test result code
+    process.exit(code);
 });
