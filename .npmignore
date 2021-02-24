@@ -20,3 +20,4 @@ mkdocs.yml
 env/
 test/
 examples/
+venv/
