@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.11.5 (2021-02-24)
+
+* **xt-test:** unit code result reporting fix, see: [#26](https://github.com/mobilefirstllc/extension-cli/issues/26) 
+
 ### 0.11.3 (2021-01-27)
 
 * **xt-build:** file watch fix
