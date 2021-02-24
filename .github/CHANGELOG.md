@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* [#26](https://github.com/mobilefirstllc/extension-cli/issues/26) unit test coverage reporting and reporting error code on test failure ([d3bba9d](https://github.com/mobilefirstllc/extension-cli/commit/d3bba9d08e04d574ab26468b522f33db3567fd9a))
+* **xt-test** [#26](https://github.com/mobilefirstllc/extension-cli/issues/26) unit test coverage reporting and reporting error code on test failure ([d3bba9d](https://github.com/mobilefirstllc/extension-cli/commit/d3bba9d08e04d574ab26468b522f33db3567fd9a))
 
 ### [0.11.3](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.3-alpha.0...v0.11.3) (2021-01-27)
 
