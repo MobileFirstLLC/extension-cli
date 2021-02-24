@@ -37,7 +37,9 @@
   "scripts": {
     "test": "nyc mocha ./test/*.test.js --colors",
     "test:report": "npm run test -- nyc report",
-    "test:travis": "npm run test && nyc report --reporter=text-lcov | coveralls"
+    "test:travis": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "alpha:test": "npx standard-version --dry-run --prerelease alpha",
+    "alpha": "npx standard-version --prerelease alpha"
   },
   "license": "MIT",
   "standard-version": {
