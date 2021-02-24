@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "Chrome Extension CLI tools",
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
@@ -44,9 +44,9 @@
     "infile": ".github/CHANGELOG.md"
   },
   "dependencies": {
-    "@babel/core": "^7.12.17",
-    "@babel/preset-env": "^7.12.17",
-    "@babel/register": "^7.12.13",
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/register": "^7.13.0",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chalk": "^4.1.0",
