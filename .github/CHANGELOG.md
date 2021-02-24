@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.11.5](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.5-alpha.1...v0.11.5) (2021-02-24)
 
+### Bug Fixes
+
+* [#26](https://github.com/mobilefirstllc/extension-cli/issues/26) unit test coverage reporting and reporting error code on test failure ([d3bba9d](https://github.com/mobilefirstllc/extension-cli/commit/d3bba9d08e04d574ab26468b522f33db3567fd9a))
+
 ### [0.11.3](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.3-alpha.0...v0.11.3) (2021-01-27)
 
 ### [0.11.3-alpha.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.2...v0.11.3-alpha.0) (2021-01-27)
