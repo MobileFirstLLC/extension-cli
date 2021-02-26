@@ -25,41 +25,72 @@
  * to provide path and name of the configuration file.
  */
 
+const fs = require('fs');
 const del = require('del');
-const path = require('path');
 const util = require('util');
+const path = require('path');
 const program = require('commander');
 const pkg = require('../package.json');
-const jsdoc = './node_modules/.bin/jsdoc';
 const exec = require('child_process').exec;
 const Spinner = require('cli-spinner').Spinner;
-const spinner = new Spinner(' %s ');
 const Utilities = require('./utilities').Utilities;
 const texts = require('../config/texts').xtDocs;
 const defaultConfig = require('../config/docs.json');
+const spinner = new Spinner(' %s ');
+const jsdoc = './node_modules/.bin/jsdoc';
+const tmpFile = path.join(process.cwd(),
+    './node_modules', pkg.name, 'tmpDocsConfig.json');
 
 program
     .version(pkg.version)
     .option('-c --config <config>', texts.configArg, /^(.*)$/i)
+    .option('-w --watch', texts.argWatch)
     .parse(process.argv);
 
-const tmpFile = path.join(process.cwd(), './node_modules', pkg.name, 'tmpDocsconfig.json');
-const docFile = program.opts().config || '.xtdocs.json';
-const projectConfig = Utilities.fileExists(docFile) ?
-    Utilities.readJSON(docFile) :
-    Utilities.readJSON('./package.json').xtdocs;
-const config = Utilities.iterateConfigs(defaultConfig, projectConfig);
+const {config: configArg, watch} = program.opts();
 
-spinner.start();
-Utilities.writeFile(tmpFile, JSON.stringify(config));
+const getConfig = (docFileName) => {
+    const fe = Utilities.fileExists(docFileName);
+    const temp = Utilities.readJSON(fe ?
+        docFileName : './package.json');
+    const config = Utilities.iterateConfigs(defaultConfig,
+        fe ? temp : temp.xtdocs);
 
-exec(util.format('"%s" -c %s', jsdoc, tmpFile),
-    (_, stdout, stderr) => {
-        console.log(stdout);
-        console.log(stderr);
-        del.sync(tmpFile);
-        process.exit(0);
-    }).on('exit', (code) => {
-    spinner.stop(true);
-    console.log(!code ? texts.success : texts.failure);
-});
+    return JSON.stringify(config);
+};
+
+const buildDocs = (tmpFile, config, callback) => {
+    spinner.start();
+    Utilities.writeFile(tmpFile, config);
+
+    exec(util.format('"%s" -c %s', jsdoc, tmpFile),
+        (_, stdout, stderr) => {
+            console.log(stdout);
+            console.log(stderr);
+        })
+        .on('exit', code => {
+            del.sync(tmpFile);
+            spinner.stop(true);
+            console.log(!code ? texts.success : texts.failure);
+            if (callback) callback();
+        });
+};
+
+const startWatch = (tmpFile, config) => {
+    JSON.parse(config).source.include.map(fileOrDir => {
+        fs.watch(path.join(process.cwd(), fileOrDir),
+            (curr, prev) => {
+                // if spinning it is already running
+                if (!spinner.isSpinning()) {
+                    buildDocs(tmpFile, config, false);
+                }
+            });
+    });
+    console.log(texts.watching);
+};
+
+const config = getConfig(configArg || '.xtdocs.json');
+
+buildDocs(tmpFile, config, _ => watch ?
+    startWatch(tmpFile, config) :
+    process.exit(0));

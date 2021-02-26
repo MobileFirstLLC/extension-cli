@@ -80,6 +80,10 @@ exports.xtSync = {
  */
 exports.xtDocs = {
 
+    argWatch: 'enable watch',
+
+    watching: 'watching...',
+
     success: chalk.bold.green('Docs done!'),
 
     failure: chalk.bold.red('Docs failed'),
