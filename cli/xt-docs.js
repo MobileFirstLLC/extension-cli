@@ -9,7 +9,7 @@
  * @description
  *
  * ```text
- * xt-docs [--config filename]
+ * xt-docs [--config filename] [--watch]
  * ```
  *
  * Docs command generates documentation for the project. This command uses

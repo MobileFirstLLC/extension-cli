@@ -1,5 +1,9 @@
 ## Release Notes
 
+### 0.11.6 (2021-02-25)
+
+* **xt-docs:** add watch mode to docs command, see: [#23](https://github.com/mobilefirstllc/extension-cli/issues/23) 
+
 ### 0.11.5 (2021-02-24)
 
 * **xt-test:** unit code result reporting fix, see: [#26](https://github.com/mobilefirstllc/extension-cli/issues/26) 

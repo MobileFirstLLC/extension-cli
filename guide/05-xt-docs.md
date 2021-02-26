@@ -26,7 +26,13 @@ xt-docs
 ```
 xt-docs {-c|--config} "/path/to/config.json"
 ```
- 
+
+**Build docs and keep watching changes**
+
+```
+xt-docs {-w|--watch}
+```
+
 **Get help using this command**
 
 ```
