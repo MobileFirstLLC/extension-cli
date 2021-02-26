@@ -5,7 +5,6 @@
  * @module
  * @public
  *
- *
  * @description
  *
  * ```text
@@ -17,12 +16,13 @@
  * Command sets up extension unit testing environment with ES6 syntax support that is pre-initialized
  * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
  * and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
- * The following browser APIs are also initialized: `window`, `chrome`. Window
- * is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
- * chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
+ * The following browser APIs are also initialized: `window`, `chrome`. Window is setup using
+ * [jsdom-global](https://www.npmjs.com/package/jsdom-global) and chrome using
+ * [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
  *
  * You may extend this test environment within a single project. This is simply the base setup
- * for running unit tests. Or create your own testing environment at project level if this is not suitable.
+ * for running unit tests. Or create your own testing environment at project level if this is
+ * not suitable.
  */
 
 const util = require('util');
@@ -42,6 +42,8 @@ program
     .parse(process.argv);
 
 const {pattern, coverage, watch} = program.opts();
+const rootSuite = path.resolve(process.cwd(),
+    'node_modules', pkg.name, 'config', 'rootSuite.js');
 
 const proc = exec([
 
@@ -52,9 +54,7 @@ const proc = exec([
     pattern ? pattern : './test/**/*.js',
 
     // setup test environment
-    util.format('--file "%s"',
-        path.resolve(process.cwd(), 'node_modules',
-            pkg.name, 'config', 'rootSuite.js')),
+    util.format('--file "%s"', rootSuite),
 
     // enable watch
     watch ? '--watch' : '',
