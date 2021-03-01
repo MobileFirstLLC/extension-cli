@@ -56,33 +56,38 @@ const getConfig = (docFileName) => {
     const config = Utilities.iterateConfigs(defaultConfig,
         fe ? temp : temp.xtdocs);
 
-    return JSON.stringify(config);
+    return config;
 };
 
 const buildDocs = (tmpFile, config, callback) => {
     spinner.start();
     Utilities.writeFile(tmpFile, config);
 
-    exec(util.format('"%s" -c %s', jsdoc, tmpFile),
-        (_, stdout, stderr) => {
-            console.log(stdout);
-            console.log(stderr);
-        })
-        .on('exit', code => {
-            del.sync(tmpFile);
-            spinner.stop(true);
-            console.log(!code ? texts.success : texts.failure);
-            if (callback) callback();
-        });
+    const proc = exec(util.format('"%s" -c %s', jsdoc, tmpFile));
+
+    proc.stdout.on('data', (data) => {
+        process.stdout.write(data.toString());
+    });
+    proc.stderr.on('data', (data) => {
+        process.stderr.write(data.toString());
+    });
+    proc.on('exit', err => {
+        del.sync(tmpFile);
+        spinner.stop(true);
+        console.log(err ? texts.failure : texts.success);
+        if (callback) callback();
+    });
 };
 
-const startWatch = (tmpFile, config) => {
-    JSON.parse(config).source.include.map(fileOrDir => {
-        fs.watch(path.join(process.cwd(), fileOrDir),
+const startWatch = (tmpFile, watchPaths, configStr) => {
+    watchPaths.map(fileOrDir => {
+        fs.watch(path.join(process.cwd(), fileOrDir), {
+                persistent: true, recursive: true
+            },
             (curr, prev) => {
                 // if spinning it is already running
                 if (!spinner.isSpinning()) {
-                    buildDocs(tmpFile, config, false);
+                    buildDocs(tmpFile, configStr, false);
                 }
             });
     });
@@ -90,7 +95,10 @@ const startWatch = (tmpFile, config) => {
 };
 
 const config = getConfig(configArg || '.xtdocs.json');
+const configString = JSON.stringify(config);
+const watchPaths = config.source.include.concat(
+    config.opts.tutorials ? [config.opts.tutorials] : []);
 
-buildDocs(tmpFile, config, _ => watch ?
-    startWatch(tmpFile, config) :
+buildDocs(tmpFile, configString, _ => watch ?
+    startWatch(tmpFile, watchPaths, configString) :
     process.exit(0));
