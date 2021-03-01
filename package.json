@@ -48,9 +48,9 @@
     "infile": ".github/CHANGELOG.md"
   },
   "dependencies": {
-    "@babel/core": "^7.13.1",
-    "@babel/preset-env": "^7.13.5",
-    "@babel/register": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/register": "^7.13.8",
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "chalk": "^4.1.0",
@@ -59,7 +59,7 @@
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
-    "eslint": "^7.20.0",
+    "eslint": "^7.21.0",
     "foodoc": "^0.0.9",
     "globby": "^11.0.2",
     "gulp": "^4.0.2",
