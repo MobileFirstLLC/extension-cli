@@ -1,5 +1,11 @@
 ## Release Notes
 
+### 0.11.7 (2021-03-02)
+
+* **xt-docs**: make watch recursive on watched directories
+* **xt-docs**: add tutorials directory to watch list (if exists)
+* **xt-docs**: display error when docs command fails
+
 ### 0.11.6 (2021-02-25)
 
 * **xt-docs:** add watch mode to docs command, see: [#23](https://github.com/mobilefirstllc/extension-cli/issues/23) 
