@@ -80,13 +80,36 @@ const styles = done => {
 };
 
 const copyAs = done => {
-    return !paths.copyAsIs.length ? done() :
-        gulp.src(paths.copyAsIs)
-            .pipe(plugins.rename(path => {
-                path.dirname = '';
-            }))
-            .pipe(gulp.dest(paths.dist))
-            .on('end', done);
+
+    const _filesToCopy = (Array.isArray(paths.copyAsIs) ?
+        paths.copyAsIs : [paths.copyAsIs]);
+
+    let copyList = [..._filesToCopy];
+
+    const doCopy = (src, callback) => {
+        if (!src || !src.length) {
+            callback();
+        } else if (src.endsWith('*')) {
+            gulp.src(src)
+                .pipe(gulp.dest(paths.dist))
+                .on('end', callback);
+        } else {
+            gulp.src(src)
+                .pipe(plugins.rename(path => {
+                    path.dirname = '';
+                }))
+                .pipe(gulp.dest(paths.dist))
+                .on('end', callback);
+        }
+    };
+
+    (function processList() {
+        if (!copyList.length) {
+            done();
+        } else {
+            doCopy(copyList.pop(), processList);
+        }
+    }());
 };
 
 const copyManifest = () => {
@@ -167,6 +190,7 @@ const watch = () => {
     gulp.watch([paths.locales_dir + '**/*.json'], locales);
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(getArray(paths.icons), copyImages);
+    gulp.watch(getArray(paths.copyAsIs), copyAs);
     gulp.watch(getArray(paths.commands_watch_path || ''), custom_commands);
 };
 
