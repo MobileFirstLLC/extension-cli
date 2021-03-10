@@ -83,14 +83,14 @@ const copyAs = done => {
 
     const _filesToCopy = (Array.isArray(paths.copyAsIs) ?
         paths.copyAsIs : [paths.copyAsIs]);
-
+    
     let copyList = [..._filesToCopy];
 
     const doCopy = (src, callback) => {
         if (!src || !src.length) {
             callback();
         } else if (src.endsWith('*')) {
-            gulp.src(src)
+            gulp.src(src, {base: 'src'})
                 .pipe(gulp.dest(paths.dist))
                 .on('end', callback);
         } else {
