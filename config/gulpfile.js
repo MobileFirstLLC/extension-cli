@@ -67,7 +67,7 @@ const styles = done => {
             gulp.src(scss.src)
                 .pipe(plugins.sass())
                 .pipe(plugins.if(isProd, plugins.cleanCss()))
-                .pipe(plugins.concat(scss.name))
+                .pipe(plugins.concat(scss.name.endsWith(".css") ? scss.name : `${scss.name}.css`))
                 .pipe(gulp.dest(paths.dist + '/css'))
                 .on('end', function () {
                     if ((--count === 0) && !isDone) {
