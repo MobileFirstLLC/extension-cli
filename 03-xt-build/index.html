@@ -398,8 +398,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
-    Skip Javascript Compilation and Linting
+  <a href="#copy-files-skip-javascript-compilation-and-linting" class="md-nav__link">
+    Copy Files / Skip Javascript Compilation and Linting
   </a>
   
 </li>
@@ -421,13 +421,6 @@
           <li class="md-nav__item">
   <a href="#image-assets" class="md-nav__link">
     Image Assets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copying-files" class="md-nav__link">
-    Copying Files
   </a>
   
 </li>
@@ -719,8 +712,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#skip-javascript-compilation-and-linting" class="md-nav__link">
-    Skip Javascript Compilation and Linting
+  <a href="#copy-files-skip-javascript-compilation-and-linting" class="md-nav__link">
+    Copy Files / Skip Javascript Compilation and Linting
   </a>
   
 </li>
@@ -742,13 +735,6 @@
           <li class="md-nav__item">
   <a href="#image-assets" class="md-nav__link">
     Image Assets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copying-files" class="md-nav__link">
-    Copying Files
   </a>
   
 </li>
@@ -895,11 +881,13 @@ bundles when your compiled extension contains more than 1 javascript file. </p>
     ]
   }
 </code></pre>
-<h3 id="skip-javascript-compilation-and-linting">Skip Javascript Compilation and Linting</h3>
-<p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. The build command will copy specified files exactly without any modification to the root of the output directory. Directory path will be flattened.</p>
+<h3 id="copy-files-skip-javascript-compilation-and-linting">Copy Files / Skip Javascript Compilation and Linting</h3>
+<p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. 
+The build command will copy specified files exactly without any modification to the root of the output directory. Directory path for files will be flattened.</p>
 <p><strong>Example</strong></p>
 <p>Sample configuration for skipping compilation of pre-compiled files.</p>
-<p>This configuration will copy material theme directly from node modules and include it in the <code>dist</code> directory. It will also copy a project level <code>ga.js</code> script in the <code>dist</code> directory. No modification will occur to these files during the build step.  </p>
+<p>This configuration will copy material theme directly from node modules and include it in the <code>dist</code> directory. 
+It will also copy a project level <code>ga.js</code> script in the <code>dist</code> directory. No modification will occur to these files during the build step.  </p>
 <pre><code>  &quot;xtbuild&quot;: {
     &quot;copyAsIs&quot;: [
       &quot;./node_modules/material-design-lite/material.min.js&quot;,
@@ -917,6 +905,12 @@ to prevent them from being linted.</p>
       ]
   }
 </code></pre>
+<p>When copying directories, directory will maintain its structure. Directory to copy must be inside <code>src</code> directory. When specifying a directory use a match pattern:</p>
+<pre><code>/src/directory/*            &lt;-- copy one level
+/src/nested/directory/**/*  &lt;-- deep copy
+</code></pre>
+<p>If the copy command fails to locate the specified file or directory, it will not
+raise an issue; the copy will simply not occur.</p>
 <h3 id="style-bundles">Style bundles</h3>
 <p><code>scss_bundles</code> are used to configure build settings for css-style files. The expected value is an array with one or more items as shown in the example below.</p>
 <ul>
@@ -1022,26 +1016,6 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
       &quot;32&quot;: &quot;icons/32x32.png&quot;
     }
   }
-</code></pre>
-<h3 id="copying-files">Copying Files</h3>
-<pre><code>&quot;copyAsIs&quot;: [],
-</code></pre>
-<p>Specify files of directories to be copied, without modification, into the build directory. </p>
-<p>Individual files will be copied into the root of the build directory. </p>
-<p>Directories will maintain their structure. Directory to copy must be inside <code>src</code> directory.
-When specifying a directory use a match pattern:</p>
-<pre><code>/src/directory/*            &lt;-- copy one level
-/src/nested/directory/**/*  &lt;-- deep copy
-</code></pre>
-<p>If the copy command fails to locate the specified file or directory, it will not
-raise an issue; the copy will simply not occur.</p>
-<p><strong>Example</strong></p>
-<p>Will copy <code>analytics-script.js</code> (file) into build directory root and recursively copy
-everything in <code>/resource/img</code> directories into the build directory: <code>dist/resource/img/</code> </p>
-<pre><code>  &quot;copyAsIs&quot;: [
-    &quot;/assets/analytics-script.js&quot;,
-    &quot;/resource/img/**/*&quot;
-  ]
 </code></pre>
 <h3 id="custom-commands">Custom commands</h3>
 <p>Starting from v. 0.11.1 it will be possible to specify custom commands to run between build steps. These commands will be
