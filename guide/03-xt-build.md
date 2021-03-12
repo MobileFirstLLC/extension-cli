@@ -156,15 +156,17 @@ This configuration will produce two javascript files in the `/dist` directory.
   }
 ```
 
-### Skip Javascript Compilation and Linting
+### Copy Files / Skip Javascript Compilation and Linting
 
-Use `copyAsIs` key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside `/src` directory. The build command will copy specified files exactly without any modification to the root of the output directory. Directory path will be flattened.
+Use `copyAsIs` key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside `/src` directory. 
+The build command will copy specified files exactly without any modification to the root of the output directory. Directory path for files will be flattened.
 
 **Example**
 
 Sample configuration for skipping compilation of pre-compiled files.
 
-This configuration will copy material theme directly from node modules and include it in the `dist` directory. It will also copy a project level `ga.js` script in the `dist` directory. No modification will occur to these files during the build step.  
+This configuration will copy material theme directly from node modules and include it in the `dist` directory. 
+It will also copy a project level `ga.js` script in the `dist` directory. No modification will occur to these files during the build step.  
 
 ```
   "xtbuild": {
@@ -187,6 +189,17 @@ to prevent them from being linted.
       ]
   }
 ```
+
+When copying directories, directory will maintain its structure. Directory to copy must be inside `src` directory. When specifying a directory use a match pattern:
+
+```
+/src/directory/*            <-- copy one level
+/src/nested/directory/**/*  <-- deep copy
+```
+
+If the copy command fails to locate the specified file or directory, it will not
+raise an issue; the copy will simply not occur.
+
 
 ### Style bundles
 
@@ -294,40 +307,6 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
     }
   }
 ```
-### Copying Files
-
-```
-"copyAsIs": [],
-```
-
-Specify files of directories to be copied, without modification, into the build directory. 
-
-Individual files will be copied into the root of the build directory. 
-
-Directories will maintain their structure. Directory to copy must be inside `src` directory.
-When specifying a directory use a match pattern:
-
-```
-/src/directory/*            <-- copy one level
-/src/nested/directory/**/*  <-- deep copy
-```
-
-If the copy command fails to locate the specified file or directory, it will not
-raise an issue; the copy will simply not occur.
-
-**Example**
-
-Will copy `analytics-script.js` (file) into build directory root and recursively copy
-everything in `/resource/img` directories into the build directory: `dist/resource/img/` 
-
-```
-  "copyAsIs": [
-    "/assets/analytics-script.js",
-    "/resource/img/**/*"
-  ]
-```
-
-
 
 ### Custom commands
 
