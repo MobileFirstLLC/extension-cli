@@ -294,6 +294,40 @@ Therefore, in your extension project `manifest.json` you would refer to them as 
     }
   }
 ```
+### Copying Files
+
+```
+"copyAsIs": [],
+```
+
+Specify files of directories to be copied, without modification, into the build directory. 
+
+Individual files will be copied into the root of the build directory. 
+
+Directories will maintain their structure. Directory to copy must be inside `src` directory.
+When specifying a directory use a match pattern:
+
+```
+/src/directory/*            <-- copy one level
+/src/nested/directory/**/*  <-- deep copy
+```
+
+If the copy command fails to locate the specified file or directory, it will not
+raise an issue; the copy will simply not occur.
+
+**Example**
+
+Will copy `analytics-script.js` (file) into build directory root and recursively copy
+everything in `/resource/img` directories into the build directory: `dist/resource/img/` 
+
+```
+  "copyAsIs": [
+    "/assets/analytics-script.js",
+    "/resource/img/**/*"
+  ]
+```
+
+
 
 ### Custom commands
 
