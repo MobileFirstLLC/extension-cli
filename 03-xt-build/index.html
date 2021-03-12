@@ -426,6 +426,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copying-files" class="md-nav__link">
+    Copying Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-commands" class="md-nav__link">
     Custom commands
   </a>
@@ -740,6 +747,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copying-files" class="md-nav__link">
+    Copying Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#custom-commands" class="md-nav__link">
     Custom commands
   </a>
@@ -1008,6 +1022,26 @@ Therefore, in your extension project <code>manifest.json</code> you would refer 
       &quot;32&quot;: &quot;icons/32x32.png&quot;
     }
   }
+</code></pre>
+<h3 id="copying-files">Copying Files</h3>
+<pre><code>&quot;copyAsIs&quot;: [],
+</code></pre>
+<p>Specify files of directories to be copied, without modification, into the build directory. </p>
+<p>Individual files will be copied into the root of the build directory. </p>
+<p>Directories will maintain their structure. Directory to copy must be inside <code>src</code> directory.
+When specifying a directory use a match pattern:</p>
+<pre><code>/src/directory/*            &lt;-- copy one level
+/src/nested/directory/**/*  &lt;-- deep copy
+</code></pre>
+<p>If the copy command fails to locate the specified file or directory, it will not
+raise an issue; the copy will simply not occur.</p>
+<p><strong>Example</strong></p>
+<p>Will copy <code>analytics-script.js</code> (file) into build directory root and recursively copy
+everything in <code>/resource/img</code> directories into the build directory: <code>dist/resource/img/</code> </p>
+<pre><code>  &quot;copyAsIs&quot;: [
+    &quot;/assets/analytics-script.js&quot;,
+    &quot;/resource/img/**/*&quot;
+  ]
 </code></pre>
 <h3 id="custom-commands">Custom commands</h3>
 <p>Starting from v. 0.11.1 it will be possible to specify custom commands to run between build steps. These commands will be
