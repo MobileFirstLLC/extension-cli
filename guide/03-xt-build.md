@@ -2,7 +2,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to the chrome web store.</p>
+<p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to the extension marketplace for distribution.</p>
 
 * * *
 
@@ -15,7 +15,7 @@ When specifying`dev` build flag, the build will complete using development setti
 
 ### Prod Build Artifacts
 
-When specifying `prod` build flag, the build will run a production build. Successful production build will generate a `dist/` directory of extension files which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded directly to the Chrome Web Store. When running a production build, all code files (js, sass, html, json) will be minified.
+When specifying `prod` build flag, the build will run a production build. Successful production build will generate a `dist/` directory of extension files which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded directly to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, sass, html, json) will be minified.
 
 ## Commands
 
@@ -24,37 +24,37 @@ Braces `{ }` indicate that the user must choose one — and only one — of the 
 
 **Run production build (default)**
 
-```
+```bash
 xt-build
 ```
 
 **Run production build using explicit flag `-e` or `--env`**
 
-```
+```bash
 xt-build {-e|--env} prod
 ```
 
 **Run development build**
 
-```
+```bash
 xt-build {-e|--env} dev
 ```
 
 **Run command using custom configuration file path**
 
-```
+```bash
 xt-build {-c|--config} "/path/to/config.json"
 ```
 
 **Run development build and keep watching changes**
 
-```
+```bash
 xt-build {-e|--env} dev {-w|--watch}
 ```
 
 **Get help using this command**
 
-```
+```bash
 xt-build --help
 ``` 
 
@@ -63,14 +63,12 @@ xt-build --help
 After adding Extension CLI to your project, you can run these commands from a terminal using syntax `npx xt-build`. 
 Or you can add an option to `packages.json` scripts section as shown below, and then execute the command as `npm run build` or `npm run start`.
  
-```
+```json
 "scripts":{
     "start": "xt-build -e dev -w",
     "build": "xt-build -e prod",
 }
 ```
-
-<br/>
 
 ## Build Configuration
 
@@ -114,8 +112,6 @@ The CLI uses a default build configuration file shown below. This tells the exte
 }
 ```
 
-<br/>
-
 ## Custom Configurations
 
 ### Script Bundles
@@ -138,8 +134,8 @@ This configuration will produce two javascript files in the `/dist` directory.
 - One file contains exactly `src/background.js` and 
 - One file contains all `.js` files under `scr/app/dir1` and `scr/app/dir2`
 
-```
-  "xtbuild": {
+```json
+"xtbuild": {
     "js_bundles": [
       {
         "name": "background",
@@ -153,7 +149,7 @@ This configuration will produce two javascript files in the `/dist` directory.
          ]
       }
     ]
-  }
+}
 ```
 
 ### Copy Files / Skip Javascript Compilation and Linting
@@ -168,13 +164,13 @@ Sample configuration for skipping compilation of pre-compiled files.
 This configuration will copy material theme directly from node modules and include it in the `dist` directory. 
 It will also copy a project level `ga.js` script in the `dist` directory. No modification will occur to these files during the build step.  
 
-```
-  "xtbuild": {
+```json
+"xtbuild": {
     "copyAsIs": [
       "./node_modules/material-design-lite/material.min.js",
       "./assets/ga.js"
     ]
-  }
+}
 ```
 
 Note that when you include precompiled javascript files to your extension project, you should also disable linting for those files.
@@ -193,8 +189,8 @@ to prevent them from being linted.
 When copying directories, directory will maintain its structure. Directory to copy must be inside `src` directory. When specifying a directory use a match pattern:
 
 ```
-/src/directory/*            <-- copy one level
-/src/nested/directory/**/*  <-- deep copy
+/src/directory/*            // copy one level
+/src/nested/directory/**/*  // deep copy
 ```
 
 If the copy command fails to locate the specified file or directory, it will not
@@ -218,8 +214,8 @@ When you name stylesheet files, use `.scss` file extension. The default CLI conf
 
 Sample project-level configuration with multiple style bundles
 
-```
-  "xtbuild": {
+```json
+"xtbuild": {
     "scss_bundles": [
       {
         "src": [
@@ -235,7 +231,7 @@ Sample project-level configuration with multiple style bundles
         "name": "display.css"
       }
     ]
-  }
+}
 ```
 
 ### Text Localization
@@ -257,11 +253,11 @@ Multiple locales example with a custom locales path and multiple `.json` languag
 
 _build configuration:_
 
-```
-  "xtbuild": {
-      "locales_list": ["en","fr","pl"],
-      "locales_dir": "./my/custom/locales/path/"
-  }
+```json
+"xtbuild": {
+  "locales_list": ["en","fr","pl"],
+  "locales_dir": "./my/custom/locales/path/"
+}
 ```
 
 _project level file structure:_ 
@@ -283,13 +279,13 @@ File Path | Description
 
 By default, extension CLI will look for image assets using these configurations:
 
-```
+```json
 "icons": [
     "./assets/img/**/*.png",
     "./assets/img/**/*.gif",
     "./assets/img/**/*.jpg",
     "./assets/img/**/*.svg"
-  ],
+],
 ```
 
 You may change this configuration if the project image assets are located elsewhere or
@@ -298,14 +294,14 @@ if you want to support additional image file extensions.
 After the build step, all image assets will be located in the `/dist/icons` directory.
 Therefore, in your extension project `manifest.json` you would refer to them as follows:
 
-```
-  "browser_action": {
+```json
+"browser_action": {
     "default_icon": {
       "16": "icons/16x16.png",
       "24": "icons/24x24.png",
       "32": "icons/32x32.png"
     }
-  }
+}
 ```
 
 ### Custom commands
@@ -320,14 +316,14 @@ Custom commands are run for both `dev` and `prod` builds.
 
 To configure custom commands specify following build configuration:
 
-```
-  "commands": "", 
+```json
+"commands": "", 
 ```
 
 For example:
 
-```
-  "commands": "python do_something.py", 
+```json
+"commands": "python do_something.py", 
 ```
 
 would first build the extension, then run a custom Python script, then (if `prod`) build the extension zip file.
@@ -337,14 +333,14 @@ cause the custom commands to re-execute.
 
 Specify watch path using following configuration option:
 
-```
-  "commands_watch_path": null
+```json
+"commands_watch_path": null
 ``` 
 
 For example:
 
-```
-  "commands_watch_path": "./src"
+```json
+"commands_watch_path": "./src"
 ```
 
 then run build in `dev` mode with `--watch` flag. Any changes under `./src` directory will cause custom commands to re-run.

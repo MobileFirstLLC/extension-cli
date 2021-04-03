@@ -19,13 +19,13 @@ to build, test and document extension projects.</p>
 
 Create a new extension project:
 
-```text
+```bash
 npx extension-cli
 ```
 
 Add CLI to an existing project:
 
-```
+```bash
 npm install extension-cli
 ```
 

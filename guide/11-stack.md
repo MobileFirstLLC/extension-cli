@@ -1,28 +1,25 @@
 # Tech Stack
 
 
-Extension CLI is built with:
+Extension CLI is built with all of the following:
 
-| Tech Stack | | |
-| --- | --- | --- |
-| [Node.js][0] | [Gulp][1] | [Chalk][2] |
-| [Commander][3] | [Babel][4] | [Chai][5] |
-| [Mocha][6] | [ESLint][7] | [jsdom][8] |
-| [JSDoc][9] | [prompts][10] | [Sinon][11] | 
-| [Sinon-chrome][16] | [NYC][12] | [Webpack][13] |  
-| [CLI Spinner][14] | [yargs][15] | | 
+ [Node.js][0]  [Gulp][1]  [Chalk][2]  [Commander][3]  [Babel][4]  [Chai][5] [Mocha][6]  [ESLint][7]  [jsdom][8]  [JSDoc][9]  [prompts][10]  [Sinon][11] [Sinon-chrome][16]  [NYC][12]  [Webpack][13] [CLI Spinner][14]  [yargs][15]   
 
-- Source [hosted on Github](https://github.com/MobileFirstLLC/extension-cli)
+Extension-CLI
 
-- Published on [NPM](https://www.npmjs.com/package/extension-cli)
+- Source is [hosted on Github](https://github.com/MobileFirstLLC/extension-cli)
+
+- Release is published on [NPM](https://www.npmjs.com/package/extension-cli)
 
 ### Documentation
+
+This user guide is built with:
 
 - [MkDocs](https://www.mkdocs.org/)
 
 - [MkDocs material theme](https://squidfunk.github.io/mkdocs-material/)
 
-- Built with [Travis CI](https://travis-ci.org/MobileFirstLLC/extension-cli)
+- Built by [Travis CI](https://travis-ci.org/MobileFirstLLC/extension-cli)
 
 - Served by Github Pages
 

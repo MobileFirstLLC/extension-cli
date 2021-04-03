@@ -28,7 +28,7 @@ Braces `{ }` indicate that the user must choose one — and only one — of the 
 
 **Run unit tests (default)**
 
-```
+```bash
 xt-test
 ```
 
@@ -36,13 +36,13 @@ xt-test
 
 Defaults to `./test/**/*.js` if not specified
 
-```
+```bash
 xt-test {-p|--pattern}
 ```
 
 **Execute tests and keep watching changes**
 
-```
+```bash
 xt-test {-w|--watch}
 ```
 
@@ -50,13 +50,13 @@ xt-test {-w|--watch}
 
 The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.
 
-```
+```bash
 xt-test {-c|--coverage}
 ```
 
 **Get help using this command**
 
-```
+```bash
 xt-test --help
 ``` 
 
@@ -67,7 +67,7 @@ After installing extension-cli, you can run these commands from a terminal using
 Or you can add an option to `packages.json` scripts section and then execute the command as `npm run test`. 
 See example below.
  
-```
+```json
 "scripts":{
   "test": "xt-test"
 }

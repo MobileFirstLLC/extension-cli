@@ -17,25 +17,25 @@ Braces `{ }` indicate that the user must choose one — and only one — of the 
 
 **Default command**
 
-```
+```bash
 xt-docs
 ```
  
 **Command using custom configuration file path**
 
-```
+```bash
 xt-docs {-c|--config} "/path/to/config.json"
 ```
 
 **Build docs and keep watching changes**
 
-```
+```bash
 xt-docs {-w|--watch}
 ```
 
 **Get help using this command**
 
-```
+```bash
 xt-docs --help
 ``` 
 
@@ -45,7 +45,7 @@ After installing extension-cli, you can run these commands from a terminal using
  
  Or you can add an option to `packages.json` scripts section and then execute the command as `npm run docs`. See example below.
  
-```
+```json
 "scripts":{
   "docs": "xt-docs"
 }
@@ -71,7 +71,7 @@ If these two locations cause a conflict, alternatively you can provide a path to
 
 Within the extension project you should define, at minimum, the following configuration options:
 
-``` 
+```json
 "xtdocs": {
   "templates": {
     "systemName": "{extension name}",
@@ -87,17 +87,16 @@ where:
 
 | key | Description of value |
 | --- | --- |
-|`systemName`| Name of you project |
+| `systemName`| Name of you project |
 | `systemSummary` | Provide a short description of your project; this will be shown as a subheading in the generated docs |
 | `systemColor` | Choose a theme color for your documentation; css hex color definition will work, e.g. `#000000`.
 
-<br/>
 
 ### Default Configuration
 
 The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they follow to [JSDoc guidelines](https://jsdoc.app/about-configuring-jsdoc.html).
 
-```
+```json
 "xtdocs": {
   "tags": {
     "allowUnknownTags": true,
@@ -145,8 +144,6 @@ The CLI uses a documentation configuration file shown below. You can override an
   }
 }
 ```
-
-<br/>
 
 ## Templates
 

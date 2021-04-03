@@ -8,35 +8,35 @@ For an existing application, before using Extension CLI, add these configuration
 
 This is needed to compile projects written in ES6.
 
-```text
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  }
+```json
+"babel": {
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
 ```
 
 ### ESLint Ignore
 
 Exclude test files from being linted. If your project includes compiled 3rd party libraries, you should exclude them also.
 
-```text
-  "eslintIgnore": [
+```json
+"eslintIgnore": [
     "test/**/*"
-  ]
+]
 ```
 
 ### Add Scripts
 
 Add these scripts to `package.json` then you can run, for example, `npm run start`.
 
-```text
-  "scripts": {
-      "start": "xt-build -e dev -w",
-      "build": "xt-build -e prod",
-      "clean": "xt-clean",
-      "docs": "xt-docs",
-      "test": "xt-test"
-    }
+```json
+"scripts": {
+  "start": "xt-build -e dev -w",
+  "build": "xt-build -e prod",
+  "clean": "xt-clean",
+  "docs": "xt-docs",
+  "test": "xt-test"
+}
 ```
 

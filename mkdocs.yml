@@ -1,4 +1,4 @@
-site_name: Extension CLI • Guide
+site_name: Extension CLI • User Guide
 site_description: Command-line build tools for chromium extension development.
 site_author: '@mobilefirstllc'
 docs_dir: ./guide
@@ -46,6 +46,17 @@ theme:
     scheme: slate
     primary: blue
     accent: blue
+  font:
+    text: Inter
+
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+      linenums_style: pymdownx.inline
 
 google_analytics:
   - !!python/object/apply:os.getenv ['UA-129118591-7']
