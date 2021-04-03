@@ -18,15 +18,15 @@ on the extension you are creating.**
 
 -  🎨 &nbsp; **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files <br/>
 
--  🔧 &nbsp; **Linting** — lint JavaScript using [ESLint](https://eslint.org/) <br/>
+-  💄 &nbsp; **Linting** — lint JavaScript using [ESLint](https://eslint.org/) <br/>
 
 -  📦 &nbsp; **ZIP Generation** — Generates a `.zip` file for uploading to extension marketplace ([Chrome Web Store](https://chrome.google.com/webstore/category/extensions) etc.) <br/>
 
 -  📝 &nbsp; **Document Source Code** — Generates code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) <br/>
 
--  ⚗️ &nbsp; **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome), and [js-dom](https://github.com/rstacruz/jsdom-global) <br/>
+-  ⚗️ &nbsp; **Unit Testing** —  Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome) and [js-dom](https://github.com/rstacruz/jsdom-global) <br/>
 
--  ⚔️ &nbsp; **Cross-Browser Compatibility** - create extensions for Chrome, Edge, Firefox or Opera. <br/>
+-  ⚔️ &nbsp; **Cross-Browser Compatibility** - develop extensions for Chrome, Edge, Firefox or Opera. <br/>
 
 ![feature image](https://raw.githubusercontent.com/MobileFirstLLC/extension-cli/master/.github/feature.png)
 

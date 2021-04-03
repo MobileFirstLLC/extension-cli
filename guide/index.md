@@ -1,8 +1,8 @@
 # Extension CLI
 
-<p class='page-intro'>Extension CLI is a command-line build tool for developing 
-chromium browser extensions fast and in a standardized way. It provides you a systematic way 
-to build, test and document extension projects.</p>
+<p class='page-intro'>is a command-line build tool for developing 
+chromium browser extensions fast and in a standardized way. It provides a systematic way 
+to organize, build, test and document extension projects.</p>
 
 <img src='https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f' alt='extension-cli' width="100%" /> 
 
@@ -12,6 +12,31 @@ to build, test and document extension projects.</p>
 [![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
 [![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
+
+## Features
+
+🖥️ &nbsp; **Javascript Bundling** 
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/)) <br/>
+
+🎨 &nbsp; **CSS Bundling**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files <br/>
+
+💄 &nbsp; **Linting**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; lint JavaScript using [ESLint](https://eslint.org/) <br/>
+
+📦 &nbsp; **ZIP Generation**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates a `.zip` file for uploading to extension marketplaces<br/>
+
+📝 &nbsp; **Document Source Code**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates source code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) <br/>
+
+⚗️ &nbsp; **Unit Testing** 
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome) and [js-dom](https://github.com/rstacruz/jsdom-global) <br/>
+
+⚔️ &nbsp; **Cross-Browser Compatibility**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; develop extensions for Chrome, Edge, Firefox or Opera. <br/>
+
+* * *
 
 ## Getting Started
 
@@ -30,6 +55,8 @@ npm install extension-cli
 ```
 
 More detailed [getting started guide here &rarr;](https://oss.mobilefirst.me/extension-cli/01-getting-started/)
+
+* * *
 
 ## Command Reference
 
