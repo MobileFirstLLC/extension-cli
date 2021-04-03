@@ -1,6 +1,6 @@
 ## Release Notes
 
-### [0.11.8] (2021-03-12)
+### 0.11.8 (2021-03-12)
 
 * **xt-build**: support copying directories as-is [#32](https://github.com/MobileFirstLLC/extension-cli/issues/32)
 * **xt-build**: append '.css' at the end of name if not specified by the user [PR #36](https://github.com/MobileFirstLLC/extension-cli/pull/36)
