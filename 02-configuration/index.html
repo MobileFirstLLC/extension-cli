@@ -20,7 +20,7 @@
     
     
       
-        <title>Configuration - Extension CLI • Guide</title>
+        <title>Configuration - Extension CLI • User Guide</title>
       
     
     
@@ -40,8 +40,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Inter";--md-code-font-family:""}</style>
       
     
     
@@ -86,7 +86,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Extension CLI • Guide" class="md-header__button md-logo" aria-label="Extension CLI • Guide" data-md-component="logo">
+    <a href=".." title="Extension CLI • User Guide" class="md-header__button md-logo" aria-label="Extension CLI • User Guide" data-md-component="logo">
       
   <img src="/extension-cli/assets/images/guide_icon.svg" alt="logo">
 
@@ -98,7 +98,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Extension CLI • Guide
+            Extension CLI • User Guide
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -267,12 +267,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Extension CLI • Guide" class="md-nav__button md-logo" aria-label="Extension CLI • Guide" data-md-component="logo">
+    <a href=".." title="Extension CLI • User Guide" class="md-nav__button md-logo" aria-label="Extension CLI • User Guide" data-md-component="logo">
       
   <img src="/extension-cli/assets/images/guide_icon.svg" alt="logo">
 
     </a>
-    Extension CLI • Guide
+    Extension CLI • User Guide
   </label>
   
     <div class="md-nav__source">
@@ -714,28 +714,43 @@
 <p>For an existing application, before using Extension CLI, add these configuration options to <code>package.json</code>:</p>
 <h3 id="babel-presets">Babel Presets</h3>
 <p>This is needed to compile projects written in ES6.</p>
-<pre><code class="language-text">  &quot;babel&quot;: {
-    &quot;presets&quot;: [
-      &quot;@babel/preset-env&quot;
-    ]
-  }
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;babel&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;presets&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;@babel/preset-env&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h3 id="eslint-ignore">ESLint Ignore</h3>
 <p>Exclude test files from being linted. If your project includes compiled 3rd party libraries, you should exclude them also.</p>
-<pre><code class="language-text">  &quot;eslintIgnore&quot;: [
-    &quot;test/**/*&quot;
-  ]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;eslintIgnore&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;test/**/*&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <h3 id="add-scripts">Add Scripts</h3>
 <p>Add these scripts to <code>package.json</code> then you can run, for example, <code>npm run start</code>.</p>
-<pre><code class="language-text">  &quot;scripts&quot;: {
-      &quot;start&quot;: &quot;xt-build -e dev -w&quot;,
-      &quot;build&quot;: &quot;xt-build -e prod&quot;,
-      &quot;clean&quot;: &quot;xt-clean&quot;,
-      &quot;docs&quot;: &quot;xt-docs&quot;,
-      &quot;test&quot;: &quot;xt-test&quot;
-    }
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-build -e dev -w&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-build -e prod&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;clean&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-clean&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;docs&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-docs&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-test&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               

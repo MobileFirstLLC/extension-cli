@@ -20,7 +20,7 @@
     
     
       
-        <title>xt-clean - Extension CLI • Guide</title>
+        <title>xt-clean - Extension CLI • User Guide</title>
       
     
     
@@ -40,8 +40,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Inter";--md-code-font-family:""}</style>
       
     
     
@@ -86,7 +86,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Extension CLI • Guide" class="md-header__button md-logo" aria-label="Extension CLI • Guide" data-md-component="logo">
+    <a href=".." title="Extension CLI • User Guide" class="md-header__button md-logo" aria-label="Extension CLI • User Guide" data-md-component="logo">
       
   <img src="/extension-cli/assets/images/guide_icon.svg" alt="logo">
 
@@ -98,7 +98,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Extension CLI • Guide
+            Extension CLI • User Guide
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -267,12 +267,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Extension CLI • Guide" class="md-nav__button md-logo" aria-label="Extension CLI • Guide" data-md-component="logo">
+    <a href=".." title="Extension CLI • User Guide" class="md-nav__button md-logo" aria-label="Extension CLI • User Guide" data-md-component="logo">
       
   <img src="/extension-cli/assets/images/guide_icon.svg" alt="logo">
 
     </a>
-    Extension CLI • Guide
+    Extension CLI • User Guide
   </label>
   
     <div class="md-nav__source">
@@ -704,30 +704,39 @@
 <h2 id="commands">Commands</h2>
 <p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
 <p><strong>Remove ignored files (default)</strong></p>
-<pre><code>xt-clean
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean
+</code></pre></div>
+</td></tr></table>
 <p><strong>Clear ignored files, including <code>node_modules</code></strong></p>
-<pre><code>xt-clean {-m|--modules}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean <span class="o">{</span>-m<span class="p">|</span>--modules<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
 <p><strong>Clear ignored files, including <code>.idea/</code> directory</strong></p>
-<pre><code>xt-clean {-i|--idea}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean <span class="o">{</span>-i<span class="p">|</span>--idea<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
 <p><strong>Clear ignored files, including <code>.vscode/</code> directory</strong></p>
-<pre><code>xt-clean {-v|--vscode}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean <span class="o">{</span>-v<span class="p">|</span>--vscode<span class="o">}</span>
+</code></pre></div>
+</td></tr></table>
 <p><strong>Clear absolutely all ignored files</strong></p>
-<pre><code>xt-clean -v -i -m
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean -v -i -m
+</code></pre></div>
+</td></tr></table>
 <p><strong>Get help using this command</strong></p>
-<pre><code>xt-clean --help
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-clean --help
+</code></pre></div>
+</td></tr></table>
 <h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-clean</code>.</p>
 <p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run clean</code> See example below. </p>
-<pre><code>&quot;scripts&quot;:{
-  &quot;clean&quot;: &quot;xt-clean&quot;
-}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:{</span>
+  <span class="nt">&quot;clean&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-clean&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
