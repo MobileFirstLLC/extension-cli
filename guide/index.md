@@ -32,7 +32,7 @@ Add CLI to an existing project:
 npm install extension-cli
 ```
 
-## Quick Command Reference
+## Command Reference
 
 Command | Description
 --- | ---
