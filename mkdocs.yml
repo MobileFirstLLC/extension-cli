@@ -43,7 +43,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
   palette:
-    scheme: preference
+    scheme: slate
     primary: blue
     accent: blue
 
