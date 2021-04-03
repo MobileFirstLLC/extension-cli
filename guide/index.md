@@ -1,7 +1,7 @@
 # Extension CLI
 
 <p class='page-intro'>Extension CLI is a command-line build tool for developing 
-chromium browser extensions fast and in standardized way. It provides you a systematic way 
+chromium browser extensions fast and in a standardized way. It provides you a systematic way 
 to build, test and document extension projects.</p>
 
 <img src='https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f' alt='extension-cli' width="100%" /> 
@@ -41,7 +41,7 @@ Command | Description
 **xt-clean** | Remove generated files
 **xt-sync**| Update project config files to match the latest defaults supplied by this CLI
 
-MOre detailed [command instructions and configuration options here](https://oss.mobilefirst.me/extension-cli/08-xt-create/) 
+More detailed [command instructions and configuration options here](https://oss.mobilefirst.me/extension-cli/08-xt-create/) 
 
 ---
 
