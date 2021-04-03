@@ -92,6 +92,7 @@ The CLI uses a default build configuration file shown below. This tells the exte
   "dist": "./dist",
   "source": "./src",
   "releases": "./",
+  "release_name": "release",
   "manifest": "./src/manifest.json",
   "js": "./src/**/*.js",
   "js_bundles": null,
