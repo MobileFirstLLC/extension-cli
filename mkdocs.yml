@@ -9,7 +9,7 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - 'Introduction': index.md
+  - Home: index.md
   - "Getting Started":
     - 'Installation': 01-getting-started.md
     - 'Configuration': 02-configuration.md
@@ -21,11 +21,11 @@ nav:
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
   - "Resources":
-    - Showcase: 10-showcase.md
+    - Release Notes: 09-release-notes.md
     - Helpful References: 12-helpful.md
+    - Showcase: 10-showcase.md
     - Tech Stack: 11-stack.md
-  - "Release Notes": 09-release-notes.md
-  - "Development": 13-cli-development.md
+    - Development: 13-cli-development.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
 
@@ -39,10 +39,13 @@ theme:
   logo: '/extension-cli/assets/images/guide_icon.svg'
   favicon: '/extension-cli/assets/images/favicon.png'
   features:
-    - tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
   palette:
-    primary: indigo
-    accent: pink
+    scheme: preference
+    primary: blue
+    accent: blue
 
 extra:
   social:
