@@ -47,21 +47,6 @@ theme:
     primary: blue
     accent: blue
 
-extra:
-  social:
-    - icon: fontawesome/solid/globe
-      link: https://mobilefirst.me
-    - icon: fontawesome/brands/github
-      link: https://github.com/mobilefirstllc
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/mobilefirstllc
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/mobilefirstllc
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/mobilefirstllc
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/mobilefirstllc
-
 google_analytics:
   - !!python/object/apply:os.getenv ['UA-129118591-7']
   - auto

@@ -81,6 +81,6 @@ This approach helps with creating a common, consistent development approach betw
 
 **Issues & Feature Requests:** [Submit on Github](https://github.com/MobileFirstLLC/extension-cli/issues/new/choose)
 
-**Maker:** [Mobile First](https://mobilefirst.me) &nbsp;  [![Twitter Follow](https://img.shields.io/twitter/follow/mobilefirstllc?label=follow&style=social)](https://twitter.com/intent/follow?screen_name=mobilefirstllc&tw_p=followbutton)
+**Maker:** made by <a href="https://github.com/MobileFirstLLC/extension-cli/graphs/contributors" target="_blank" rel="noreferrer noopener">developers</a> behind several popular extensions!
 
 **License:** [MIT](https://github.com/MobileFirstLLC/extension-cli/blob/master/LICENSE)
