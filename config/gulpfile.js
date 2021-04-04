@@ -83,7 +83,7 @@ const copyAs = done => {
 
     const _filesToCopy = (Array.isArray(paths.copyAsIs) ?
         paths.copyAsIs : [paths.copyAsIs]);
-    
+
     let copyList = [..._filesToCopy];
 
     const doCopy = (src, callback) => {
@@ -176,7 +176,9 @@ const custom_commands = done => {
 const release = done => {
     return isProd ?
         gulp.src(paths.dist + '/**/*')
-            .pipe(plugins.zip('release.zip'))
+            .pipe(plugins.zip(
+                `${paths.release_name || 'release'}.zip`
+            ))
             .pipe(gulp.dest(paths.releases))
             .on('end', done) :
         done();

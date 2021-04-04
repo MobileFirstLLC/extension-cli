@@ -3,6 +3,7 @@
   "dist": "./dist",
   "source": "./src",
   "releases": "./",
+  "release_name": "release",
   "manifest": "./src/manifest.json",
   "js": "./src/**/*.js",
   "js_bundles": null,
