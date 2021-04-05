@@ -15,9 +15,7 @@ nav:
     - Configuration: 02-configuration.md
   - "Commands":
     - 'extension-cli': 08-xt-create.md
-    - 'xt-build':
-      - xt-build: 03-xt-build.md
-      - Script Bundles: 03-xt-build-js-bundles.md
+    - 'xt-build': 03-xt-build.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
