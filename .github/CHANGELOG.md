@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.9](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.9-alpha.0...v0.11.9) (2021-04-05)
+
 ### [0.11.9-alpha.0](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.8...v0.11.9-alpha.0) (2021-04-04)
 
 ### [0.11.8](https://github.com/mobilefirstllc/extension-cli/compare/v0.11.8-alpha.2...v0.11.8) (2021-03-12)
