@@ -9,13 +9,15 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - Home: index.md
   - "Getting Started":
-    - 'Installation': 01-getting-started.md
-    - 'Configuration': 02-configuration.md
+    - Intro: index.md
+    - Installation: 01-getting-started.md
+    - Configuration: 02-configuration.md
   - "Commands":
     - 'extension-cli': 08-xt-create.md
-    - 'xt-build': 03-xt-build.md
+    - 'xt-build':
+      - xt-build: 03-xt-build.md
+      - Script Bundles: 03-xt-build-js-bundles.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
@@ -44,8 +46,8 @@ theme:
     - navigation.expand
   palette:
     scheme: slate
-    primary: blue
-    accent: blue
+    primary: amber
+    accent: amber
   font:
     text: Inter
 
