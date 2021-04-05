@@ -1,5 +1,11 @@
 ## Release Notes
 
+### 0.11.9 (2021-04-04)
+
+* **xt-build**: enable customizing release filename [PR #37](https://github.com/MobileFirstLLC/extension-cli/pull/37)
+* update dependencies [PR #39](https://github.com/MobileFirstLLC/extension-cli/pull/39)
+* improve user guide organization and UI [PR #38](https://github.com/MobileFirstLLC/extension-cli/pull/38), [PR #40](https://github.com/MobileFirstLLC/extension-cli/pull/40)
+
 ### 0.11.8 (2021-03-12)
 
 * **xt-build**: support copying directories as-is [#32](https://github.com/MobileFirstLLC/extension-cli/issues/32)
