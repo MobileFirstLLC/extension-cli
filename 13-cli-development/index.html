@@ -20,7 +20,7 @@
     
     
       
-        <title>Development - Extension CLI • User Guide</title>
+        <title>Overview - Extension CLI • User Guide</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#developing-extension-cli" class="md-skip">
+        <a href="#extension-cli-development" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Development
+              Overview
             
           </span>
         </div>
@@ -610,14 +610,25 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../11-stack/" class="md-nav__link">
-        Tech Stack
-      </a>
-    </li>
   
-
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        CLI Development
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CLI Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -633,12 +644,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Development
+          Overview
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Development
+        Overview
       </a>
       
         
@@ -655,29 +666,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    Tech Stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#project-organization" class="md-nav__link">
     Project Organization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-and-extending-the-cli-locally" class="md-nav__link">
-    Debugging and Extending the CLI Locally
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-these-docs" class="md-nav__link">
-    Editing These Docs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-extending-cli-documentation-locally" class="md-nav__link">
-    Debugging &amp; Extending CLI Documentation Locally
   </a>
   
 </li>
@@ -686,6 +683,36 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-dev-env/" class="md-nav__link">
+        Environment Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-user-guide/" class="md-nav__link">
+        Editing User Guide
+      </a>
     </li>
   
 
@@ -763,29 +790,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    Tech Stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#project-organization" class="md-nav__link">
     Project Organization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-and-extending-the-cli-locally" class="md-nav__link">
-    Debugging and Extending the CLI Locally
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#editing-these-docs" class="md-nav__link">
-    Editing These Docs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-extending-cli-documentation-locally" class="md-nav__link">
-    Debugging &amp; Extending CLI Documentation Locally
   </a>
   
 </li>
@@ -807,10 +820,17 @@
                   </a>
                 
                 
-                <h1 id="developing-extension-cli">Developing Extension CLI</h1>
-<p>This CLI is built with numerous tools (see <a href="extension-cli/11-stack/">Tech Stack</a>) and written in Javascript. 
-The source code is available on <a href="https://github.com/MobileFirstLLC/extension-cli">Github</a>.</p>
+                <h1 id="extension-cli-development">Extension CLI Development</h1>
+<p>This CLI is built with numerous tools listed below and written in Javascript. </p>
+<p>The source code is available on <a href="https://github.com/MobileFirstLLC/extension-cli">Github</a>.</p>
+<p>Releases are published on <a href="https://www.npmjs.com/package/extension-cli">NPM</a>.</p>
+<h2 id="tech-stack">Tech Stack</h2>
+<p>Extension CLI is built with all of the following:</p>
+<p><a href="https://nodejs.org/en/">Node.js</a>  <a href="https://gulpjs.com/">Gulp</a>  <a href="https://www.npmjs.com/package/chalk">Chalk</a>  <a href="https://www.npmjs.com/package/commander">Commander</a>  <a href="https://babeljs.io/">Babel</a>  <a href="https://www.chaijs.com/">Chai</a> <a href="https://mochajs.org/">Mocha</a>  <a href="https://eslint.org/">ESLint</a>  <a href="https://github.com/jsdom/jsdom">jsdom</a>  <a href="https://jsdoc.app/">JSDoc</a>  <a href="https://www.npmjs.com/package/prompts">prompts</a>  <a href="https://sinonjs.org/">Sinon</a> <a href="https://github.com/acvetkov/sinon-chrome">Sinon-chrome</a>  <a href="https://www.npmjs.com/package/nyc">NYC</a>  <a href="https://webpack.js.org/">Webpack</a> <a href="https://www.npmjs.com/package/cli-spinner">CLI Spinner</a>  <a href="https://www.npmjs.com/package/yargs">yargs</a>   </p>
+<p>This user guide is built with <a href="https://www.mkdocs.org/">MkDocs</a> and  <a href="https://squidfunk.github.io/mkdocs-material/">MkDocs material theme</a>.</p>
+<p>CI builds by <a href="https://travis-ci.org/MobileFirstLLC/extension-cli">Travis CI</a> and documentation served by Github Pages.</p>
 <h2 id="project-organization">Project Organization</h2>
+<p>How things in the source are organized and where to find things</p>
 <table>
 <thead>
 <tr>
@@ -821,11 +841,11 @@ The source code is available on <a href="https://github.com/MobileFirstLLC/exten
 <tbody>
 <tr>
 <td>└ <strong>.github</strong></td>
-<td>Github markdown files</td>
+<td>Github config files and markdown</td>
 </tr>
 <tr>
 <td>└ <strong>cli</strong></td>
-<td>all commands are defined here</td>
+<td>all available commands are defined here</td>
 </tr>
 <tr>
 <td>└ <strong>config</strong></td>
@@ -833,7 +853,7 @@ The source code is available on <a href="https://github.com/MobileFirstLLC/exten
 </tr>
 <tr>
 <td>└ <strong>examples</strong></td>
-<td>Examples (future)</td>
+<td>Sample extensions (future)</td>
 </tr>
 <tr>
 <td>└ <strong>guide</strong></td>
@@ -841,7 +861,7 @@ The source code is available on <a href="https://github.com/MobileFirstLLC/exten
 </tr>
 <tr>
 <td>└ <strong>test</strong></td>
-<td>Unit tests</td>
+<td>CLI unit tests</td>
 </tr>
 <tr>
 <td>└ <code>/*</code></td>
@@ -849,67 +869,9 @@ The source code is available on <a href="https://github.com/MobileFirstLLC/exten
 </tr>
 </tbody>
 </table>
-<h2 id="debugging-and-extending-the-cli-locally">Debugging and Extending the CLI Locally</h2>
-<ol>
-<li>
-<p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the repo</a></p>
-</li>
-<li>
-<p>Clone the forked repo and launch your favorite web IDE</p>
-</li>
-<li>
-<p>Install packages <code>npm install</code></p>
-</li>
-<li>
-<p><a href="https://docs.npmjs.com/cli/link.html">Link the local package</a> <code>npm link</code> (prepend <code>sudo</code> if necessary)</p>
-</li>
-<li>
-<p>You can now run any commands against the local source; you will need an extension project for this to make any sense though. You can create a new starter project by running <code>npx extension-cli</code>.</p>
-</li>
-<li>
-<p>When debugging the build command, you may need to go into <code>./config/build.json</code> and change value of <code>projectRootDir</code> as it assumes it is running from <code>node_modules</code> of the extension project. This may not be true if you are using a locally linked package.</p>
-</li>
-<li>
-<p>When you are done unlink the package: </p>
-<ol>
-<li>
-<p>run <code>npm unlink --no-save extension-cli</code> on your extension project's directory to remove the local symlink. </p>
-</li>
-<li>
-<p>Run <code>npm unlink</code> on the extension-cli root directory to remove the global symlink.</p>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="editing-these-docs">Editing These Docs</h2>
-<p>If you are not interested in the layout of this documentation site, just edit the markdown directly.
-There is a pen icon linking to the markdown source on each page of these docs.</p>
-<h2 id="debugging-extending-cli-documentation-locally">Debugging &amp; Extending CLI Documentation Locally</h2>
-<p>When you want to edit the layout and theme of these docs:</p>
-<ol>
-<li>
-<p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the repo</a></p>
-</li>
-<li>
-<p>Clone the forked repo and launch your favorite markdown editor + terminal.</p>
-</li>
-<li>
-<p>The docs use Python package called <code>mkdocs</code>. You need to have python and <code>mkdocs</code> installed if you want to preview your changes (or skip this step if you are not interested in previewing the changes!)</p>
-<ol>
-<li>Create a virtual environment: <code>python3 -m venv env</code></li>
-<li>Activate the environment: <code>source env/bin/activate</code>
-   <br/>(on Windows: <code>env\Scripts\activate.bat</code>)</li>
-<li>Install requirements <code>pip install -r requirements.txt</code></li>
-<li>Run the docs locally: <code>mkdocs serve</code></li>
-</ol>
-</li>
-<li>
-<p>All written docs are in the <code>guide</code> directory. These are the files you want to edit to make changes to the documentation. </p>
-</li>
-<li>
-<p>After editing the docs, commit your changes. Travis CI is used to compile and publish the docs automatically.</p>
-</li>
-</ol>
+<hr />
+<p>To setup a local dev environment and develop the CLI application, see</p>
+<p><a href="../13-dev-env/">Environment Setup &rarr;</a></p>
                 
               
               
@@ -928,7 +890,7 @@ There is a pen icon linking to the markdown source on each page of these docs.</
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../11-stack/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../10-showcase/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -937,11 +899,25 @@ There is a pen icon linking to the markdown source on each page of these docs.</
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tech Stack
+              Showcase
             </div>
           </div>
         </a>
       
+      
+        <a href="../13-dev-env/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Environment Setup
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

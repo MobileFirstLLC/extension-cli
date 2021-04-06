@@ -13,14 +13,14 @@
         <meta name="author" content="@mobilefirstllc">
       
       
-        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/11-stack/">
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/13-dev-env/">
       
       <link rel="icon" href="/extension-cli/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Tech Stack - Extension CLI • User Guide</title>
+        <title>Environment Setup - Extension CLI • User Guide</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tech-stack" class="md-skip">
+        <a href="#environment-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tech Stack
+              Environment Setup
             
           </span>
         </div>
@@ -613,6 +613,41 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        CLI Development
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CLI Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-cli-development/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -621,12 +656,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tech Stack
+          Environment Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tech Stack
+        Environment Setup
       </a>
       
         
@@ -643,8 +678,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-the-cli" class="md-nav__link">
+    1. Setup the CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-driver-project" class="md-nav__link">
+    2. Setup driver project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-link-driver-and-cli" class="md-nav__link">
+    3. Link driver and CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-changes" class="md-nav__link">
+    Commit Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    Clean up
   </a>
   
 </li>
@@ -657,13 +733,19 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../13-cli-development/" class="md-nav__link">
-        Development
+      <a href="../14-user-guide/" class="md-nav__link">
+        Editing User Guide
       </a>
     </li>
   
@@ -742,8 +824,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#instructions" class="md-nav__link">
+    Instructions
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-the-cli" class="md-nav__link">
+    1. Setup the CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-setup-driver-project" class="md-nav__link">
+    2. Setup driver project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-link-driver-and-cli" class="md-nav__link">
+    3. Link driver and CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-changes" class="md-nav__link">
+    Commit Changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clean-up" class="md-nav__link">
+    Clean up
   </a>
   
 </li>
@@ -760,39 +883,98 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/11-stack.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/13-dev-env.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="tech-stack">Tech Stack</h1>
-<p>Extension CLI is built with all of the following:</p>
-<p><a href="https://nodejs.org/en/">Node.js</a>  <a href="https://gulpjs.com/">Gulp</a>  <a href="https://www.npmjs.com/package/chalk">Chalk</a>  <a href="https://www.npmjs.com/package/commander">Commander</a>  <a href="https://babeljs.io/">Babel</a>  <a href="https://www.chaijs.com/">Chai</a> <a href="https://mochajs.org/">Mocha</a>  <a href="https://eslint.org/">ESLint</a>  <a href="https://github.com/jsdom/jsdom">jsdom</a>  <a href="https://jsdoc.app/">JSDoc</a>  <a href="https://www.npmjs.com/package/prompts">prompts</a>  <a href="https://sinonjs.org/">Sinon</a> <a href="https://github.com/acvetkov/sinon-chrome">Sinon-chrome</a>  <a href="https://www.npmjs.com/package/nyc">NYC</a>  <a href="https://webpack.js.org/">Webpack</a> <a href="https://www.npmjs.com/package/cli-spinner">CLI Spinner</a>  <a href="https://www.npmjs.com/package/yargs">yargs</a>   </p>
-<p>Extension-CLI</p>
-<ul>
+                <h1 id="environment-setup">Environment Setup</h1>
+<p>To build extension CLI locally you will need <a href="https://nodejs.org/en/download/">Node.js</a>
+and any web IDE of your choice.</p>
+<p>The general development setting requires two projects open at the same time:</p>
+<ol>
+<li>the CLI source code, which you are developing</li>
+<li>a driver project that is used to execute the CLI commands</li>
+</ol>
+<p>The following instructions explain how to set up such environment.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="1-setup-the-cli">1. Setup the CLI</h3>
+<ol>
 <li>
-<p>Source is <a href="https://github.com/MobileFirstLLC/extension-cli">hosted on Github</a></p>
+<p><a href="https://github.com/MobileFirstLLC/extension-cli/fork">Fork the extension-CLI repo</a></p>
 </li>
 <li>
-<p>Release is published on <a href="https://www.npmjs.com/package/extension-cli">NPM</a></p>
-</li>
-</ul>
-<h3 id="documentation">Documentation</h3>
-<p>This user guide is built with:</p>
-<ul>
-<li>
-<p><a href="https://www.mkdocs.org/">MkDocs</a></p>
+<p>Clone the forked repo and then open it in your favorite web IDE</p>
 </li>
 <li>
-<p><a href="https://squidfunk.github.io/mkdocs-material/">MkDocs material theme</a></p>
+<p>Run the following command in terminal </p>
+</li>
+</ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install   
+</code></pre></div>
+</td></tr></table>
+<h3 id="2-setup-driver-project">2. Setup driver project</h3>
+<p>Next you will need a project to drive the CLI to be able to execute its commands.
+You can use any existing extension project that is using extension-cli.</p>
+<p>If you do not have an existing project, create a new project. In the directory where you want to create the driver project run:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npx extension-cli
+</code></pre></div>
+</td></tr></table>
+<p>then follow the on-screen instructions. Once you have the project ready, open it in a web IDE. 
+At this point you should have two IDE windows open.   </p>
+<h3 id="3-link-driver-and-cli">3. Link driver and CLI</h3>
+<ol>
+<li>
+<p>In <strong>CLI project</strong> terminal run this command (use <code>sudo npm link</code> if necessary):</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm link  
+</code></pre></div>
+</td></tr></table>
+<p><br/></p>
 </li>
 <li>
-<p>Built by <a href="https://travis-ci.org/MobileFirstLLC/extension-cli">Travis CI</a></p>
+<p>In the <strong>driver project</strong> terminal run this command:    </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm link extension-cli
+</code></pre></div>
+</td></tr></table>
+<p><br/></p>
 </li>
 <li>
-<p>Served by Github Pages</p>
+<p>In the <strong>CLI project</strong> open <code>config/build.json</code> and change value of <code>projectRootDir</code>
+    to an absolute path of the driver project.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="s2">&quot;projectRootDir&quot;</span><span class="o">:</span> <span class="s2">&quot;../../../&quot;</span><span class="p">,</span>                    <span class="c1">// before</span>
+
+<span class="s2">&quot;projectRootDir&quot;</span><span class="o">:</span> <span class="s2">&quot;/path/to/my/driver/project&quot;</span><span class="p">,</span>   <span class="c1">// after</span>
+</code></pre></div>
+</td></tr></table>
+<p>This last step is required because by default the CLI assumes it is
+in <code>node_modules</code> relative to the target project. This is not necessarily
+the case when using a locally linked package.</p>
 </li>
-</ul>
+</ol>
+<hr />
+<p><strong><center>Your dev environment should now be ready to use.</center></strong></p>
+<hr />
+<h2 id="commit-changes">Commit Changes</h2>
+<p>Once done, commit your changes and open a PR.
+Note that if you changed <code>projectRootDir</code> you should exclude that change or
+ undo it before committing.</p>
+<h2 id="clean-up">Clean up</h2>
+<p>Finally you should unlink CLI and driver project to remove all local links.</p>
+<p>In the <strong>driver project</strong> terminal run:    </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm unlink --no-save extension-cli
+</code></pre></div>
+</td></tr></table>
+<p>to unlink project from the local CLI version. Note that this may remove
+extension-cli from the project completely, and you may need to run <code>install extension-cli</code>
+to add back the version from NPM registry. This is relevant only if you used
+an existing project as a driver.</p>
+<p>In CLI project terminal run:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm r extension-cli -g
+</code></pre></div>
+</td></tr></table>
+<p>to remove the CLI symlink.</p>
                 
               
               
@@ -811,7 +993,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../10-showcase/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../13-cli-development/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -820,19 +1002,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Showcase
+              Overview
             </div>
           </div>
         </a>
       
       
-        <a href="../13-cli-development/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../14-user-guide/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Development
+              Editing User Guide
             </div>
           </div>
           <div class="md-footer__button md-icon">
