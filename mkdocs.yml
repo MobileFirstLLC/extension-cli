@@ -15,7 +15,14 @@ nav:
     - Configuration: 02-configuration.md
   - "Commands":
     - 'extension-cli': 08-xt-create.md
-    - 'xt-build': 03-xt-build.md
+    - 'xt-build':
+      - Overview: 03-xt-build.md
+      - Building scripts: 03-xt-build-scripts.md
+      - Building styles: 03-xt-build-styles.md
+      - Copying files: 03-xt-build-copy.md
+      - Localization: 03-xt-build-locales.md
+      - Images: 03-xt-build-images.md
+      - Commands: 03-xt-build-cmds.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
@@ -53,6 +60,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.magiclink
   - pymdownx.highlight:
       use_pygments: true
       linenums: true
