@@ -1,6 +1,10 @@
-### List of Projects built with Extension-CLI
+* * *
 
-Alphabetical list by app name
+<p class='page-intro'>List of Projects built with Extension-CLI</p>
+
+* * *
+
+## Alphabetical list
 
 | Name | Maker | Badge |
 | --- | --- | --- |
@@ -9,16 +13,13 @@ Alphabetical list by app name
 | [Shortcuts for Chrome][0040] | [Mobile First][0021] | ![img][0042] |
 | [Sitemap Generator][0030]| [nkrusch][0031]| ![img][0032] |
 
-<br/><br/>
-
-### Open Source Projects on Github
+## Open Source Projects on Github
 
 [See Dependency Graph](https://github.com/MobileFirstLLC/extension-cli/network/dependents)
 
+## Add your own project!
 
-### Add your own project!
-
-Edit this file on Github to add your project, then submit a PR
+Edit this file on Github to add your project, then submit a PR.
  
  
 <!-- ADD PROJECT LINKS HERE !
@@ -27,7 +28,7 @@ Edit this file on Github to add your project, then submit a PR
 
  XXX0 : Webstore link 
  XXX1 : Maker url  
- XXX2 : Shild url 
+ XXX2 : Shield url 
  
  Lastly add a row to project table on top ! -->
 
