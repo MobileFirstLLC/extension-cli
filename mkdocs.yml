@@ -31,8 +31,10 @@ nav:
     - Release Notes: 09-release-notes.md
     - Helpful References: 12-helpful.md
     - Showcase: 10-showcase.md
-    - Tech Stack: 11-stack.md
-    - Development: 13-cli-development.md
+    - CLI Development:
+      - Overview: 13-cli-development.md
+      - Environment Setup: 13-dev-env.md
+    - Editing User Guide: 14-user-guide.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
 
