@@ -1,6 +1,11 @@
 # Configuration for Existing Applications
 
+
+* * *
+
 **If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.**
+
+* * *
 
 For an existing application, before using Extension CLI, add these configuration options to `package.json`:
 

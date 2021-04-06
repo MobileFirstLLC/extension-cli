@@ -4,14 +4,7 @@
 chromium browser extensions fast and in a standardized way. It provides a systematic way 
 to organize, build, test and document extension projects.</p>
 
-<img src='https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f' alt='extension-cli' width="100%" /> 
-
-[![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
-[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
-[![david](https://img.shields.io/david/mobilefirstllc/extension-cli)](https://david-dm.org/mobilefirstllc/extension-cli)
-[![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
-[![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
+* * *
 
 ## Features
 
