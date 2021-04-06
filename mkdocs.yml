@@ -14,7 +14,6 @@ nav:
     - Installation: 01-getting-started.md
     - Configuration: 02-configuration.md
   - "Commands":
-    - 'extension-cli': 08-xt-create.md
     - 'xt-build':
       - Overview: 03-xt-build.md
       - Building scripts: 03-xt-build-scripts.md
@@ -27,6 +26,7 @@ nav:
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
+    - 'extension-cli': 08-xt-create.md
   - "Resources":
     - Release Notes: 09-release-notes.md
     - Helpful References: 12-helpful.md

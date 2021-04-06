@@ -19,13 +19,11 @@ CI builds by [Travis CI](https://travis-ci.org/MobileFirstLLC/extension-cli) and
 
 ## Project Organization
 
-How things in the source are organized and where to find things
-
 Path | Description
 --- | ---
 └ **.github** | Github config files and markdown
 └ **cli** |  all available commands are defined here
-└ **config** | Resources used by the commands in `cli`
+└ **config** | Resources and config files used by the commands in `cli`
 └ **examples** | Sample extensions (future)
 └ **guide** | User guide
 └ **test** | CLI unit tests
