@@ -20,7 +20,7 @@
     
     
       
-        <title>xt-build - Extension CLI • User Guide</title>
+        <title>Overview - Extension CLI • User Guide</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              xt-build
+              Overview
             
           </span>
         </div>
@@ -388,6 +388,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        xt-build
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="xt-build" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          xt-build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -396,12 +419,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          xt-build
+          Overview
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        xt-build
+        Overview
       </a>
       
         
@@ -446,58 +469,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-configuration" class="md-nav__link">
-    Build Configuration
+  <a href="#default-configuration" class="md-nav__link">
+    Default Configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-configurations" class="md-nav__link">
-    Custom Configurations
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom Configurations">
+    <nav class="md-nav" aria-label="Default Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#script-bundles" class="md-nav__link">
-    Script Bundles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy-files-skip-javascript-compilation-and-linting" class="md-nav__link">
-    Copy Files / Skip Javascript Compilation and Linting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-bundles" class="md-nav__link">
-    Style bundles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#text-localization" class="md-nav__link">
-    Text Localization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-assets" class="md-nav__link">
-    Image Assets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-commands" class="md-nav__link">
-    Custom commands
+  <a href="#configuration-keys" class="md-nav__link">
+    Configuration Keys
   </a>
   
 </li>
@@ -511,6 +492,84 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-scripts/" class="md-nav__link">
+        Building scripts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-styles/" class="md-nav__link">
+        Building styles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-copy/" class="md-nav__link">
+        Copying files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-locales/" class="md-nav__link">
+        Localization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-cmds/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -754,58 +813,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#build-configuration" class="md-nav__link">
-    Build Configuration
+  <a href="#default-configuration" class="md-nav__link">
+    Default Configuration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-configurations" class="md-nav__link">
-    Custom Configurations
-  </a>
-  
-    <nav class="md-nav" aria-label="Custom Configurations">
+    <nav class="md-nav" aria-label="Default Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#script-bundles" class="md-nav__link">
-    Script Bundles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy-files-skip-javascript-compilation-and-linting" class="md-nav__link">
-    Copy Files / Skip Javascript Compilation and Linting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-bundles" class="md-nav__link">
-    Style bundles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#text-localization" class="md-nav__link">
-    Text Localization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-assets" class="md-nav__link">
-    Image Assets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-commands" class="md-nav__link">
-    Custom commands
+  <a href="#configuration-keys" class="md-nav__link">
+    Configuration Keys
   </a>
   
 </li>
@@ -881,7 +898,7 @@ Or you can add an option to <code>packages.json</code> scripts section as shown 
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="build-configuration">Build Configuration</h2>
+<h2 id="default-configuration">Default Configuration</h2>
 <p>By default the CLI will look for build configuration in two different
 places:</p>
 <ul>
@@ -892,9 +909,13 @@ places:</p>
 <p>in a file named <code>.xtbuild.json</code> in project root</p>
 </li>
 </ul>
-<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> or <code>--config</code> flag,
- followed by path to file. <a href="#commands">See commands for an example</a>.</p>
-<p>The CLI uses a default build configuration file shown below. This tells the extension CLI where to look for files and where to output files. You can override any of these key-value pairs at project level. You can find more detailed explanations of usage of some of these keys <a href="#custom-configurations">below</a>.</p>
+<p>If these two locations cause a conflict, alternatively you can provide a path 
+to configuration file with <code>-c</code> or <code>--config</code> flag, followed by path to file. 
+<a href="#commands">See commands for an example of how to configure this behavior</a>.</p>
+<p>The CLI uses a default build configuration file shown below. This tells 
+extension CLI where to look for input files, how to process them, and where 
+to output files. You can override any of these key-value pairs at project level. </p>
+<p>Explanations for each of these keys is given below.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -948,265 +969,103 @@ places:</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="custom-configurations">Custom Configurations</h2>
-<h3 id="script-bundles">Script Bundles</h3>
-<p><code>js_bundles</code> key used to configure build settings for javascript bundles. You will need to configure
-bundles when your compiled extension contains more than 1 javascript file. </p>
-<p>The expected value for <code>js_bundles</code> is an array with one or more items as shown in the example below.</p>
-<ul>
-<li><code>name</code> is the output bundle filename without file extension</li>
-<li><code>src</code> specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use <code>!</code> as a way to negate the inclusion of a file. This is the <a href="https://gulpjs.com/docs/en/api/src">globs syntax expected by gulp</a> (without options).</li>
-</ul>
-<p><strong>Example</strong></p>
-<p>Sample project-level configuration with multiple javascript bundles. </p>
-<p>This configuration will produce two javascript files in the <code>/dist</code> directory. </p>
-<ul>
-<li>One file contains exactly <code>src/background.js</code> and </li>
-<li>One file contains all <code>.js</code> files under <code>scr/app/dir1</code> and <code>scr/app/dir2</code></li>
-</ul>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;js_bundles&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;background&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="s2">&quot;./src/background.js&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;app&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;./src/app/dir1/**/*.js&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;./src/app/dir2/**/*.js&quot;</span>
-         <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="copy-files-skip-javascript-compilation-and-linting">Copy Files / Skip Javascript Compilation and Linting</h3>
-<p>Use <code>copyAsIs</code> key to specify an array of files which should not be compiled. These files can be located anywhere in your project, but probably best to store them somewhere outside <code>/src</code> directory. 
-The build command will copy specified files exactly without any modification to the root of the output directory. Directory path for files will be flattened.</p>
-<p><strong>Example</strong></p>
-<p>Sample configuration for skipping compilation of pre-compiled files.</p>
-<p>This configuration will copy material theme directly from node modules and include it in the <code>dist</code> directory. 
-It will also copy a project level <code>ga.js</code> script in the <code>dist</code> directory. No modification will occur to these files during the build step.  </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;copyAsIs&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;./node_modules/material-design-lite/material.min.js&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;./assets/ga.js&quot;</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<p>Note that when you include precompiled javascript files to your extension project, you should also disable linting for those files.
-In the project-level <code>package.json</code>, add the file paths to the list of ignored files
-to prevent them from being linted.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="p">{</span>  
-      <span class="nt">&quot;eslintIgnore&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;test/**/*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;./assets/ga.js&quot;</span>
-      <span class="p">]</span>
-  <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<p>When copying directories, directory will maintain its structure. Directory to copy must be inside <code>src</code> directory. When specifying a directory use a match pattern:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>/src/directory/*            // copy one level
-/src/nested/directory/**/*  // deep copy
-</code></pre></div>
-</td></tr></table>
-<p>If the copy command fails to locate the specified file or directory, it will not
-raise an issue; the copy will simply not occur.</p>
-<h3 id="style-bundles">Style bundles</h3>
-<p><code>scss_bundles</code> are used to configure build settings for css-style files. The expected value is an array with one or more items as shown in the example below.</p>
-<ul>
-<li>The property value <code>name</code> is the output bundle filename with file extension</li>
-<li><code>src</code> specifies which files to include in each bundle; you can use a string value for a single file,  array of files, or a path with wildcard. You may also use <code>!</code> as a way to negate the inclusion of a file. This is the <a href="https://gulpjs.com/docs/en/api/src">globs syntax expected by gulp</a> (without options).</li>
-</ul>
-<p>The production build will minify style files. Dev build does not minify style files.</p>
-<p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. Any CSS you write is valid Sass as well.</p>
-<p>When you name stylesheet files, use <code>.scss</code> file extension. The default CLI configuration looks for this file extension. Otherwise you must override this default configuration: <code>"scss": "./src/**/*.scss"</code> to include other file extensions in the style bundles.</p>
-<p><strong>Example</strong></p>
-<p>Sample project-level configuration with multiple style bundles</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;scss_bundles&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="s2">&quot;./src/**/*.scss&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;!./src/app/styles/message.scss&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;styles.css&quot;</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="s2">&quot;./src/app/styles/message.scss&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;display.css&quot;</span>
-      <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="text-localization">Text Localization</h3>
-<p>If the extension supports multiple languages, specify all supported languages in <code>locales_list</code> as an array. The default value is <code>["en"]</code>. 
-Refer <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list of language codes</a> when specifying this configuration.</p>
-<p><code>locales_list</code> should be an array corresponding to subdirectories under <code>locales_dir</code>. The default <code>locales_dir</code> is <code>./assets/locales/</code>.
-If you prefer a different directory value, override this default path.</p>
-<p>You may include multiple <code>.json</code> files within the language-specific directory to improve maintainability of these files (see example below).
-The build step will automatically combine all files within a language directory into a single <code>messages.json</code> which is expected from a browser extensions.</p>
-<p>Recommended reading: <a href="https://developer.chrome.com/extensions/i18n">learn how to internationalize extensions</a>.</p>
-<p><strong>Example</strong> </p>
-<p>Multiple locales example with a custom locales path and multiple <code>.json</code> language files</p>
-<p><em>build configuration:</em></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;locales_list&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="s2">&quot;fr&quot;</span><span class="p">,</span><span class="s2">&quot;pl&quot;</span><span class="p">],</span>
-  <span class="nt">&quot;locales_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;./my/custom/locales/path/&quot;</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><em>project level file structure:</em> </p>
+<h3 id="configuration-keys">Configuration Keys</h3>
 <table>
 <thead>
 <tr>
-<th>File Path</th>
+<th>Key</th>
 <th>Description</th>
+<th>Guide</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>└ <strong><code>/my/custom/locales/path/</code></strong></td>
-<td>locales directory</td>
-</tr>
-<tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>en</code>/messages.json</td>
-<td>English dictionary</td>
-</tr>
-<tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>fr</code>/myFile.json</td>
-<td>French dictionary</td>
-</tr>
-<tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>pl/</code></td>
+<td><code>"projectRootDir"</code></td>
+<td>Path to project from the to CLI location</td>
 <td></td>
 </tr>
 <tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json</td>
-<td>Polish dictionary, part 1</td>
+<td><code>"dist"</code></td>
+<td>Build output directory</td>
+<td></td>
 </tr>
 <tr>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json</td>
-<td>Polish dictionary, part 2</td>
+<td><code>"source"</code></td>
+<td>Source code directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"releases"</code></td>
+<td>Directory for outputting releases</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"release_name"</code></td>
+<td>name of release zip file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"manifest"</code></td>
+<td>Extension manifest file with path</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"js"</code></td>
+<td>Javascript watch pattern during dev builds</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"js_bundles"</code></td>
+<td>Javascript bundles configuration</td>
+<td><a href="../03-xt-build-scripts/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"html"</code></td>
+<td>location and watch pattern of HTML files</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"scss"</code></td>
+<td>Stylesheets watch pattern during dev builds</td>
+<td></td>
+</tr>
+<tr>
+<td><code>"scss_bundles"</code></td>
+<td>Stylesheets bundles configuration</td>
+<td><a href="../03-xt-build-styles/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"icons"</code></td>
+<td>Image assets configuration</td>
+<td><a href="../03-xt-build-images/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"copyAsIs"</code></td>
+<td>File and directories to copy without modification</td>
+<td><a href="../03-xt-build-copy/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"locales_dir"</code></td>
+<td>Localizations directory</td>
+<td><a href="../03-xt-build-locales/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"locales_list"</code></td>
+<td>List of locales</td>
+<td><a href="../03-xt-build-locales/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"commands"</code></td>
+<td>Custom commands</td>
+<td><a href="../03-xt-build-cmds/">Guide</a></td>
+</tr>
+<tr>
+<td><code>"commands_watch_path"</code></td>
+<td>Commands watch pattern during dev builds</td>
+<td><a href="../03-xt-build-cmds/">Guide</a></td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>During build, <code>myFile.json</code> will be renamed to <code>messages.json</code> </li>
-<li>During build, <code>app.json</code> and <code>options.json</code> will me combined and renamed to <code>messages.json</code></li>
-<li>extension will be available in 3 languages</li>
-</ul>
-<h3 id="image-assets">Image Assets</h3>
-<p>By default, extension CLI will look for image assets using these configurations:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;./assets/img/**/*.png&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.gif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.jpg&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.svg&quot;</span>
-<span class="p">],</span>
-</code></pre></div>
-</td></tr></table>
-<p>You may change this configuration if the project image assets are located elsewhere or
-if you want to support additional image file extensions.</p>
-<p>After the build step, all image assets will be located in the <code>/dist/icons</code> directory.
-Therefore, in your extension project <code>manifest.json</code> you would refer to them as follows:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;browser_action&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;default_icon&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;16&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/16x16.png&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;24&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/24x24.png&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;32&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/32x32.png&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="custom-commands">Custom commands</h3>
-<p>Starting from v. 0.11.1 it will be possible to specify custom commands to run between build steps. These commands will be
-executed: </p>
-<ul>
-<li><em>after</em> script, styles, html and other bundles have been built, and</li>
-<li><em>before</em> a release <code>.zip</code> file is compiled</li>
-</ul>
-<p>Custom commands are run for both <code>dev</code> and <code>prod</code> builds. </p>
-<p>To configure custom commands specify following build configuration:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;commands&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
-</code></pre></div>
-</td></tr></table>
-<p>For example:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;commands&quot;</span><span class="p">:</span> <span class="s2">&quot;python do_something.py&quot;</span><span class="p">,</span> 
-</code></pre></div>
-</td></tr></table>
-<p>would first build the extension, then run a custom Python script, then (if <code>prod</code>) build the extension zip file.</p>
-<p>For <code>dev</code> builds, it is also be possible to specify a watch path, such that changes under the specified path will 
-cause the custom commands to re-execute. </p>
-<p>Specify watch path using following configuration option:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;commands_watch_path&quot;</span><span class="p">:</span> <span class="kc">null</span>
-</code></pre></div>
-</td></tr></table>
-<p>For example:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;commands_watch_path&quot;</span><span class="p">:</span> <span class="s2">&quot;./src&quot;</span>
-</code></pre></div>
-</td></tr></table>
-<p>then run build in <code>dev</code> mode with <code>--watch</code> flag. Any changes under <code>./src</code> directory will cause custom commands to re-run.</p>
                 
               
               
@@ -1240,13 +1099,13 @@ cause the custom commands to re-execute. </p>
         </a>
       
       
-        <a href="../04-xt-clean/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../03-xt-build-scripts/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              xt-clean
+              Building scripts
             </div>
           </div>
           <div class="md-footer__button md-icon">

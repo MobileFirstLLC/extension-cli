@@ -386,10 +386,109 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        xt-build
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="xt-build" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          xt-build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../03-xt-build/" class="md-nav__link">
-        xt-build
+        Overview
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-scripts/" class="md-nav__link">
+        Building scripts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-styles/" class="md-nav__link">
+        Building styles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-copy/" class="md-nav__link">
+        Copying files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-locales/" class="md-nav__link">
+        Localization
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-images/" class="md-nav__link">
+        Images
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-cmds/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -750,13 +849,19 @@
                 
                 <h1 id="xt-docs">xt-docs</h1>
 <hr />
-<p class='page-intro'><code>xt-docs</code> command is used for generating source code documentation for an extension project.</p>
+<p class='page-intro'><code>xt-docs</code> command is used for generating source
+ code documentation for an extension project.</p>
 
 <hr />
-<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc</a> specification to generate documentation for javascript files in an extension project. JSDoc is a flexible documentation generator that converts javascript code comments to readable HTML/CSS files which you can be hosted for example with github pages.</p>
-<p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more about templating here</a>.</p>
+<p>Extension CLI uses <a href="https://jsdoc.app/index.html">JSDoc</a> specification to 
+generate documentation for javascript files in an extension project. JSDoc is 
+a flexible documentation generator that converts javascript code comments to 
+readable HTML/CSS files which you can be hosted for example with github pages.</p>
+<p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more 
+about templating here</a>.</p>
 <h2 id="commands">Commands</h2>
-<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the 
+items inside the braces.</p>
 <p><strong>Default command</strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-docs
 </code></pre></div>
@@ -774,8 +879,10 @@
 </code></pre></div>
 </td></tr></table>
 <h2 id="packagejson-scripts">Package.json scripts</h2>
-<p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-docs</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run docs</code>. See example below.</p>
+<p>After installing extension-cli, you can run these commands from a terminal 
+using syntax <code>npx xt-docs</code>.</p>
+<p>Or you can add an option to <code>packages.json</code> scripts section and then execute 
+ the command as <code>npm run docs</code>. See example below.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:{</span>
@@ -783,7 +890,6 @@
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><br/></p>
 <h2 id="configuration">Configuration</h2>
 <p>By default the CLI will look for docs configuration in two different
 places:</p>
@@ -795,10 +901,12 @@ places:</p>
 <p>in a file named <code>.xtdocs.json</code> in project root</p>
 </li>
 </ul>
-<p>If these two locations cause a conflict, alternatively you can provide a path to configuration file with <code>-c</code> (<code>--config</code>) flag, followed by path to file. <a href="#commands">See commands for an example</a>.</p>
-<p><br/></p>
+<p>If these two locations cause a conflict, alternatively you can provide a path 
+to configuration file with <code>-c</code> (<code>--config</code>) flag, followed by path to file. 
+<a href="#commands">See commands for an example</a>.</p>
 <h3 id="minimum-project-level-configuration">Minimum Project-Level Configuration</h3>
-<p>Within the extension project you should define, at minimum, the following configuration options:</p>
+<p>Within the extension project you should define, at minimum, the following 
+configuration options:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -814,7 +922,6 @@ places:</p>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p><br/></p>
 <p>where:</p>
 <table>
 <thead>
@@ -826,15 +933,15 @@ places:</p>
 <tbody>
 <tr>
 <td><code>systemName</code></td>
-<td>Name of you project</td>
+<td>Project name</td>
 </tr>
 <tr>
 <td><code>systemSummary</code></td>
-<td>Provide a short description of your project; this will be shown as a subheading in the generated docs</td>
+<td>Short description of your project; becomes a subheading in generated docs</td>
 </tr>
 <tr>
 <td><code>systemColor</code></td>
-<td>Choose a theme color for your documentation; css hex color definition will work, e.g. <code>#000000</code>.</td>
+<td>Theme color, e.g. hex or rgb value <code>#000000</code>.</td>
 </tr>
 </tbody>
 </table>
