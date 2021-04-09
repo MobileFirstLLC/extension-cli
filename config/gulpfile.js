@@ -2,11 +2,13 @@ const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
 const chalk = require('chalk');
+const gulpChange = require('gulp-change');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
 const argv = require('yargs').argv;
 const isProd = argv.prod;
+const isFirefox = argv.firefox;
 
 /** switch to project working directory **/
 process.chdir(paths.projectRootDir);
@@ -126,15 +128,27 @@ const copyManifest = () => {
 
     const {version} = pkg;
 
+    const performChange = (content) => {
+        let mft = JSON.parse(content);
+        
+        if (isFirefox && mft.firefox) mft = {...mft, ...mft.firefox};
+        else if (!isFirefox && mft.chrome) mft = {...mft, ...mft.chrome};
+        delete mft.chrome;
+        delete mft.firefox;
+
+        return JSON.stringify(mft);
+    }
+
     return gulp.src(paths.manifest)
         .pipe(plugins.jsonEditor({version}))
+        .pipe(gulpChange(performChange))
         .pipe(plugins.jsonminify())
         .pipe(gulp.dest(paths.dist));
 };
 
-const copyImages = () => {
-    return gulp.src(paths.icons)
-        .pipe(gulp.dest(paths.dist + '/icons'));
+const copyAssets = () => {
+    return gulp.src(paths.assets)
+        .pipe(gulp.dest(paths.dist + '/assets'));
 };
 
 const locales = done => {
@@ -199,9 +213,9 @@ const watch = () => {
     gulp.watch(getArray(paths.js), scripts);
     gulp.watch(getArray(paths.scss), styles);
     gulp.watch(getArray(paths.html), buildHtml);
+    gulp.watch(getArray(paths.assets), copyAssets);
     gulp.watch([paths.locales_dir + '**/*.json'], locales);
     gulp.watch(paths.manifest, copyManifest);
-    gulp.watch(getArray(paths.icons), copyImages);
     gulp.watch(getArray(paths.copyAsIs), copyAs);
     gulp.watch(getArray(paths.commands_watch_path || ''), custom_commands);
 };
@@ -213,7 +227,7 @@ const build = gulp.series(
         styles,
         copyAs,
         copyManifest,
-        copyImages,
+        copyAssets,
         locales,
         buildHtml,
         custom_commands

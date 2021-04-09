@@ -146,6 +146,8 @@ exports.xtBuild = {
 
     watchArg: 'Enable watch',
 
+    platformArg: 'Platform',
+
     configFileArg: 'Path to configuration file, default: .xtbuild.json in root, or xtbuild in package.json)',
 
     onBuildSuccess: _ => (

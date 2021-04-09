@@ -24,17 +24,19 @@ const Spinner = require('cli-spinner').Spinner;
 const exec = require('child_process').exec;
 const pkg = require('../package.json');
 const env = {prod: 'prod', dev: 'dev'};
+const platform = {chrome: 'chrome', firefox: 'firefox'};
 const texts = require('../config/texts').xtBuild;
 const gulpfile = path.resolve(__dirname, '../config/gulpfile.js');
 
 program
     .version(pkg.version)
     .option('-e --env <env>', texts.envArg, /^(dev|prod)$/i, env.prod)
+    .option('-p <platform>', texts.platformArg, /^(chrome|firefox)$/i, platform.chrome)
     .option('-c --config <config>', texts.configFileArg, /^(.*)$/i)
     .option('-w --watch', texts.watchArg)
     .parse(process.argv);
 
-const {watch, env: programEnv, config} = program.opts();
+const {watch, env: programEnv, config, p: platformEnv} = program.opts();
 
 const args = [
     watch ? 'gulp watch' : 'gulp',
@@ -42,6 +44,7 @@ const args = [
     util.format('--config "%s"', path.resolve(process.cwd(), config || './.xtbuild.json')),
     util.format('--pkg', path.resolve(process.cwd(), './package.json')),
     util.format('--%s', programEnv),
+    util.format('--%s', platformEnv),
     '--colors'
 ].join(' ');
 
