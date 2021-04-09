@@ -1,6 +1,7 @@
 const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
+const chalk = require('chalk');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
@@ -35,6 +36,10 @@ const scripts = done => {
     const _bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : [paths.js_bundles]);
 
     let bundles = [..._bundles];
+    const webpackOptions = {
+        mode: isProd ? "production" : "development",
+        devtool: 'source-map'
+    };
 
     const buildScript = () => {
         if (!bundles.length) {
@@ -42,9 +47,14 @@ const scripts = done => {
         }
 
         const b = bundles.pop();
-
+        
+        console.log(chalk.bold.yellow(b.src));
         return gulp.src(b.src)
-            .pipe(webpack({'mode': 'production'}))
+            .pipe(webpack(webpackOptions))
+            .on('error', (err) => {
+                console.log(err.toString());
+                this.emit('end');
+            })
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
                 path.basename = b.name;
