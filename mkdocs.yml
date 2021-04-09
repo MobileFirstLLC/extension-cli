@@ -20,7 +20,7 @@ nav:
       - Building styles: 03-xt-build-styles.md
       - Copying files: 03-xt-build-copy.md
       - Localization: 03-xt-build-locales.md
-      - Images: 03-xt-build-images.md
+      - Static assets: 03-xt-build-assets.md
       - Commands: 03-xt-build-cmds.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
@@ -59,6 +59,7 @@ theme:
     text: Inter
 
 markdown_extensions:
+  - admonition
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets
