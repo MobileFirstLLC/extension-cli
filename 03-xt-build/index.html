@@ -544,8 +544,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-xt-build-images/" class="md-nav__link">
-        Images
+      <a href="../03-xt-build-assets/" class="md-nav__link">
+        Static assets
       </a>
     </li>
   
@@ -920,8 +920,13 @@ uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-e<span class="p">|</span>--env<span class="o">}</span> dev
 </code></pre></div>
 </td></tr></table>
+<p><strong>Specify target platform</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-p<span class="p">|</span>--platform<span class="o">}</span> firefox
+</code></pre></div>
+</td></tr></table>
+<p>where platform is one of: <code>chrome, firefox</code></p>
 <p><strong>Run command using custom configuration file path</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-c<span class="p">|</span>--config<span class="o">}</span> <span class="s2">&quot;/path/to/config.json&quot;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-c<span class="p">|</span>--config<span class="o">}</span> /path/to/config.json
 </code></pre></div>
 </td></tr></table>
 <p><strong>Run development build and keep watching changes</strong></p>
@@ -986,8 +991,7 @@ to output files. You can override any of these key-value pairs at project level.
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;projectRootDir&quot;</span><span class="p">:</span> <span class="s2">&quot;../../../&quot;</span><span class="p">,</span>
   <span class="nt">&quot;dist&quot;</span><span class="p">:</span> <span class="s2">&quot;./dist&quot;</span><span class="p">,</span>
   <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;./src&quot;</span><span class="p">,</span>
@@ -999,11 +1003,10 @@ to output files. You can override any of these key-value pairs at project level.
   <span class="nt">&quot;html&quot;</span><span class="p">:</span> <span class="s2">&quot;./src/**/*.html&quot;</span><span class="p">,</span>
   <span class="nt">&quot;scss&quot;</span><span class="p">:</span> <span class="s2">&quot;./src/**/*.scss&quot;</span><span class="p">,</span>
   <span class="nt">&quot;scss_bundles&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-  <span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;./assets/img/**/*.png&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.gif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.jpg&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.svg&quot;</span>
+  <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;./assets/**/*&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;!./assets/locales&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;!./assets/locales/**/*&quot;</span>
   <span class="p">],</span>
   <span class="nt">&quot;copyAsIs&quot;</span><span class="p">:</span> <span class="p">[],</span>
   <span class="nt">&quot;locales_dir&quot;</span><span class="p">:</span> <span class="s2">&quot;./assets/locales/&quot;</span><span class="p">,</span>
@@ -1081,9 +1084,9 @@ to output files. You can override any of these key-value pairs at project level.
 <td><a href="../03-xt-build-styles/">Guide</a></td>
 </tr>
 <tr>
-<td><code>"icons"</code></td>
-<td>Image assets configuration</td>
-<td><a href="../03-xt-build-images/">Guide</a></td>
+<td><code>"assets"</code></td>
+<td>Static assets configuration match pattern</td>
+<td><a href="../03-xt-build-assets/">Guide</a></td>
 </tr>
 <tr>
 <td><code>"copyAsIs"</code></td>

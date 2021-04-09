@@ -13,14 +13,14 @@
         <meta name="author" content="@mobilefirstllc">
       
       
-        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build-images/">
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build-assets/">
       
       <link rel="icon" href="/extension-cli/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Images - Extension CLI • User Guide</title>
+        <title>Static assets - Extension CLI • User Guide</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#images" class="md-skip">
+        <a href="#static-assets" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Images
+              Static assets
             
           </span>
         </div>
@@ -474,7 +474,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Images
+        Static assets
       </a>
       
     </li>
@@ -764,34 +764,32 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/03-xt-build-images.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/03-xt-build-assets.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="images">Images</h1>
+                <h1 id="static-assets">Static assets</h1>
 <hr />
-<p class='page-intro'>Specify how image assets will be handled during builds.</p>
+<p class='page-intro'>Specify how static assets will be handled during builds.</p>
 
 <hr />
-<p>By default, extension CLI will look for image assets using these configurations:</p>
+<p>By default, extension CLI will look for static assets matching this configuration:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;./assets/img/**/*.png&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.gif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.jpg&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;./assets/img/**/*.svg&quot;</span>
-<span class="p">],</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;./assets/**/*&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;!./assets/locales&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;!./assets/locales/**/*&quot;</span>
+  <span class="p">],</span>
 </code></pre></div>
 </td></tr></table>
-<p>You may change this configuration if the project image assets are located elsewhere or
-if you want to support additional image file extensions.</p>
-<p>After the build step, all image assets will be located in the <code>/dist/icons</code> directory.</p>
-<p>In your extension <code>manifest.json</code> refer to images as follows:</p>
+<p>You may change this configuration if the project's static assets are located elsewhere or
+if you want to include or exclude additional files/directories.</p>
+<p>After the build step, all static assets will be located in the <code>/dist/assets</code> directory.</p>
+<p>For example, to refer to images in extension manifest, would be as follows:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -800,14 +798,13 @@ if you want to support additional image file extensions.</p>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;browser_action&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;default_icon&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;16&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/16x16.png&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;24&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/24x24.png&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;32&quot;</span><span class="p">:</span> <span class="s2">&quot;icons/32x32.png&quot;</span>
+      <span class="nt">&quot;16&quot;</span><span class="p">:</span> <span class="s2">&quot;assets/img/16x16.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;24&quot;</span><span class="p">:</span> <span class="s2">&quot;assets/img/24x24.png&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;32&quot;</span><span class="p">:</span> <span class="s2">&quot;assets/img/32x32.png&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<p>In javascript, stylesheets or HTML files refer to images by <code>icons/myImage.jpeg</code></p>
                 
               
               

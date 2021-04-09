@@ -517,8 +517,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-xt-build-images/" class="md-nav__link">
-        Images
+      <a href="../03-xt-build-assets/" class="md-nav__link">
+        Static assets
       </a>
     </li>
   
@@ -847,6 +847,11 @@
 This includes use case where you want to skip compilation and linting of scripts or stylesheets.</p>
 
 <hr />
+<div class="admonition info">
+<p class="admonition-title">Copying static assets</p>
+<p>By default, all static assets under <code>assets/</code> directory will be automatically
+copied to output directory during builds.</p>
+</div>
 <p><code>copyAsIs</code> allows you to specify an array of files and/or directories which should be included in build output
 without modification. Files to copy can be located anywhere in your project. The directories to copy are expected to be inside <code>/src</code> directory.</p>
 <p>The build command will copy: </p>
@@ -874,7 +879,7 @@ script in the <code>dist</code> directory. No modification will occur to these f
 <span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;copyAsIs&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="s2">&quot;./node_modules/material-design-lite/material.min.js&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;./assets/special.js&quot;</span>
+      <span class="s2">&quot;./some/path/special.js&quot;</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -917,7 +922,7 @@ add the file paths to the list of ignored files to prevent them from being linte
 <span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="p">{</span>  
       <span class="nt">&quot;eslintIgnore&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;test/**/*&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;./assets/special.js&quot;</span>
+        <span class="s2">&quot;./some/path/special.js&quot;</span>
       <span class="p">]</span>
   <span class="p">}</span>
 </code></pre></div>
