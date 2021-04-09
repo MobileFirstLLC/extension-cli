@@ -10,11 +10,10 @@
   "html": "./src/**/*.html",
   "scss": "./src/**/*.scss",
   "scss_bundles": null,
-  "icons": [
-    "./assets/img/**/*.png",
-    "./assets/img/**/*.gif",
-    "./assets/img/**/*.jpg",
-    "./assets/img/**/*.svg"
+  "assets": [
+    "./assets/**/*",
+    "!./assets/locales",
+    "!./assets/locales/**/*"
   ],
   "copyAsIs": [],
   "locales_dir": "./assets/locales/",

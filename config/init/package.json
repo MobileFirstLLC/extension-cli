@@ -10,7 +10,9 @@
   },
   "scripts": {
     "start": "xt-build -e dev -w",
+    "start:firefox": "xt-build -e dev -p firefox -w",
     "build": "xt-build -e prod",
+    "build:firefox": "xt-build -e prod -p firefox",
     "clean": "xt-clean",
     "docs": "xt-docs",
     "test": "xt-test",
