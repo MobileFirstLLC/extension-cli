@@ -8,7 +8,7 @@
 
 ## Commands
 
-```text
+```bash
 npx extension-cli
 ```
  

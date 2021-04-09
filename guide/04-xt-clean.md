@@ -16,37 +16,37 @@ Braces `{ }` indicate that the user must choose one — and only one — of the 
 
 **Remove ignored files (default)**
 
-```
+```bash
 xt-clean
 ```
 
 **Clear ignored files, including `node_modules`**
 
-```
+```bash
 xt-clean {-m|--modules}
 ```
 
 **Clear ignored files, including `.idea/` directory**
 
-```
+```bash
 xt-clean {-i|--idea}
 ```
 
 **Clear ignored files, including `.vscode/` directory**
 
-```
+```bash
 xt-clean {-v|--vscode}
 ```
 
 **Clear absolutely all ignored files**
 
-```
+```bash
 xt-clean -v -i -m
 ```
 
 **Get help using this command**
 
-```
+```bash
 xt-clean --help
 ``` 
 
@@ -56,7 +56,7 @@ After installing extension-cli, you can run these commands from a terminal using
  
 Or you can add an option to `packages.json` scripts section and then execute the command as `npm run clean` See example below. 
  
-```
+```json
 "scripts":{
   "clean": "xt-clean"
 }

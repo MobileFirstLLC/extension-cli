@@ -29,37 +29,37 @@ You must pass at least one flag with this command.
 
 **Synchronize all configuration files**
 
-```
+```bash
 xt-sync {-a|--all}
 ```
 
 **Synchronize ESLint configuration file**
 
-```
+```bash
 xt-sync {-e|--eslint}
 ```
 
 **Synchronize Gitlab CI configuration file**
 
-```
+```bash
 xt-sync {-l|--gitlab}
 ```
 
 **Synchronize Travis CI configuration file**
 
-```
+```bash
 xt-sync {-t|--travis}
 ``` 
 
 **Synchronize .gitignore file**
 
-```
+```bash
 xt-sync {-g|--gitignore}
 ``` 
 
 **Get help using this command**
 
-```
+```bash
 xt-sync --help
 ``` 
 
@@ -70,7 +70,7 @@ After installing extension-cli, you can run these commands from a terminal using
 Or you can add an option to `packages.json` scripts section and then execute the command as `npm run sync`.
 See example below.
  
-```
+```json
 "scripts":{
   "sync": "xt-sync --all"
 }

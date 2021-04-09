@@ -1,38 +1,57 @@
 # Extension CLI
 
-<img src='https://repository-images.githubusercontent.com/228303750/551b1200-581f-11eb-8d9a-5ddd3b608e7f' alt='extension-cli' width="100%" /> 
+<p class='page-intro'>is a command-line build tool for developing 
+chromium browser extensions fast and in a standardized way. It provides a systematic way 
+to organize, build, test and document extension projects.</p>
 
 * * *
 
-<p class='page-intro'>Extension CLI is a command-line build tool that facilitate rapid extension development by providing
-systematic way to build, test and document extension projects.</p>
+## Features
+
+🖥️ &nbsp; **Javascript Bundling** 
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/)) <br/>
+
+🎨 &nbsp; **CSS Bundling**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files <br/>
+
+💄 &nbsp; **Linting**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; lint JavaScript using [ESLint](https://eslint.org/) <br/>
+
+📦 &nbsp; **ZIP Generation**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates a `.zip` file for uploading to extension marketplaces<br/>
+
+📝 &nbsp; **Document Source Code**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates source code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) <br/>
+
+⚗️ &nbsp; **Unit Testing** 
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome) and [js-dom](https://github.com/rstacruz/jsdom-global) <br/>
+
+⚔️ &nbsp; **Cross-Browser Compatibility**
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; develop extensions for Chrome, Edge, Firefox or Opera. <br/>
 
 * * *
 
-[![npm](https://img.shields.io/npm/v/extension-cli)](https://www.npmjs.com/package/extension-cli)
-[![travis](https://img.shields.io/travis/mobilefirstllc/extension-cli)](https://travis-ci.org/MobileFirstLLC/extension-cli)
-[![david](https://img.shields.io/david/mobilefirstllc/extension-cli)](https://david-dm.org/mobilefirstllc/extension-cli)
-[![Maintainability](https://api.codeclimate.com/v1/badges/abbf1b25f926d75bb9df/maintainability)](https://codeclimate.com/github/MobileFirstLLC/extension-cli/maintainability)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
-[![Last commit](https://img.shields.io/github/last-commit/mobilefirstllc/extension-cli)](https://github.com/MobileFirstLLC/extension-cli)
-
-## Getting Started & Docs
+## Getting Started
 
 **Note:** Using this CLI assumes you have Node.js installed. If you do not, you can [install it here](https://nodejs.org/en/download/).
 
 Create a new extension project:
 
-```text
+```bash
 npx extension-cli
 ```
 
 Add CLI to an existing project:
 
-```
+```bash
 npm install extension-cli
 ```
 
-## Quick Command Reference
+More detailed [getting started guide here &rarr;](https://oss.mobilefirst.me/extension-cli/01-getting-started/)
+
+* * *
+
+## Command Reference
 
 Command | Description
 --- | ---
@@ -42,17 +61,16 @@ Command | Description
 **xt-clean** | Remove generated files
 **xt-sync**| Update project config files to match the latest defaults supplied by this CLI
 
-<br/>
-
-**Note that for each command `--help` and `--version` flags are also valid**
-
-Read these docs for more detailed guides!
+More detailed [command instructions and configuration options here &rarr;](https://oss.mobilefirst.me/extension-cli/08-xt-create/) 
 
 ---
 
 <p align="center" style="margin-bottom:4em;">
 
-Extension CLI is made with <span role="img" aria-label="peach">🍑</span> by <a style='font-weight:700' href='https://mobilefirst.me'>Mobile First</a> in Augusta, Georgia
+Extension CLI is made by
+<a href="https://github.com/MobileFirstLLC/extension-cli/graphs/contributors" target="_blank" rel="noreferrer noopener">open source contributors</a> 
+behind several popular extensions!
+
 <br/><br/> 
 <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a>
 </p>

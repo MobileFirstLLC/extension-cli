@@ -1,64 +1,57 @@
-# Developing Extension CLI
+# Extension CLI Development
 
-This CLI is built with numerous tools (see [Tech Stack](extension-cli/11-stack/)) and written in Javascript. 
+This CLI is built with numerous tools listed below and written in Javascript. 
 
 The source code is available on [Github](https://github.com/MobileFirstLLC/extension-cli).
+
+Releases are published on [NPM](https://www.npmjs.com/package/extension-cli).
+
+## Tech Stack
+
+Extension CLI is built with all of the following:
+
+[Node.js][0]  [Gulp][1]  [Chalk][2]  [Commander][3]  [Babel][4]  [Chai][5] [Mocha][6]  [ESLint][7]  [jsdom][8]  [JSDoc][9]  [prompts][10]  [Sinon][11] [Sinon-chrome][16]  [NYC][12]  [Webpack][13] [CLI Spinner][14]  [yargs][15]   
+
+This user guide is built with [MkDocs](https://www.mkdocs.org/) and  [MkDocs material theme](https://squidfunk.github.io/mkdocs-material/).
+
+CI builds by [Travis CI](https://travis-ci.org/MobileFirstLLC/extension-cli) and documentation served by Github Pages.
 
 
 ## Project Organization
 
 Path | Description
 --- | ---
-└ **.github** | Github markdown files
-└ **cli** |  all commands are defined here
-└ **config** | Resources used by the commands in `cli`
-└ **examples** | Examples (future)
+└ **.github** | Github config files and markdown
+└ **cli** |  all available commands are defined here
+└ **config** | Resources and config files used by the commands in `cli`
+└ **examples** | Sample extensions (future)
 └ **guide** | User guide
-└ **test** | Unit tests
+└ **test** | CLI unit tests
 └ `/*` | Application root; various project config files
 
+* * *
 
-## Debugging and Extending the CLI Locally
 
-1. [Fork the repo](https://github.com/MobileFirstLLC/extension-cli/fork)
+To setup a local dev environment and develop the CLI application, see
+ 
+[Environment Setup &rarr;](13-dev-env.md)
 
-2. Clone the forked repo and launch your favorite web IDE
 
-3. Install packages `npm install`
 
-4. [Link the local package](https://docs.npmjs.com/cli/link.html) `npm link` (prepend `sudo` if necessary)
-
-5. You can now run any commands against the local source; you will need an extension project for this to make any sense though. You can create a new starter project by running `npx extension-cli`.
-
-6. When debugging the build command, you may need to go into `./config/build.json` and change value of `projectRootDir` as it assumes it is running from `node_modules` of the extension project. This may not be true if you are using a locally linked package.
-
-7. When you are done unlink the package: 
-
-    1. run `npm unlink --no-save extension-cli` on your extension project's directory to remove the local symlink. 
-    
-    2. Run `npm unlink` on the extension-cli root directory to remove the global symlink.
-
-## Editing These Docs
-
-If you are not interested in the layout of this documentation site, just edit the markdown directly.
-There is a pen icon linking to the markdown source on each page of these docs.
-
-## Debugging & Extending CLI Documentation Locally
-
-When you want to edit the layout and theme of these docs:
-
-1. [Fork the repo](https://github.com/MobileFirstLLC/extension-cli/fork)
-
-2. Clone the forked repo and launch your favorite markdown editor + terminal.
-
-3. The docs use Python package called `mkdocs`. You need to have python and `mkdocs` installed if you want to preview your changes (or skip this step if you are not interested in previewing the changes!)
-
-    1. Create a virtual environment: `python3 -m venv env`
-    2. Activate the environment: `source env/bin/activate`
-       <br/>(on Windows: `env\Scripts\activate.bat`)
-    3. Install requirements `pip install -r requirements.txt`
-    4. Run the docs locally: `mkdocs serve`
-
-4. All written docs are in the `guide` directory. These are the files you want to edit to make changes to the documentation. 
-
-5. After editing the docs, commit your changes. Travis CI is used to compile and publish the docs automatically.
+[0]: https://nodejs.org/en/
+[1]: https://gulpjs.com/
+[2]: https://www.npmjs.com/package/chalk
+[3]: https://www.npmjs.com/package/commander
+[4]: https://babeljs.io/
+[5]: https://www.chaijs.com/
+[6]: https://mochajs.org/
+[7]: https://eslint.org/
+[8]: https://github.com/jsdom/jsdom
+[9]: https://jsdoc.app/
+[10]: https://www.npmjs.com/package/prompts
+[11]: https://sinonjs.org/
+[12]: https://www.npmjs.com/package/nyc
+[13]: https://webpack.js.org/
+[14]: https://www.npmjs.com/package/cli-spinner
+[15]: https://www.npmjs.com/package/yargs
+[16]: https://github.com/acvetkov/sinon-chrome

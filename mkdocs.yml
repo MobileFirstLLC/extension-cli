@@ -1,4 +1,4 @@
-site_name: Extension CLI • Guide
+site_name: Extension CLI • User Guide
 site_description: Command-line build tools for chromium extension development.
 site_author: '@mobilefirstllc'
 docs_dir: ./guide
@@ -9,23 +9,32 @@ edit_uri: blob/master/guide/
 use_directory_urls: true
 
 nav:
-  - 'Introduction': index.md
   - "Getting Started":
-    - 'Installation': 01-getting-started.md
-    - 'Configuration': 02-configuration.md
+    - Intro: index.md
+    - Installation: 01-getting-started.md
+    - Configuration: 02-configuration.md
   - "Commands":
-    - 'extension-cli': 08-xt-create.md
-    - 'xt-build': 03-xt-build.md
+    - 'xt-build':
+      - Overview: 03-xt-build.md
+      - Building scripts: 03-xt-build-scripts.md
+      - Building styles: 03-xt-build-styles.md
+      - Copying files: 03-xt-build-copy.md
+      - Localization: 03-xt-build-locales.md
+      - Images: 03-xt-build-images.md
+      - Commands: 03-xt-build-cmds.md
     - 'xt-clean': 04-xt-clean.md
     - 'xt-docs': 05-xt-docs.md
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
+    - 'extension-cli': 08-xt-create.md
   - "Resources":
-    - Showcase: 10-showcase.md
+    - Release Notes: 09-release-notes.md
     - Helpful References: 12-helpful.md
-    - Tech Stack: 11-stack.md
-  - "Release Notes": 09-release-notes.md
-  - "Development": 13-cli-development.md
+    - Showcase: 10-showcase.md
+    - CLI Development:
+      - Overview: 13-cli-development.md
+      - Environment Setup: 13-dev-env.md
+    - Editing User Guide: 14-user-guide.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
 
@@ -39,25 +48,25 @@ theme:
   logo: '/extension-cli/assets/images/guide_icon.svg'
   favicon: '/extension-cli/assets/images/favicon.png'
   features:
-    - tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
   palette:
-    primary: indigo
-    accent: pink
+    scheme: slate
+    primary: amber
+    accent: amber
+  font:
+    text: Inter
 
-extra:
-  social:
-    - icon: fontawesome/solid/globe
-      link: https://mobilefirst.me
-    - icon: fontawesome/brands/github
-      link: https://github.com/mobilefirstllc
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/mobilefirstllc
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/mobilefirstllc
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/mobilefirstllc
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/mobilefirstllc
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+      linenums_style: pymdownx.inline
 
 google_analytics:
   - !!python/object/apply:os.getenv ['UA-129118591-7']

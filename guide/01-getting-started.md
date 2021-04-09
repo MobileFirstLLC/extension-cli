@@ -13,13 +13,13 @@ Before using extension CLI, you must have the following:
 
 Create a new extension project:
 
-```text
+```bash
 npx extension-cli
 ```
 
 Add CLI to an existing project:
 
-```
+```bash
 npm install extension-cli
 ```
 

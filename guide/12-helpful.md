@@ -1,6 +1,10 @@
-# Helpful References for Extension Development
+# Helpful References
 
-Some generally helpful links that may be useful when working with extension projects.
+* * *
+
+<p class='page-intro'>Collection of generally helpful links for extension development.</p>
+
+* * *
 
 ### Chrome Extension Development Resources
 
