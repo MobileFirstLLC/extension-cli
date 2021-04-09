@@ -40,8 +40,12 @@
     "test:travis": "npm run test && nyc report --reporter=text-lcov | coveralls",
     "patch:test": "npx standard-version --dry-run --release-as patch",
     "alpha:test": "npx standard-version --dry-run --prerelease alpha",
+    "minor:test": "npx standard-version --dry-run --prerelease minor",
+    "major:test": "npx standard-version --dry-run --prerelease major",
     "alpha": "npx standard-version --prerelease alpha",
-    "patch": "npx standard-version --release-as patch"
+    "patch": "npx standard-version --release-as patch",
+    "minor": "npx standard-version --release-as minor",
+    "major": "npx standard-version --release-as major"
   },
   "license": "MIT",
   "standard-version": {
