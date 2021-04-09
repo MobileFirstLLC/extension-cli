@@ -40,10 +40,19 @@ xt-build {-e|--env} prod
 xt-build {-e|--env} dev
 ```
 
+**Specify target platform**
+
+```bash
+xt-build {-p|--platform} firefox
+```
+
+where platform is one of: `chrome, firefox`
+
+
 **Run command using custom configuration file path**
 
 ```bash
-xt-build {-c|--config} "/path/to/config.json"
+xt-build {-c|--config} /path/to/config.json
 ```
 
 **Run development build and keep watching changes**
@@ -102,11 +111,10 @@ Explanations for each of these keys is given below.
   "html": "./src/**/*.html",
   "scss": "./src/**/*.scss",
   "scss_bundles": null,
-  "icons": [
-    "./assets/img/**/*.png",
-    "./assets/img/**/*.gif",
-    "./assets/img/**/*.jpg",
-    "./assets/img/**/*.svg"
+  "assets": [
+    "./assets/**/*",
+    "!./assets/locales",
+    "!./assets/locales/**/*"
   ],
   "copyAsIs": [],
   "locales_dir": "./assets/locales/",
@@ -133,7 +141,7 @@ Key | Description | Guide
 `"html"` | location and watch pattern of HTML files ||
 `"scss"` | Stylesheets watch pattern during dev builds ||
 `"scss_bundles"` | Stylesheets bundles configuration | [Guide](03-xt-build-styles.md)
-`"icons"` | Image assets configuration | [Guide](03-xt-build-images.md) 
+`"assets"` | Static assets configuration match pattern | [Guide](03-xt-build-assets.md) 
 `"copyAsIs"` | File and directories to copy without modification | [Guide](03-xt-build-copy.md)
 `"locales_dir"` | Localizations directory | [Guide](03-xt-build-locales.md) 
 `"locales_list"` | List of locales | [Guide](03-xt-build-locales.md)

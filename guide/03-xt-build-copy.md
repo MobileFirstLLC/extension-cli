@@ -7,9 +7,14 @@ This includes use case where you want to skip compilation and linting of scripts
 
 * * *
 
+!!! info "Copying static assets"
+    By default, all static assets under `assets/` directory will be automatically
+    copied to output directory during builds.
+ 
+
 `copyAsIs` allows you to specify an array of files and/or directories which should be included in build output
 without modification. Files to copy can be located anywhere in your project. The directories to copy are expected to be inside `/src` directory.
- 
+  
 The build command will copy: 
 
 - specified **files** without any modification and add them to the root of the output directory;
@@ -32,7 +37,7 @@ script in the `dist` directory. No modification will occur to these files during
 "xtbuild": {
     "copyAsIs": [
       "./node_modules/material-design-lite/material.min.js",
-      "./assets/special.js"
+      "./some/path/special.js"
     ]
 }
 ```
@@ -72,7 +77,7 @@ add the file paths to the list of ignored files to prevent them from being linte
   {  
       "eslintIgnore": [
         "test/**/*",
-        "./assets/special.js"
+        "./some/path/special.js"
       ]
   }
 ```

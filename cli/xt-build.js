@@ -8,7 +8,7 @@
  * @description
  *
  * ```text
- * xt-build --env {prod|dev} [--config filename] [--watch]
+ * xt-build --env {prod|dev} --platform {chrome|firefox} [--config filename] [--watch]
  * ```
  *
  * Build command generates a dist/ directory that can be
