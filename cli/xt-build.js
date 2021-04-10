@@ -14,7 +14,7 @@
  * Build command generates a dist/ directory that can be
  * debugged in the browser. When called with production env flag, `-e prod`,
  * this command will minify and compile a `release.zip` file that can be
- * uploaded to Chrome Web Store for distribution.
+ * uploaded to extension marketplace for distribution.
  */
 
 const util = require('util');
@@ -31,7 +31,7 @@ const gulpfile = path.resolve(__dirname, '../config/gulpfile.js');
 program
     .version(pkg.version)
     .option('-e --env <env>', texts.envArg, /^(dev|prod)$/i, env.prod)
-    .option('-p <platform>', texts.platformArg, /^(chrome|firefox)$/i, platform.chrome)
+    .option('-p --platform <platform>', texts.platformArg, /^(chrome|firefox)$/i, platform.chrome)
     .option('-c --config <config>', texts.configFileArg, /^(.*)$/i)
     .option('-w --watch', texts.watchArg)
     .parse(process.argv);

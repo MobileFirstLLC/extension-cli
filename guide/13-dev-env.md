@@ -100,7 +100,7 @@ to add back the version from NPM registry. This is relevant only if you used
 an existing project as a driver.
 
 
-In CLI project terminal run:
+In **CLI project** terminal run:
 
 ```bash
 npm r extension-cli -g

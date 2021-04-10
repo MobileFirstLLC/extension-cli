@@ -13,17 +13,23 @@ const isFirefox = argv.firefox;
 /** switch to project working directory **/
 process.chdir(paths.projectRootDir);
 
-/** override default paths with project paths **/
-let customPaths = null;
-const pkg = JSON.parse(fs.readFileSync(argv.pkg, 'utf8'));
+/** helper method to ensure array type */
 const getArray = path => Array.isArray(path) ? path : [path];
 
+/** read project package.json **/
+const pkg = JSON.parse(fs.readFileSync(argv.pkg, 'utf8'));
+
+/** read project's config file, if specified **/
+let customPaths = null;
 if (fs.existsSync(argv.config)) {
+    // if config is a file
     customPaths = JSON.parse(fs.readFileSync(argv.config, 'utf8'));
 } else if (pkg.xtbuild !== undefined) {
+    // if config is specified in package.json
     customPaths = pkg.xtbuild;
 }
 
+/** replace default configs with project-level configs **/
 if (customPaths) {
     for (let key in customPaths) {
         if (customPaths.hasOwnProperty(key)) {
@@ -49,7 +55,7 @@ const scripts = done => {
         }
 
         const b = bundles.pop();
-        
+
         console.log(chalk.bold.yellow(b.src));
         return gulp.src(b.src)
             .pipe(webpack(webpackOptions))
@@ -130,7 +136,7 @@ const copyManifest = () => {
 
     const performChange = (content) => {
         let mft = JSON.parse(content);
-        
+
         if (isFirefox && mft.firefox) mft = {...mft, ...mft.firefox};
         else if (!isFirefox && mft.chrome) mft = {...mft, ...mft.chrome};
         delete mft.chrome;
@@ -240,4 +246,7 @@ const build = gulp.series(
  */
 exports.default = build;
 
+/*
+ * If watch flag is defined, run build and keep watching
+ */
 exports.watch = gulp.series(build, watch);
