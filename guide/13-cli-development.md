@@ -24,7 +24,6 @@ Path | Description
 └ **.github** | Github config files and markdown
 └ **cli** |  all available commands are defined here
 └ **config** | Resources and config files used by the commands in `cli`
-└ **examples** | Sample extensions (future)
 └ **guide** | User guide
 └ **test** | CLI unit tests
 └ `/*` | Application root; various project config files
@@ -35,7 +34,6 @@ Path | Description
 To setup a local dev environment and develop the CLI application, see
  
 [Environment Setup &rarr;](13-dev-env.md)
-
 
 
 [0]: https://nodejs.org/en/
