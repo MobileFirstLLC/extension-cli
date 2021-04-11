@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build/">
       
       <link rel="icon" href="/extension-cli/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -218,9 +218,32 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../09-release-notes/" class="md-tabs__link">
         Resources
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../15-tutorials/" class="md-tabs__link">
+        Tutorials
       </a>
     </li>
   
@@ -663,9 +686,30 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Release Notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Release Notes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../09-release-notes/" class="md-nav__link">
-        Release Notes
+        Latest
       </a>
     </li>
   
@@ -676,21 +720,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../12-helpful/" class="md-nav__link">
-        Helpful References
+      <a href="../09-release-notes-0/" class="md-nav__link">
+        Version 0.x.x
       </a>
     </li>
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10-showcase/" class="md-nav__link">
-        Showcase
-      </a>
+        </ul>
+      </nav>
     </li>
   
 
@@ -703,14 +741,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
-      <label class="md-nav__link" for="__nav_3_4">
+      <label class="md-nav__link" for="__nav_3_2">
         CLI Development
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="CLI Development" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           CLI Development
         </label>
@@ -778,11 +816,77 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
+        Tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-tutorials/" class="md-nav__link">
+        How to Build Extensions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-helpful/" class="md-nav__link">
+        Helpful References
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-showcase/" class="md-nav__link">
+        Showcase
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
         Source Code
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Source Code" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Source Code
         </label>
@@ -900,32 +1004,33 @@
 <p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
 
 <hr />
-<p>Successful build command always generates an extension <code>dist/</code> directory that can be debugged in the browser.  The underlying build system
-uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.com/babel/gulp-babel">babel</a> and <a href="https://github.com/webpack/webpack">webpack</a> to compile scripts (among other plugins).</p>
+<p>Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.com/babel/gulp-babel">babel</a> and <a href="https://github.com/webpack/webpack">webpack</a> to compile scripts (among other plugins).</p>
 <h3 id="dev-build-artifacts">Dev Build Artifacts</h3>
-<p>When specifying<code>dev</code> build flag, the build will complete using development settings. The output of a successful dev build is  a <code>dist/</code> directory which can be debugged using the chrome browser. The build command will always compile scripts using production settings, because extension scripts must be compiled prior to debugging (<code>eval</code> is not allowed).</p>
+<p>When specifying<code>dev</code> build flag, the build will complete using development settings. The output of a successful dev build is an extension source code, in the specified build output directory (<code>dist/</code> by default), which can be debugged using a chromium browser.</p>
 <h3 id="prod-build-artifacts">Prod Build Artifacts</h3>
-<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build will generate a <code>dist/</code> directory of extension files which can be debugged in the browser. It will also generate a <code>release.zip</code> file in the project root strictly based on the files in the <code>dist</code> directory. This zip file can be uploaded directly to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, sass, html, json) will be minified.</p>
+<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build will generate a extension source code in build output directory (<code>dist/</code> by default), which can be debugged in the browser. It will also generate a <code>release.zip</code> file in the project root strictly based on the files in the <code>dist</code> directory. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be minified.</p>
 <h2 id="commands">Commands</h2>
 <p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
-<p><strong>Run production build (default)</strong></p>
+<p><strong>Run build with default options</strong></p>
+<p>Default is production build for chrome</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build
 </code></pre></div>
 </td></tr></table>
-<p><strong>Run production build using explicit flag <code>-e</code> or <code>--env</code></strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-e<span class="p">|</span>--env<span class="o">}</span> prod
-</code></pre></div>
-</td></tr></table>
-<p><strong>Run development build</strong></p>
+<p><strong>Run production build using explicit environment flag <code>-e</code> or <code>--env</code></strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-e<span class="p">|</span>--env<span class="o">}</span> dev
 </code></pre></div>
 </td></tr></table>
-<p><strong>Specify target platform</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-e<span class="p">|</span>--env<span class="o">}</span> prod
+</code></pre></div>
+</td></tr></table>
+<p><strong>Run build for specific target browser</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-p<span class="p">|</span>--platform<span class="o">}</span> chrome 
+</code></pre></div>
+</td></tr></table>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-p<span class="p">|</span>--platform<span class="o">}</span> firefox
 </code></pre></div>
 </td></tr></table>
-<p>where platform is one of: <code>chrome, firefox</code></p>
-<p><strong>Run command using custom configuration file path</strong></p>
+<p><strong>Run build using custom configuration file path</strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-c<span class="p">|</span>--config<span class="o">}</span> /path/to/config.json
 </code></pre></div>
 </td></tr></table>
@@ -1186,7 +1291,7 @@ to output files. You can override any of these key-value pairs at project level.
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       
