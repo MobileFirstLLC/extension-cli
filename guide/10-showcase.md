@@ -1,6 +1,6 @@
 * * *
 
-<p class='page-intro'>List of Projects built with Extension-CLI</p>
+<p class='page-intro'>List of extensions and add-ons built with Extension CLI</p>
 
 * * *
 
