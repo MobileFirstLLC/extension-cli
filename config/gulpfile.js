@@ -75,12 +75,15 @@ const styles = done => {
         isDone = false;
 
     return !count ? done() :
-        bundles.map(scss => {
-            gulp.src(scss.src)
+        bundles.map(b => {
+            gulp.src(b.src)
                 .pipe(plugins.sass())
-                .pipe(plugins.if(isProd, plugins.cleanCss()))
-                .pipe(plugins.concat(scss.name.endsWith(".css") ? scss.name : `${scss.name}.css`))
-                .pipe(gulp.dest(paths.dist + '/css'))
+                .pipe(plugins.cleanCss())
+                .pipe(plugins.rename(function (path) {
+                    path.dirname = '';
+                    path.basename = b.name;
+                }))
+                .pipe(gulp.dest(paths.dist))
                 .on('end', function () {
                     if ((--count === 0) && !isDone) {
                         isDone = true;
