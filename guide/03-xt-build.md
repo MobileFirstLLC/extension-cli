@@ -6,50 +6,50 @@
 
 * * *
 
-Successful build command always generates an extension `dist/` directory that can be debugged in the browser.  The underlying build system
-uses [gulp](https://github.com/gulpjs/gulp), [babel](https://github.com/babel/gulp-babel) and [webpack](https://github.com/webpack/webpack) to compile scripts (among other plugins).
+Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses [gulp](https://github.com/gulpjs/gulp), [babel](https://github.com/babel/gulp-babel) and [webpack](https://github.com/webpack/webpack) to compile scripts (among other plugins).
 
 ### Dev Build Artifacts
 
-When specifying`dev` build flag, the build will complete using development settings. The output of a successful dev build is  a `dist/` directory which can be debugged using the chrome browser. The build command will always compile scripts using production settings, because extension scripts must be compiled prior to debugging (`eval` is not allowed).
+When specifying`dev` build flag, the build will complete using development settings. The output of a successful dev build is an extension source code, in the specified build output directory (`dist/` by default), which can be debugged using a chromium browser.
 
 ### Prod Build Artifacts
 
-When specifying `prod` build flag, the build will run a production build. Successful production build will generate a `dist/` directory of extension files which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded directly to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, sass, html, json) will be minified.
+When specifying `prod` build flag, the build will run a production build. Successful production build will generate a extension source code in build output directory (`dist/` by default), which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be minified.
 
 ## Commands
 
 Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
 
 
-**Run production build (default)**
+**Run build with default options**
+
+Default is production build for chrome
 
 ```bash
 xt-build
 ```
 
-**Run production build using explicit flag `-e` or `--env`**
-
-```bash
-xt-build {-e|--env} prod
-```
-
-**Run development build**
+**Run production build using explicit environment flag `-e` or `--env`**
 
 ```bash
 xt-build {-e|--env} dev
 ```
 
-**Specify target platform**
+```bash
+xt-build {-e|--env} prod
+```
+
+**Run build for specific target browser**
+
+```bash
+xt-build {-p|--platform} chrome 
+```
 
 ```bash
 xt-build {-p|--platform} firefox
 ```
 
-where platform is one of: `chrome, firefox`
-
-
-**Run command using custom configuration file path**
+**Run build using custom configuration file path**
 
 ```bash
 xt-build {-c|--config} /path/to/config.json
