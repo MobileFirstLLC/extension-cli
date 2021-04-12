@@ -76,7 +76,7 @@ const scripts = done => {
 
 const styles = done => {
     let bundles = Array.isArray(paths.scss_bundles) ?
-        paths.scss_bundles : [{src: paths.scss, name: 'styles.css'}],
+        paths.scss_bundles : [{src: paths.scss, name: 'styles'}],
         count = bundles.length,
         isDone = false;
 
