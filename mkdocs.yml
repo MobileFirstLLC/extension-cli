@@ -29,8 +29,8 @@ nav:
     - 'extension-cli': 08-xt-create.md
   - "Resources":
     - Release Notes:
-      - Latest: 09-release-notes.md
-      - "Version 0.x.x": 09-release-notes-0.md
+      - "Version 1.x (latest)": 09-release-notes.md
+      - "Version 0.x": 09-release-notes-0.md
     - CLI Development:
       - Overview: 13-cli-development.md
       - Environment Setup: 13-dev-env.md
