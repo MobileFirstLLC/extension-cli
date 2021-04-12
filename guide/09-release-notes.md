@@ -1,9 +1,10 @@
 
-### 1.0.1 (2021-04-11)
+### 1.0.2 (2021-04-11)
 
 **Changes to build**
 
 - Custom folders for scss bundles and always minify css [PR #47](https://github.com/MobileFirstLLC/extension-cli/pull/47)
+- Default style bundle name without extension [PR #48](https://github.com/MobileFirstLLC/extension-cli/pull/48)
 
 ### 1.0.0 (2021-04-11)
 
