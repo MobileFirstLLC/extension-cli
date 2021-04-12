@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chrome Extension CLI tools",
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
