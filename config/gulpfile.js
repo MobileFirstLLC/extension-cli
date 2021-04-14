@@ -40,7 +40,7 @@ const scripts = done => {
     let bundles = [..._bundles];
     const webpackOptions = {
         mode: isProd ? "production" : "development",
-        devtool: 'source-map'
+        devtool: 'cheap-source-map'
     };
 
     const buildScript = () => {
