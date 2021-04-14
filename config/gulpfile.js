@@ -41,7 +41,8 @@ if (customPaths) {
 const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
-    const _bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : [paths.js_bundles]);
+    const _bundles = (Array.isArray(paths.js_bundles) ?
+        paths.js_bundles : [{src: paths.js, name: 'script'}]);
 
     let bundles = [..._bundles];
     const webpackOptions = {
@@ -83,14 +84,19 @@ const styles = done => {
     return !count ? done() :
         bundles.map(b => {
             gulp.src(b.src)
+                // convert to css
                 .pipe(plugins.sass())
+                // concatenate multiple src files
+                .pipe(plugins.concat(`${count}.css`))
+                // minify
                 .pipe(plugins.cleanCss())
+                // rename to user-specified name
                 .pipe(plugins.rename(function (path) {
                     path.dirname = '';
                     path.basename = b.name;
                 }))
                 .pipe(gulp.dest(paths.dist))
-                .on('end', function () {
+                .on('end', _ => {
                     if ((--count === 0) && !isDone) {
                         isDone = true;
                         return typeof done !== 'function' || done();
