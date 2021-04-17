@@ -42,7 +42,7 @@ const clean = () => del([paths.dist + '/*']);
 
 const scripts = done => {
     const _bundles = (Array.isArray(paths.js_bundles) ?
-        paths.js_bundles : [{src: paths.js, name: 'script'}]);
+        paths.js_bundles : [{src: paths.js_bundles, name: 'script'}]);
 
     let bundles = [..._bundles];
     const webpackOptions = { mode: isProd ? "production" : "development" };
