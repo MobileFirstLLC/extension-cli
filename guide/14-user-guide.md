@@ -37,6 +37,7 @@ You will need Python 3.x before proceeding.
     - all written documents are under `guide` directory
     - `mkdocs.yml` at project root is a configuration file for Mkdocs
     - `guide/assets` includes static assets for these docs
+    - `guide/overrides` includes customized template files that override default mkdocs-material templates
 
 5. After editing the docs, commit your changes and open a PR as
    necessary. Travis CI is used to compile and publish the docs automatically
