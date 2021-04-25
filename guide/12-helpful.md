@@ -14,6 +14,8 @@
 - Internationalization
   - [Supporting multiple languages](https://developer.chrome.com/extensions/i18n)
   - [Language locales list](https://developers.google.com/admin-sdk/directory/v1/languages)
+- [Awesome WebExtensions](https://github.com/fregante/Awesome-WebExtensions) - curated list of resources
+
 
 ### Extension Publishing Guides
 
