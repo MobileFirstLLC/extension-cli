@@ -4,7 +4,7 @@ site_author: '@mobilefirstllc'
 docs_dir: ./guide
 site_url: https://oss.mobilefirst.me/extension-cli/
 repo_url: https://github.com/MobileFirstLLC/extension-cli
-repo_name: Github
+repo_name: "extension-cli"
 edit_uri: blob/master/guide/
 use_directory_urls: true
 
@@ -49,6 +49,7 @@ extra_javascript:
 
 theme:
   name: material
+  custom_dir: ./guide/overrides
   logo: '/extension-cli/assets/images/guide_icon.svg'
   favicon: '/extension-cli/assets/images/favicon.png'
   features:
@@ -61,6 +62,8 @@ theme:
     accent: amber
   font:
     text: Inter
+  extra:
+    disqus: xyz # enable comments
 
 markdown_extensions:
   - admonition
