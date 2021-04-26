@@ -38,8 +38,9 @@ const scripts = done => {
     const _bundles = (Array.isArray(paths.js_bundles) ? paths.js_bundles : [paths.js_bundles]);
 
     let bundles = [..._bundles];
-    const webpackOptions = { mode: isProd ? "production" : "development" };
+    const webpackOptions = { mode: "development" };
     if (!isProd) webpackOptions.devtool = "cheap-source-map";
+    else webpackOptions.devtool = "none";
 
     const buildScript = () => {
         if (!bundles.length) {
