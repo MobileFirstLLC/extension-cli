@@ -2,6 +2,14 @@
 disqus: "False"
 ---
 
+### 1.0.3 (2021-04-27)
+
+**Changes to build**
+
+- Make webpack mode configurable [#51](https://github.com/MobileFirstLLC/extension-cli/issues/51), [PR #55](https://github.com/MobileFirstLLC/extension-cli/pull/55)
+- use `cheap-source-map` [PR #49](https://github.com/MobileFirstLLC/extension-cli/pull/49)
+- remove devtool in prod config [PR #50](https://github.com/MobileFirstLLC/extension-cli/pull/50)
+
 ### 1.0.2 (2021-04-11)
 
 **Changes to build**
