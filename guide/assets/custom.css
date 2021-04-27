@@ -3,3 +3,24 @@
 .page-intro{font-size:1.3em;line-height:1.7;}
 .highlighttable td pre {line-height: 1.9;}
 .md-tabs__item{font-weight: bold}
+
+table {padding: 0;}
+table tr {margin: 0;padding: 0; }
+table tr th {font-weight: bold; margin: 0;padding: 6px 13px; }
+table tr td { margin: 0;padding: 6px 13px; }
+table tr th :first-child, table tr td :first-child {margin-top: 0; }
+table tr th :last-child, table tr td :last-child {margin-bottom: 0; }
+
+.md-typeset table:not([class]){
+    font-size: .68rem;
+    box-shadow: none;
+    background: var(--md-code-bg-color);
+}
+.md-typeset table:not([class]) code{
+    font-size: .70rem;
+}
+.md-typeset table:not([class]) tr:hover{
+    transition: none;
+    background-color: transparent;
+    box-shadow: none;
+}
