@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block disqus %}
+{% if not page.meta.disqus == "False" %}
 <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 <script src="https://utteranc.es/client.js"
         repo="MobileFirstLLC/extension-cli"
@@ -10,4 +11,6 @@
         crossorigin="anonymous"
         async>
 </script>
+
+{% endif %}
 {% endblock %}
