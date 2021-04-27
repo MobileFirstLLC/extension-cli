@@ -141,7 +141,7 @@ Key | Description | Guide
 `"scss"` | Stylesheets watch pattern during dev builds ||
 `"scss_bundles"` | Stylesheets bundles configuration | [Guide](03-xt-build-styles.md)
 `"assets"` | Static assets configuration match pattern | [Guide](03-xt-build-assets.md) 
-`"copyAsIs"` | File and directories to copy without modification | [Guide](03-xt-build-copy.md)
+`"copyAsIs"` | Files and directories to copy without modification | [Guide](03-xt-build-copy.md)
 `"locales_dir"` | Localizations directory | [Guide](03-xt-build-locales.md) 
 `"locales_list"` | List of locales | [Guide](03-xt-build-locales.md)
 `"commands"` | Custom commands | [Guide](03-xt-build-cmds.md)
