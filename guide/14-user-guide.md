@@ -41,4 +41,4 @@ You will need Python 3.x before proceeding.
 
 5. After editing the docs, commit your changes and open a PR as
    necessary. Travis CI is used to compile and publish the docs automatically
-   after merged to master branch.
+   after each merge to master branch.
