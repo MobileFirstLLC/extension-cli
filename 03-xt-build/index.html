@@ -973,13 +973,13 @@
 <p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
 
 <hr />
-<p>Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses <a href="https://github.com/gulpjs/gulp">gulp</a>, <a href="https://github.com/babel/gulp-babel">babel</a> and <a href="https://github.com/webpack/webpack">webpack</a> to compile scripts (among other plugins).</p>
+<p>Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses gulp, babel and webpack to compile scripts (among other plugins).</p>
 <h3 id="dev-build-artifacts">Dev Build Artifacts</h3>
-<p>When specifying<code>dev</code> build flag, the build will complete using development settings. The output of a successful dev build is an extension source code, in the specified build output directory (<code>dist/</code> by default), which can be debugged using a chromium browser.</p>
+<p>When specifying<code>dev</code> build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory (<code>dist/</code> by default), which can be debugged using a chromium browser.</p>
 <h3 id="prod-build-artifacts">Prod Build Artifacts</h3>
-<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build will generate a extension source code in build output directory (<code>dist/</code> by default), which can be debugged in the browser. It will also generate a <code>release.zip</code> file in the project root strictly based on the files in the <code>dist</code> directory. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be minified.</p>
+<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build generates extension source code in build output directory (<code>dist/</code> by default), which can be debugged in the browser. It also generates a <code>release.zip</code> file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.</p>
 <h2 id="commands">Commands</h2>
-<p>Braces <code>{ }</code> indicate that the user must choose one — and only one — of the items inside the braces.</p>
+<p>Braces <code>{ }</code> indicate that the user must choose one (and only one) of the items inside the braces.</p>
 <p><strong>Run build with default options</strong></p>
 <p>Default is production build for chrome</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build
@@ -1035,9 +1035,8 @@ places:</p>
 </li>
 </ul>
 <p>If these two locations cause a conflict, alternatively you can provide a path 
-to configuration file with <code>-c</code> or <code>--config</code> flag, followed by path to file. 
-<a href="#commands">See commands for an example of how to configure this behavior</a>.</p>
-<p>The CLI uses a default build configuration file shown below. This tells 
+to configuration file with <code>-c</code> or <code>--config</code> flag, followed by path to configuration file. </p>
+<p>The CLI uses a default build configuration shown below. This tells 
 extension CLI where to look for input files, how to process them, and where 
 to output files. You can override any of these key-value pairs at project level. </p>
 <p>Explanations for each of these keys is given below.</p>
@@ -1119,7 +1118,7 @@ to output files. You can override any of these key-value pairs at project level.
 </tr>
 <tr>
 <td><code>"releases"</code></td>
-<td>Directory for outputting releases</td>
+<td>Directory for outputting release zip file</td>
 <td></td>
 </tr>
 <tr>
