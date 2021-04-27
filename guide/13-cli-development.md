@@ -1,3 +1,7 @@
+---
+disqus: "False"
+---
+
 # Extension CLI Development
 
 This CLI is built with numerous tools listed below and written in Javascript. 

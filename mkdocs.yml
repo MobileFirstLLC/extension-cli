@@ -27,17 +27,16 @@ nav:
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
     - 'extension-cli': 08-xt-create.md
-  - "Resources":
-    - Release Notes:
-      - "Version 1.x (latest)": 09-release-notes.md
-      - "Version 0.x": 09-release-notes-0.md
+  - "Releases":
+    - "Version 1.x (latest)": 09-release-notes.md
+    - "Version 0.x": 09-release-notes-0.md
+  - "Developer Resources":
+    - Extension Tutorials: 15-tutorials.md
+    - Helpful References: 12-helpful.md
     - CLI Development:
       - Overview: 13-cli-development.md
       - Environment Setup: 13-dev-env.md
     - Editing User Guide: 14-user-guide.md
-  - Tutorials:
-    - How to Build Extensions: 15-tutorials.md
-    - Helpful References: 12-helpful.md
     - Showcase: 10-showcase.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
@@ -75,6 +74,7 @@ markdown_extensions:
       use_pygments: true
       linenums: true
       linenums_style: pymdownx.inline
+  - meta
 
 google_analytics:
   - !!python/object/apply:os.getenv ['UA-129118591-7']
