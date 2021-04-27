@@ -12,7 +12,7 @@ Clean operation iterates over files and directories listed in the project `.giti
 
 ## Commands
 
-Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+Braces `{ }` indicate that the user must choose one (and only one) of the items inside the braces.
 
 **Remove ignored files (default)**
 

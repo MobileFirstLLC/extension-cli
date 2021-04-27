@@ -23,7 +23,7 @@ for running unit tests. Or you may create your own test environment if this is n
 
 ## Commands
 
-Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+Braces `{ }` indicate that the user must choose one (and only one) of the items inside the braces.
 
 
 **Run unit tests (default)**

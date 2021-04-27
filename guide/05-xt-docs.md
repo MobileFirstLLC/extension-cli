@@ -18,7 +18,7 @@ about templating here](#templates).
 
 ## Commands
 
-Braces `{ }` indicate that the user must choose one — and only one — of the 
+Braces `{ }` indicate that the user must choose one (and only one) of the 
 items inside the braces.
 
 **Default command**

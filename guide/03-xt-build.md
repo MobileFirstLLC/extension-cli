@@ -6,19 +6,19 @@
 
 * * *
 
-Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses [gulp](https://github.com/gulpjs/gulp), [babel](https://github.com/babel/gulp-babel) and [webpack](https://github.com/webpack/webpack) to compile scripts (among other plugins).
+Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses gulp, babel and webpack to compile scripts (among other plugins).
 
 ### Dev Build Artifacts
 
-When specifying`dev` build flag, the build will complete using development settings. The output of a successful dev build is an extension source code, in the specified build output directory (`dist/` by default), which can be debugged using a chromium browser.
+When specifying`dev` build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory (`dist/` by default), which can be debugged using a chromium browser.
 
 ### Prod Build Artifacts
 
-When specifying `prod` build flag, the build will run a production build. Successful production build will generate a extension source code in build output directory (`dist/` by default), which can be debugged in the browser. It will also generate a `release.zip` file in the project root strictly based on the files in the `dist` directory. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be minified.
+When specifying `prod` build flag, the build will run a production build. Successful production build generates extension source code in build output directory (`dist/` by default), which can be debugged in the browser. It also generates a `release.zip` file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.
 
 ## Commands
 
-Braces `{ }` indicate that the user must choose one — and only one — of the items inside the braces.
+Braces `{ }` indicate that the user must choose one (and only one) of the items inside the braces.
 
 
 **Run build with default options**
@@ -89,10 +89,9 @@ places:
 - in a file named `.xtbuild.json` in project root
 
 If these two locations cause a conflict, alternatively you can provide a path 
-to configuration file with `-c` or `--config` flag, followed by path to file. 
-[See commands for an example of how to configure this behavior](#commands).
+to configuration file with `-c` or `--config` flag, followed by path to configuration file. 
 
-The CLI uses a default build configuration file shown below. This tells 
+The CLI uses a default build configuration shown below. This tells 
 extension CLI where to look for input files, how to process them, and where 
 to output files. You can override any of these key-value pairs at project level. 
 
@@ -133,7 +132,7 @@ Key | Description | Guide
 `"projectRootDir"` | Path to project from the to CLI location ||
 `"dist"` | Build output directory ||
 `"source"` | Source code directory ||
-`"releases"` | Directory for outputting releases ||
+`"releases"` | Directory for outputting release zip file ||
 `"release_name"` | name of release zip file ||
 `"manifest"` | Extension manifest file with path ||
 `"js"` | Javascript watch pattern during dev builds ||
