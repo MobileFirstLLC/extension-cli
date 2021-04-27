@@ -45,19 +45,20 @@ const scripts = done => {
         paths.js_bundles : [{src: paths.js_bundles, name: 'script'}]);
 
     let bundles = [..._bundles];
-    const webpackOptions = { mode: "development" };
-    if (!isProd) webpackOptions.devtool = "cheap-source-map";
-    else webpackOptions.devtool = "none";
 
     const buildScript = () => {
         if (!bundles.length) {
             return typeof done !== 'function' || done();
         }
 
-        const b = bundles.pop();
+        const {src, name, mode} = bundles.pop();
+        // use mode if specified explicitly; otherwise choose by --env
+        const webpackOptions = {mode: mode || (isProd ? "production" : "development")};
+        if (!isProd) webpackOptions.devtool = "cheap-source-map";
+        else webpackOptions.devtool = "none";
 
-        console.log(chalk.bold.yellow(b.src));
-        return gulp.src(b.src)
+        console.log(chalk.bold.yellow(src));
+        return gulp.src(src)
             .pipe(webpack(webpackOptions))
             .on('error', (err) => {
                 console.log(err.toString());
@@ -65,7 +66,7 @@ const scripts = done => {
             })
             .pipe(plugins.rename(function (path) {
                 path.dirname = '';
-                path.basename = b.name;
+                path.basename = name;
             }))
             .pipe(gulp.dest(paths.dist))
             .on('end', buildScript);
