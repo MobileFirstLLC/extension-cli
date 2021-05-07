@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.14.0",
-    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
     "@babel/register": "^7.13.16",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
@@ -92,6 +92,6 @@
     "sinon": "^10.0.1",
     "sinon-chrome": "^3.0.1",
     "webpack-stream": "^6.1.2",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.1"
   }
 }
