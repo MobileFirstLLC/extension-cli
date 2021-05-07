@@ -6,16 +6,24 @@
 
 * * *
 
-### Chrome Extension Development Resources
+- Getting Started guides:
+    - [by Chrome developers](https://developer.chrome.com/extensions/getstarted)
+    - [by Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#get_started)
 
-- [Extension Development Intro Guide](https://developer.chrome.com/extensions/getstarted)
-- Extension manifest reference: [version 2](https://developer.chrome.com/extensions/manifest) - [version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
-- [Chrome APIs](https://developer.chrome.com/extensions/api_index)
-- Internationalization
-  - [Supporting multiple languages](https://developer.chrome.com/extensions/i18n)
-  - [Language locales list](https://developers.google.com/admin-sdk/directory/v1/languages)
+- Extension manifest references:
+    - [Chrome, version 2](https://developer.chrome.com/extensions/manifest) 
+    - [Chrome, version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
+    - [Firefox manifest](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)    
+
+- Lists of browser APIs:
+    - [Chrome APIs reference](https://developer.chrome.com/extensions/api_index)
+    - [Firefox APIs reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API#javascript_api_listing)
+
+- Internationalization:
+    - [Supporting multiple languages](https://developer.chrome.com/extensions/i18n)
+    - [Language locales list](https://developers.google.com/admin-sdk/directory/v1/languages)
+
 - [Awesome WebExtensions](https://github.com/fregante/Awesome-WebExtensions) - curated list of resources
-
 
 ### Extension Publishing Guides
 
