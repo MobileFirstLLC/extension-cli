@@ -31,8 +31,8 @@ nav:
     - "Version 1.x (latest)": 09-release-notes.md
     - "Version 0.x": 09-release-notes-0.md
   - "Developer Resources":
-    - Extension Tutorials: 15-tutorials.md
     - Helpful References: 12-helpful.md
+    - Extension Tutorials: 15-tutorials.md
     - CLI Development:
       - Overview: 13-cli-development.md
       - Environment Setup: 13-dev-env.md
