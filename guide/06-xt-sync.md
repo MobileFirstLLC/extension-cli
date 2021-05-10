@@ -3,76 +3,53 @@
 
 * * *
 
-<p class='page-intro'><code>xt-sync</code> command is intended for upgrading configuration files of
-a stale project to the latest versions</p>
+<p class='page-intro'><code>xt-sync</code> is intended for copying and updating 
+configuration files.</p>
 
 * * *
 
-When a project has not been worked on recently, it may need updates of 
-various files, such as CI configuration files. 
+When adding more features to an extension project, it may be helpful
+to not start from scratch. `xt-sync` command enables extension projects
+to pull in starter configuration files for the purposes of linting, 
+setting up automated CI builds, and for setting up git VCS.
 
-The purpose of this command is to make that update process simple by
-allowing each project to choose which configuration files to update.
-The CLI will then supply the project with the most recent configuration
-files.
+The configuration files are intended as a starting point. If you
+end up modifying them heavily at a project level, you should continue
+to maintain them manually instead of using this command.
 
-**Note:** If the configuration files have been modified heavily for 
-an individual project, it is not advisable to upgrade them in this manner. 
-Instead you should upgrade such configuration files manually.
+If you do not modify these configuration files, you can sync the 
+latest version periodically, to update to the latest version supplied
+by this CLI.
 
 ## Commands
 
-Braces `{ }` indicate that the user must choose one (and only one) of the items inside the braces.
+**Sync configuration files**
 
-You must pass at least one flag with this command.
-
-
-**Synchronize all configuration files**
+This command will guide you through the available options. 
 
 ```bash
-xt-sync {-a|--all}
+xt-sync
 ```
 
-**Synchronize ESLint configuration file**
-
-```bash
-xt-sync {-e|--eslint}
-```
-
-**Synchronize Gitlab CI configuration file**
-
-```bash
-xt-sync {-l|--gitlab}
-```
-
-**Synchronize Travis CI configuration file**
-
-```bash
-xt-sync {-t|--travis}
-``` 
-
-**Synchronize .gitignore file**
-
-```bash
-xt-sync {-g|--gitignore}
-``` 
-
-**Get help using this command**
-
-```bash
-xt-sync --help
-``` 
 
 ## Package.json scripts
 
-After installing extension-cli, you can run these commands from a terminal using `npx xt-sync --all`.
+After installing extension-cli, you can run these commands from a terminal by calling
  
-Or you can add an option to `packages.json` scripts section and then execute the command as `npm run sync`.
-See example below.
+```bash
+npx xt-sync
+```
+
+Alternatively you can add an option to `packages.json` scripts section as shown below
  
 ```json
-"scripts":{
-  "sync": "xt-sync --all"
+"scripts" : {
+  "sync": "xt-sync"
 }
 ```
 
+and then execute the command by running 
+
+```bash
+npm run sync
+```
