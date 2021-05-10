@@ -55,20 +55,15 @@ exports.xtCreate = {
  */
 exports.xtSync = {
 
-    argGitlab: 'sync gitlab-ci.yml',
+    argGitlab: 'gitlab CI config',
 
-    argTravis: 'sync travis.yml',
+    argTravis: 'travis CI config',
 
-    argLint: 'sync eslint',
+    argLint: 'eslint config',
 
-    argGitIgnore: 'sync gitignore',
+    argGitIgnore: 'gitignore',
 
-    argAll: 'sync everything',
-
-    onError: (
-        chalk.red('Specify which files to sync using flags.\n' +
-            'See --help for more details.')
-    ),
+    instructions: 'choose the files you want to sync:',
 
     updateSuccess: (what) => (
         chalk.bold.green(`✓ updated ${what}`)

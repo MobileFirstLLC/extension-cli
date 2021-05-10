@@ -8,7 +8,7 @@
  * @description
  *
  * ```text
- * xt-sync [--gitignore] [--eslint] [--gitlab] [--travis] [--all]
+ * xt-sync
  * ```
  *
  * The purpose of this command is to upgrade configuration files of
@@ -19,42 +19,53 @@
  */
 
 const path = require('path');
+const prompts = require('prompts');
 const program = require('commander');
 const pkg = require('../package.json');
 const texts = require('../config/texts').xtSync;
 const Utilities = require('./utilities').Utilities;
 
+// list available options
 const files = {
-    gitlab: {path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
-    travis: {path: '../config/travis.yml', out: '.travis.yml'},
-    eslint: {path: '../config/eslint.json', out: '.eslintrc'},
-    gitignore: {path: '../config/ignore', out: '.gitignore'}
+    gitlab: {title: texts.argLint, path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
+    travis: {title: texts.argGitlab, path: '../config/travis.yml', out: '.travis.yml'},
+    eslint: {title: texts.argTravis, path: '../config/eslint.json', out: '.eslintrc'},
+    gitignore: {title: texts.gitignore, path: '../config/ignore', out: '.gitignore'}
 };
 
+// generate the options to display to user
+const options = [{
+    type: 'multiselect',
+    name: 'options',
+    message: texts.instructions,
+    choices: Object.entries(files).map(
+        ([key, value]) => (
+            {title: value.title, value: key}
+        ))
+}];
+
 program
+    .name('xt-sync')
+    .option('-a --all', 'deprecated: call xt-sync without flags')
     .version(pkg.version)
-    .option('-l --gitlab', texts.argGitlab)
-    .option('-t --travis', texts.argTravis)
-    .option('-e --eslint', texts.argLint)
-    .option('-g --gitignore', texts.argGitIgnore)
-    .option('-a --all', texts.argAll)
     .parse(process.argv);
 
-let counter = 0;
+(async () => {
 
-const options = program.opts();
+    const onCancel = () => process.exit(0)
+    // noinspection JSUnresolvedVariable
+    const response = (await prompts(options, {onCancel})).options;
 
-Object.keys(files).map(opt => {
-    if (options[opt] !== undefined || options.all) {
-        const relativePath = path.resolve(__dirname, files[opt].path);
-        const outputFileName = files[opt].out;
-        const content = Utilities.readFile(relativePath, 'utf8');
-        const outPath = path.join(process.cwd(), outputFileName);
+    // copy selected options from config -> project
+    Object.entries(files).map(([key, value]) => {
 
-        Utilities.writeFile(outPath, content);
-        console.log(texts.updateSuccess(outputFileName));
-        counter++;
-    }
-});
+        if (response.indexOf(key) > -1) {
+            const relativePath = path.resolve(__dirname, value.path);
+            const content = Utilities.readFile(relativePath);
+            const outPath = path.join(process.cwd(), value.out);
 
-if (!counter) console.log(texts.onError);
+            Utilities.writeFile(outPath, content);
+            console.log(texts.updateSuccess(value.out));
+        }
+    });
+})();
