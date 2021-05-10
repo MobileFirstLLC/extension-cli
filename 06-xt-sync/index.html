@@ -888,55 +888,41 @@
                 
                 <h1 id="xt-sync">xt-sync</h1>
 <hr />
-<p class='page-intro'><code>xt-sync</code> command is intended for upgrading configuration files of
-a stale project to the latest versions</p>
+<p class='page-intro'><code>xt-sync</code> is intended for copying and updating 
+configuration files.</p>
 
 <hr />
-<p>When a project has not been worked on recently, it may need updates of 
-various files, such as CI configuration files. </p>
-<p>The purpose of this command is to make that update process simple by
-allowing each project to choose which configuration files to update.
-The CLI will then supply the project with the most recent configuration
-files.</p>
-<p><strong>Note:</strong> If the configuration files have been modified heavily for 
-an individual project, it is not advisable to upgrade them in this manner. 
-Instead you should upgrade such configuration files manually.</p>
+<p>When adding more features to an extension project, it may be helpful
+to not start from scratch. <code>xt-sync</code> command enables extension projects
+to pull in starter configuration files for the purposes of linting, 
+setting up automated CI builds, and for setting up git VCS.</p>
+<p>The configuration files are intended as a starting point. If you
+end up modifying them heavily at a project level, you should continue
+to maintain them manually instead of using this command.</p>
+<p>If you do not modify these configuration files, you can sync the 
+latest version periodically, to update to the latest version supplied
+by this CLI.</p>
 <h2 id="commands">Commands</h2>
-<p>Braces <code>{ }</code> indicate that the user must choose one (and only one) of the items inside the braces.</p>
-<p>You must pass at least one flag with this command.</p>
-<p><strong>Synchronize all configuration files</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync <span class="o">{</span>-a<span class="p">|</span>--all<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Synchronize ESLint configuration file</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync <span class="o">{</span>-e<span class="p">|</span>--eslint<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Synchronize Gitlab CI configuration file</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync <span class="o">{</span>-l<span class="p">|</span>--gitlab<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Synchronize Travis CI configuration file</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync <span class="o">{</span>-t<span class="p">|</span>--travis<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Synchronize .gitignore file</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync <span class="o">{</span>-g<span class="p">|</span>--gitignore<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Get help using this command</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync --help
+<p><strong>Sync configuration files</strong></p>
+<p>This command will guide you through the available options. </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-sync
 </code></pre></div>
 </td></tr></table>
 <h2 id="packagejson-scripts">Package.json scripts</h2>
-<p>After installing extension-cli, you can run these commands from a terminal using <code>npx xt-sync --all</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run sync</code>.
-See example below.</p>
+<p>After installing extension-cli, you can run these commands from a terminal by calling</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npx xt-sync
+</code></pre></div>
+</td></tr></table>
+<p>Alternatively you can add an option to <code>packages.json</code> scripts section as shown below</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:{</span>
-  <span class="nt">&quot;sync&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-sync --all&quot;</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span> <span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;sync&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-sync&quot;</span>
 <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>and then execute the command by running </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm run sync
 </code></pre></div>
 </td></tr></table>
                 
