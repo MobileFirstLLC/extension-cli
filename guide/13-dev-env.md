@@ -4,12 +4,12 @@
 To build extension CLI locally you will need [Node.js](https://nodejs.org/en/download/)
 and any web IDE of your choice.
 
-The general development setting requires two projects open at the same time:
+Developing the CLI requires two projects open at the same time:
 
 1. the CLI source code, which you are developing
 2. a driver project that is used to execute the CLI commands
 
-The following instructions explain how to set up such environment.
+The following instructions explain how to set up this environment.
 
 ## Instructions
 
@@ -67,8 +67,8 @@ At this point you should have two IDE windows open.
     "projectRootDir": "/path/to/my/driver/project",   // after
     ```
     
-    This last step is required because by default the CLI assumes it is
-    in `node_modules` relative to the target project. This is not necessarily
+    This last step is required because by default the CLI assumes it is located
+    in `node_modules` relative to the driver project. This is not necessarily
     the case when using a locally linked package.
     
 * * * 

@@ -74,7 +74,3 @@ markdown_extensions:
       linenums: true
       linenums_style: pymdownx.inline
   - meta
-
-google_analytics:
-  - !!python/object/apply:os.getenv ['UA-129118591-7']
-  - auto
