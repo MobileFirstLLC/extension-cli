@@ -48,7 +48,7 @@ class Utilities {
         let temp = content.toString();
 
         Object.keys(vars).map(key => {
-            const re = new RegExp('\\$\{' + key + '\}', 'gi');
+            const re = new RegExp('\\$\{' + key + '}', 'gi');
 
             temp = temp.replace(re, vars[key]);
             return true;
