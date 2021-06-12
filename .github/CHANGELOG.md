@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-alpha.0](https://github.com/mobilefirstllc/extension-cli/compare/v1.0.3...v1.1.0-alpha.0) (2021-06-12)
+
+
+### Features
+
+* **xt-sync:** change command to prompt with options; update relevant docs ([7a65245](https://github.com/mobilefirstllc/extension-cli/commit/7a652455e834929c1d5e78d8dc5648a64f079aca))
+
 ### [1.0.3](https://github.com/mobilefirstllc/extension-cli/compare/v1.0.3-alpha.2...v1.0.3) (2021-04-27)
 
 ### [1.0.3-alpha.2](https://github.com/mobilefirstllc/extension-cli/compare/v1.0.3-alpha.1...v1.0.3-alpha.2) (2021-04-27)
