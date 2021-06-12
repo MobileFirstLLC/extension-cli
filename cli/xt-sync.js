@@ -27,9 +27,9 @@ const Utilities = require('./utilities').Utilities;
 
 // list available options
 const files = {
-    gitlab: {title: texts.argLint, path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
-    travis: {title: texts.argGitlab, path: '../config/travis.yml', out: '.travis.yml'},
-    eslint: {title: texts.argTravis, path: '../config/eslint.json', out: '.eslintrc'},
+    gitlab: {title: texts.argGitlab, path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
+    travis: {title: texts.argTravis, path: '../config/travis.yml', out: '.travis.yml'},
+    eslint: {title: texts.argLint, path: '../config/eslint.json', out: '.eslintrc'},
     gitignore: {title: texts.gitignore, path: '../config/ignore', out: '.gitignore'}
 };
 
