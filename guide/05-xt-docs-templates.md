@@ -28,7 +28,7 @@ If you are using the default template see: [Configuring JSDoc's default template
 To use an alternative template:
 
 1. Choose a suitable template and use npm to install it at project level
-2. In the [documentation configuration](05-xt-docs.md/#default-configuration):
+2. In the [documentation configuration](https://oss.mobilefirst.me/extension-cli/05-xt-docs/#default-configuration):
     1. Specify `"opts.template"` to indicate which template to use    
     2. Customize the template options under `"templates"` 
 

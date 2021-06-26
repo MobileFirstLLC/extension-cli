@@ -65,7 +65,7 @@ Command | Description
 **xt-clean** | Remove generated files
 **xt-sync**| Update project config files to match the latest defaults supplied by this CLI
 
-More detailed [command instructions and configuration options here &rarr;](https://oss.mobilefirst.me/extension-cli/08-xt-create/) 
+More detailed [command instructions and configuration options here &rarr;](https://oss.mobilefirst.me/extension-cli/03-xt-build/) 
 
 ---
 
