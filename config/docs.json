@@ -16,31 +16,16 @@
     "plugins/markdown"
   ],
   "templates": {
-    "footer": "",
-    "copyright": "",
-    "includeDate": "true",
-    "dateFormat": "MMM YYYY",
-    "inlineNav": "true",
-    "inverseNav": "false",
-    "linenums": "true",
-    "showTableOfContents": "true",
-    "showAccessFilter": "true",
-    "collapseSymbols": "true",
-    "methodHeadingReturns": "false",
-    "outputSourceFiles": "true",
-    "outputSourcePath": "true",
-    "search": "true",
-    "stylesheets": [
-      "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="
-    ],
-    "scripts": [],
-    "favicon": "./assets/img/128x128.png"
+    "default": {
+      "cleverLinks": true,
+      "monospaceLinks": false
+    }
   },
   "opts": {
     "destination": "./public/documentation",
     "encoding": "utf8",
     "private": true,
     "recurse": true,
-    "template": "./node_modules/foodoc/template"
+    "template": "templates/default"
   }
 }

@@ -12,10 +12,6 @@ generate documentation for javascript files in an extension project. JSDoc is
 a flexible documentation generator that converts javascript code comments to 
 readable HTML/CSS files which you can be hosted for example with github pages.
 
-You can use any compatible template of choice to skin your docs. Learn [more 
-about templating here](#templates).
-
-
 ## Commands
 
 Braces `{ }` indicate that the user must choose one (and only one) of the 
@@ -72,29 +68,8 @@ If these two locations cause a conflict, alternatively you can provide a path
 to configuration file with `-c` (`--config`) flag, followed by path to file. 
 [See commands for an example](#commands).
 
-
-### Minimum Project-Level Configuration
-
-Within the extension project you should define, at minimum, the following 
-configuration options:
-
-```json
-"xtdocs": {
-  "templates": {
-    "systemName": "{extension name}",
-    "systemSummary": "{short description}",
-    "systemColor": "{css-color}"
-  }
-}
-```
-
-where:
-
-| key | Description of value |
-| --- | --- |
-| `systemName`| Project name |
-| `systemSummary` | Short description of your project; becomes a subheading in generated docs |
-| `systemColor` | Theme color, e.g. hex or rgb value `#000000`.
+You can use any compatible template of choice to style your docs. You can find 
+some [templating options here](05-xt-docs-templates.md).
 
 ### Default Configuration
 
@@ -102,61 +77,36 @@ The CLI uses a documentation configuration file shown below. You can override an
 
 ```json
 "xtdocs": {
-  "tags": {
-    "allowUnknownTags": true,
-    "dictionaries": [
-      "jsdoc"
-    ]
-  },
-  "source": {
-    "include": [
-      "src"
+    "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": [
+        "jsdoc"
+      ]
+    },
+    "source": {
+      "include": [
+        "src"
+      ],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/)"
+    },
+    "plugins": [
+      "plugins/markdown"
     ],
-    "includePattern": ".js$",
-    "excludePattern": "(node_modules/|docs)"
-  },
-  "plugins": [
-    "plugins/markdown"
-  ],
-  "templates": {
-    "footer": "",
-    "copyright": "",
-    "includeDate": "true",
-    "dateFormat": "MMM YYYY",
-    "inlineNav": "true",
-    "inverseNav": "false",
-    "linenums": "true",
-    "showTableOfContents": "true",
-    "showAccessFilter": "true",
-    "collapseSymbols": "true",
-    "methodHeadingReturns": "false",
-    "outputSourceFiles": "true",
-    "outputSourcePath": "true",
-    "search": "true",
-    "stylesheets": [
-      "data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ=="
-    ],
-    "scripts": [],
-    "favicon": "./assets/img/128x128.png"
-  },
-  "opts": {
-    "destination": "./public/documentation",
-    "encoding": "utf8",
-    "private": true,
-    "recurse": true,
-    "template": "./node_modules/foodoc/template"
+    "templates": {
+      "default": {
+        "cleverLinks": true,
+        "monospaceLinks": false
+      }
+    },
+    "opts": {
+      "destination": "./public/documentation",
+      "encoding": "utf8",
+      "private": true,
+      "recurse": true,
+      "template": "templates/default"
+    }
   }
 }
 ```
-
-## Templates
-
-`templates` key is used specifically to customize the options for a template of choice. This is useful if you want to change the look and feel of the generated documentation. The default template used by this CLI is 
-[Foodoc](https://github.com/steveush/foodoc#configuring-the-template). 
-
-You can change the template by overriding `opts.template` in the project-level configuration, and by adding the template package of your choice to project-level dependencies.
-
-[This list](https://cancerberosgx.github.io/jsdoc-templates-demo/demo/) can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.
-
-
 

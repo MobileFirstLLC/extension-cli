@@ -23,7 +23,9 @@ nav:
       - Static assets: 03-xt-build-assets.md
       - Commands: 03-xt-build-cmds.md
     - 'xt-clean': 04-xt-clean.md
-    - 'xt-docs': 05-xt-docs.md
+    - 'xt-docs':
+      - Configuration: 05-xt-docs.md
+      - Templates: 05-xt-docs-templates.md
     - 'xt-sync': 06-xt-sync.md
     - 'xt-test': 07-xt-test.md
     - 'extension-cli': 08-xt-create.md
