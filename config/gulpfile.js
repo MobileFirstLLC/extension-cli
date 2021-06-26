@@ -6,6 +6,7 @@ const gulpChange = require('gulp-change');
 const paths = require('./build.json');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
+const sass = require('gulp-sass')(require('sass'));
 const argv = require('yargs').argv;
 const isProd = argv.prod;
 const isFirefox = argv.firefox;
@@ -85,7 +86,7 @@ const styles = done => {
         bundles.map(b => {
             gulp.src(b.src)
                 // convert to css
-                .pipe(plugins.sass())
+                .pipe(sass().on('error', sass.logError))
                 // concatenate multiple src files
                 .pipe(plugins.concat(`${count}.css`))
                 // minify
