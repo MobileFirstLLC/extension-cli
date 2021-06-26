@@ -21,6 +21,9 @@
       "url": "https://github.com/sponsors/MobileFirstLLC"
     }
   ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "bin": {
     "extension-cli": "cli/xt-create.js",
     "xt-build": "cli/xt-build.js",
