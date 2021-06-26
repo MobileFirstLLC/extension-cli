@@ -20,7 +20,7 @@
     
     
       
-        <title>xt-docs - Extension CLI • User Guide</title>
+        <title>Configuration - Extension CLI • User Guide</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              xt-docs
+              Configuration
             
           </span>
         </div>
@@ -520,6 +520,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        xt-docs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          xt-docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -529,12 +552,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          xt-docs
+          Configuration
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        xt-docs
+        Configuration
       </a>
       
         
@@ -574,13 +597,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#minimum-project-level-configuration" class="md-nav__link">
-    Minimum Project-Level Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#default-configuration" class="md-nav__link">
     Default Configuration
   </a>
@@ -592,17 +608,28 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#templates" class="md-nav__link">
-    Templates
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-xt-docs-templates/" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -910,13 +937,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#minimum-project-level-configuration" class="md-nav__link">
-    Minimum Project-Level Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#default-configuration" class="md-nav__link">
     Default Configuration
   </a>
@@ -925,13 +945,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#templates" class="md-nav__link">
-    Templates
-  </a>
   
 </li>
       
@@ -962,8 +975,6 @@
 generate documentation for javascript files in an extension project. JSDoc is 
 a flexible documentation generator that converts javascript code comments to 
 readable HTML/CSS files which you can be hosted for example with github pages.</p>
-<p>You can use any compatible template of choice to skin your docs. Learn <a href="#templates">more 
-about templating here</a>.</p>
 <h2 id="commands">Commands</h2>
 <p>Braces <code>{ }</code> indicate that the user must choose one (and only one) of the 
 items inside the braces.</p>
@@ -1009,47 +1020,8 @@ places:</p>
 <p>If these two locations cause a conflict, alternatively you can provide a path 
 to configuration file with <code>-c</code> (<code>--config</code>) flag, followed by path to file. 
 <a href="#commands">See commands for an example</a>.</p>
-<h3 id="minimum-project-level-configuration">Minimum Project-Level Configuration</h3>
-<p>Within the extension project you should define, at minimum, the following 
-configuration options:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtdocs&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;systemName&quot;</span><span class="p">:</span> <span class="s2">&quot;{extension name}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;systemSummary&quot;</span><span class="p">:</span> <span class="s2">&quot;{short description}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;systemColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{css-color}&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
-<p>where:</p>
-<table>
-<thead>
-<tr>
-<th>key</th>
-<th>Description of value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>systemName</code></td>
-<td>Project name</td>
-</tr>
-<tr>
-<td><code>systemSummary</code></td>
-<td>Short description of your project; becomes a subheading in generated docs</td>
-</tr>
-<tr>
-<td><code>systemColor</code></td>
-<td>Theme color, e.g. hex or rgb value <code>#000000</code>.</td>
-</tr>
-</tbody>
-</table>
+<p>You can use any compatible template of choice to style your docs. You can find 
+some <a href="../05-xt-docs-templates/">templating options here</a>.</p>
 <h3 id="default-configuration">Default Configuration</h3>
 <p>The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they follow to <a href="https://jsdoc.app/about-configuring-jsdoc.html">JSDoc guidelines</a>.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1083,73 +1055,40 @@ configuration options:</p>
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtdocs&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;allowUnknownTags&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;dictionaries&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;jsdoc&quot;</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;include&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;src&quot;</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtdocs&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;allowUnknownTags&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;dictionaries&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;jsdoc&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;include&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;src&quot;</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;includePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.js$&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;excludePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;(node_modules/)&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;plugins/markdown&quot;</span>
     <span class="p">],</span>
-    <span class="nt">&quot;includePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.js$&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;excludePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;(node_modules/|docs)&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;plugins/markdown&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;footer&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;copyright&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;includeDate&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;dateFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;MMM YYYY&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;inlineNav&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;inverseNav&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;linenums&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;showTableOfContents&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;showAccessFilter&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;collapseSymbols&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;methodHeadingReturns&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;outputSourceFiles&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;outputSourcePath&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;stylesheets&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;data:text/css;base64,Zm9vdGVyewogICAgZGlzcGxheTpub25lIWltcG9ydGFudDsKfQ==&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="nt">&quot;favicon&quot;</span><span class="p">:</span> <span class="s2">&quot;./assets/img/128x128.png&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;opts&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;./public/documentation&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;./node_modules/foodoc/template&quot;</span>
+    <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;cleverLinks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;monospaceLinks&quot;</span><span class="p">:</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;opts&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;./public/documentation&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;templates/default&quot;</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="templates">Templates</h2>
-<p><code>templates</code> key is used specifically to customize the options for a template of choice. This is useful if you want to change the look and feel of the generated documentation. The default template used by this CLI is 
-<a href="https://github.com/steveush/foodoc#configuring-the-template">Foodoc</a>. </p>
-<p>You can change the template by overriding <code>opts.template</code> in the project-level configuration, and by adding the template package of your choice to project-level dependencies.</p>
-<p><a href="https://cancerberosgx.github.io/jsdoc-templates-demo/demo/">This list</a> can help you get started with picking a custom template. If you cannot find one that you like, you can always make and publish your own.</p>
                 
               
               
@@ -1194,13 +1133,13 @@ configuration options:</p>
       
       
         
-        <a href="../06-xt-sync/" class="md-footer__link md-footer__link--next" aria-label="Next: xt-sync" rel="next">
+        <a href="../05-xt-docs-templates/" class="md-footer__link md-footer__link--next" aria-label="Next: Templates" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              xt-sync
+              Templates
             </div>
           </div>
           <div class="md-footer__button md-icon">

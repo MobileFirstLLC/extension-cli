@@ -16,7 +16,10 @@ table tr th :last-child, table tr td :last-child {margin-bottom: 0; }
     box-shadow: none;
     background: var(--md-code-bg-color);
 }
-.md-typeset table:not([class]) code{
+.md-typeset code{
+    padding: 3px .35em;
+}
+.md-typeset table:not([class]) code {
     font-size: .70rem;
 }
 .md-typeset table:not([class]) tr:hover{
