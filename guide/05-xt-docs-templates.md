@@ -20,7 +20,7 @@ If you are using the default template see: [Configuring JSDoc's default template
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/jsdoc-default.jpg" alt="default template"/>
+  </span><img src="/extension-cli/assets/images/jsdoc-default.jpg" alt="default template"/>
 </a>
 
 ## Alternative Templates
@@ -46,7 +46,7 @@ To use an alternative template:
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/braintree.jpg" alt="braintree"/>
+  </span><img src="/extension-cli/assets/images/braintree.jpg" alt="braintree"/>
 </a>
 
 * * *
@@ -65,7 +65,7 @@ _Light mode_
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/clean-jsdoc-light.jpg" alt="light mode"/>
+  </span><img src="/extension-cli/assets/images/clean-jsdoc-light.jpg" alt="light mode"/>
 </a>
 
 _Dark mode_
@@ -76,7 +76,7 @@ _Dark mode_
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/clean-jsdoc-dark.jpg" alt="dark mode"/>
+  </span><img src="/extension-cli/assets/images/clean-jsdoc-dark.jpg" alt="dark mode"/>
 </a>
 
 * * *
@@ -94,7 +94,7 @@ _Dark mode_
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/foodoc.jpg" alt="foodoc"/>
+  </span><img src="/extension-cli/assets/images/foodoc.jpg" alt="foodoc"/>
 </a>
 
 * * *
@@ -111,7 +111,7 @@ _Dark mode_
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/jsdoc-template.jpg" alt="JsDoc Template"/>
+  </span><img src="/extension-cli/assets/images/jsdoc-template.jpg" alt="JsDoc Template"/>
 </a>
 
 * * *
@@ -128,7 +128,7 @@ _Dark mode_
       <span class="red"></span>
       <span class="yellow"></span>
       <span class="green"></span>
-  </span><img src="/assets/images/tidy-jsdoc.jpg" alt="Tidy JsDoc"/>
+  </span><img src="/extension-cli/assets/images/tidy-jsdoc.jpg" alt="Tidy JsDoc"/>
 </a>
 
 * * *
