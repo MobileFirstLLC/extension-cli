@@ -35,11 +35,6 @@
         "README.md",
         "src"
       ]
-    },
-    "templates": {
-      "systemName": "${name}",
-      "systemSummary": "${description}",
-      "systemColor": "#4CAF50"
     }
   },
   "xtbuild": {
