@@ -159,6 +159,11 @@ const copyManifest = () => {
         .pipe(plugins.jsonEditor({version}))
         .pipe(gulpChange(performChange))
         .pipe(plugins.jsonminify())
+        .pipe(plugins.rename(function (path) {
+            path.dirname = '';
+            path.basename = 'manifest';
+            path.extname = ".json";
+        }))
         .pipe(gulp.dest(paths.dist));
 };
 
