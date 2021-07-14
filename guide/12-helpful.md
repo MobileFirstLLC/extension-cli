@@ -9,6 +9,7 @@
 - Getting Started guides:
     - [by Chrome developers](https://developer.chrome.com/extensions/getstarted)
     - [by Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#get_started)
+    - [by Apple Developer](https://developer.apple.com/documentation/safariservices/safari_web_extensions)
 
 - Extension manifest references:
     - [Chrome, version 2](https://developer.chrome.com/extensions/manifest) 
@@ -40,3 +41,6 @@
 
 - **Firefox**
     - [Publishing for Firefox](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/)
+
+- **Safari**
+    - [Distributing Your Safari Web Extension](https://developer.apple.com/documentation/safariservices/safari_web_extensions/distributing_your_safari_web_extension)
