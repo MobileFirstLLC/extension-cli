@@ -1,0 +1,77 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+
+## to run workflow on pull requests:
+#on:
+#  pull_request:
+#    branches: [ main ]
+
+## to run workflow on tagged commits
+#on:
+#  push:
+#    tags:
+#      - '*'
+
+## to run workflow on schedule, e.g. nightly build
+#on:
+#  schedule:
+#    - cron:  '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # see https://github.com/marketplace/actions/setup-node-js-environment
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # see https://github.com/marketplace/actions/cache
+      - name: Cache dependecies
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Unit test
+        run: npm run test
+
+      - name: Build docs
+        run: npm run docs
+
+      - name: Build extension .zip file
+        run: npm run build
+
+## Uncomment to deploy docs to GH pages
+## see: https://github.com/marketplace/actions/deploy-to-github-pages
+#      - name: Deploy docs
+#        uses: JamesIves/github-pages-deploy-action@4.1.3
+#        with:
+#          branch: gh-pages
+#          folder: public/documentation
+
+## Uncomment to upload generated zip file to web store
+## see: https://github.com/MobileFirstLLC/cws-publish
+#      - name: Upload to Chrome Web Store
+#        run: >-
+#          npx cws-upload
+#          ${{ secrets.CLIENT }}
+#          ${{ secrets.SECRET }}
+#          ${{ secrets.TOKEN }}
+#          "release.zip"
+#          ${{ EXTENSION_ID }};
+
+## Uncomment to make a Github release
+## see: https://github.com/marketplace/actions/create-release
+#      - uses: ncipollo/release-action@v1
+#        with:
+#          artifacts: "release.zip"
+#          token: ${{ secrets.GITHUB_TOKEN }}

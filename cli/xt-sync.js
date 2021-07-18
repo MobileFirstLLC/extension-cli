@@ -27,6 +27,7 @@ const Utilities = require('./utilities').Utilities;
 
 // list available options
 const files = {
+    actions: {title: texts.argActions, path: '../config/actions.yml', out: 'build.yml', dir: '.github/workflows'},
     gitlab: {title: texts.argGitlab, path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
     travis: {title: texts.argTravis, path: '../config/travis.yml', out: '.travis.yml'},
     eslint: {title: texts.argLint, path: '../config/eslint.json', out: '.eslintrc.js'},
@@ -62,8 +63,10 @@ program
         if (response.indexOf(key) > -1) {
             const relativePath = path.resolve(__dirname, value.path);
             const content = Utilities.readFile(relativePath);
-            const outPath = path.join(process.cwd(), value.out);
+            const outPath = path.join(process.cwd(),
+                (value.dir ? path.join(value.dir, value.out) : value.out));
 
+            if (value.dir) Utilities.createDir(path.join(process.cwd(), value.dir));
             Utilities.writeFile(outPath, content);
             console.log(texts.updateSuccess(value.out));
         }

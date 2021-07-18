@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - install
   - pages
+  - test
   - publish
 
 cache:
@@ -12,7 +13,7 @@ cache:
 
 install_dependencies:
   stage: install
-  script: yarn
+  script: npm install
   artifacts:
     paths:
       - node_modules/
@@ -20,7 +21,6 @@ install_dependencies:
 pages:
   stage: pages
   script:
-    - npm run test
     - npm run docs
   artifacts:
     paths:
@@ -28,11 +28,17 @@ pages:
   only:
     - master
 
+test:
+  stage: test
+  script:
+    - npm run test
+
 store_publish:
   stage: publish
   script:
     - npm run build
-    # - npx cws-upload $cid $sec $tkn $zip $eid;
+    ## see: https://github.com/MobileFirstLLC/cws-publish
+    # - npx cws-upload $client_id $secret $token $zip_path $extension_id;
   artifacts:
     paths:
       - $zip

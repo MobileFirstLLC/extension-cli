@@ -192,7 +192,7 @@ class Utilities {
     createDir(dirPath) {
         // doesn't exist
         if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath);
+            fs.mkdirSync(dirPath, { recursive: true });
             return true;
         }
         // check if empty
