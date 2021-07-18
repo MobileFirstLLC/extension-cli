@@ -1,15 +1,7 @@
-/** * * * * * * * * * * * * * * * * * * * *
- * Extension-CLI
- * Command line build tool for building
- * browser extensions
- *
- * Author: Mobile First LLC
- * Website: https://mobilefirst.me
- *
+/**
  * @description
- * This module specifies terminal/console
- * output for all commands
- * * * * * * * * * * * * * * * * * * * * */
+ * This module specifies terminal/console output for all commands
+ */
 
 const chalk = require('chalk');
 
@@ -18,13 +10,28 @@ const chalk = require('chalk');
  */
 exports.xtCreate = {
 
-    promptName: 'What do you want to call the extension?',
-
-    promptNameError: 'You must choose a name',
-
-    prompDescription: 'What does it do?',
-
-    promptHomepage: 'Homepage URL (leave blank if you do not have one yet)',
+    prompts : {
+        name: {
+            type: 'text',
+            name: 'name',
+            message: 'What do you want to call the extension?',
+            validate: value =>
+                // basic null check is sufficient
+                !value || value.trim().length < 1 ?
+                    'You must choose a name' : true
+        },
+        optional: [
+            {
+                type: 'text',
+                name: 'description',
+                message: 'What does it do?'
+            }, {
+                type: 'text',
+                name: 'homepage',
+                message: 'Homepage URL (leave blank if you do not have one yet)'
+            }
+        ]
+    },
 
     dirError: (dirname) => (
         chalk.bold.red(`Cannot create directory: ${dirname}.\n` +
@@ -48,6 +55,7 @@ exports.xtCreate = {
         `${chalk.bold.green('DONE! ')}Your extension starter is ready.\n` +
         `${chalk.bold.green('What Next: ')} Open ${dir} in your favorite web IDE`
     )
+
 };
 
 /**
@@ -65,9 +73,7 @@ exports.xtSync = {
 
     instructions: 'choose the files you want to sync:',
 
-    updateSuccess: (what) => (
-        chalk.bold.green(`✓ updated ${what}`)
-    )
+    updateSuccess: (what) => chalk.bold.green(`✓ updated ${what}`)
 };
 
 /**
@@ -97,21 +103,13 @@ exports.xtClean = {
 
     argVS: 'Clean .vscode/ directory',
 
-    onConfigError: (path) => (
-        chalk.yellow(`File does not exist: ${path}`)
-    ),
+    onConfigError: (path) => chalk.yellow(`File does not exist: ${path}`),
 
-    onCleanFile: (path) => (
-        `- ${path}`
-    ),
+    onCleanFile: (path) => `- ${path}`,
 
-    onCleanError: (e, line) => (
-        chalk.bold.red(e) + ' ' + line
-    ),
+    onCleanError: (e, line) => chalk.bold.red(e) + ' ' + line,
 
-    result: count => (
-        chalk.bold[count === 0 ? 'yellow' : 'green'](`Done. Cleaned: ${count}`)
-    )
+    result: count => chalk.bold[count === 0 ? 'yellow' : 'green'](`Done. Cleaned: ${count}`)
 };
 
 /**
@@ -145,11 +143,7 @@ exports.xtBuild = {
 
     configFileArg: 'Path to configuration file, default: .xtbuild.json in root, or xtbuild in package.json)',
 
-    onBuildSuccess: _ => (
-        chalk.bold.green('Build done!')
-    ),
+    onBuildSuccess: _ => chalk.bold.green('Build done!'),
 
-    onBuildError: _ => (
-        chalk.bold.red('Build failed')
-    )
+    onBuildError: _ => chalk.bold.red('Build failed')
 };

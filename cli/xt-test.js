@@ -30,7 +30,7 @@ const path = require('path');
 const program = require('commander');
 const pkg = require('../package.json');
 const exec = require('child_process').exec;
-const texts = require('../config/texts').xtTest;
+const texts = require('./texts').xtTest;
 
 process.chdir(process.cwd());
 
@@ -43,7 +43,7 @@ program
 
 const {pattern, coverage, watch} = program.opts();
 const rootSuite = path.resolve(process.cwd(),
-    'node_modules', pkg.name, 'config', 'rootSuite.js');
+    'node_modules', pkg.name, 'cli', 'rootsuite.js');
 
 const proc = exec([
 
