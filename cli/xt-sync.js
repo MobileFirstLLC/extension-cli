@@ -22,7 +22,7 @@ const path = require('path');
 const prompts = require('prompts');
 const program = require('commander');
 const pkg = require('../package.json');
-const texts = require('../config/texts').xtSync;
+const texts = require('./texts').xtSync;
 const Utilities = require('./utilities').Utilities;
 
 // list available options

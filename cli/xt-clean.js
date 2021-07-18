@@ -25,7 +25,7 @@ const readline = require('readline');
 const pkg = require('../package.json');
 const ignore = path.join(process.cwd(), '.gitignore');
 const Utilities = require('./utilities').Utilities;
-const texts = require('../config/texts').xtClean;
+const texts = require('./texts').xtClean;
 
 let counter = 0;
 

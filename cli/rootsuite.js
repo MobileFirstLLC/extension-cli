@@ -1,22 +1,14 @@
-/** * * * * * * * * * * * * * * * * * * * *
- * Extension-CLI
- * Command line build tool for building
- * browser extensions
- *
- * Author: Mobile First LLC
- * Website: https://mobilefirst.me
- *
+/**
  * @description
- * This rootsuite sets up unit testing
- * environment
- * * * * * * * * * * * * * * * * * * * * */
+ * This rootsuite sets up unit testing environment
+ */
 
 const sinon = require('sinon');
 const chrome = require('sinon-chrome');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const argv = require('yargs').argv;
-const texts = require('../config/texts').xtTest;
+const texts = require('./texts').xtTest;
 
 /**
  * Create sinon sandbox

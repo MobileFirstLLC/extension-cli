@@ -25,8 +25,8 @@ const exec = require('child_process').exec;
 const pkg = require('../package.json');
 const env = {prod: 'prod', dev: 'dev'};
 const platform = {chrome: 'chrome', firefox: 'firefox'};
-const texts = require('../config/texts').xtBuild;
-const gulpfile = path.resolve(__dirname, '../config/gulpfile.js');
+const texts = require('./texts').xtBuild;
+const gulpfile = path.resolve(__dirname, './gulpfile.js');
 
 program
     .version(pkg.version)
