@@ -63,13 +63,15 @@ exports.xtCreate = {
  */
 exports.xtSync = {
 
-    argGitlab: 'gitlab CI config',
+    argGitlab: 'Gitlab CI config',
 
-    argTravis: 'travis CI config',
+    argTravis: 'Travis CI config',
 
     argLint: 'eslint config',
 
     argGitIgnore: 'gitignore',
+
+    argActions: 'Github actions workflow config',
 
     instructions: 'choose the files you want to sync:',
 

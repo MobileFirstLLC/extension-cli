@@ -25,6 +25,13 @@ deploy:
   - provider: releases
     skip_cleanup: true
     api_key: $github_token
-    file: $zip
+    file: $zip_path
     on:
       tags: true
+
+#after_deploy:
+## upload generated zip to chrome web store
+## see: https://github.com/MobileFirstLLC/cws-publish
+#  - if [ ! -z  "$TRAVIS_TAG" ]; then
+#      npx cws-upload $client_id $secret $token $zip_path $extension_id;
+#    fi
