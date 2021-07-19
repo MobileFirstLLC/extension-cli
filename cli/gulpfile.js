@@ -186,18 +186,10 @@ const copies = ensureArray(paths.copyAsIs).map(obj =>
 
 const watch = () => {
     console.log(chalk.bold.yellow('watching...'));
-    paths.js_bundles.map(({src}, i) => {
-        gulp.watch(ensureArray(src), scripts[i]);
-    })
-    paths.scss_bundles.map(({src}, i) => {
-        gulp.watch(ensureArray(src), styles[i]);
-    })
-    ensureArray(paths.copyAsIs).map((path, i) => {
-        gulp.watch(ensureArray(path), copies[i]);
-    })
-    paths.locales_list.map((lang, i) => {
-        gulp.watch(paths.locales_dir + lang + '/**/*.json', locales[i])
-    })
+    gulp.watch(ensureArray(paths.js), gulp.parallel(...scripts))
+    gulp.watch(ensureArray(paths.scss), gulp.parallel(...styles))
+    gulp.watch(ensureArray(paths.copyAsIs), gulp.parallel(...copies))
+    gulp.watch(paths.locales_dir + '**/*.json', gulp.parallel(...locales))
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(ensureArray(paths.html), buildHtml);
     gulp.watch(ensureArray(paths.assets), copyAssets);
