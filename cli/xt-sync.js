@@ -30,7 +30,7 @@ const files = {
     actions: {title: texts.argActions, path: '../config/actions.yml', out: 'build.yml', dir: '.github/workflows'},
     gitlab: {title: texts.argGitlab, path: '../config/gitlab.yml', out: '.gitlab-ci.yml'},
     travis: {title: texts.argTravis, path: '../config/travis.yml', out: '.travis.yml'},
-    eslint: {title: texts.argLint, path: '../config/eslint.json', out: '.eslintrc.js'},
+    eslint: {title: texts.argLint, path: '../config/eslint.json', out: '.eslintrc.json'},
     gitignore: {title: texts.gitignore, path: '../config/ignore', out: '.gitignore'}
 };
 
