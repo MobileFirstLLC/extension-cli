@@ -8,24 +8,20 @@ const webpack = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
 const Utilities = require('./utilities').Utilities;
 const argv = require('yargs').argv;
-const isProd = argv.prod;
-const isFirefox = argv.firefox;
-
-/** switch to project working directory **/
-process.chdir(paths.projectRootDir);
+const {prod: isProd, firefox: isFirefox, pkg: pkgPath, config} = argv;
 
 /** helper method to ensure array type */
 const ensureArray = path => Array.isArray(path) ? path : [path];
 const chooseArray = (input, _default) => Array.isArray(input) ? input : _default;
 
 /** read project package.json **/
-const pkg = Utilities.readJSON(argv.pkg);
+const pkg = Utilities.readJSON(pkgPath);
 
 /** read project's config file, if specified **/
 let customPaths = null;
-if (Utilities.fileExists(argv.config)) {
+if (Utilities.fileExists(config)) {
     // if config is a file
-    customPaths = Utilities.readJSON(argv.config);
+    customPaths = Utilities.readJSON(config);
 } else if (pkg.xtbuild !== undefined) {
     // otherwise config should be specified in package.json
     customPaths = pkg.xtbuild;
@@ -56,7 +52,6 @@ const script = ({src, name, mode}, done = _ => true) => {
     if (!isProd) webpackOptions.devtool = "cheap-source-map";
     else webpackOptions.devtool = "none";
 
-    // console.log(chalk.bold.yellow(src));
     return gulp.src(src)
         .pipe(webpack(webpackOptions))
         .on('error', (err) => {

@@ -1,5 +1,4 @@
 {
-  "projectRootDir": "../../../",
   "dist": "./dist",
   "source": "./src",
   "releases": "./",

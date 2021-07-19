@@ -36,35 +36,37 @@ program
     .option('-w --watch', texts.watchArg)
     .parse(process.argv);
 
-const {watch, env: programEnv, config, p: platformEnv} = program.opts();
+const {watch, env: programEnv, config, platform: platformEnv} = program.opts();
 
 const args = [
     watch ? 'gulp watch' : 'gulp',
     util.format('--gulpfile "%s"', gulpfile),
     util.format('--config "%s"', path.resolve(process.cwd(), config || './.xtbuild.json')),
     util.format('--pkg', path.resolve(process.cwd(), './package.json')),
+    util.format('--cwd', path.resolve(process.cwd())),
     util.format('--%s', programEnv),
     util.format('--%s', platformEnv),
     '--colors'
 ].join(' ');
 
-const spinner = (!watch) ? new Spinner(' %s ') : null;
-
-if (spinner) spinner.start();
+const spinner = new Spinner(' %s ');
+spinner.start();
 
 const bat = exec(args);
 
 bat.stdout.on('data', (data) => {
+    if (data && data.indexOf('Using gulpfile') === 0) return;
+    spinner.stop(true);
     process.stdout.write(data.toString());
 });
 
 bat.stderr.on('data', (data) => {
-    if (spinner) spinner.stop(true);
+    spinner.stop(true);
     process.stdout.write(data.toString());
 });
 
 bat.on('exit', (err) => {
-    if (spinner) spinner.stop(true);
+    spinner.stop(true);
     console.log(!err ?
         texts.onBuildSuccess() :
         texts.onBuildError());
