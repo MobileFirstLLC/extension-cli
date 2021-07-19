@@ -31,7 +31,7 @@ to organize, build, test and document extension projects.</p>
 <br/>&nbsp;&nbsp; &nbsp; &nbsp; Sets up a unit testing environment with [mocha](https://mochajs.org), [chai](https://www.chaijs.com/), [sinon-chrome](https://github.com/acvetkov/sinon-chrome) and [js-dom](https://github.com/rstacruz/jsdom-global) <br/>
 
 ⚔️ &nbsp; **Cross-Browser Compatibility**
-<br/>&nbsp;&nbsp; &nbsp; &nbsp; develop extensions for Chrome, Edge, Firefox or Opera. <br/>
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; develop extensions for Chrome, Edge, Firefox, Opera and Brave. <br/>
 
 * * *
 
