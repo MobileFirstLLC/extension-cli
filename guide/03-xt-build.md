@@ -105,10 +105,16 @@ Explanations for each of these keys is given below.
   "release_name": "release",
   "manifest": "./src/manifest.json",
   "js": "./src/**/*.js",
-  "js_bundles": null,
+  "js_bundles": [{
+    "src":"./src/**/*.js",
+    "name": "script"
+  }],
   "html": "./src/**/*.html",
   "scss": "./src/**/*.scss",
-  "scss_bundles": null,
+  "scss_bundles": [{
+    "src":"./src/**/*.scss",
+    "name": "styles"
+  }],
   "assets": [
     "./assets/**/*",
     "!./assets/locales",
@@ -133,10 +139,10 @@ Key | Description | Guide
 `"releases"` | Directory for outputting release zip file ||
 `"release_name"` | name of release zip file ||
 `"manifest"` | Extension manifest file with path ||
-`"js"` | Javascript watch pattern during dev builds ||
+`"js"` | **deprecated** - use `js_bundles` ||
 `"js_bundles"` | Javascript bundles configuration | [Guide](03-xt-build-scripts.md)
 `"html"` | location and watch pattern of HTML files ||
-`"scss"` | Stylesheets watch pattern during dev builds ||
+`"scss"` | **deprecated** - use `scss_bundles` ||
 `"scss_bundles"` | Stylesheets bundles configuration | [Guide](03-xt-build-styles.md)
 `"assets"` | Static assets configuration match pattern | [Guide](03-xt-build-assets.md) 
 `"copyAsIs"` | Files and directories to copy without modification | [Guide](03-xt-build-copy.md)
