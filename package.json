@@ -54,7 +54,7 @@
   },
   "license": "MIT",
   "standard-version": {
-    "infile": ".github/CHANGELOG.md"
+    "infile": ".github/changelog.md"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
