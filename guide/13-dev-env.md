@@ -55,38 +55,16 @@ At this point you should have two IDE windows open.
     ```bash
     npm link extension-cli
     ``` 
-    
-    <br/>
-
-3.  In the **CLI project** open `config/build.json` and change value of `projectRootDir`
-    to an absolute path of the driver project.
-    
-    ```js            
-    "projectRootDir": "../../../",                    // before
-    
-    "projectRootDir": "/path/to/my/driver/project",   // after
-    ```
-    
-    This last step is required because by default the CLI assumes it is located
-    in `node_modules` relative to the driver project. This is not necessarily
-    the case when using a locally linked package.
-    
+   
 * * * 
 
 **<center>Your dev environment should now be ready to use.</center>**
  
 * * * 
 
-## Commit Changes
-
-Once done, commit your changes and open a PR.
-Note that if you changed `projectRootDir` you should exclude that change or
- undo it before committing.
-
-
 ## Clean up
 
-Finally you should unlink CLI and driver project to remove all local links.
+Unlink CLI and driver project to remove all local links.
 
 In the **driver project** terminal run:    
     
@@ -98,7 +76,6 @@ to unlink project from the local CLI version. Note that this may remove
 extension-cli from the project completely, and you may need to run `install extension-cli`
 to add back the version from NPM registry. This is relevant only if you used
 an existing project as a driver.
-
 
 In **CLI project** terminal run:
 

@@ -99,7 +99,6 @@ Explanations for each of these keys is given below.
 
 ```json
 {
-  "projectRootDir": "../../../",
   "dist": "./dist",
   "source": "./src",
   "releases": "./",
@@ -120,7 +119,7 @@ Explanations for each of these keys is given below.
   "locales_list": [
     "en"
   ],
-  "commands": "",
+  "commands": null,
   "commands_watch_path": null
 }
 ```
@@ -129,7 +128,6 @@ Explanations for each of these keys is given below.
 
 Key | Description | Guide 
 --- | --- | ---
-`"projectRootDir"` | Path to project from the to CLI location ||
 `"dist"` | Build output directory ||
 `"source"` | Source code directory ||
 `"releases"` | Directory for outputting release zip file ||
