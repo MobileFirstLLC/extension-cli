@@ -5,10 +5,16 @@
   "release_name": "release",
   "manifest": "./src/manifest.json",
   "js": "./src/**/*.js",
-  "js_bundles": null,
+  "js_bundles": [{
+    "src":"./src/**/*.js",
+    "name": "script"
+  }],
   "html": "./src/**/*.html",
   "scss": "./src/**/*.scss",
-  "scss_bundles": null,
+  "scss_bundles": [{
+    "src":"./src/**/*.scss",
+    "name": "styles"
+  }],
   "assets": [
     "./assets/**/*",
     "!./assets/locales",

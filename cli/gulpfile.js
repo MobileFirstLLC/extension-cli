@@ -12,7 +12,6 @@ const {prod: isProd, firefox: isFirefox, pkg: pkgPath, config} = argv;
 
 /** helper method to ensure array type */
 const ensureArray = path => Array.isArray(path) ? path : [path];
-const chooseArray = (input, _default) => Array.isArray(input) ? input : _default;
 
 /** read project package.json **/
 const pkg = Utilities.readJSON(pkgPath);
@@ -35,10 +34,6 @@ if (customPaths) {
         }
     }
 }
-
-/** src for scripts and styles; for use later in tasks **/
-const scriptBundles = chooseArray(paths.js_bundles, [{src: paths.js, name: 'script'}]);
-const styleBundles = chooseArray(paths.scss_bundles, [{src: paths.scss, name: 'styles'}])
 
 const clean = () => del([paths.dist + '/*']);
 
@@ -177,10 +172,10 @@ const dynamicFunc = (action, name) => {
     return f;
 }
 
-const scripts = scriptBundles.map(obj =>
+const scripts = paths.js_bundles.map(obj =>
     dynamicFunc(_ => script(obj), `${obj.name}.js`));
 
-const styles = styleBundles.map(obj =>
+const styles = paths.scss_bundles.map(obj =>
     dynamicFunc(_ => style(obj), `${obj.name}.css`));
 
 const locales = paths.locales_list.map(lang =>
@@ -191,10 +186,10 @@ const copies = ensureArray(paths.copyAsIs).map(obj =>
 
 const watch = () => {
     console.log(chalk.bold.yellow('watching...'));
-    scriptBundles.map(({src}, i) => {
+    paths.js_bundles.map(({src}, i) => {
         gulp.watch(ensureArray(src), scripts[i]);
     })
-    styleBundles.map(({src}, i) => {
+    paths.scss_bundles.map(({src}, i) => {
         gulp.watch(ensureArray(src), styles[i]);
     })
     ensureArray(paths.copyAsIs).map((path, i) => {
