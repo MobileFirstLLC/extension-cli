@@ -804,13 +804,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commit-changes" class="md-nav__link">
-    Commit Changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#clean-up" class="md-nav__link">
     Clean up
   </a>
@@ -963,13 +956,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commit-changes" class="md-nav__link">
-    Commit Changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#clean-up" class="md-nav__link">
     Clean up
   </a>
@@ -1041,32 +1027,13 @@ At this point you should have two IDE windows open.   </p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm link extension-cli
 </code></pre></div>
 </td></tr></table>
-<p><br/></p>
-</li>
-<li>
-<p>In the <strong>CLI project</strong> open <code>config/build.json</code> and change value of <code>projectRootDir</code>
-    to an absolute path of the driver project.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="s2">&quot;projectRootDir&quot;</span><span class="o">:</span> <span class="s2">&quot;../../../&quot;</span><span class="p">,</span>                    <span class="c1">// before</span>
-
-<span class="s2">&quot;projectRootDir&quot;</span><span class="o">:</span> <span class="s2">&quot;/path/to/my/driver/project&quot;</span><span class="p">,</span>   <span class="c1">// after</span>
-</code></pre></div>
-</td></tr></table>
-<p>This last step is required because by default the CLI assumes it is located
-in <code>node_modules</code> relative to the driver project. This is not necessarily
-the case when using a locally linked package.</p>
 </li>
 </ol>
 <hr />
 <p><strong><center>Your dev environment should now be ready to use.</center></strong></p>
 <hr />
-<h2 id="commit-changes">Commit Changes</h2>
-<p>Once done, commit your changes and open a PR.
-Note that if you changed <code>projectRootDir</code> you should exclude that change or
- undo it before committing.</p>
 <h2 id="clean-up">Clean up</h2>
-<p>Finally you should unlink CLI and driver project to remove all local links.</p>
+<p>Unlink CLI and driver project to remove all local links.</p>
 <p>In the <strong>driver project</strong> terminal run:    </p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm unlink --no-save extension-cli
 </code></pre></div>
