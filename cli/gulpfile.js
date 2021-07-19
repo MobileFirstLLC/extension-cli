@@ -1,4 +1,3 @@
-const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
 const chalk = require('chalk');
@@ -7,6 +6,7 @@ const paths = require('../config/build.json');
 const plugins = require('gulp-load-plugins')();
 const webpack = require('webpack-stream');
 const sass = require('gulp-sass')(require('sass'));
+const Utilities = require('./utilities').Utilities;
 const argv = require('yargs').argv;
 const isProd = argv.prod;
 const isFirefox = argv.firefox;
@@ -15,18 +15,19 @@ const isFirefox = argv.firefox;
 process.chdir(paths.projectRootDir);
 
 /** helper method to ensure array type */
-const getArray = path => Array.isArray(path) ? path : [path];
+const ensureArray = path => Array.isArray(path) ? path : [path];
+const chooseArray = (input, _default) => Array.isArray(input) ? input : _default;
 
 /** read project package.json **/
-const pkg = JSON.parse(fs.readFileSync(argv.pkg, 'utf8'));
+const pkg = Utilities.readJSON(argv.pkg);
 
 /** read project's config file, if specified **/
 let customPaths = null;
-if (fs.existsSync(argv.config)) {
+if (Utilities.fileExists(argv.config)) {
     // if config is a file
-    customPaths = JSON.parse(fs.readFileSync(argv.config, 'utf8'));
+    customPaths = Utilities.readJSON(argv.config);
 } else if (pkg.xtbuild !== undefined) {
-    // if config is specified in package.json
+    // otherwise config should be specified in package.json
     customPaths = pkg.xtbuild;
 }
 
@@ -39,108 +40,79 @@ if (customPaths) {
     }
 }
 
+/** src for scripts and styles; for use later in tasks **/
+const scriptBundles = chooseArray(paths.js_bundles, [{src: paths.js, name: 'script'}]);
+const styleBundles = chooseArray(paths.scss_bundles, [{src: paths.scss, name: 'styles'}])
+
 const clean = () => del([paths.dist + '/*']);
 
-const scripts = done => {
-    const _bundles = (Array.isArray(paths.js_bundles) ?
-        paths.js_bundles : [{src: paths.js_bundles, name: 'script'}]);
+const script = ({src, name, mode}, done = _ => true) => {
 
-    let bundles = [..._bundles];
+    // use mode if specified explicitly; otherwise choose by --env
+    const webpackOptions = {
+        mode: mode || (isProd ? "production" : "development"),
+        output: {filename: `${name}.js`},
+    };
+    if (!isProd) webpackOptions.devtool = "cheap-source-map";
+    else webpackOptions.devtool = "none";
 
-    const buildScript = () => {
-        if (!bundles.length) {
-            return typeof done !== 'function' || done();
-        }
+    // console.log(chalk.bold.yellow(src));
+    return gulp.src(src)
+        .pipe(webpack(webpackOptions))
+        .on('error', (err) => {
+            console.log(err.toString());
+            this.emit('end');
+        })
+        .pipe(plugins.rename(path => {
+            path.dirname = '';
+            path.basename = name;
+        }))
+        .pipe(gulp.dest(paths.dist))
+        .on('end', done);
+}
 
-        const {src, name, mode} = bundles.pop();
-        // use mode if specified explicitly; otherwise choose by --env
-        const webpackOptions = {mode: mode || (isProd ? "production" : "development")};
-        if (!isProd) webpackOptions.devtool = "cheap-source-map";
-        else webpackOptions.devtool = "none";
+const style = ({src, name}, done = _ => true) => {
+    return gulp.src(src)
+        // convert to css
+        .pipe(sass().on('error', sass.logError))
+        // concatenate multiple src files
+        .pipe(plugins.concat(`${name}.css`))
+        // minify
+        .pipe(plugins.cleanCss())
+        // rename to user-specified name
+        .pipe(plugins.rename((path) => {
+            path.dirname = '';
+            path.basename = name;
+        }))
+        .pipe(gulp.dest(paths.dist))
+        .on('end', done);
+}
 
-        console.log(chalk.bold.yellow(src));
-        return gulp.src(src)
-            .pipe(webpack(webpackOptions))
-            .on('error', (err) => {
-                console.log(err.toString());
-                this.emit('end');
-            })
-            .pipe(plugins.rename(function (path) {
-                path.dirname = '';
-                path.basename = name;
-            }))
+const copy = (src, done = _ => true) => {
+    // nested copy specified using glob pattern
+    if (src.endsWith('*'))
+        return gulp.src(src, {base: 'src'})
             .pipe(gulp.dest(paths.dist))
-            .on('end', buildScript);
-    };
+            .on('end', done);
 
-    buildScript();
+    // copy single file or directory
+    return gulp.src(src)
+        .pipe(plugins.rename(path => {
+            path.dirname = '';
+        }))
+        .pipe(gulp.dest(paths.dist))
+        .on('end', done);
 };
 
-const styles = done => {
-    let bundles = Array.isArray(paths.scss_bundles) ?
-        paths.scss_bundles : [{src: paths.scss, name: 'styles'}],
-        count = bundles.length,
-        isDone = false;
-
-    return !count ? done() :
-        bundles.map(b => {
-            gulp.src(b.src)
-                // convert to css
-                .pipe(sass().on('error', sass.logError))
-                // concatenate multiple src files
-                .pipe(plugins.concat(`${count}.css`))
-                // minify
-                .pipe(plugins.cleanCss())
-                // rename to user-specified name
-                .pipe(plugins.rename(function (path) {
-                    path.dirname = '';
-                    path.basename = b.name;
-                }))
-                .pipe(gulp.dest(paths.dist))
-                .on('end', _ => {
-                    if ((--count === 0) && !isDone) {
-                        isDone = true;
-                        return typeof done !== 'function' || done();
-                    }
-                    return true;
-                });
-        });
+const locale = (language, done = _ => true) => {
+    return gulp.src(paths.locales_dir + language + '/**/*.json')
+        .pipe(plugins.mergeJson({fileName: 'messages.json'}))
+        .pipe(plugins.jsonminify())
+        .pipe(gulp.dest(paths.dist + '/_locales/' + language))
+        .on('end', done);
 };
 
-const copyAs = done => {
-
-    const _filesToCopy = (Array.isArray(paths.copyAsIs) ?
-        paths.copyAsIs : [paths.copyAsIs]);
-
-    let copyList = [..._filesToCopy];
-
-    const doCopy = (src, callback) => {
-        if (!src || !src.length) {
-            callback();
-        } else if (src.endsWith('*')) {
-            gulp.src(src, {base: 'src'})
-                .pipe(gulp.dest(paths.dist))
-                .on('end', callback);
-        } else {
-            gulp.src(src)
-                .pipe(plugins.rename(path => {
-                    path.dirname = '';
-                }))
-                .pipe(gulp.dest(paths.dist))
-                .on('end', callback);
-        }
-    };
-
-    (function processList() {
-        if (!copyList.length) {
-            done();
-        } else {
-            doCopy(copyList.pop(), processList);
-        }
-    }());
-};
-
-const copyManifest = () => {
+const copyManifest = done => {
 
     const {version} = pkg;
 
@@ -159,100 +131,101 @@ const copyManifest = () => {
         .pipe(plugins.jsonEditor({version}))
         .pipe(gulpChange(performChange))
         .pipe(plugins.jsonminify())
-        .pipe(plugins.rename(function (path) {
+        .pipe(plugins.rename(path => {
             path.dirname = '';
             path.basename = 'manifest';
             path.extname = ".json";
         }))
-        .pipe(gulp.dest(paths.dist));
+        .pipe(gulp.dest(paths.dist))
+        .on('end', done);
 };
 
-const copyAssets = () => {
+const copyAssets = done => {
     return gulp.src(paths.assets)
-        .pipe(gulp.dest(paths.dist + '/assets'));
+        .pipe(gulp.dest(paths.dist + '/assets'))
+        .on('end', done);
 };
 
-const locales = done => {
-    let bundles = Array.isArray(paths.locales_list) ?
-        paths.locales_list : [],
-        onDone = () => typeof done !== 'function' || done(),
-        count = bundles.length,
-        isDone = false;
-
-    return !count ? onDone() : paths.locales_list.map(language => {
-        let root = paths.locales_dir + language;
-
-        if (fs.existsSync(root)) {
-            return gulp.src(root + '/**/*.json')
-                .pipe(plugins.mergeJson({fileName: 'messages.json'}))
-                .pipe(plugins.jsonminify())
-                .pipe(gulp.dest(paths.dist + '/_locales/' + language))
-                .on('end', function () {
-                    if ((--count === 0) && !isDone) {
-                        isDone = true;
-                        return onDone();
-                    }
-                    return true;
-                });
-        }
-
-        return true;
-    });
-};
-
-const buildHtml = () => {
+const buildHtml = done => {
     return gulp.src(paths.html)
         .pipe(plugins.htmlmin({collapseWhitespace: true}))
         .pipe(plugins.rename(path => {
             path.dirname = '';
         }))
-        .pipe(gulp.dest(paths.dist));
+        .pipe(gulp.dest(paths.dist))
+        .on('end', done);
 };
 
-const custom_commands = done => {
-    return (!paths.commands.length) ?
-        done() :
-        require('child_process')
-            .exec(paths.commands, () => {
-                done();
-            });
+const customCommands = done => {
+    if (!paths.commands || !paths.commands.length)
+        return done();
+
+    return require('child_process')
+        .exec(paths.commands, done);
 };
 
 const release = done => {
-    return isProd ?
-        gulp.src(paths.dist + '/**/*')
-            .pipe(plugins.zip(
-                `${paths.release_name || 'release'}.zip`
-            ))
-            .pipe(gulp.dest(paths.releases))
-            .on('end', done) :
-        done();
+    if (!isProd) return done();
+
+    return gulp.src(paths.dist + '/**/*')
+        .pipe(plugins.zip(`${paths.release_name || 'release'}.zip`))
+        .pipe(gulp.dest(paths.releases))
+        .on('end', done);
 };
 
+const dynamicFunc = (action, name) => {
+    const f = action;
+    Object.defineProperty(f, 'name', {
+        value: name,
+        writable: false
+    });
+    return f;
+}
+
+const scripts = scriptBundles.map(obj =>
+    dynamicFunc(_ => script(obj), `${obj.name}.js`));
+
+const styles = styleBundles.map(obj =>
+    dynamicFunc(_ => style(obj), `${obj.name}.css`));
+
+const locales = paths.locales_list.map(lang =>
+    dynamicFunc(_ => locale(lang), `locale ${lang}`));
+
+const copies = ensureArray(paths.copyAsIs).map(obj =>
+    dynamicFunc(_ => copy(obj), `copy ${obj}`));
+
 const watch = () => {
-    console.log('watching...');
-    gulp.watch(getArray(paths.js), scripts);
-    gulp.watch(getArray(paths.scss), styles);
-    gulp.watch(getArray(paths.html), buildHtml);
-    gulp.watch(getArray(paths.assets), copyAssets);
-    gulp.watch([paths.locales_dir + '**/*.json'], locales);
+    console.log(chalk.bold.yellow('watching...'));
+    scriptBundles.map(({src}, i) => {
+        gulp.watch(ensureArray(src), scripts[i]);
+    })
+    styleBundles.map(({src}, i) => {
+        gulp.watch(ensureArray(src), styles[i]);
+    })
+    ensureArray(paths.copyAsIs).map((path, i) => {
+        gulp.watch(ensureArray(path), copies[i]);
+    })
+    paths.locales_list.map((lang, i) => {
+        gulp.watch(paths.locales_dir + lang + '/**/*.json', locales[i])
+    })
     gulp.watch(paths.manifest, copyManifest);
-    gulp.watch(getArray(paths.copyAsIs), copyAs);
-    gulp.watch(getArray(paths.commands_watch_path || ''), custom_commands);
+    gulp.watch(ensureArray(paths.html), buildHtml);
+    gulp.watch(ensureArray(paths.assets), copyAssets);
+    // gulp.watch(paths.commands_watch_path || '', customCommands);
 };
 
 const build = gulp.series(
     clean,
-    gulp.series(
-        scripts,
-        styles,
-        copyAs,
+    gulp.parallel(
+        ...scripts,
+        ...styles,
+        ...copies,
+        ...locales,
         copyManifest,
         copyAssets,
-        locales,
         buildHtml,
-        custom_commands
     ),
+    customCommands,
     release
 );
 
