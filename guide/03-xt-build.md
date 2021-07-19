@@ -139,10 +139,10 @@ Key | Description | Guide
 `"releases"` | Directory for outputting release zip file ||
 `"release_name"` | name of release zip file ||
 `"manifest"` | Extension manifest file with path ||
-`"js"` | **deprecated** - use `js_bundles` ||
+`"js"` | Watch pattern for script changes during dev builds ||
 `"js_bundles"` | Javascript bundles configuration | [Guide](03-xt-build-scripts.md)
 `"html"` | location and watch pattern of HTML files ||
-`"scss"` | **deprecated** - use `scss_bundles` ||
+`"scss"` | Watch pattern for style changes during dev builds ||
 `"scss_bundles"` | Stylesheets bundles configuration | [Guide](03-xt-build-styles.md)
 `"assets"` | Static assets configuration match pattern | [Guide](03-xt-build-assets.md) 
 `"copyAsIs"` | Files and directories to copy without modification | [Guide](03-xt-build-copy.md)
