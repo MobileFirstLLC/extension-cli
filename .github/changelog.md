@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0-alpha.0](https://github.com/mobilefirstllc/extension-cli/compare/v1.1.0...v1.2.0-alpha.0) (2021-07-19)
+
+
+### Bug Fixes
+
+* Useless regular-expression character escape ([935d0b3](https://github.com/mobilefirstllc/extension-cli/commit/935d0b3df52255c3c18526b4a1a3212c2c6b1b20))
+* Useless regular-expression character escape ([f2ebae5](https://github.com/mobilefirstllc/extension-cli/commit/f2ebae55ca8bc5df2fe8872a58131219b6f81a88))
+
 ## [1.1.0](https://github.com/mobilefirstllc/extension-cli/compare/v1.1.0-alpha.1...v1.1.0) (2021-06-12)
 
 ## [1.1.0-alpha.1](https://github.com/mobilefirstllc/extension-cli/compare/v1.1.0-alpha.0...v1.1.0-alpha.1) (2021-06-12)
