@@ -4,13 +4,18 @@ disqus: "False"
 
 ### 1.2.0 (pre-release)
 
-- **xt-build** enable using custom filenames for manifests pre-build [PR #66](https://github.com/MobileFirstLLC/extension-cli/pull/66)
-- **xt-build** run build tasks in parallel [PR #70](https://github.com/MobileFirstLLC/extension-cli/pull/70)
-- **xt-build** make sourcemap basename match js file name [PR #70](https://github.com/MobileFirstLLC/extension-cli/pull/70)
-- **xt-build** dynamically determine project path; remove build config key [PR #71](https://github.com/MobileFirstLLC/extension-cli/pull/71)
-- **xt-docs** make JsDoc default template the default for CLI [#62](https://github.com/MobileFirstLLC/extension-cli/issues/62)
-- **xt-sync** add CI configuration starter for Github actions [#65](https://github.com/MobileFirstLLC/extension-cli/issues/65)
-- **xt-sync** eslint config file will now have file extension `.json` [PR #78](https://github.com/MobileFirstLLC/extension-cli/pull/78)
+**Changes to build**
+
+- enable using custom filenames for manifests pre-build [PR #66](https://github.com/MobileFirstLLC/extension-cli/pull/66)
+- run build tasks in parallel [PR #70](https://github.com/MobileFirstLLC/extension-cli/pull/70)
+- make sourcemap basename match js file name [PR #70](https://github.com/MobileFirstLLC/extension-cli/pull/70)
+- dynamically determine project path; remove build config key [PR #71](https://github.com/MobileFirstLLC/extension-cli/pull/71)
+
+**Other changes**
+
+- docs: make JsDoc default template the default documentation template for CLI [#62](https://github.com/MobileFirstLLC/extension-cli/issues/62)
+- sync: add CI configuration starter for Github actions [#65](https://github.com/MobileFirstLLC/extension-cli/issues/65)
+- sync: eslint config file will now have file extension `.json` [PR #78](https://github.com/MobileFirstLLC/extension-cli/pull/78)
 - update dependencies
 
 ### 1.1.0 (2021-06-12)
