@@ -20,7 +20,7 @@ disqus: "False"
 
 ### 1.1.0 (2021-06-12)
 
-- **xt-sync**: changed command to prompt with options and updated relevant docs [PR #57](https://github.com/MobileFirstLLC/extension-cli/pull/57), [#59](https://github.com/MobileFirstLLC/extension-cli/pull/59)
+- sync: changed command to prompt with options [PR #57](https://github.com/MobileFirstLLC/extension-cli/pull/57), [#59](https://github.com/MobileFirstLLC/extension-cli/pull/59)
 - updated dependencies
 
 ### 1.0.3 (2021-04-27)
