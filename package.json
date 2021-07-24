@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "1.2.0-alpha.1",
+  "version": "1.2.0-beta.0",
   "description": "CLI tool for building browser extensions",
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {
@@ -44,12 +44,14 @@
     "alpha:test": "npx standard-version --dry-run --prerelease alpha",
     "patch:test": "npx standard-version --dry-run --release-as patch",
     "minor:test": "npx standard-version --dry-run --release-as minor",
+    "minor:beta:test": "npx standard-version --dry-run --release-as minor --prerelease beta",
     "minor:alpha:test": "npx standard-version --dry-run --release-as minor --prerelease alpha",
     "major:alpha:test": "npx standard-version --dry-run --release-as major --prerelease alpha",
     "major:test": "npx standard-version --dry-run --release-as major",
     "alpha": "npx standard-version --prerelease alpha",
     "patch": "npx standard-version --release-as patch",
     "minor": "npx standard-version --release-as minor",
+    "minor:beta": "npx standard-version --release-as minor --prerelease beta",
     "minor:alpha": "npx standard-version --release-as minor --prerelease alpha",
     "major:alpha": "npx standard-version --release-as major --prerelease alpha",
     "major": "npx standard-version --release-as major"
