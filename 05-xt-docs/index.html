@@ -1058,37 +1058,35 @@ some <a href="../05-xt-docs-templates/">templating options here</a>.</p>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtdocs&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;allowUnknownTags&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nt">&quot;dictionaries&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;jsdoc&quot;</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;include&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;src&quot;</span>
-      <span class="p">],</span>
-      <span class="nt">&quot;includePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.js$&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;excludePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;(node_modules/)&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;plugins/markdown&quot;</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;allowUnknownTags&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;dictionaries&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;jsdoc&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;include&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;src&quot;</span>
     <span class="p">],</span>
-    <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;cleverLinks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;monospaceLinks&quot;</span><span class="p">:</span> <span class="kc">false</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;opts&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;./public/documentation&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nt">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;templates/default&quot;</span>
+    <span class="nt">&quot;includePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;.js$&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;excludePattern&quot;</span><span class="p">:</span> <span class="s2">&quot;(node_modules/)&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;plugins&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;plugins/markdown&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;templates&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;cleverLinks&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;monospaceLinks&quot;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;opts&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="s2">&quot;./public/documentation&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;recurse&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;templates/default&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
