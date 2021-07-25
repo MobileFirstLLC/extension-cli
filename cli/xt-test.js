@@ -76,15 +76,15 @@ proc.stderr.on('data', data => {
 });
 
 proc.on('exit', code => {
-    // unit test proc must finish without error
-    if (code === 0) {
-        if (coverage) {
-            // lastly: pipe to coveralls -->
-            // after all tests have run AND
-            // only if tests completed without error
-            exec('nyc report --reporter=text-lcov | coveralls');
-        }
-    }
+    // // unit test proc must finish without error
+    // if (code === 0) {
+    //     if (coverage) {
+    //         // lastly: pipe to coveralls -->
+    //         // after all tests have run AND
+    //         // only if tests completed without error
+    //         exec('nyc report --reporter=text-lcov | coveralls');
+    //     }
+    // }
     // exit main process with the unit test result code
     process.exit(code);
 });

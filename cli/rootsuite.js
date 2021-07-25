@@ -6,7 +6,6 @@
 const sinon = require('sinon');
 const chrome = require('sinon-chrome');
 const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
 const argv = require('yargs').argv;
 const texts = require('./texts').xtTest;
 
@@ -31,7 +30,6 @@ global.jsdom = require('jsdom-global')();
  */
 before(function () {
     process.env.NODE_ENV = 'test';
-    chai.use(chaiAsPromised);
     global.sinon = sinon;
     global.chrome = chrome;
     global.chai = chai;

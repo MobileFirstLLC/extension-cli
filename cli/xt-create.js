@@ -87,6 +87,9 @@ const initFilesPath = '../config/init/';
     // create readme
     Utilities.writeFile(dir + '/README.md', _readtext(_file('intro.md')));
 
+    // add eslint config
+    Utilities.writeFile(dir + '/.eslintrc.json', _readtext(_file('eslint.json')));
+
     // INSTALL packages
     spinner.stop(true);
     console.log(texts.install);
