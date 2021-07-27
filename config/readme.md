@@ -26,7 +26,7 @@ Path | Description
 - eslint, CI configuration files, (git)ignore can be pulled into a project through `xt-sync` command,
   or a project can specify these files independently.
   The idea is not having to start from scratch at project level unless it is by choice. 
-- All files in this directory are included in a new extension project
+- All files in `init` directory are included in a new extension project
   - files that should not be included in a newly generated project go in `/config` directory
 - keep `init` directory flat on purpose to keep things simple &mdash; create command will generate
   the necessary structure     
