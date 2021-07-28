@@ -2,7 +2,7 @@
 disqus: "False"
 ---
 
-### 1.2.0 (pre-release)
+### 1.2.0 (2021-07-28)
 
 **Changes to build**
 

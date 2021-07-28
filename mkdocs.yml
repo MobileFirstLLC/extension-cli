@@ -71,6 +71,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets
   - pymdownx.magiclink
+  - pymdownx.snippets
   - pymdownx.highlight:
       use_pygments: true
       linenums: true

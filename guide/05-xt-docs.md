@@ -76,37 +76,9 @@ some [templating options here](05-xt-docs-templates.md).
 The CLI uses a documentation configuration file shown below. You can override any of these key-value pairs at project level. You can also add key-value pairs that are not defined here so long as they follow to [JSDoc guidelines](https://jsdoc.app/about-configuring-jsdoc.html).
 
 ```json
-"xtdocs": {
-    "tags": {
-      "allowUnknownTags": true,
-      "dictionaries": [
-        "jsdoc"
-      ]
-    },
-    "source": {
-      "include": [
-        "src"
-      ],
-      "includePattern": ".js$",
-      "excludePattern": "(node_modules/)"
-    },
-    "plugins": [
-      "plugins/markdown"
-    ],
-    "templates": {
-      "default": {
-        "cleverLinks": true,
-        "monospaceLinks": false
-      }
-    },
-    "opts": {
-      "destination": "./public/documentation",
-      "encoding": "utf8",
-      "private": true,
-      "recurse": true,
-      "template": "templates/default"
-    }
-  }
-}
+--8<--
+./config/docs.json
+--8<--
 ```
+
 

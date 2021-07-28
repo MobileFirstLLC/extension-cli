@@ -98,36 +98,9 @@ to output files. You can override any of these key-value pairs at project level.
 Explanations for each of these keys is given below.
 
 ```json
-{
-  "dist": "./dist",
-  "source": "./src",
-  "releases": "./",
-  "release_name": "release",
-  "manifest": "./src/manifest.json",
-  "js": "./src/**/*.js",
-  "js_bundles": [{
-    "src":"./src/**/*.js",
-    "name": "script"
-  }],
-  "html": "./src/**/*.html",
-  "scss": "./src/**/*.scss",
-  "scss_bundles": [{
-    "src":"./src/**/*.scss",
-    "name": "styles"
-  }],
-  "assets": [
-    "./assets/**/*",
-    "!./assets/locales",
-    "!./assets/locales/**/*"
-  ],
-  "copyAsIs": [],
-  "locales_dir": "./assets/locales/",
-  "locales_list": [
-    "en"
-  ],
-  "commands": null,
-  "commands_watch_path": null
-}
+--8<--
+./config/build.json
+--8<--
 ```
 
 ### Configuration Keys
