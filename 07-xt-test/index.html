@@ -632,6 +632,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reporting-coverage" class="md-nav__link">
+    Reporting Coverage
+  </a>
+  
+    <nav class="md-nav" aria-label="Reporting Coverage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coveralls" class="md-nav__link">
+    Coveralls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -910,6 +930,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reporting-coverage" class="md-nav__link">
+    Reporting Coverage
+  </a>
+  
+    <nav class="md-nav" aria-label="Reporting Coverage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coveralls" class="md-nav__link">
+    Coveralls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -950,16 +990,11 @@ for running unit tests. Or you may create your own test environment if this is n
 </td></tr></table>
 <p><strong>Configure custom test directory path or match pattern</strong></p>
 <p>Defaults to <code>./test/**/*.js</code> if not specified</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-p<span class="p">|</span>--pattern<span class="o">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-p<span class="p">|</span>--pattern<span class="o">}</span> ./test/**/*.js
 </code></pre></div>
 </td></tr></table>
 <p><strong>Execute tests and keep watching changes</strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-w<span class="p">|</span>--watch<span class="o">}</span>
-</code></pre></div>
-</td></tr></table>
-<p><strong>Execute tests then pipe result to <a href="https://coveralls.io">coveralls.io</a></strong></p>
-<p>The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-c<span class="p">|</span>--coverage<span class="o">}</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>Get help using this command</strong></p>
@@ -968,13 +1003,51 @@ for running unit tests. Or you may create your own test environment if this is n
 </td></tr></table>
 <h2 id="packagejson-scripts">Package.json scripts</h2>
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
-<p>Or you can add an option to <code>packages.json</code> scripts section and then execute the command as <code>npm run test</code>. 
-See example below.</p>
+<p>You may also add an option to <code>packages.json</code> scripts section as shown below, then</p>
+<ul>
+<li>run unit tests from terminal using command: <code>npm run test</code> </li>
+<li>run unit tests and save coverage to file, run: <code>npm run coverage</code>.</li>
+</ul>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:{</span>
-  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-test&quot;</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:{</span>
+  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-test&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;coverage&quot;</span><span class="p">:</span> <span class="s2">&quot;nyc --reporter=lcov npm run test&quot;</span>
 <span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="reporting-coverage">Reporting Coverage</h2>
+<h3 id="coveralls">Coveralls</h3>
+<p>The general setup is:</p>
+<ol>
+<li>
+<p>Install <a href="https://www.npmjs.com/package/coveralls">coveralls</a> as a dev dependency at project level:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>npm install coveralls --save-dev
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>Run unit tests with coverage report during CI/CD workflow, then pipe the result to coveralls:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>nyc --reporter=lcov npm run test | coveralls
+</code></pre></div>
+</td></tr></table>
+</li>
+</ol>
+<p>If using Github actions, use <a href="https://github.com/marketplace/actions/coveralls-github-action">Coveralls Github action</a> to report results. Example configuration:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Execute unit tests w/ coverage</span>
+  <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nyc --reporter=lcov npm run test</span>  
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Report coverage</span>
+  <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">coverallsapp/github-action@master</span>
+  <span class="nt">with</span><span class="p">:</span>
+    <span class="nt">github-token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
 </code></pre></div>
 </td></tr></table>
                 
