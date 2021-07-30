@@ -37,21 +37,13 @@ xt-test
 Defaults to `./test/**/*.js` if not specified
 
 ```bash
-xt-test {-p|--pattern}
+xt-test {-p|--pattern} ./test/**/*.js
 ```
 
 **Execute tests and keep watching changes**
 
 ```bash
 xt-test {-w|--watch}
-```
-
-**Execute tests then pipe result to [coveralls.io](https://coveralls.io)**
-
-The default command will display coverage. Use this command explicitly to publish your coverage stats and track progress over time, for example during automated build.
-
-```bash
-xt-test {-c|--coverage}
 ```
 
 **Get help using this command**
@@ -64,13 +56,49 @@ xt-test --help
 
 After installing extension-cli, you can run these commands from a terminal using syntax `npx xt-test`.
  
-Or you can add an option to `packages.json` scripts section and then execute the command as `npm run test`. 
-See example below.
+You may also add an option to `packages.json` scripts section as shown below, then
+
+- run unit tests from terminal using command: `npm run test` 
+- run unit tests and save coverage to file, run: `npm run coverage`.
+
  
 ```json
 "scripts":{
-  "test": "xt-test"
+  "test": "xt-test",
+  "coverage": "nyc --reporter=lcov npm run test"
 }
 ```
+
+## Reporting Coverage
+
+### Coveralls
+
+The general setup is:
+
+1. Install [coveralls](https://www.npmjs.com/package/coveralls) as a dev dependency at project level:
+
+    ```
+    npm install coveralls --save-dev
+    ```
+
+2. Run unit tests with coverage report during CI/CD workflow, then pipe the result to coveralls:
+
+    ```
+    nyc --reporter=lcov npm run test | coveralls
+    ```
+
+
+If using Github actions, use [Coveralls Github action](https://github.com/marketplace/actions/coveralls-github-action) to report results. Example configuration:
+
+```yaml
+- name: Execute unit tests w/ coverage
+  run: nyc --reporter=lcov npm run test  
+
+- name: Report coverage
+  uses: coverallsapp/github-action@master
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
 
 
