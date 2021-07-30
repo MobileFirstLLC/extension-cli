@@ -60,7 +60,7 @@ const proc = exec([
     watch ? '--watch' : '',
 
     // babel
-    ' --require @babel/register ',
+    '--require @babel/register',
 
     // output colors
     '--colors'
@@ -75,16 +75,5 @@ proc.stderr.on('data', data => {
     process.stdout.write(data.toString());
 });
 
-proc.on('exit', code => {
-    // unit test proc must finish without error
-    if (code === 0) {
-        if (coverage) {
-            // lastly: pipe to coveralls -->
-            // after all tests have run AND
-            // only if tests completed without error
-            exec('nyc report --reporter=text-lcov | coveralls');
-        }
-    }
-    // exit main process with the unit test result code
-    process.exit(code);
-});
+// exit parent process with the unit test result code
+proc.on('exit', process.exit);

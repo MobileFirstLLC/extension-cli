@@ -108,6 +108,7 @@ const copyManifest = done => {
 
     const performChange = (content) => {
         let mft = JSON.parse(content);
+        mft.version = version; // use version from package
 
         if (isFirefox && mft.firefox) mft = {...mft, ...mft.firefox};
         else if (!isFirefox && mft.chrome) mft = {...mft, ...mft.chrome};
@@ -118,7 +119,6 @@ const copyManifest = done => {
     }
 
     return gulp.src(paths.manifest)
-        .pipe(plugins.jsonEditor({version}))
         .pipe(gulpChange(performChange))
         .pipe(plugins.jsonminify())
         .pipe(plugins.rename(path => {
