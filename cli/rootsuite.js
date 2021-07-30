@@ -31,11 +31,11 @@ global.jsdom = require('jsdom-global')();
 before(function () {
     process.env.NODE_ENV = 'test';
     global.sinon = sinon;
-    global.chrome = chrome;
     global.chai = chai;
     global.expect = chai.expect;
     global.sandbox = sandbox;
     window.sandbox = sandbox;
+    global.chrome = chrome;
     window.chrome = chrome;
 
     // output list of namespaces that

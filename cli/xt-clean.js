@@ -20,8 +20,8 @@
 const fs = require('fs');
 const del = require('del');
 const path = require('path');
-const program = require('commander');
 const readline = require('readline');
+const program = require('commander');
 const pkg = require('../package.json');
 const ignore = path.join(process.cwd(), '.gitignore');
 const Utilities = require('./utilities').Utilities;
