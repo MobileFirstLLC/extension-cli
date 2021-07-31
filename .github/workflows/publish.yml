@@ -29,6 +29,6 @@ jobs:
 
       - name: Github Release
         uses: ncipollo/release-action@v1
-        if: {{ contains(env.TAG, 'alpha') == false && contains(env.TAG, 'beta') == false }}
+        if: "!contains(env.TAG, 'alpha') && !contains(env.TAG, 'beta')"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
