@@ -23,12 +23,11 @@ jobs:
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v1
         with:
-          dry-run: true
           tag: ${{ env.TAG }}
           token: ${{ secrets.NPM_TOKEN }}
 
       - name: Github Release
         uses: ncipollo/release-action@v1
-        if: "!contains(env.TAG, 'alpha') && !contains(env.TAG, 'beta')"
+        if: "!contains(env.TAG, '-')"
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
