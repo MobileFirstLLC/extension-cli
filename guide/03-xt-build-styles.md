@@ -14,14 +14,15 @@ zero or more objects where.
     - a string value for a single file
     - array of files, or 
     - a path with wildcard. 
+    - prefix `!` as a way to negate the inclusion of a file
     
-    You may also use `!` as a way to negate the inclusion of a file. This is the [globs syntax expected by gulp](https://gulpjs.com/docs/en/api/src) (without options).
+See [globs syntax guide](https://gulpjs.com/docs/en/api/src) for more details.
 
-The production build will minify style files. Dev build does not minify style files.
+Dev build does not minify style files. The production build will minify style files.
 
-By default, the stylesheets are assumed to be written using [Sass](https://sass-lang.com/guide). If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. Any CSS you write is valid Sass as well.
- 
-When you name stylesheet files, use `.scss` file extension. The default CLI configuration looks for this file extension. Otherwise you must override this default configuration: `"scss": "./src/**/*.scss"` to include other file extensions in the style bundles.
+By default, the stylesheets are assumed to be written using [Sass](https://sass-lang.com/guide). When naming stylesheet files, use `.scss` file extension because default configuration looks for style files with this file extension. 
+
+If you are not a friend of Sass, you can write style sheets using CSS. In the build configuration override the default configuration: `"scss": "./src/**/*.scss"` to treat other file extensions as style files, and use `"scss_bundles"` key to specify how to generate stylesheets, as shown in the example below.
 
 **Example**
 
@@ -35,13 +36,13 @@ Sample project-level configuration with multiple style bundles
           "./src/**/*.scss",
           "!./src/app/styles/app.scss"
         ],
-        "name": "styles.css"
+        "name": "styles"
       },
       {
         "src": [
           "./src/app/styles/ui.scss"
         ],
-        "name": "display.css"
+        "name": "display"
       }
     ]
 }

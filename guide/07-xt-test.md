@@ -8,18 +8,19 @@
 * * *
 
 This command will setup extension testing environment that is pre-initialized
-with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised),
+with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/),
 and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage. 
-Also the following browser features are initialized: window, chrome. Window
-is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
+The following browser features are initialized for convenience: `window`, `chrome`, `document`. 
+Window is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
 chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
 
-By default this command will look for tests in `test/` directory, in any file ending with `.js`, but you can change this default value.
+By default this command looks for unit tests in `test/` directory, in any file ending with `.js`. 
+Mocha will execute with babel, meaning you can use this test environment with modern JavaScript
+ syntax.
 
-Mocha will execute with babel, meaning you can use this test environment with ES6 modules.
-
-You may extend this test environment within an extension project; this is simply the base setup
-for running unit tests. Or you may create your own test environment if this is not suitable.
+You may extend this unit testing environment within an extension project. 
+This is simply a base setup for running unit tests for web extensions. 
+You may also create your very own test environment if this setup is not suitable for your project.
 
 ## Commands
 
@@ -37,7 +38,7 @@ xt-test
 Defaults to `./test/**/*.js` if not specified
 
 ```bash
-xt-test {-p|--pattern} ./test/**/*.js
+xt-test {-p|--pattern} "./test/**/*.js"
 ```
 
 **Execute tests and keep watching changes**
@@ -58,8 +59,8 @@ After installing extension-cli, you can run these commands from a terminal using
  
 You may also add an option to `packages.json` scripts section as shown below, then
 
-- run unit tests from terminal using command: `npm run test` 
-- run unit tests and save coverage to file, run: `npm run coverage`.
+- run unit tests from terminal: `npm run test` 
+- run unit tests and save coverage to file: `npm run coverage`.
 
  
 ```json
@@ -92,7 +93,7 @@ If using Github actions, use [Coveralls Github action](https://github.com/market
 
 ```yaml
 - name: Execute unit tests w/ coverage
-  run: nyc --reporter=lcov npm run test  
+  run: nyc --reporter=lcov npm run test  # or: npm run coverage
 
 - name: Report coverage
   uses: coverallsapp/github-action@master

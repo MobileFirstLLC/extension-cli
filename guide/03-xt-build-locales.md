@@ -29,9 +29,9 @@ If you prefer a different directory structure, override this default value.
  Refer [to this list of language codes](https://developers.google.com/admin-sdk/directory/v1/languages)
  when specifying value for this configuration.
 
-You may include multiple `.json` files within the language-specific directory to 
-improve maintainability of these files. Building the extension
-will automatically combine all files within a language directory into a single 
+You may split localization files into multiple `.json` files within the 
+language-specific directory to improve maintainability. During builds
+all files within a language directory will be automatically combined into a single 
 `messages.json` which is expected from a browser extensions.
 
 Recommended reading: [learn how to internationalize extensions](https://developer.chrome.com/extensions/i18n).
@@ -60,12 +60,14 @@ File Path | Description
 &nbsp; &nbsp; &nbsp; &nbsp; └─ `pl/` | 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ app.json | Polish dictionary, part 1
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json | Polish dictionary, part 2
+&nbsp; &nbsp; &nbsp; &nbsp; └─ `de`/messages.json | German dictionary
 
 Build behavior:
 
 - `myFile.json` will be renamed to `messages.json` 
-- `app.json` and `options.json` will me combined and renamed to `messages.json`
-- extension will be available in 3 languages; in `dist/` directory:
+- `app.json` and `options.json` will me concatenated and renamed to `messages.json`
+- extension will be available in 3 languages; `dist/` directory will contain:
     - `_locales/en/messages.json`
     - `_locales/fr/messages.json`
     - `_locales/pl/messages.json`
+- German dictionary is excluded from build output because it is not included in `locales_list`

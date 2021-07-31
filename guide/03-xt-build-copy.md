@@ -31,7 +31,9 @@ Sample configuration for skipping compilation of pre-compiled files.
 
 This configuration will copy material theme directly from `node_modules` 
 and include it in the `dist` directory. It will also copy a project level `special.js` 
-script in the `dist` directory. No modification will occur to these files during the build step.  
+script into the output directory. No modification will occur to these files during the build step.  
+
+After the build `dist/` directory root will include `material.min.js` and `special.js`.
 
 ```json
 "xtbuild": {
@@ -41,9 +43,6 @@ script in the `dist` directory. No modification will occur to these files during
     ]
 }
 ```
-
-After the build, `dist/` directory root will include `material.min.js` and `special.js`.
-
 
 
 ## Example 2: Directory copy
@@ -70,7 +69,7 @@ This build configuration will perform following copy operations:
 ## Disable Linting
 
 When including precompiled javascript files to an extension project, you should also 
-disable linting for those files to avoid unnecessary warnings. In the project-level `package.json`, 
+disable linting for those files to avoid unnecessary warnings. In `package.json`, 
 add the file paths to the list of ignored files to prevent them from being linted:
 
 ```json

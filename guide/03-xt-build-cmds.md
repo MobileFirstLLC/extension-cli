@@ -24,6 +24,7 @@ To configure custom commands specify `commands` build configuration key. For exa
 This configuration would first build the extension, then run a custom Python script, 
 then for a production build, generate the extension zip file.
 
+<!--
 ## Watching changes
 
 For `dev` builds, you can specify a watch pattern, such that changes matching the 
@@ -40,3 +41,4 @@ Specify watch path using `commands_watch_path` configuration key, for example:
 then run build in `dev` mode with `--watch` flag. 
 
 Any changes under `./src` directory will cause custom commands to re-run.
+-->

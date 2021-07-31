@@ -2,7 +2,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
+<p class='page-intro'><code>xt-build</code> command is used for building an extension project. It can be used to create debuggable version and a production-ready .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
 
 * * *
 
@@ -10,11 +10,11 @@ Successful build command always generates an extension in build output directory
 
 ### Dev Build Artifacts
 
-When specifying`dev` build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory (`dist/` by default), which can be debugged using a chromium browser.
+When specifying`dev` build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory (`dist/` by default), which can be debugged in a browser.
 
 ### Prod Build Artifacts
 
-When specifying `prod` build flag, the build will run a production build. Successful production build generates extension source code in build output directory (`dist/` by default), which can be debugged in the browser. It also generates a `release.zip` file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.
+When specifying `prod` build flag, the build will run a production build. Successful production build generates extension source code in build output directory (`dist/` by default), which can be debugged in a browser. It also generates a `release.zip` file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.
 
 ## Commands
 
@@ -118,7 +118,7 @@ Key | Description | Guide
 `"scss"` | Watch pattern for style changes during dev builds ||
 `"scss_bundles"` | Stylesheets bundles configuration | [Guide](03-xt-build-styles.md)
 `"assets"` | Static assets configuration match pattern | [Guide](03-xt-build-assets.md) 
-`"copyAsIs"` | Files and directories to copy without modification | [Guide](03-xt-build-copy.md)
+`"copyAsIs"` | Files and directories to copy to output directory without modification | [Guide](03-xt-build-copy.md)
 `"locales_dir"` | Localizations directory | [Guide](03-xt-build-locales.md) 
 `"locales_list"` | List of locales | [Guide](03-xt-build-locales.md)
 `"commands"` | Custom commands | [Guide](03-xt-build-cmds.md)

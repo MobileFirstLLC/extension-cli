@@ -8,8 +8,8 @@ configuration files.</p>
 
 * * *
 
-When adding more features to an extension project, it may be helpful
-to not start from scratch. `xt-sync` command enables extension projects
+When adding more features to an extension project, it is helpful
+to \*not\* start from scratch. `xt-sync` command enables extension projects
 to pull in starter configuration files for the purposes of linting, 
 setting up automated CI builds, and for setting up git VCS.
 
