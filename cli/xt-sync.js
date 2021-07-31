@@ -53,7 +53,7 @@ program
 
 (async () => {
 
-    const onCancel = () => process.exit(0)
+    const onCancel = () => process.exit(0);
     // noinspection JSUnresolvedVariable
     const response = (await prompts(options, {onCancel})).options;
 

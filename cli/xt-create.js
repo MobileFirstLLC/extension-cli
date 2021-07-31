@@ -23,7 +23,7 @@ const spinner = new Spinner(' %s ');
 const Utilities = require('./utilities').Utilities;
 const texts = require('./texts').xtCreate;
 const createPrompts = texts.prompts;
-const defaultHomepage = 'http://chrome.google.com/webstore'
+const defaultHomepage = 'http://chrome.google.com/webstore';
 const initFilesPath = '../config/init/';
 
 /**
@@ -40,6 +40,7 @@ const initFilesPath = '../config/init/';
 
     // create project directory
     const success = Utilities.createDir(dir);
+
     if (!success) {
         console.error(texts.dirError(dirname));
         return process.exit(0);
@@ -49,7 +50,7 @@ const initFilesPath = '../config/init/';
     const vars = {
         name, description, safeName: dirname,
         version: '0.0.1', homepage: homepage || defaultHomepage
-    }
+    };
     const _file = fileName => path.resolve(__dirname, initFilesPath + fileName);
     const _readtext = path => Utilities.readAndReplaceTextFile(path, vars);
     const _readjson = path => Utilities.readAndReplaceJSONFile(path, vars);
@@ -104,4 +105,7 @@ const initFilesPath = '../config/init/';
             console.log(texts.success(dir));
             process.exit(0);
         });
+
+    // this is just to make eslint happy
+    return '';
 })();

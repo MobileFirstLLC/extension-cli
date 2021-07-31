@@ -41,7 +41,7 @@ program
     .option('-w --watch', texts.argWatch)
     .parse(process.argv);
 
-const {pattern, coverage, watch} = program.opts();
+const {pattern, watch} = program.opts();
 const rootSuite = path.resolve(process.cwd(),
     'node_modules', pkg.name, 'cli', 'rootsuite.js');
 

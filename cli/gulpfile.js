@@ -18,6 +18,7 @@ const pkg = Utilities.readJSON(pkgPath);
 
 /** read project's config file, if specified **/
 let customPaths = null;
+
 if (Utilities.fileExists(config)) {
     // if config is a file
     customPaths = Utilities.readJSON(config);
@@ -41,11 +42,12 @@ const script = ({src, name, mode}, done = _ => true) => {
 
     // use mode if specified explicitly; otherwise choose by --env
     const webpackOptions = {
-        mode: mode || (isProd ? "production" : "development"),
-        output: {filename: `${name}.js`},
+        mode: mode || (isProd ? 'production' : 'development'),
+        output: {filename: `${name}.js`}
     };
-    if (!isProd) webpackOptions.devtool = "cheap-source-map";
-    else webpackOptions.devtool = "none";
+
+    if (!isProd) webpackOptions.devtool = 'cheap-source-map';
+    else webpackOptions.devtool = 'none';
 
     return gulp.src(src)
         .pipe(webpack(webpackOptions))
@@ -59,7 +61,7 @@ const script = ({src, name, mode}, done = _ => true) => {
         }))
         .pipe(gulp.dest(paths.dist))
         .on('end', done);
-}
+};
 
 const style = ({src, name}, done = _ => true) => {
     return gulp.src(src)
@@ -76,14 +78,15 @@ const style = ({src, name}, done = _ => true) => {
         }))
         .pipe(gulp.dest(paths.dist))
         .on('end', done);
-}
+};
 
 const copy = (src, done = _ => true) => {
     // nested copy specified using glob pattern
-    if (src.endsWith('*'))
+    if (src.endsWith('*')) {
         return gulp.src(src, {base: 'src'})
             .pipe(gulp.dest(paths.dist))
             .on('end', done);
+    }
 
     // copy single file or directory
     return gulp.src(src)
@@ -108,6 +111,7 @@ const copyManifest = done => {
 
     const performChange = (content) => {
         let mft = JSON.parse(content);
+
         mft.version = version; // use version from package
 
         if (isFirefox && mft.firefox) mft = {...mft, ...mft.firefox};
@@ -116,7 +120,7 @@ const copyManifest = done => {
         delete mft.firefox;
 
         return JSON.stringify(mft);
-    }
+    };
 
     return gulp.src(paths.manifest)
         .pipe(gulpChange(performChange))
@@ -124,7 +128,7 @@ const copyManifest = done => {
         .pipe(plugins.rename(path => {
             path.dirname = '';
             path.basename = 'manifest';
-            path.extname = ".json";
+            path.extname = '.json';
         }))
         .pipe(gulp.dest(paths.dist))
         .on('end', done);
@@ -147,8 +151,9 @@ const buildHtml = done => {
 };
 
 const customCommands = done => {
-    if (!paths.commands || !paths.commands.length)
+    if (!paths.commands || !paths.commands.length) {
         return done();
+    }
 
     return require('child_process')
         .exec(paths.commands, done);
@@ -165,12 +170,13 @@ const release = done => {
 
 const dynamicFunc = (action, name) => {
     const f = action;
+
     Object.defineProperty(f, 'name', {
         value: name,
         writable: false
     });
     return f;
-}
+};
 
 const scripts = paths.js_bundles.map(obj =>
     dynamicFunc(_ => script(obj), `${obj.name}.js`));
@@ -186,14 +192,18 @@ const copies = ensureArray(paths.copyAsIs).map(obj =>
 
 const watch = () => {
     console.log(chalk.bold.yellow('watching...'));
-    if (scripts.length)
-        gulp.watch(ensureArray(paths.js), gulp.parallel(...scripts))
-    if (styles.length)
-        gulp.watch(ensureArray(paths.scss), gulp.parallel(...styles))
-    if (copies.length)
-        gulp.watch(ensureArray(paths.copyAsIs), gulp.parallel(...copies))
-    if (paths.locales_list.length)
-        gulp.watch(paths.locales_dir + '**/*.json', gulp.parallel(...locales))
+    if (scripts.length) {
+        gulp.watch(ensureArray(paths.js), gulp.parallel(...scripts));
+    }
+    if (styles.length) {
+        gulp.watch(ensureArray(paths.scss), gulp.parallel(...styles));
+    }
+    if (copies.length) {
+        gulp.watch(ensureArray(paths.copyAsIs), gulp.parallel(...copies));
+    }
+    if (paths.locales_list.length) {
+        gulp.watch(paths.locales_dir + '**/*.json', gulp.parallel(...locales));
+    }
     gulp.watch(paths.manifest, copyManifest);
     gulp.watch(ensureArray(paths.html), buildHtml);
     gulp.watch(ensureArray(paths.assets), copyAssets);
@@ -209,7 +219,7 @@ const build = gulp.series(
         ...locales,
         copyManifest,
         copyAssets,
-        buildHtml,
+        buildHtml
     ),
     customCommands,
     release
