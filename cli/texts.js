@@ -10,7 +10,7 @@ const chalk = require('chalk');
  */
 exports.xtCreate = {
 
-    prompts : {
+    prompts: {
         name: {
             type: 'text',
             name: 'name',

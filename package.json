@@ -1,6 +1,6 @@
 {
   "name": "extension-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "CLI tool for building browser extensions",
   "homepage": "https://oss.mobilefirst.me/extension-cli",
   "repository": {

@@ -50,6 +50,7 @@ const args = [
 ].join(' ');
 
 const spinner = new Spinner(' %s ');
+
 spinner.start();
 
 const bat = exec(args);
