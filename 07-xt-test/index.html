@@ -197,18 +197,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="../03-xt-build/" class="md-tabs__link md-tabs__link--active">
+      <a href="../08-xt-create/" class="md-tabs__link md-tabs__link--active">
         Commands
       </a>
     </li>
-  
-
   
 
       
@@ -399,18 +392,30 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../08-xt-create/" class="md-nav__link">
+        extension-cli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_1">
+      <label class="md-nav__link" for="__nav_2_2">
         xt-build
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-build" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           xt-build
         </label>
@@ -526,14 +531,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
       
-      <label class="md-nav__link" for="__nav_2_3">
+      <label class="md-nav__link" for="__nav_2_4">
         xt-docs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           xt-docs
         </label>
@@ -656,18 +661,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-xt-create/" class="md-nav__link">
-        extension-cli
-      </a>
     </li>
   
 
@@ -973,15 +966,17 @@
 
 <hr />
 <p>This command will setup extension testing environment that is pre-initialized
-with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a> (including chai-as-promised),
+with <a href="https://mochajs.org/">mocha</a>, <a href="https://www.chaijs.com/">chai</a>,
 and expect. <a href="https://www.npmjs.com/package/nyc">nyc</a> is used for computing code coverage. 
-Also the following browser features are initialized: window, chrome. Window
-is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
+The following browser features are initialized for convenience: <code>window</code>, <code>chrome</code>, <code>document</code>. 
+Window is setup using <a href="https://www.npmjs.com/package/jsdom-global">jsdom-global</a> and
 chrome using <a href="https://www.npmjs.com/package/sinon-chrome">sinon-chrome</a>.</p>
-<p>By default this command will look for tests in <code>test/</code> directory, in any file ending with <code>.js</code>, but you can change this default value.</p>
-<p>Mocha will execute with babel, meaning you can use this test environment with ES6 modules.</p>
-<p>You may extend this test environment within an extension project; this is simply the base setup
-for running unit tests. Or you may create your own test environment if this is not suitable.</p>
+<p>By default this command looks for unit tests in <code>test/</code> directory, in any file ending with <code>.js</code>. 
+Mocha will execute with babel, meaning you can use this test environment with modern JavaScript
+ syntax.</p>
+<p>You may extend this unit testing environment within an extension project. 
+This is simply a base setup for running unit tests for web extensions. 
+You may also create your very own test environment if this setup is not suitable for your project.</p>
 <h2 id="commands">Commands</h2>
 <p>Braces <code>{ }</code> indicate that the user must choose one (and only one) of the items inside the braces.</p>
 <p><strong>Run unit tests (default)</strong></p>
@@ -990,7 +985,7 @@ for running unit tests. Or you may create your own test environment if this is n
 </td></tr></table>
 <p><strong>Configure custom test directory path or match pattern</strong></p>
 <p>Defaults to <code>./test/**/*.js</code> if not specified</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-p<span class="p">|</span>--pattern<span class="o">}</span> ./test/**/*.js
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-test <span class="o">{</span>-p<span class="p">|</span>--pattern<span class="o">}</span> <span class="s2">&quot;./test/**/*.js&quot;</span>
 </code></pre></div>
 </td></tr></table>
 <p><strong>Execute tests and keep watching changes</strong></p>
@@ -1005,8 +1000,8 @@ for running unit tests. Or you may create your own test environment if this is n
 <p>After installing extension-cli, you can run these commands from a terminal using syntax <code>npx xt-test</code>.</p>
 <p>You may also add an option to <code>packages.json</code> scripts section as shown below, then</p>
 <ul>
-<li>run unit tests from terminal using command: <code>npm run test</code> </li>
-<li>run unit tests and save coverage to file, run: <code>npm run coverage</code>.</li>
+<li>run unit tests from terminal: <code>npm run test</code> </li>
+<li>run unit tests and save coverage to file: <code>npm run coverage</code>.</li>
 </ul>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1042,7 +1037,7 @@ for running unit tests. Or you may create your own test environment if this is n
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Execute unit tests w/ coverage</span>
-  <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nyc --reporter=lcov npm run test</span>  
+  <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nyc --reporter=lcov npm run test</span>  <span class="c1"># or: npm run coverage</span>
 
 <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Report coverage</span>
   <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">coverallsapp/github-action@master</span>
@@ -1094,13 +1089,13 @@ for running unit tests. Or you may create your own test environment if this is n
       
       
         
-        <a href="../08-xt-create/" class="md-footer__link md-footer__link--next" aria-label="Next: extension-cli" rel="next">
+        <a href="../09-release-notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Version 1.x (latest)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              extension-cli
+              Version 1.x (latest)
             </div>
           </div>
           <div class="md-footer__button md-icon">
