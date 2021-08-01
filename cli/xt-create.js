@@ -12,7 +12,7 @@
  * ```
  *
  * This command will create a new extension project and initial code files.
- * Command takes no arguments; just follow prompts on screen.
+ * Command takes no arguments; follow prompts on screen.
  */
 
 const prompts = require('prompts');

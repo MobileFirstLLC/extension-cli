@@ -5,7 +5,6 @@
  * @module
  * @public
  *
- *
  * @description
  *
  * ```text
@@ -15,14 +14,15 @@
  * Docs command generates documentation for the project. This command uses
  * jsdocs syntax. See {@link https://jsdoc.app/index.html|About JSDoc} for more details,
  * including {@link https://jsdoc.app/about-configuring-jsdoc.html|configuration options here}.
- * The default template for the guide is {@link https://github.com/steveush/foodoc#readme|FooDoc}.
- * You can override this theme in the project by changing `opts.template` in jsdoc config file.
+ * The default template for the guide is JsDoc default template. You can override this template
+ * in the project by changing `opts.template` in jsdoc config file.
  *
  * By default, this command will automatically look for configuration in the project `package.json`.
- * Use `"xtdocs"` key to define config options in `package.json`. Alternatively add a separate
- * configuration file `.xtdocs.json` in the project root; or explicitly provide a path to a config file.
- * If you want to define configuration in some other location, use `-c` / `--config` flag
- * to provide path and name of the configuration file.
+ * - use `"xtdocs"` key to define config options in `package.json,
+ * - -or- add a separate configuration file `.xtdocs.json` in the project root,
+ * - -or- explicitly provide a path to a config file.
+ *
+ * Use `-c` / `--config` flag to provide path and name of the configuration file.
  */
 
 const fs = require('fs');
@@ -53,10 +53,8 @@ const getConfig = (docFileName) => {
     const fe = Utilities.fileExists(docFileName);
     const temp = Utilities.readJSON(fe ?
         docFileName : './package.json');
-    const config = Utilities.iterateConfigs(defaultConfig,
+    return Utilities.iterateConfigs(defaultConfig,
         fe ? temp : temp.xtdocs);
-
-    return config;
 };
 
 const buildDocs = (tmpFile, config, callback) => {

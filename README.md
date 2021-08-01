@@ -15,7 +15,7 @@ on the extension you are creating.**
 
 ## Features
 
--  🖥️ &nbsp; **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/)) <br/>
+-  🖥️ &nbsp; **Javascript Bundling** — Compiles, bundles and minifies javascript files (supports ES6, ES2021 syntax) <br/>
 
 -  🎨 &nbsp; **CSS Bundling** — Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files <br/>
 

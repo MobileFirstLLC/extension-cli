@@ -121,7 +121,7 @@ exports.xtTest = {
 
     argPattern: 'test file/directory match pattern',
 
-    argCoverage: 'deprecated! see docs for instructions on how to report coverage',
+    argCoverage: 'deprecated! see docs on how to report coverage: https://bit.ly/3j5Zrn2',
 
     argWatch: 'enable watch',
 

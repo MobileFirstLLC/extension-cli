@@ -14,11 +14,11 @@
  * This command will run project unit tests located in `./test` directory.
  *
  * Command sets up extension unit testing environment with ES6 syntax support that is pre-initialized
- * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) (including chai-as-promised)
- * and expect. [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
- * The following browser APIs are also initialized: `window`, `chrome`. Window is setup using
- * [jsdom-global](https://www.npmjs.com/package/jsdom-global) and chrome using
- * [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
+ * with [mocha](https://mochajs.org/), [chai](https://www.chaijs.com/) and expect.
+ * [nyc](https://www.npmjs.com/package/nyc) is used for computing code coverage.
+ * The following browser APIs are also initialized: `window`, `document`, `chrome`.
+ * Window is setup using [jsdom-global](https://www.npmjs.com/package/jsdom-global) and
+ * chrome using [sinon-chrome](https://www.npmjs.com/package/sinon-chrome).
  *
  * You may extend this test environment within a single project. This is simply the base setup
  * for running unit tests. Or create your own testing environment at project level if this is
