@@ -885,7 +885,7 @@ zero or more objects where.</p>
 <p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. When naming stylesheet files, use <code>.scss</code> file extension because default configuration looks for style files with this file extension. </p>
 <p>If you are not a friend of Sass, you can write style sheets using CSS. In the build configuration override the default configuration: <code>"scss": "./src/**/*.scss"</code> to treat other file extensions as style files, and use <code>"scss_bundles"</code> key to specify how to generate stylesheets, as shown in the example below.</p>
 <p><strong>Example</strong></p>
-<p>Sample project-level configuration with multiple style bundles</p>
+<p>Sample project-level configuration with multiple style bundles. This configuration will generate two stylesheets in the output directory: styles.css and display.css.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -907,7 +907,7 @@ zero or more objects where.</p>
       <span class="p">{</span>
         <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
           <span class="s2">&quot;./src/**/*.scss&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;!./src/app/styles/app.scss&quot;</span>
+          <span class="s2">&quot;!./src/app/styles/ui.scss&quot;</span>
         <span class="p">],</span>
         <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;styles&quot;</span>
       <span class="p">},</span>
