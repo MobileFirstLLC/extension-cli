@@ -26,7 +26,7 @@ If you are not a friend of Sass, you can write style sheets using CSS. In the bu
 
 **Example**
 
-Sample project-level configuration with multiple style bundles
+Sample project-level configuration with multiple style bundles. This configuration will generate two stylesheets in the output directory: styles.css and display.css.
 
 ```json
 "xtbuild": {
@@ -34,7 +34,7 @@ Sample project-level configuration with multiple style bundles
       {
         "src": [
           "./src/**/*.scss",
-          "!./src/app/styles/app.scss"
+          "!./src/app/styles/ui.scss"
         ],
         "name": "styles"
       },
