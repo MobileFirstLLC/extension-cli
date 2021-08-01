@@ -40,9 +40,7 @@ const options = [{
     name: 'options',
     message: texts.instructions,
     choices: Object.entries(files).map(
-        ([key, value]) => (
-            {title: value.title, value: key}
-        ))
+        ([key, {title}]) => ({title, value: key}))
 }];
 
 program
