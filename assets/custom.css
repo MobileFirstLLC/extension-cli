@@ -27,3 +27,12 @@ table tr th :last-child, table tr td :last-child {margin-bottom: 0; }
     background-color: transparent;
     box-shadow: none;
 }
+.admonition > p{
+    font-size: 115%;
+}
+.admonition > p:not(first-child){
+    line-height: 1.8;
+}
+p code{
+    white-space: nowrap;
+}

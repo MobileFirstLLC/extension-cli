@@ -811,18 +811,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10-showcase/" class="md-nav__link">
-        Showcase
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -935,12 +923,13 @@
                 
                 
                 <h1 id="configuration-for-existing-applications">Configuration for Existing Applications</h1>
-<hr />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p><strong>If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.</strong></p>
-<hr />
-<p>For an existing application, before using Extension CLI, add these configuration options to <code>package.json</code>:</p>
+</div>
+<p>Before using Extension CLI with an existing application, add these configuration options to project's <code>package.json</code>:</p>
 <h3 id="babel-presets">Babel Presets</h3>
-<p>This is needed to compile projects written in ES6.</p>
+<p>This is needed to compile projects written in modern JavaScript syntax.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -962,19 +951,21 @@
 </code></pre></div>
 </td></tr></table>
 <h3 id="add-scripts">Add Scripts</h3>
-<p>Add these scripts to <code>package.json</code> then you can run, for example, <code>npm run start</code>.</p>
+<p>Add these to <code>package.json</code> <code>scripts</code> section:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-build -e dev -w&quot;</span><span class="p">,</span>
   <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-build -e prod&quot;</span><span class="p">,</span>
   <span class="nt">&quot;clean&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-clean&quot;</span><span class="p">,</span>
   <span class="nt">&quot;docs&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-docs&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-test&quot;</span>
+  <span class="nt">&quot;test&quot;</span><span class="p">:</span> <span class="s2">&quot;xt-test&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;coverage&quot;</span><span class="p">:</span> <span class="s2">&quot;nyc --reporter=lcov npm run test&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>

@@ -13,14 +13,14 @@
         <meta name="author" content="@mobilefirstllc">
       
       
-        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/10-showcase/">
+        <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build-manifest/">
       
       <link rel="icon" href="/extension-cli/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
-        <title>Showcase - Extension CLI • User Guide</title>
+        <title>Manifest - Extension CLI • User Guide</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alphabetical-list" class="md-skip">
+        <a href="#manifest" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Showcase
+              Manifest
             
           </span>
         </div>
@@ -222,15 +222,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../12-helpful/" class="md-tabs__link md-tabs__link--active">
+      <a href="../12-helpful/" class="md-tabs__link">
         Developer Resources
       </a>
     </li>
@@ -662,14 +660,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Developer Resources
@@ -757,68 +753,6 @@
   
 
           
-            
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Showcase
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Showcase
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#alphabetical-list" class="md-nav__link">
-    Alphabetical list
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-source-projects-on-github" class="md-nav__link">
-    Open Source Projects on Github
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-your-own-project" class="md-nav__link">
-    Add your own project!
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -883,6 +817,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -891,23 +827,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alphabetical-list" class="md-nav__link">
-    Alphabetical list
+  <a href="#customizing-manifests-for-different-target-browsers" class="md-nav__link">
+    Customizing manifests for different target browsers
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing manifests for different target browsers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-specific-keys-in-single-manifest" class="md-nav__link">
+    Browser specific keys in single manifest
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#open-source-projects-on-github" class="md-nav__link">
-    Open Source Projects on Github
+        
+          <li class="md-nav__item">
+  <a href="#multiple-build-configurations" class="md-nav__link">
+    Multiple build configurations
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#add-your-own-project" class="md-nav__link">
-    Add your own project!
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -923,62 +865,98 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/10-showcase.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/MobileFirstLLC/extension-cli/blob/master/guide/03-xt-build-manifest.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Showcase</h1>
-                
-                <hr />
-<p class='page-intro'>List of extensions and add-ons built with Extension CLI</p>
+                <h1 id="manifest">Manifest</h1>
+<hr />
+<p class='page-intro'>Customize build behavior for extension manifest.</p>
 
 <hr />
-<h2 id="alphabetical-list">Alphabetical list</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Maker</th>
-<th>Badge</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://chrome.google.com/webstore/detail/eeledoologbepiegnccedjigjkblhmhi">Doucheblock for Twitter</a></td>
-<td><a href="https://mobilefirst.me">Mobile First</a></td>
-<td><img alt="img" src="https://img.shields.io/chrome-web-store/users/eeledoologbepiegnccedjigjkblhmhi" /></td>
-</tr>
-<tr>
-<td><a href="https://chrome.google.com/webstore/detail/ifipmflagepipjokmbdecpmjbibjnakm">Download All Images</a></td>
-<td><a href="https://mobilefirst.me">Mobile First</a></td>
-<td><img alt="img" src="https://img.shields.io/chrome-web-store/users/ifipmflagepipjokmbdecpmjbibjnakm" /></td>
-</tr>
-<tr>
-<td><a href="https://chrome.google.com/webstore/detail/jnmekaomnicdcpgdndekkmojfomifjal">Shortcuts for Chrome</a></td>
-<td><a href="https://mobilefirst.me">Mobile First</a></td>
-<td><img alt="img" src="https://img.shields.io/chrome-web-store/users/jnmekaomnicdcpgdndekkmojfomifjal" /></td>
-</tr>
-<tr>
-<td><a href="https://chrome.google.com/webstore/detail/hcnjemngcihnhncobgdgkkfkhmleapah">Sitemap Generator</a></td>
-<td><a href="https://github.com/nkrusch">nkrusch</a></td>
-<td><img alt="img" src="https://img.shields.io/chrome-web-store/users/hcnjemngcihnhncobgdgkkfkhmleapah" /></td>
-</tr>
-</tbody>
-</table>
-<h2 id="open-source-projects-on-github">Open Source Projects on Github</h2>
-<p><a href="https://github.com/MobileFirstLLC/extension-cli/network/dependents">See Dependency Graph</a></p>
-<h2 id="add-your-own-project">Add your own project!</h2>
-<p>Edit this file on Github to add your project, then submit a PR.</p>
-<!-- ADD PROJECT LINKS HERE !
+<p>In your build configuration specify path to the manifest file:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./src/manifest.json&quot;</span><span class="p">,</span>
+<span class="p">}</span> 
+</code></pre></div>
+</td></tr></table>
+<p>The file will be renamed to <code>manifest.json</code> during build regardless of its original name.</p>
+<h2 id="customizing-manifests-for-different-target-browsers">Customizing manifests for different target browsers</h2>
+<p>There are two strategies for customizing the manifest contents per target browser:</p>
+<ol>
+<li>Specify browser-specific keys in single manifest file</li>
+<li>Specify multiple build configurations, each with different manifest file.</li>
+</ol>
+<h3 id="browser-specific-keys-in-single-manifest">Browser specific keys in single manifest</h3>
+<p>Using this strategy, the project contains single manifest. In manifest.json:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;__MSG_appname__&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;__MSG_description__&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;chrome&quot;</span><span class="p">:{</span>
 
- XXX is project number - pad each number with up to 2 leading zeros 
+     <span class="err">...</span> <span class="err">chrome</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span> <span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span> <span class="err">keys</span> <span class="err">here</span>
 
- XXX0 : Webstore link 
- XXX1 : Maker url  
- XXX2 : Shield url 
+  <span class="p">},</span>
+  <span class="nt">&quot;firefox&quot;</span><span class="p">:{</span>
 
- Lastly add a row to project table on top ! -->
+     <span class="err">...</span> <span class="kc">f</span><span class="err">ire</span><span class="kc">f</span><span class="err">ox</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span> <span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span> <span class="err">keys</span> <span class="err">here</span>
+
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>Then run the build command specifying the target platform:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build --platform chrome  
+xt-build --platform firefox
+</code></pre></div>
+</td></tr></table>
+<p>The build will then combine all common manifest elements with those
+specified for the target platform. </p>
+<p>When building cross-browser extensions, most browsers can reuse the 
+same manifest. Therefore, these two targets are typically sufficient to generate the desired
+ manifests for multiple target browsers. However, if this strategy
+is insufficient, see the next option.  </p>
+<h3 id="multiple-build-configurations">Multiple build configurations</h3>
+<p>Create multiple build configuration files:</p>
+<p>chrome-config.json:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./manifests/chrome.json&quot;</span>
+<span class="p">}</span> 
+</code></pre></div>
+</td></tr></table>
+<p>firefox-config.json:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./manifests/firefox.json&quot;</span>
+<span class="p">}</span> 
+</code></pre></div>
+</td></tr></table>
+<p>Using this strategy, run the build command specifying path to config file explicitly:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build --config chrome-config.json  
+xt-build --config firefox-config.json
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -1003,26 +981,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../14-user-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Editing User Guide" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Editing User Guide
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
