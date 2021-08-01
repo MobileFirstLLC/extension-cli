@@ -17,6 +17,7 @@ nav:
     - 'extension-cli': 08-xt-create.md
     - 'xt-build':
       - Overview: 03-xt-build.md
+      - Manifest: 03-xt-build-manifest.md
       - Building scripts: 03-xt-build-scripts.md
       - Building styles: 03-xt-build-styles.md
       - Copying files: 03-xt-build-copy.md
