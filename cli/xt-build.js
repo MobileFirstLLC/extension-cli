@@ -37,36 +37,50 @@ program
     .parse(process.argv);
 
 const {watch, env: programEnv, config, platform: platformEnv} = program.opts();
-
-const args = [
-    watch ? 'gulp watch' : 'gulp',
-    util.format('--gulpfile "%s"', gulpfile),
-    util.format('--config "%s"', path.resolve(process.cwd(), config || './.xtbuild.json')),
-    util.format('--pkg', path.resolve(process.cwd(), './package.json')),
-    util.format('--cwd', path.resolve(process.cwd())),
-    util.format('--%s', programEnv),
-    util.format('--%s', platformEnv),
-    '--colors'
-].join(' ');
-
 const spinner = new Spinner(' %s ');
 
 spinner.start();
 
-const bat = exec(args);
+const proc = exec([
 
-bat.stdout.on('data', (data) => {
+    // run either watch or default
+    watch ? 'gulp watch' : 'gulp',
+
+    // path to gulpfile (in current dir)
+    util.format('--gulpfile "%s"', gulpfile),
+
+    // path to build configuration file
+    util.format('--config "%s"', path.resolve(process.cwd(), config || './.xtbuild.json')),
+
+    // path to project's package.json
+    util.format('--pkg', path.resolve(process.cwd(), './package.json')),
+
+    // explicitly tell gulp to use cwd (necessary)
+    util.format('--cwd', path.resolve(process.cwd())),
+
+    // ENV is either "--dev" or "--prod"
+    util.format('--%s', programEnv),
+
+    // target platform is "--chrome" or "--firefox"
+    util.format('--%s', platformEnv),
+
+    // use colors in terminal output
+    '--colors'
+
+].join(' '));
+
+proc.stdout.on('data', (data) => {
     if (data && data.indexOf('Using gulpfile') === 0) return;
     spinner.stop(true);
     process.stdout.write(data.toString());
 });
 
-bat.stderr.on('data', (data) => {
+proc.stderr.on('data', (data) => {
     spinner.stop(true);
     process.stdout.write(data.toString());
 });
 
-bat.on('exit', (err) => {
+proc.on('exit', (err) => {
     spinner.stop(true);
     console.log(!err ?
         texts.onBuildSuccess() :
