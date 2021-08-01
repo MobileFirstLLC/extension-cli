@@ -1,9 +1,11 @@
 # Editing User Guide
 
-If you are interested in editing the content (and not layout) of this user guide, 
-simply edit the markdown directly in any markdown editor or on Github.
-There is a pen icon linking to the markdown source on each page of these docs,
-which takes you directly to the source document.
+
+!!! info
+    If you are interested in editing the content (and not layout) of this user guide, 
+    simply edit the markdown directly in any markdown editor or on Github.
+    There is a pencil icon linking to the markdown source on each page of these docs,
+    which takes you directly to the source document.
 
 ## Developing User Guide
 
@@ -17,20 +19,30 @@ You will need Python 3.x before proceeding.
 
 3. Setup Python development env as follows: 
 
-    ```Python
-    # 1. create virtual env for packages
-    python3 -m venv env         
+    - Create virtual env for Python packages:
+   
+        ```
+        python3 -m venv env         
+        ```
+   
+    - Activate virtual env:
+   
+        ``` 
+        source env/bin/activate     # macOS/Linux
+        env\Scripts\activate.bat    # Windows
+        ```
+   
+    - Install requirements:
     
-    # 2. activate virtual env 
-    source env/bin/activate     # macOS/Linux
-    env\Scripts\activate.bat    # Windows
+        ```
+        pip install -r requirements.txt
+        ```
     
-    # 3. install requirements:
-    pip install -r requirements.txt
+    - Run and debug the docs:
     
-    # 4. run the docs:
-    mkdocs serve
-    ```
+        ```
+        mkdocs serve
+        ```
 
 4. Relevant files:
 

@@ -38,7 +38,6 @@ nav:
       - Overview: 13-cli-development.md
       - Environment Setup: 13-dev-env.md
     - Editing User Guide: 14-user-guide.md
-    - Showcase: 10-showcase.md
   - "Source Code":
     - Github: https://github.com/MobileFirstLLC/extension-cli
 

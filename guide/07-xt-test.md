@@ -3,7 +3,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-test</code> command will run unit tests</p>
+<p class='page-intro'><code>xt-test</code> command runs unit tests.</p>
 
 * * *
 
@@ -84,12 +84,12 @@ The general setup is:
 
 2. Run unit tests with coverage report during CI/CD workflow, then pipe the result to coveralls:
 
-    ```
+    ``` 
     nyc --reporter=lcov npm run test | coveralls
     ```
 
 
-If using Github actions, use [Coveralls Github action](https://github.com/marketplace/actions/coveralls-github-action) to report results. Example configuration:
+If using Github actions, use [Coveralls Github action](https://github.com/marketplace/actions/coveralls-github-action) to report results. Example:
 
 ```yaml
 - name: Execute unit tests w/ coverage

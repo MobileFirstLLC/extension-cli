@@ -2,7 +2,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-docs</code> command is used for generating source
+<p class='page-intro'><code>xt-docs</code> command generates source
  code documentation for an extension project.</p>
 
 * * *

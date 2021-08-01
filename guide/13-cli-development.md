@@ -32,7 +32,7 @@ To setup a local dev environment and develop the CLI application, see
 
 ## Dependencies
 
-Extension CLI is built with the following:
+Extension CLI is built with the following dependencies:
 
 | # | Package name | Purpose |
 | --- | --- | --- | 
@@ -65,4 +65,4 @@ Extension CLI is built with the following:
 | 27. | `sinon` | JavaScript test spies, stubs and mocks |
 | 28. | `sinon-chrome` | unit testing for extensions |
 | 29. | `webpack-stream` | build javascript files |
-| 30. | `yargs` | parse keyword args (build, tests) |
+| 30. | `yargs` | parse keyword args |

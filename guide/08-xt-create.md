@@ -2,7 +2,7 @@
 
 * * *
 
-<p class='page-intro'><code>extension-cli</code> command is used to create a new extension project.</p>
+<p class='page-intro'><code>extension-cli</code> command creates a new web extension project.</p>
 
 * * *
 
@@ -12,7 +12,7 @@
 npx extension-cli
 ```
  
-This command will prompt you with necessary questions. You do not need to call it with any arguments. 
+This command will prompt with necessary questions and does not take any arguments. 
  
 This command will generate initial files and directories for a new project.
 

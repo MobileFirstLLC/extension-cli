@@ -19,7 +19,7 @@ The following instructions explain how to set up this environment.
 
 2. Clone the forked repo and then open it in your favorite web IDE
 
-3. Run the following command in terminal 
+3. Run the following command in terminal: 
 
 ```bash
 npm install   

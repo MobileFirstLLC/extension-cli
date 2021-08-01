@@ -3,7 +3,7 @@
 
 * * *
 
-<p class='page-intro'><code>xt-sync</code> is intended for copying and updating 
+<p class='page-intro'><code>xt-sync</code> command enables copying and updating 
 configuration files.</p>
 
 * * *

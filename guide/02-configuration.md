@@ -1,17 +1,14 @@
 # Configuration for Existing Applications
 
+!!! info
+    **If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.**
+ 
 
-* * *
-
-**If you created the extension with Extension CLI, this setup is already done for you, and you may skip this step.**
-
-* * *
-
-For an existing application, before using Extension CLI, add these configuration options to `package.json`:
+Before using Extension CLI with an existing application, add these configuration options to project's `package.json`:
 
 ### Babel Presets
 
-This is needed to compile projects written in ES6.
+This is needed to compile projects written in modern JavaScript syntax.
 
 ```json
 "babel": {
@@ -33,7 +30,7 @@ Exclude test files from being linted. If your project includes compiled 3rd part
 
 ### Add Scripts
 
-Add these scripts to `package.json` then you can run, for example, `npm run start`.
+Add these to `package.json` `scripts` section:
 
 ```json
 "scripts": {
@@ -41,7 +38,8 @@ Add these scripts to `package.json` then you can run, for example, `npm run star
   "build": "xt-build -e prod",
   "clean": "xt-clean",
   "docs": "xt-docs",
-  "test": "xt-test"
+  "test": "xt-test",
+  "coverage": "nyc --reporter=lcov npm run test"
 }
 ```
 

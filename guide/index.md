@@ -13,7 +13,7 @@ to organize, build, test and document extension projects.</p>
 ## Features
 
 🖥️ &nbsp; **Javascript Bundling** 
-<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles and minifies javascript files (supports [ES6 syntax](http://es6-features.org/)) <br/>
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles and minifies javascript files (supports ES6, ES2021 syntax) <br/>
 
 🎨 &nbsp; **CSS Bundling**
 <br/>&nbsp;&nbsp; &nbsp; &nbsp; Compiles, bundles, and minifies CSS and [SASS](https://sass-lang.com/guide) files <br/>
@@ -22,7 +22,7 @@ to organize, build, test and document extension projects.</p>
 <br/>&nbsp;&nbsp; &nbsp; &nbsp; lint JavaScript using [ESLint](https://eslint.org/) <br/>
 
 📦 &nbsp; **ZIP Generation**
-<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates a `.zip` file for uploading to extension marketplaces<br/>
+<br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates a .zip file for uploading to extension marketplaces<br/>
 
 📝 &nbsp; **Document Source Code**
 <br/>&nbsp;&nbsp; &nbsp; &nbsp; Generates source code documentation using [JSDoc](https://jsdoc.app/about-getting-started.html) <br/>
@@ -35,9 +35,20 @@ to organize, build, test and document extension projects.</p>
 
 * * *
 
+
+Extension CLI is made and maintained free and voluntarily by
+<a href="https://github.com/MobileFirstLLC/extension-cli/graphs/contributors" target="_blank" rel="noreferrer noopener">open source contributors</a> 
+behind several popular extensions. If you find it helpful, please share, star, or contribute to its development.
+
+<br/>
+
+<a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a>
+
+* * *
+
 ## Getting Started
 
-**Note:** Using this CLI assumes you have Node.js installed. If you do not, you can [install it here](https://nodejs.org/en/download/).
+**Note:** Using this CLI assumes you have Node.js installed (or [install it here](https://nodejs.org/en/download/)).
 
 Create a new extension project:
 
@@ -52,8 +63,7 @@ npm install extension-cli
 ```
 
 More detailed [getting started guide here &rarr;](https://oss.mobilefirst.me/extension-cli/01-getting-started/)
-
-* * *
+ 
 
 ## Command Reference
 
@@ -67,14 +77,3 @@ Command | Description
 
 More detailed [command instructions and configuration options here &rarr;](https://oss.mobilefirst.me/extension-cli/03-xt-build/) 
 
----
-
-<p align="center" style="margin-bottom:4em;">
-
-Extension CLI is made by
-<a href="https://github.com/MobileFirstLLC/extension-cli/graphs/contributors" target="_blank" rel="noreferrer noopener">open source contributors</a> 
-behind several popular extensions!
-
-<br/><br/> 
-<a class="github-button" href="https://github.com/mobilefirstllc/extension-cli" data-icon="octicon-star" data-size="large" aria-label="Star mobilefirstllc/extension-cli on GitHub">Star</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/fork" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork mobilefirstllc/extension-cli on GitHub">Fork</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue mobilefirstllc/extension-cli on GitHub">Issue</a> &nbsp; <a class="github-button" href="https://github.com/mobilefirstllc/extension-cli/subscription" data-icon="octicon-eye" data-size="large" aria-label="Watch mobilefirstllc/extension-cli on GitHub">Watch</a>
-</p>
