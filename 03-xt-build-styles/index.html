@@ -197,11 +197,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../08-xt-create/" class="md-tabs__link md-tabs__link--active">
+      <a href="../03-xt-build/" class="md-tabs__link md-tabs__link--active">
         Commands
       </a>
     </li>
+  
+
   
 
       
@@ -391,18 +398,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../08-xt-create/" class="md-nav__link">
-        extension-cli
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -410,14 +405,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         xt-build
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-build" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           xt-build
         </label>
@@ -430,18 +425,6 @@
     <li class="md-nav__item">
       <a href="../03-xt-build/" class="md-nav__link">
         Overview
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-xt-build-manifest/" class="md-nav__link">
-        Manifest
       </a>
     </li>
   
@@ -555,14 +538,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_3">
         xt-docs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           xt-docs
         </label>
@@ -617,6 +600,18 @@
     <li class="md-nav__item">
       <a href="../07-xt-test/" class="md-nav__link">
         xt-test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-xt-create/" class="md-nav__link">
+        extension-cli
       </a>
     </li>
   
@@ -781,6 +776,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-showcase/" class="md-nav__link">
+        Showcase
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -872,20 +879,21 @@
 zero or more objects where.</p>
 <ul>
 <li><code>name</code> is the output bundle filename with file extension</li>
-<li><code>src</code> specifies which files to include in each bundle; you can use <ul>
+<li>
+<p><code>src</code> specifies which files to include in each bundle; you can use </p>
+<ul>
 <li>a string value for a single file</li>
 <li>array of files, or </li>
 <li>a path with wildcard. </li>
-<li>prefix <code>!</code> as a way to negate the inclusion of a file</li>
 </ul>
+<p>You may also use <code>!</code> as a way to negate the inclusion of a file. This is the <a href="https://gulpjs.com/docs/en/api/src">globs syntax expected by gulp</a> (without options).</p>
 </li>
 </ul>
-<p>See <a href="https://gulpjs.com/docs/en/api/src">globs syntax guide</a> for more details.</p>
-<p>Dev build does not minify style files. The production build will minify style files.</p>
-<p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. When naming stylesheet files, use <code>.scss</code> file extension because default configuration looks for style files with this file extension. </p>
-<p>If you are not a friend of Sass, you can write style sheets using CSS. In the build configuration override the default configuration: <code>"scss": "./src/**/*.scss"</code> to treat other file extensions as style files, and use <code>"scss_bundles"</code> key to specify how to generate stylesheets, as shown in the example below.</p>
+<p>The production build will minify style files. Dev build does not minify style files.</p>
+<p>By default, the stylesheets are assumed to be written using <a href="https://sass-lang.com/guide">Sass</a>. If you are not a friend of Sass language stylesheets, you can write your style sheets using regular CSS. Any CSS you write is valid Sass as well.</p>
+<p>When you name stylesheet files, use <code>.scss</code> file extension. The default CLI configuration looks for this file extension. Otherwise you must override this default configuration: <code>"scss": "./src/**/*.scss"</code> to include other file extensions in the style bundles.</p>
 <p><strong>Example</strong></p>
-<p>Sample project-level configuration with multiple style bundles. This configuration will generate two stylesheets in the output directory: styles.css and display.css.</p>
+<p>Sample project-level configuration with multiple style bundles</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -907,15 +915,15 @@ zero or more objects where.</p>
       <span class="p">{</span>
         <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
           <span class="s2">&quot;./src/**/*.scss&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;!./src/app/styles/ui.scss&quot;</span>
+          <span class="s2">&quot;!./src/app/styles/app.scss&quot;</span>
         <span class="p">],</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;styles&quot;</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;styles.css&quot;</span>
       <span class="p">},</span>
       <span class="p">{</span>
         <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="p">[</span>
           <span class="s2">&quot;./src/app/styles/ui.scss&quot;</span>
         <span class="p">],</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;display&quot;</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;display.css&quot;</span>
       <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>

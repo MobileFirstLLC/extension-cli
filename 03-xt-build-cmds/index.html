@@ -197,11 +197,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../08-xt-create/" class="md-tabs__link md-tabs__link--active">
+      <a href="../03-xt-build/" class="md-tabs__link md-tabs__link--active">
         Commands
       </a>
     </li>
+  
+
   
 
       
@@ -391,18 +398,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../08-xt-create/" class="md-nav__link">
-        extension-cli
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -410,14 +405,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         xt-build
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-build" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           xt-build
         </label>
@@ -430,18 +425,6 @@
     <li class="md-nav__item">
       <a href="../03-xt-build/" class="md-nav__link">
         Overview
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-xt-build-manifest/" class="md-nav__link">
-        Manifest
       </a>
     </li>
   
@@ -521,9 +504,39 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Commands
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Commands
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#watching-changes" class="md-nav__link">
+    Watching changes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -555,14 +568,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_3">
         xt-docs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           xt-docs
         </label>
@@ -617,6 +630,18 @@
     <li class="md-nav__item">
       <a href="../07-xt-test/" class="md-nav__link">
         xt-test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-xt-create/" class="md-nav__link">
+        extension-cli
       </a>
     </li>
   
@@ -781,6 +806,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-showcase/" class="md-nav__link">
+        Showcase
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -848,6 +885,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#watching-changes" class="md-nav__link">
+    Watching changes
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -884,14 +936,10 @@
 </td></tr></table>
 <p>This configuration would first build the extension, then run a custom Python script, 
 then for a production build, generate the extension zip file.</p>
-<!--
-## Watching changes
-
-For `dev` builds, you can specify a watch pattern, such that changes matching the 
-pattern will re-run custom commands.
-
-Specify watch path using `commands_watch_path` configuration key, for example:
-
+<h2 id="watching-changes">Watching changes</h2>
+<p>For <code>dev</code> builds, you can specify a watch pattern, such that changes matching the 
+pattern will re-run custom commands.</p>
+<p>Specify watch path using <code>commands_watch_path</code> configuration key, for example:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -899,11 +947,8 @@ Specify watch path using `commands_watch_path` configuration key, for example:
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
-
-then run build in `dev` mode with `--watch` flag. 
-
-Any changes under `./src` directory will cause custom commands to re-run.
--->
+<p>then run build in <code>dev</code> mode with <code>--watch</code> flag. </p>
+<p>Any changes under <code>./src</code> directory will cause custom commands to re-run.</p>
                 
               
               

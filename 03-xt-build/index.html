@@ -197,11 +197,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../08-xt-create/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Commands
       </a>
     </li>
+  
+
   
 
       
@@ -391,18 +398,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../08-xt-create/" class="md-nav__link">
-        extension-cli
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -410,14 +405,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="__nav_2_1">
         xt-build
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-build" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           xt-build
         </label>
@@ -521,18 +516,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-xt-build-manifest/" class="md-nav__link">
-        Manifest
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../03-xt-build-scripts/" class="md-nav__link">
         Building scripts
       </a>
@@ -626,14 +609,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
       
-      <label class="md-nav__link" for="__nav_2_4">
+      <label class="md-nav__link" for="__nav_2_3">
         xt-docs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_4">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           xt-docs
         </label>
@@ -688,6 +671,18 @@
     <li class="md-nav__item">
       <a href="../07-xt-test/" class="md-nav__link">
         xt-test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-xt-create/" class="md-nav__link">
+        extension-cli
       </a>
     </li>
   
@@ -852,6 +847,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-showcase/" class="md-nav__link">
+        Showcase
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -992,23 +999,22 @@
                 
                 <h1 id="xt-build">xt-build</h1>
 <hr />
-<p class='page-intro'><code>xt-build</code> command builds an extension project.</p>
+<p class='page-intro'><code>xt-build</code> command is used for generating a debuggable, development version of an extension project. It is also used to create a production-ready, minified .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
 
 <hr />
-<p>Build command can be used to create a debuggable version, or a production-ready .zip file that can be uploaded to an extension/add-on marketplace for distribution.</p>
-<p>Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses gulp, babel and webpack (among other plugins) to compile the extension project.</p>
+<p>Successful build command always generates an extension in build output directory that can be debugged in the browser.  The underlying build system uses gulp, babel and webpack to compile scripts (among other plugins).</p>
 <h3 id="dev-build-artifacts">Dev Build Artifacts</h3>
-<p>When specifying<code>dev</code> build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory, which can be debugged in a browser.</p>
+<p>When specifying<code>dev</code> build flag, the build will complete using development settings. Successful dev build generates extension source code in the specified build output directory (<code>dist/</code> by default), which can be debugged using a chromium browser.</p>
 <h3 id="prod-build-artifacts">Prod Build Artifacts</h3>
-<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build generates extension source code in build output directory, which can be debugged in a browser. It also generates a .zip file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.</p>
+<p>When specifying <code>prod</code> build flag, the build will run a production build. Successful production build generates extension source code in build output directory (<code>dist/</code> by default), which can be debugged in the browser. It also generates a <code>release.zip</code> file in the project root. This zip file can be uploaded to extension/add-on marketplace such as Chrome Web Store or Firefox add-ons. When running a production build, all code files (js, css, HTML, json) will be optimized.</p>
 <h2 id="commands">Commands</h2>
 <p>Braces <code>{ }</code> indicate that the user must choose one (and only one) of the items inside the braces.</p>
 <p><strong>Run build with default options</strong></p>
-<p>Default option runs production build targeting Chrome browser. </p>
+<p>Default is production build for chrome</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build
 </code></pre></div>
 </td></tr></table>
-<p><strong>Run build with explicit environment flag <code>-e</code> or <code>--env</code></strong></p>
+<p><strong>Run production build using explicit environment flag <code>-e</code> or <code>--env</code></strong></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-e<span class="p">|</span>--env<span class="o">}</span> dev
 </code></pre></div>
 </td></tr></table>
@@ -1023,7 +1029,7 @@
 </code></pre></div>
 </td></tr></table>
 <p><strong>Run build using custom configuration file path</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-c<span class="p">|</span>--config<span class="o">}</span> <span class="s2">&quot;/path/to/config.json&quot;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>xt-build <span class="o">{</span>-c<span class="p">|</span>--config<span class="o">}</span> /path/to/config.json
 </code></pre></div>
 </td></tr></table>
 <p><strong>Run development build and keep watching changes</strong></p>
@@ -1035,9 +1041,8 @@
 </code></pre></div>
 </td></tr></table>
 <h2 id="packagejson-scripts">Package.json scripts</h2>
-<p>After adding Extension CLI to your project, you can run these commands from a 
-terminal using syntax <code>npx xt-build</code>, or add the following to <code>packages.json</code> scripts section, 
-then execute the commands as <code>npm run start</code> or <code>npm run build</code>:</p>
+<p>After adding Extension CLI to your project, you can run these commands from a terminal using syntax <code>npx xt-build</code>. 
+Or you can add an option to <code>packages.json</code> scripts section as shown below, and then execute the command as <code>npm run build</code> or <code>npm run start</code>.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1058,8 +1063,8 @@ places:</p>
 <p>in a file named <code>.xtbuild.json</code> in project root</p>
 </li>
 </ul>
-<p>Alternatively you can provide a path  to configuration file with <code>-c</code> or 
-<code>--config</code> flag, followed by a path to configuration file. </p>
+<p>If these two locations cause a conflict, alternatively you can provide a path 
+to configuration file with <code>-c</code> or <code>--config</code> flag, followed by path to configuration file. </p>
 <p>The CLI uses a default build configuration shown below. This tells 
 extension CLI where to look for input files, how to process them, and where 
 to output files. You can override any of these key-value pairs at project level. </p>
@@ -1157,8 +1162,8 @@ to output files. You can override any of these key-value pairs at project level.
 </tr>
 <tr>
 <td><code>"manifest"</code></td>
-<td>extension manifest file path</td>
-<td><a href="../03-xt-build-manifest/">Guide</a></td>
+<td>Extension manifest file with path</td>
+<td></td>
 </tr>
 <tr>
 <td><code>"js"</code></td>
@@ -1192,7 +1197,7 @@ to output files. You can override any of these key-value pairs at project level.
 </tr>
 <tr>
 <td><code>"copyAsIs"</code></td>
-<td>Files and directories to copy to output directory without modification</td>
+<td>Files and directories to copy without modification</td>
 <td><a href="../03-xt-build-copy/">Guide</a></td>
 </tr>
 <tr>
@@ -1210,9 +1215,13 @@ to output files. You can override any of these key-value pairs at project level.
 <td>Custom commands</td>
 <td><a href="../03-xt-build-cmds/">Guide</a></td>
 </tr>
+<tr>
+<td><code>"commands_watch_path"</code></td>
+<td>Commands watch pattern during dev builds</td>
+<td><a href="../03-xt-build-cmds/">Guide</a></td>
+</tr>
 </tbody>
 </table>
-<!-- `"commands_watch_path"` | Commands watch pattern during dev builds | [Guide](03-xt-build-cmds.md) -->
                 
               
               
@@ -1241,7 +1250,7 @@ to output files. You can override any of these key-value pairs at project level.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../08-xt-create/" class="md-footer__link md-footer__link--prev" aria-label="Previous: extension-cli" rel="prev">
+        <a href="../02-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1250,20 +1259,20 @@ to output files. You can override any of these key-value pairs at project level.
               <span class="md-footer__direction">
                 Previous
               </span>
-              extension-cli
+              Configuration
             </div>
           </div>
         </a>
       
       
         
-        <a href="../03-xt-build-manifest/" class="md-footer__link md-footer__link--next" aria-label="Next: Manifest" rel="next">
+        <a href="../03-xt-build-scripts/" class="md-footer__link md-footer__link--next" aria-label="Next: Building scripts" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Manifest
+              Building scripts
             </div>
           </div>
           <div class="md-footer__button md-icon">
