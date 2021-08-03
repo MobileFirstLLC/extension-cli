@@ -197,18 +197,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="../03-xt-build/" class="md-tabs__link md-tabs__link--active">
+      <a href="../08-xt-create/" class="md-tabs__link md-tabs__link--active">
         Commands
       </a>
     </li>
-  
-
   
 
       
@@ -398,6 +391,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../08-xt-create/" class="md-nav__link">
+        extension-cli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -405,14 +410,14 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
-      <label class="md-nav__link" for="__nav_2_1">
+      <label class="md-nav__link" for="__nav_2_2">
         xt-build
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-build" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           xt-build
         </label>
@@ -425,6 +430,18 @@
     <li class="md-nav__item">
       <a href="../03-xt-build/" class="md-nav__link">
         Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-xt-build-manifest/" class="md-nav__link">
+        Manifest
       </a>
     </li>
   
@@ -582,14 +599,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
       
-      <label class="md-nav__link" for="__nav_2_3">
+      <label class="md-nav__link" for="__nav_2_4">
         xt-docs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="xt-docs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           xt-docs
         </label>
@@ -644,18 +661,6 @@
     <li class="md-nav__item">
       <a href="../07-xt-test/" class="md-nav__link">
         xt-test
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-xt-create/" class="md-nav__link">
-        extension-cli
       </a>
     </li>
   
@@ -820,18 +825,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10-showcase/" class="md-nav__link">
-        Showcase
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -963,9 +956,9 @@ If you prefer a different directory structure, override this default value.</p>
 <p>The default value of <code>locales_list</code> is <code>["en"]</code>. </p>
 <p>Refer <a href="https://developers.google.com/admin-sdk/directory/v1/languages">to this list of language codes</a>
  when specifying value for this configuration.</p>
-<p>You may include multiple <code>.json</code> files within the language-specific directory to 
-improve maintainability of these files. Building the extension
-will automatically combine all files within a language directory into a single 
+<p>You may split localization files into multiple <code>.json</code> files within the 
+language-specific directory to improve maintainability. During builds
+all files within a language directory will be automatically combined into a single 
 <code>messages.json</code> which is expected from a browser extensions.</p>
 <p>Recommended reading: <a href="https://developer.chrome.com/extensions/i18n">learn how to internationalize extensions</a>.</p>
 <h2 id="example">Example</h2>
@@ -1014,18 +1007,23 @@ outputs.</p>
 <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └─ options.json</td>
 <td>Polish dictionary, part 2</td>
 </tr>
+<tr>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; └─ <code>de</code>/messages.json</td>
+<td>German dictionary</td>
+</tr>
 </tbody>
 </table>
 <p>Build behavior:</p>
 <ul>
 <li><code>myFile.json</code> will be renamed to <code>messages.json</code> </li>
-<li><code>app.json</code> and <code>options.json</code> will me combined and renamed to <code>messages.json</code></li>
-<li>extension will be available in 3 languages; in <code>dist/</code> directory:<ul>
+<li><code>app.json</code> and <code>options.json</code> will me concatenated and renamed to <code>messages.json</code></li>
+<li>extension will be available in 3 languages; <code>dist/</code> directory will contain:<ul>
 <li><code>_locales/en/messages.json</code></li>
 <li><code>_locales/fr/messages.json</code></li>
 <li><code>_locales/pl/messages.json</code></li>
 </ul>
 </li>
+<li>German dictionary is excluded from build output because it is not included in <code>locales_list</code></li>
 </ul>
                 
               
