@@ -6,8 +6,7 @@
 
 table {padding: 0;}
 table tr {margin: 0;padding: 0; }
-table tr th {font-weight: bold; margin: 0;padding: 6px 13px; }
-table tr td { margin: 0;padding: 6px 13px; }
+table tr th {font-weight: bold;}
 table tr th :first-child, table tr td :first-child {margin-top: 0; }
 table tr th :last-child, table tr td :last-child {margin-bottom: 0; }
 
@@ -16,11 +15,17 @@ table tr th :last-child, table tr td :last-child {margin-bottom: 0; }
     box-shadow: none;
     background: var(--md-code-bg-color);
 }
+table tr th,table tr td,
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td{
+    margin: 0; padding: .65em .95em;
+}
 .md-typeset code{
     padding: 3px .35em;
 }
 .md-typeset table:not([class]) code {
-    font-size: .70rem;
+    font-size: .65rem;
+    white-space: nowrap;
 }
 .md-typeset table:not([class]) tr:hover{
     transition: none;
