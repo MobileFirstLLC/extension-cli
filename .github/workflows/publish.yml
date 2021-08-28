@@ -16,14 +16,13 @@ jobs:
 
       - name: Tag name
         run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-
-      - run: npm install
+      - run: npm ci
       - run: npm run test
 
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v1
         with:
-          tag: ${{ env.TAG }}
+          tag: ${{ fromJSON('["latest", "alpha"]')[contains(env.TAG, '-')] }}
           token: ${{ secrets.NPM_TOKEN }}
 
       - name: Github Release
