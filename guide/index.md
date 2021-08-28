@@ -69,11 +69,11 @@ More detailed [getting started guide here &rarr;](https://oss.mobilefirst.me/ext
 
 Command | Description
 --- | ---
-**xt-build** | Run builds; env flags: `-e prod` and `-e dev`
-**xt-test**| Run unit tests
-**xt-docs**| Generate docs
-**xt-clean** | Remove generated files
-**xt-sync**| Update project config files to match the latest defaults supplied by this CLI
+**`xt-build`** | Run builds; env flags: `-e prod` or `-e dev`
+**`xt-test`**| Run unit tests
+**`xt-docs`**| Generate docs
+**`xt-clean`** | Remove generated files
+**`xt-sync`**| Update project config files to latest versions supplied by this CLI
 
 More detailed [command instructions and configuration options here &rarr;](https://oss.mobilefirst.me/extension-cli/03-xt-build/) 
 

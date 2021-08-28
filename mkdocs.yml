@@ -46,6 +46,8 @@ extra_css:
  - assets/custom.css
 extra_javascript:
   - "https://buttons.github.io/buttons.js"
+  - "https://www.googletagmanager.com/gtag/js?id=G-6XB4XDVPX3"
+  - assets/custom.js
 
 theme:
   name: material

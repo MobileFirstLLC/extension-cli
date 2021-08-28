@@ -6,46 +6,49 @@
 
 * * *
 
-- Getting Started guides:
-    - [for Chrome](https://developer.chrome.com/extensions/getstarted)
-    - [for Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#get_started)
-    - [for Safari](https://developer.apple.com/documentation/safariservices/safari_web_extensions)
-    - [for Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/)
-    - [for Opera](https://dev.opera.com/extensions/getting-started/)
+**Getting started guides**<br/>
+[Chrome](https://developer.chrome.com/extensions/getstarted) &bull;
+[Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#get_started) &bull;
+[Safari](https://developer.apple.com/documentation/safariservices/safari_web_extensions) &bull;
+[Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/) &bull;
+[Opera](https://dev.opera.com/extensions/getting-started/)
 
-- Extension manifest references:
-    - [Chrome, version 2](https://developer.chrome.com/extensions/manifest) 
-    - [Chrome, version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
-    - [Firefox manifest](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)    
-    - [Opera manifest](https://dev.opera.com/extensions/manifest/)
+**Extension manifest references**<br/>
+[Chrome v3](https://developer.chrome.com/extensions/manifest) &bull;
+[Chrome v2 ⚠️](https://developer.chrome.com/docs/extensions/mv2/manifest/) &bull;
+[Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) &bull; 
+[Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/manifest-format) &bull;
+[Opera](https://dev.opera.com/extensions/manifest/)
 
-- Lists of browser APIs:
-    - [Chrome APIs reference](https://developer.chrome.com/extensions/api_index)
-    - [Firefox APIs reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API#javascript_api_listing)
-    - [Opera APIs reference](https://dev.opera.com/extensions/apis/)
-    - [Browser support for JavaScript APIs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+**Lists of browser APIs**<br/>
+[Chrome](https://developer.chrome.com/extensions/api_index) &bull;
+[Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API#javascript_api_listing) &bull;
+[Opera](https://dev.opera.com/extensions/apis/)
+  
+    
+**Cross-browser compatibility charts**<br/>
+[Manifest compatibility](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) &bull;
+[JavaScript API support](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 
-- Internationalization:
-    - [Supporting multiple languages](https://developer.chrome.com/extensions/i18n)
-    - [Language locales list](https://developer.chrome.com/docs/webstore/i18n/#choosing-locales-to-support)
+**Internationalization**<br/>
+[Supporting multiple languages](https://developer.chrome.com/extensions/i18n) &bull;
+[Language locales list](https://developer.chrome.com/docs/webstore/i18n/#choosing-locales-to-support)
 
-- [Awesome WebExtensions](https://github.com/fregante/Awesome-WebExtensions) - curated list of resources
+**Extension Publishing Guides**<br/>
+[Chrome](https://developer.chrome.com/webstore/publish) &bull;
+[Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/create-dev-account) &bull;
+[Firefox](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/) &bull;
+[Opera](https://dev.opera.com/extensions/publishing-guidelines/) &bull;
+[Safari](https://developer.apple.com/documentation/safariservices/safari_web_extensions/distributing_your_safari_web_extension)
 
-### Extension Publishing Guides
+**Marketplace Image Guidelines**<br/>
+[Chrome](https://developer.chrome.com/webstore/images) &bull;
+[Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension#step-5-add-store-listing-details-for-your-extension)
+  
+**Marketplace APIs**<br/>
+[Chrome Web Store](https://developer.chrome.com/webstore/api_index)
 
-- **Chrome**
-    - [Webstore Image Guide](https://developer.chrome.com/webstore/images)
-    - [Publishing for Chrome](https://developer.chrome.com/webstore/publish)
-    - [Chrome Web Store API](https://developer.chrome.com/webstore/api_index)
 
-- **Edge**
-    - [Publishing for Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/create-dev-account)
+**Other Resources**
 
-- **Opera**
-    - [Publishing for Opera addons](https://dev.opera.com/extensions/publishing-guidelines/)
-
-- **Firefox**
-    - [Publishing for Firefox](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/)
-
-- **Safari**
-    - [Distributing Your Safari Web Extension](https://developer.apple.com/documentation/safariservices/safari_web_extensions/distributing_your_safari_web_extension)
+- [Awesome WebExtensions](https://github.com/fregante/Awesome-WebExtensions) - curated list of resources and tools
