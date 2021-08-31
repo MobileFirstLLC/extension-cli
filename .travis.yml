@@ -1,7 +1,7 @@
 language: bash
 
 node_js:
-  - "14.17.5"
+  - "14.17.6"
 
 python:
   - "3.9"
