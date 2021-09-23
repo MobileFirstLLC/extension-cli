@@ -39,7 +39,6 @@ exports.xtCreate = {
     ),
 
     start: (dirname, name) => (
-        'Press CTRL+C if you want to terminate process early.\n' +
         `Creating extension ${name} in directory ${chalk.bold.green(dirname)}.`
     ),
 

@@ -5,7 +5,7 @@
     "node": true
   },
   "extends": [
-    "xo"
+    "eslint:recommended"
   ],
   "globals": {
     "document": false,
@@ -22,7 +22,7 @@
   },
   "plugins": [],
   "parserOptions": {
-    "ecmaVersion": 12,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "rules": {
