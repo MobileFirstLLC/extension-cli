@@ -103,7 +103,7 @@
     "sinon": "11.1.2",
     "sinon-chrome": "3.0.1",
     "webpack-stream": "7.0.0",
-    "yargs": "17.2.0"
+    "yargs": "17.2.1"
   },
   "devDependencies": {
     "coveralls": "3.1.1"
