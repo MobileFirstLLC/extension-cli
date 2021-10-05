@@ -1,1 +1,1 @@
-window.alert('Greetings from background! Edit Me!');
+console.log('This is background service worker - edit me!');
