@@ -53,6 +53,7 @@ const getConfig = (docFileName) => {
     const fe = Utilities.fileExists(docFileName);
     const temp = Utilities.readJSON(fe ?
         docFileName : './package.json');
+
     return Utilities.iterateConfigs(defaultConfig,
         fe ? temp : temp.xtdocs);
 };
