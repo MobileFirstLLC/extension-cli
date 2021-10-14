@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/mobilefirstllc/extension-cli/compare/v1.2.2...v1.2.3) (2021-10-14)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([b8b8640](https://github.com/mobilefirstllc/extension-cli/commit/b8b8640580ad4d703403eeb94076c6e762d780f2))
+* **deps:** pin dependencies ([09091ef](https://github.com/mobilefirstllc/extension-cli/commit/09091ef2707bbd9f446616d1dab305bb5005f5f8))
+* **deps:** update dependency @babel/preset-env to v7.15.4 ([4ea4cf5](https://github.com/mobilefirstllc/extension-cli/commit/4ea4cf595bac9c68ab77abbc164f057810baca23))
+* **deps:** update dependency @babel/preset-env to v7.15.6 ([657d011](https://github.com/mobilefirstllc/extension-cli/commit/657d011d4a70a3db513fc4f7d921a9193b3bee4f))
+* **deps:** update dependency @babel/preset-env to v7.15.8 ([a341965](https://github.com/mobilefirstllc/extension-cli/commit/a3419659b3ac2427f1134f8c6cfb2bb38c29f009))
+* **deps:** update dependency commander to v8.2.0 ([5226669](https://github.com/mobilefirstllc/extension-cli/commit/52266695f15cace4cc422e229afe5555d30ff0e4))
+* **deps:** update dependency eslint to v8 ([d5549a8](https://github.com/mobilefirstllc/extension-cli/commit/d5549a8730256f61edbd36ab7cabbac95db5000e))
+* **deps:** update dependency jsdom to v18 ([681db6b](https://github.com/mobilefirstllc/extension-cli/commit/681db6bafeedda989471235ff6f14ad9edff1885))
+* **deps:** update dependency mocha to v9.1.2 ([d7cecc6](https://github.com/mobilefirstllc/extension-cli/commit/d7cecc60a2aa918559bea17b2531b3e331500cce))
+* **deps:** update dependency prompts to v2.4.2 ([f99cb60](https://github.com/mobilefirstllc/extension-cli/commit/f99cb608f43414ecbb8f9309ce2d32453b11b0d5))
+* **deps:** update dependency sass to v1.39.0 ([#96](https://github.com/mobilefirstllc/extension-cli/issues/96)) ([35bafd7](https://github.com/mobilefirstllc/extension-cli/commit/35bafd721dd50fc32f89b466e20695c63ce0649b))
+* **deps:** update dependency sass to v1.39.2 ([604b188](https://github.com/mobilefirstllc/extension-cli/commit/604b188a0abf413febd5b600cec2d27b3374a1a4))
+* **deps:** update dependency sass to v1.40.0 ([110b952](https://github.com/mobilefirstllc/extension-cli/commit/110b952b9fbbf3b8e9d7145dcdadc9d16da5873d))
+* **deps:** update dependency sass to v1.40.1 ([#102](https://github.com/mobilefirstllc/extension-cli/issues/102)) ([1198f86](https://github.com/mobilefirstllc/extension-cli/commit/1198f860f7188c299792c49348874d347f189bf0))
+* **deps:** update dependency sass to v1.41.0 ([103219e](https://github.com/mobilefirstllc/extension-cli/commit/103219e94f163d0696051898d0bef47fc6048b84))
+* **deps:** update dependency sass to v1.41.1 ([e8f43fc](https://github.com/mobilefirstllc/extension-cli/commit/e8f43fc7953044ebcc7769aa6a3c283e4e555a60))
+* **deps:** update dependency sass to v1.42.0 ([c3bf75b](https://github.com/mobilefirstllc/extension-cli/commit/c3bf75b5f5af777c9bc5b844014e5204f0421469))
+* **deps:** update dependency sass to v1.42.1 ([825d0ce](https://github.com/mobilefirstllc/extension-cli/commit/825d0cef9886a6ea0242a8e7c825a4f69ad25d24))
+* **deps:** update dependency webpack-stream to v7 ([#94](https://github.com/mobilefirstllc/extension-cli/issues/94)) ([a19b448](https://github.com/mobilefirstllc/extension-cli/commit/a19b4488cc7f9a31474904e58b2920bf67f0619a))
+* **deps:** update dependency yargs to v17.2.0 ([f04507a](https://github.com/mobilefirstllc/extension-cli/commit/f04507acfc13861efddb534cf9fb32fecc59beb5))
+* **deps:** update dependency yargs to v17.2.1 ([9a06f44](https://github.com/mobilefirstllc/extension-cli/commit/9a06f44b878d178dbd15fbae490470082b99221a))
+
 ### [1.2.2](https://github.com/mobilefirstllc/extension-cli/compare/v1.2.0...v1.2.2) (2021-08-28)
 
 ## [1.2.0](https://github.com/mobilefirstllc/extension-cli/compare/v1.2.0-beta.1...v1.2.0) (2021-07-28)
