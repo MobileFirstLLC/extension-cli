@@ -2,6 +2,23 @@
 disqus: "False"
 ---
 
+### 1.2.4 (2021-10-13) (beta)
+
+- Update devtools sourcemap config [PR #119](https://github.com/MobileFirstLLC/extension-cli/pull/119)
+- New extension now initialized with MV3 [#86](https://github.com/MobileFirstLLC/extension-cli/pull/111)
+
+**Dependency updates**
+
+- **deps:** update dependency sass to v1.43.2 ([32eb148](https://github.com/mobilefirstllc/extension-cli/commit/32eb148d81318f115942df2682270ded3c061652))
+- **deps:** update dependency @babel/preset-env to v7.15.8 ([a341965](https://github.com/mobilefirstllc/extension-cli/commit/a3419659b3ac2427f1134f8c6cfb2bb38c29f009))
+- **deps:** update dependency commander to v8.2.0 ([5226669](https://github.com/mobilefirstllc/extension-cli/commit/52266695f15cace4cc422e229afe5555d30ff0e4))
+- **deps:** update dependency eslint to v8 ([d5549a8](https://github.com/mobilefirstllc/extension-cli/commit/d5549a8730256f61edbd36ab7cabbac95db5000e))
+- **deps:** update dependency jsdom to v18 ([681db6b](https://github.com/mobilefirstllc/extension-cli/commit/681db6bafeedda989471235ff6f14ad9edff1885))
+- **deps:** update dependency mocha to v9.1.2 ([d7cecc6](https://github.com/mobilefirstllc/extension-cli/commit/d7cecc60a2aa918559bea17b2531b3e331500cce))
+- **deps:** update dependency prompts to v2.4.2 ([f99cb60](https://github.com/mobilefirstllc/extension-cli/commit/f99cb608f43414ecbb8f9309ce2d32453b11b0d5))
+- **deps:** update dependency webpack-stream to v7 ([#94](https://github.com/mobilefirstllc/extension-cli/issues/94)) ([a19b448](https://github.com/mobilefirstllc/extension-cli/commit/a19b4488cc7f9a31474904e58b2920bf67f0619a))
+- **deps:** update dependency yargs to v17.2.1 ([9a06f44](https://github.com/mobilefirstllc/extension-cli/commit/9a06f44b878d178dbd15fbae490470082b99221a))
+
 ### 1.2.2 (2021-07-28)
 
 - update dependencies
