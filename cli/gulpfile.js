@@ -40,14 +40,14 @@ const clean = () => del([paths.dist + '/*']);
 
 const script = ({src, name, mode}, done = _ => true) => {
 
-    // use mode if specified explicitly; otherwise choose by --env
     const webpackOptions = {
+        // use mode if specified explicitly; otherwise choose by --env
         mode: mode || (isProd ? 'production' : 'development'),
-        output: {filename: `${name}.js`}
+        // match sourcemap name with configured js file name
+        output: {filename: `${name}.js`},
+        // use source map with dev builds only
+        devtool: isProd ? undefined : 'cheap-source-map'
     };
-
-    if (!isProd) webpackOptions.devtool = 'cheap-source-map';
-    else webpackOptions.devtool = 'none';
 
     return gulp.src(src)
         .pipe(webpack(webpackOptions))
