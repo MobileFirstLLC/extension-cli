@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/mobilefirstllc/extension-cli/compare/v1.2.4-beta.0...v1.2.4) (2021-10-20)
+
 ### [1.2.4-beta.0](https://github.com/mobilefirstllc/extension-cli/compare/v1.2.2...v1.2.4-beta.0) (2021-10-14)
 
 * Update devtools sourcemap config [PR #119](https://github.com/MobileFirstLLC/extension-cli/pull/119)
