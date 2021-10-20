@@ -2,7 +2,7 @@
 disqus: "False"
 ---
 
-### 1.2.4 (2021-10-13) (beta)
+### 1.2.4 (2021-10-19)
 
 - Update devtools sourcemap config [PR #119](https://github.com/MobileFirstLLC/extension-cli/pull/119)
 - New extension now initialized with MV3 [#86](https://github.com/MobileFirstLLC/extension-cli/pull/111)
