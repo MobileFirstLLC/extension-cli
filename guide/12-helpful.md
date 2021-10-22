@@ -51,4 +51,5 @@
 
 **Other Resources**
 
+- [Chrome Extension Samples](https://github.com/GoogleChrome/chrome-extensions-samples) - examples of feature implementations
 - [Awesome WebExtensions](https://github.com/fregante/Awesome-WebExtensions) - curated list of resources and tools
