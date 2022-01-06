@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://oss.mobilefirst.me/extension-cli/03-xt-build-manifest/">
       
       <link rel="icon" href="/extension-cli/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bb3983ee.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
@@ -1046,9 +1046,9 @@
 <p>In your build configuration specify path to the manifest file:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span> <span class="p">{</span>
-   <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./src/manifest.json&quot;</span><span class="p">,</span>
-<span class="p">}</span> 
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nt">&quot;xtbuild&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;manifest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./src/manifest.json&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 </td></tr></table>
 <p>The file will be renamed to <code>manifest.json</code> during build regardless of its original name.</p>
@@ -1073,20 +1073,20 @@
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;__MSG_appname__&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;__MSG_description__&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;chrome&quot;</span><span class="p">:{</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;__MSG_appname__&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;__MSG_description__&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;chrome&quot;</span><span class="p">:{</span><span class="w"></span>
 
-     <span class="err">...</span> <span class="err">chrome</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span> <span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span> <span class="err">keys</span> <span class="err">here</span>
+<span class="w">     </span><span class="err">...</span><span class="w"> </span><span class="err">chrome</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span><span class="w"> </span><span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span><span class="w"> </span><span class="err">keys</span><span class="w"> </span><span class="err">here</span><span class="w"></span>
 
-  <span class="p">},</span>
-  <span class="nt">&quot;firefox&quot;</span><span class="p">:{</span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;firefox&quot;</span><span class="p">:{</span><span class="w"></span>
 
-     <span class="err">...</span> <span class="kc">f</span><span class="err">ire</span><span class="kc">f</span><span class="err">ox</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span> <span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span> <span class="err">keys</span> <span class="err">here</span>
+<span class="w">     </span><span class="err">...</span><span class="w"> </span><span class="kc">f</span><span class="err">ire</span><span class="kc">f</span><span class="err">ox</span><span class="mi">-</span><span class="err">speci</span><span class="kc">f</span><span class="err">ic</span><span class="w"> </span><span class="err">ma</span><span class="kc">n</span><span class="err">i</span><span class="kc">fest</span><span class="w"> </span><span class="err">keys</span><span class="w"> </span><span class="err">here</span><span class="w"></span>
 
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </td></tr></table>
 <p>Then run the build command specifying the target platform:</p>
@@ -1106,17 +1106,17 @@ is insufficient, see the next option.  </p>
 <p>chrome-config.json:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./manifests/chrome.json&quot;</span>
-<span class="p">}</span> 
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;manifest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./manifests/chrome.json&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 </td></tr></table>
 <p>firefox-config.json:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;manifest&quot;</span><span class="p">:</span> <span class="s2">&quot;./manifests/firefox.json&quot;</span>
-<span class="p">}</span> 
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;manifest&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;./manifests/firefox.json&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 </td></tr></table>
 <p>Using this strategy, run the build command specifying path to config file explicitly:</p>
@@ -1190,10 +1190,10 @@ xt-build --config firefox-config.json
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       
