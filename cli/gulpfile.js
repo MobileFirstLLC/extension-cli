@@ -44,7 +44,7 @@ const script = ({src, name, mode}, done = _ => true) => {
         // use mode if specified explicitly; otherwise choose by --env
         mode: mode || (isProd ? 'production' : 'development'),
         // match sourcemap name with configured js file name
-        output: {filename: `${name}.js`},
+        output: {filename: `${name}.js`, sourceMapFilename: `${name}.map[query]`},
         // use source map with dev builds only
         devtool: isProd ? undefined : 'cheap-source-map'
     };
