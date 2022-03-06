@@ -77,7 +77,7 @@
   "dependencies": {
     "@babel/preset-env": "7.16.11",
     "@babel/register": "7.17.0",
-    "chai": "4.3.4",
+    "chai": "4.3.6",
     "chalk": "4.1.2",
     "cli-spinner": "0.2.10",
     "commander": "8.3.0",
