@@ -26,4 +26,4 @@ jobs:
           keep_history: true
           local_dir: site
           on:
-            branch: master
+            branch: main
