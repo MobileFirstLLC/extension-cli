@@ -2,6 +2,23 @@
 disqus: "False"
 ---
 
+### 1.2.5 (2021-03-16) (alpha)
+
+**Dependency upgrades**
+
+- @babel/preset-env: 7.16.11 (minor)
+- @babel/register: 7.17.7 (minor)
+- chai: 4.3.6 (patch)
+- commander: 9.0.0 (major)
+- eslint: 8.11.0 (minor)
+- gulp-sass: 5.1.0 (minor)
+- jsdoc: 3.6.10 (patch)
+- jsdom: 19.0.0 (major)
+- mocha: 9.2.2 (minor)
+- sass: 1.49.9 (minor)
+- sinon: 13.0.1 (major)
+- yargs: 17.3.1 (minor)
+
 ### 1.2.4 (2021-10-19)
 
 - Update devtools sourcemap config [PR #119](https://github.com/MobileFirstLLC/extension-cli/pull/119)
