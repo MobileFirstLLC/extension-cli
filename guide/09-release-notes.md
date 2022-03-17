@@ -6,18 +6,18 @@ disqus: "False"
 
 **Dependency upgrades**
 
-- @babel/preset-env: 7.16.11 (minor)
-- @babel/register: 7.17.7 (minor)
-- chai: 4.3.6 (patch)
-- commander: 9.0.0 (major)
-- eslint: 8.11.0 (minor)
-- gulp-sass: 5.1.0 (minor)
-- jsdoc: 3.6.10 (patch)
-- jsdom: 19.0.0 (major)
-- mocha: 9.2.2 (minor)
-- sass: 1.49.9 (minor)
-- sinon: 13.0.1 (major)
-- yargs: 17.3.1 (minor)
+- @babel/preset-env: 7.16.11 ([066f782](https://github.com/MobileFirstLLC/extension-cli/commit/066f7820ce48e877cf5477ff77037c9d3a9d2fdd))
+- @babel/register: 7.17.7 ([2084d42](https://github.com/MobileFirstLLC/extension-cli/commit/2084d42255e811c9f142ca77983b02aaa7dd71f0))
+- chai: 4.3.6 ([2084d42](https://github.com/MobileFirstLLC/extension-cli/commit/2084d42255e811c9f142ca77983b02aaa7dd71f0))
+- commander: 9.0.0 ([2084d42](https://github.com/MobileFirstLLC/extension-cli/commit/2084d42255e811c9f142ca77983b02aaa7dd71f0))
+- eslint: 8.11.0 ([2084d42](https://github.com/MobileFirstLLC/extension-cli/commit/2084d42255e811c9f142ca77983b02aaa7dd71f0))
+- gulp-sass: 5.1.0 ([0ac28b2](https://github.com/MobileFirstLLC/extension-cli/commit/0ac28b2eb26c998e0958ed4f98691419323b1931))
+- jsdoc: 3.6.10 ([d0a09a3](https://github.com/MobileFirstLLC/extension-cli/commit/d0a09a3540580ef1d69edaaf9aa264a4674198b5))
+- jsdom: 19.0.0 ([b0f290f](https://github.com/MobileFirstLLC/extension-cli/commit/b0f290fa43f76fc4e67a95ae35ca4cefb7b9db6c))
+- mocha: 9.2.2 ([2084d42](https://github.com/MobileFirstLLC/extension-cli/commit/2084d42255e811c9f142ca77983b02aaa7dd71f0))
+- sass: 1.49.9 ([aef9fd6](https://github.com/MobileFirstLLC/extension-cli/commit/aef9fd6142879af3bf4610c80eaca1f97aff96a4))
+- sinon: 13.0.1 ([8282c0a](https://github.com/MobileFirstLLC/extension-cli/commit/8282c0a05d2702e6ec92155d8cfaba2de93c9c53))
+- yargs: 17.3.1 ([add18ee](https://github.com/MobileFirstLLC/extension-cli/commit/add18ee15196d4356a74d0f76ded23d1fef1d085))
 
 ### 1.2.4 (2021-10-19)
 
