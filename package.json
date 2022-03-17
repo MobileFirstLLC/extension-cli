@@ -64,8 +64,7 @@
     "alpha": "npx standard-version --prerelease alpha",
     "patch": "npx standard-version --release-as patch",
     "minor": "npx standard-version --release-as minor",
-    "patch:beta": "npx standard-version --release-as patch --prerelease beta",
-    "minor:beta": "npx standard-version --release-as minor --prerelease beta",
+    "patch:alpha": "npx standard-version --release-as patch --prerelease alpha",
     "minor:alpha": "npx standard-version --release-as minor --prerelease alpha",
     "major:alpha": "npx standard-version --release-as major --prerelease alpha",
     "major": "npx standard-version --release-as major"
