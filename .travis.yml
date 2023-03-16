@@ -1,7 +1,7 @@
 language: bash
 
 node_js:
-  - "14.18.3"
+  - "14.21.3"
 
 python:
   - "3.9"
@@ -9,7 +9,7 @@ python:
 jobs:
   include:
     - language: node_js
-      node_js: 14.18.3
+      node_js: 14.21.3
       script:
         - npm install
         - npm run test:travis || travis_terminate 1
