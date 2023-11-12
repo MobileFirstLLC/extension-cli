@@ -46,7 +46,11 @@ const script = ({src, name, mode}, done = _ => true) => {
         // match sourcemap name with configured js file name
         output: {filename: `${name}.js`},
         // use source map with dev builds only
-        devtool: isProd ? undefined : 'cheap-source-map'
+        devtool: isProd ? undefined : 'cheap-source-map',
+        // allow TS importing
+        resolve: {
+            extensions: ['.ts', '...']
+        },
     };
 
     return gulp.src(src)
