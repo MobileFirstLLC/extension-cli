@@ -69,6 +69,14 @@ xt-build {-e|--env} dev {-w|--watch}
 xt-build --help
 ``` 
 
+## TypeScript notes
+
+You may use either TypeScript (`.ts`, `.tsx`) or JavaScript files. However, if any TypeScript is used, you must add
+`tsconfig.json` to the `src` directory.
+
+In this config file, you do not need to add anything (unless you want to change any settings). However, without it,
+compilation will fail.
+
 ## Package.json scripts
 
 After adding Extension CLI to your project, you can run these commands from a 
