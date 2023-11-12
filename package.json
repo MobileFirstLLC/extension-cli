@@ -102,6 +102,7 @@
     "sass": "1.49.9",
     "sinon": "13.0.1",
     "sinon-chrome": "3.0.1",
+    "ts-loader": "9.5.0",
     "webpack-stream": "7.0.0",
     "yargs": "17.3.1"
   },
