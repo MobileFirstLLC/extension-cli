@@ -4,9 +4,9 @@
   "releases": "./",
   "release_name": "release",
   "manifest": "./src/manifest.json",
-  "js": "./src/**/*.js",
+  "js": "./src/**/*.[jt]s",
   "js_bundles": [{
-    "src":"./src/**/*.js",
+    "src":"./src/**/*.[jt]s",
     "name": "script"
   }],
   "html": "./src/**/*.html",
