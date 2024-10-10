@@ -74,8 +74,8 @@
     "infile": ".github/changelog.md"
   },
   "dependencies": {
-    "@babel/preset-env": "7.16.11",
-    "@babel/register": "7.17.7",
+    "@babel/preset-env": "7.25.8",
+    "@babel/register": "7.25.7",
     "chai": "4.3.6",
     "chalk": "4.1.2",
     "cli-spinner": "0.2.10",
